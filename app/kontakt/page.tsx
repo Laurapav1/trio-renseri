@@ -48,28 +48,17 @@ export default function Kontakt() {
           </form>
         </div>
         <div className={styles.contactDetails}>
-          <p>michelle@signaturerealtynj.com</p>
-          <p>(908) 686-1200</p>
           <p>
-            <strong>Westfield</strong>
+            <strong>Trio Renseri</strong>
             <br />
-            233 North Avenue E.
             <br />
-            Westfield, NJ 07090
-          </p>
-          <p>
-            <strong>Summit</strong>
+            L. A. Rings Vej 19
             <br />
-            357 Springfield Ave.
+            8270, Højbjerg
             <br />
-            Short Hills, NJ 07901
-          </p>
-          <p>
-            <strong>Short Hills Office</strong>
+            tel.: +45 86 27 09 56
             <br />
-            549 Millburn Ave.
-            <br />
-            Short Hills, NJ 07078
+            andriustrio@hotmail.com
           </p>
         </div>
       </div>
