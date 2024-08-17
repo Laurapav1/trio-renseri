@@ -65,3 +65,8 @@
 .contactDetails p {
   line-height: 140%;
 }
+
+.googleMaps {
+  margin-top: 50px;
+  width: 100%;
+}
