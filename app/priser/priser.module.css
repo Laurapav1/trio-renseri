@@ -1,0 +1,64 @@
+
+.prislisteContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tabs a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .prisliste {
+    margin-top: 20px;
+  }
+  
+  .prisliste h2 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .prisliste ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .prisliste ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    color: #333;
+    border-bottom: 1px solid black;
+  }
+  
+  .dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted #0d0909;
+    margin: 0 10px;
+  }
+  
+  .tilbud {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .tilbud a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
