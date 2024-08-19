@@ -40,6 +40,10 @@ export default function Services() {
           <p>Professionel rensning af tæpper, store som små.</p>
         </div>
         <div className={styles.serviceCard}>
+          <h2>Tekstilrens</h2>
+          <p>Vi tilbyder skånsom og effektiv rensning af alle tekstiler.</p>
+        </div>
+        <div className={styles.serviceCard}>
           <h2>Brudekjole rens</h2>
           <p>
             Specialrensning af brudekjoler, så de forbliver i perfekt stand.
