@@ -1,0 +1,67 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 60px;
+  }
+  
+  .intro {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  
+  .intro {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 60px;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .serviceCard {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .serviceCard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .serviceCard p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+
+  
+
+  
