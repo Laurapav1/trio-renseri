@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "../serviceDetail.module.css";
+import styles from "./serviceDetail.module.css";
 import CompareSlider from "react-compare-image";
 
 export default function Omforandring() {

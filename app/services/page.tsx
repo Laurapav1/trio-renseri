@@ -14,16 +14,15 @@ export default function Services() {
         betyder mest for dig.
       </p>
       <div className={styles.servicesGrid}>
-        <Link href="/services/omforandring" passHref>
+        <Link href="/services/omforandring" className={styles.serviceLink}>
           <div className={styles.serviceCard}>
-            <h2>Omforandring af tøj</h2>
+            <h2 className={styles.serviceCardHeading}>Omforandring af tøj</h2>
             <p>
               Tilpasning og reparation af alle slags tøj for den perfekte
               pasform.
             </p>
           </div>
         </Link>
-
         <div className={styles.serviceCard}>
           <h2>Skjorteservice</h2>
           <p>Rens og strygning af skjorter, så de altid ser skarpe ud.</p>
