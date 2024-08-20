@@ -1,5 +1,108 @@
+/* serviceDetail.module.css */
 .container {
-  max-width: 800px;
-  margin: 0 auto;
   padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero {
+  background-color: #f9f9f9;
+  padding: 50px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #555;
+  max-width: 800px;
+}
+
+.heroButton {
+  background-color: #0070f3;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.heroButton:hover {
+  background-color: #005bb5;
+}
+
+/* Before and After Slider */
+.compareContainer {
+  margin: 50px 0;
+}
+
+.compareContainer h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Steps Section */
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.step {
+  text-align: center;
+  width: 30%;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.step img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 15px;
+}
+
+.cta {
+  margin-top: 50px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta button {
+  background-color: #0070f3;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cta button:hover {
+  background-color: #005bb5;
 }
