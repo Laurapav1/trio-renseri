@@ -23,41 +23,62 @@ export default function Services() {
             </p>
           </div>
         </Link>
-        <div className={styles.serviceCard}>
-          <h2>Skjorteservice</h2>
-          <p>Rens og strygning af skjorter, så de altid ser skarpe ud.</p>
-        </div>
-        <div className={styles.serviceCard}>
-          <h2>Gardinservice</h2>
-          <p>
-            Vi renser dine gardiner og sørger for, at de forbliver friske og
-            rene.
-          </p>
-        </div>
-        <div className={styles.serviceCard}>
-          <h2>Tæpperens</h2>
-          <p>Professionel rensning af tæpper, store som små.</p>
-        </div>
-        <div className={styles.serviceCard}>
-          <h2>Tekstilrens</h2>
-          <p>Vi tilbyder skånsom og effektiv rensning af alle tekstiler.</p>
-        </div>
-        <div className={styles.serviceCard}>
-          <h2>Brudekjole rens</h2>
-          <p>
-            Specialrensning af brudekjoler, så de forbliver i perfekt stand.
-          </p>
-        </div>
-        <div className={styles.serviceCard}>
-          <h2>Dåbskjole vask/rens</h2>
-          <p>Vi tager os af dåbskjoler med ekstra omsorg og præcision.</p>
-        </div>
-        <div className={styles.serviceCard}>
-          <h2>Vaske/Rulle service</h2>
-          <p>
-            Lad os tage hånd om dit vasketøj, så det altid er klar til brug.
-          </p>
-        </div>
+
+        <Link href="/services/skjorteservice" className={styles.serviceLink}>
+          <div className={styles.serviceCard}>
+            <h2 className={styles.serviceCardHeading}>Skjorteservice</h2>
+            <p>Rens og strygning af skjorter, så de altid ser skarpe ud.</p>
+          </div>
+        </Link>
+
+        <Link href="/services/gardinservice" className={styles.serviceLink}>
+          <div className={styles.serviceCard}>
+            <h2 className={styles.serviceCardHeading}>Gardinservice</h2>
+            <p>
+              Vi renser dine gardiner og sørger for, at de forbliver friske og
+              rene.
+            </p>
+          </div>
+        </Link>
+
+        <Link href="/services/taepperens" className={styles.serviceLink}>
+          <div className={styles.serviceCard}>
+            <h2 className={styles.serviceCardHeading}>Tæpperens</h2>
+            <p>Professionel rensning af tæpper, store som små.</p>
+          </div>
+        </Link>
+
+        <Link href="/services/tekstilrens" className={styles.serviceLink}>
+          <div className={styles.serviceCard}>
+            <h2 className={styles.serviceCardHeading}>Tekstilrens</h2>
+            <p>Vi tilbyder skånsom og effektiv rensning af alle tekstiler.</p>
+          </div>
+        </Link>
+
+        <Link href="/services/brudekjolerens" className={styles.serviceLink}>
+          <div className={styles.serviceCard}>
+            <h2 className={styles.serviceCardHeading}>Brudekjole rens</h2>
+            <p>
+              Specialrensning af brudekjoler, så de forbliver i perfekt stand.
+            </p>
+          </div>
+        </Link>
+
+        <Link href="/services/daabskjolevask" className={styles.serviceLink}>
+          <div className={styles.serviceCard}>
+            <h2 className={styles.serviceCardHeading}>Dåbskjole vask/rens</h2>
+            <p>Vi tager os af dåbskjoler med ekstra omsorg og præcision.</p>
+          </div>
+        </Link>
+
+        <Link href="/services/vaskerulleservice" className={styles.serviceLink}>
+          <div className={styles.serviceCard}>
+            <h2 className={styles.serviceCardHeading}>Vaske/Rulle service</h2>
+            <p>
+              Lad os tage hånd om dit vasketøj, så det altid er klar til brug.
+            </p>
+          </div>
+        </Link>
       </div>
     </div>
   );
