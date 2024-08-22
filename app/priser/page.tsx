@@ -1,15 +1,25 @@
 // components/PriceList.tsx
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import styles from "./priser.module.css";
+import { useParams, useSearchParams } from "next/navigation";
 
 export default function Prices() {
+  const searchParams = useSearchParams();
+  const service = searchParams.get("service");
+
+  const skjorteservice = "skjorter";
   return (
     <>
       <PriceList
         heading="Herretøj"
         items={[
-          { name: "Skjorter", price: "1 stk. 25 DKK" },
-          { name: "Skjorter", price: "5 stk. 110 DKK" },
+          { name: "Skjorter", price: "1 stk. 25 DKK", service: skjorteservice },
+          {
+            name: "Skjorter",
+            price: "5 stk. 110 DKK",
+            service: skjorteservice,
+          },
           { name: "Frakker", price: "250 DKK" },
           { name: "Frakke ¾", price: "195 DKK" },
           { name: "Cotton coat", price: "225 DKK" },
@@ -29,6 +39,7 @@ export default function Prices() {
             price: "fra 400 DKK",
           },
         ]}
+        service={service}
       />
       <PriceList
         heading="Dametøj"
@@ -48,6 +59,7 @@ export default function Prices() {
           { name: "Silkebluse", price: "75 DKK" },
           { name: "Benklæder, shorts", price: "65 DKK" },
         ]}
+        service={service}
       />
       <PriceList
         heading="Diverse"
@@ -62,6 +74,7 @@ export default function Prices() {
           { name: "Dyne", price: "2 stk. 350 DKK" },
           { name: "Pude", price: "150 DKK" },
         ]}
+        service={service}
       />
     </>
   );
@@ -70,14 +83,16 @@ export default function Prices() {
 interface PriceItem {
   name: string;
   price: string;
+  service?: string;
 }
 
 interface PriceListContentProps {
   heading: string;
   items: PriceItem[];
+  service: string | null;
 }
 
-function PriceList({ heading, items }: PriceListContentProps) {
+function PriceList({ heading, items, service }: PriceListContentProps) {
   return (
     <div className={styles.prislisteContainer}>
       <div className={styles.prisliste}>
@@ -85,12 +100,12 @@ function PriceList({ heading, items }: PriceListContentProps) {
         <ul>
           {items.map((item) => (
             <li key={item.name}>
-              <span>{item.name}</span> <span className={styles.dots}></span>{" "}
-              <span>
-                {typeof item.price === "number"
-                  ? item.price + " DKK"
-                  : item.price}
-              </span>
+              <span
+                className={service === item.service ? styles.highlighted : ""}
+              >
+                {item.name}
+              </span>{" "}
+              <span className={styles.dots}></span> <span>{item.price}</span>
             </li>
           ))}
         </ul>

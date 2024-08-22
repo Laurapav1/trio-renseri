@@ -2,7 +2,7 @@
 import React from "react";
 import CompareImage from "react-compare-image";
 import styles from "../serviceDetail.module.css";
-import router from "next/router";
+import Link from "next/link";
 
 export default function Skjorteservice() {
   return (
@@ -14,16 +14,6 @@ export default function Skjorteservice() {
           Perfekt rensede og strøgede skjorter – klar til enhver dag. Se,
           hvordan vi gør dine skjorter klar fra start til slut.
         </p>
-      </div>
-
-      {/* Before and After Slider */}
-      <div className={styles.compareContainer}>
-        <h2>Før og efter</h2>
-        <CompareImage
-          leftImage="/images/before-pants.jpg"
-          rightImage="/images/after-pants.jpg"
-          sliderPositionPercentage={0.5}
-        />
       </div>
 
       {/* Steps Section */}
@@ -53,9 +43,9 @@ export default function Skjorteservice() {
 
       <div className={styles.cta}>
         <h2>Klar til en fejlfri skjorte?</h2>
-        <button onClick={() => (window.location.href = "/priser")}>
+        <Link href={"/priser?service=skjorter"} passHref>
           Se Priser
-        </button>
+        </Link>
       </div>
     </div>
   );
