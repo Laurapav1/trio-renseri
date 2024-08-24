@@ -76,6 +76,7 @@ export default function Prices() {
         ]}
         service={service}
       />
+      <Tilbud />
     </>
   );
 }
@@ -110,6 +111,18 @@ function PriceList({ heading, items, service }: PriceListContentProps) {
           ))}
         </ul>
       </div>
+    </div>
+  );
+}
+
+function Tilbud() {
+  return (
+    <div className={styles.tilbudContainer}>
+      <h3>Eksklusivt Tilbud!</h3>
+      <p>
+        Få 10% rabat på alle dine skjorteservices, når du bestiller online.
+        Gælder kun for nye kunder.
+      </p>
     </div>
   );
 }
