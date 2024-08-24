@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.contents}></div>
       <video
-        src="/hero.mp4"
+        src="/videos/hero.mp4"
         autoPlay
         muted
         loop

@@ -1,0 +1,51 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.serviceCard {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Sørg for at fjerne linjen under links */
+.serviceLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Eventuelt styling for h2 for at fjerne linje */
+.serviceCard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+.serviceCard p {
+  font-size: 1rem;
+  color: #555;
+}
