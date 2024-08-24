@@ -48,14 +48,11 @@ body {
   color: #333; /* Mørkegrå tekstfarve */
   padding: 2rem;
   text-align: center;
-  margin-top: 3rem;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
+  max-width: 80vw;
   margin: 0 auto;
   flex-wrap: wrap;
   margin-bottom: 2rem;
@@ -63,6 +60,7 @@ body {
 
 .footer-section {
   flex: 1;
+  margin: 0 4rem;
 }
 
 .footer-section h4 {
@@ -74,8 +72,6 @@ body {
 
 .footer-section li {
   margin-bottom: 0.6rem;
-  list-style: none;
-  padding: 0;
 }
 
 .footer-section a {
@@ -87,21 +83,36 @@ body {
   color: #000;
 }
 
-.footer-bottom-text {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.footer ul {
-  padding-inline-start: 0;
-}
-
 .social-icon {
-  margin: 0 0.5rem;
+  margin: 0.5rem;
+  margin-top: 0;
   height: 35px !important;
   width: 35px !important;
 }
 
 .social-icon:hover {
   filter: brightness(110%);
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section .opening-hours {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section .day {
+  text-align: left;
+}
+
+.footer-section .time {
+  text-align: right;
+}
+
+.footer-bottom-text {
+  color: #555;
+  font-size: 0.9rem;
 }
