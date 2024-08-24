@@ -69,8 +69,7 @@ export default function Prices() {
           { name: "Soveposer fra", prices: ["195 DKK"] },
           { name: "Sengetæpper", prices: ["135 DKK"] },
           { name: "Hyndebetræk", prices: ["135 DKK"] },
-          { name: "Dyne", prices: ["1 stk. 275 DKK"] },
-          { name: "Dyne", prices: ["2 stk. 350 DKK"] },
+          { name: "Dyne", prices: ["1 stk. 275 DKK", "2 stk. 350 DKK"] },
           { name: "Pude", prices: ["150 DKK"] },
         ]}
         service={service}

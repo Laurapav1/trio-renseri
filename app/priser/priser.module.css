@@ -7,10 +7,10 @@
 }
 
 .prisliste {
-  background-color: #f9f9f9;
+  background-color: hsl(0, 0%, 99%);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0.6rem rgba(0 0 0 / 0.25);
   text-align: center;
 }
 
