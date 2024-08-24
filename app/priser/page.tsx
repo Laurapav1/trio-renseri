@@ -14,29 +14,28 @@ export default function Prices() {
       <PriceList
         heading="Herretøj"
         items={[
-          { name: "Skjorter", price: "1 stk. 25 DKK", service: skjorteservice },
           {
             name: "Skjorter",
-            price: "5 stk. 110 DKK",
+            prices: ["1 stk. 25 DKK", "stk. 110DKK"],
             service: skjorteservice,
           },
-          { name: "Frakker", price: "250 DKK" },
-          { name: "Frakke ¾", price: "195 DKK" },
-          { name: "Cotton coat", price: "225 DKK" },
-          { name: "Jakker", price: "165 DKK" },
-          { name: "Benklæder", price: "115 DKK" },
-          { name: "Habit", price: "265 DKK" },
-          { name: "Slips", price: "65 DKK" },
-          { name: "Vindjakker", price: "185 DKK" },
-          { name: "Dunejakker", price: "300 DKK" },
-          { name: "Dunefrakker", price: "350 DKK" },
-          { name: "Veste", price: "75 DKK" },
-          { name: "Veste, vind, dun", price: "185 DKK" },
-          { name: "Smoking", price: "295 DKK" },
-          { name: "Herrekjoler", price: "315 DKK" },
+          { name: "Frakker", prices: ["250 DKK"] },
+          { name: "Frakke ¾", prices: ["195 DKK"] },
+          { name: "Cotton coat", prices: ["225 DKK"] },
+          { name: "Jakker", prices: ["165 DKK"] },
+          { name: "Benklæder", prices: ["115 DKK"] },
+          { name: "Habit", prices: ["265 DKK"] },
+          { name: "Slips", prices: ["65 DKK"] },
+          { name: "Vindjakker", prices: ["185 DKK"] },
+          { name: "Dunejakker", prices: ["300 DKK"] },
+          { name: "Dunefrakker", prices: ["350 DKK"] },
+          { name: "Veste", prices: ["75 DKK"] },
+          { name: "Veste, vind, dun", prices: ["185 DKK"] },
+          { name: "Smoking", prices: ["295 DKK"] },
+          { name: "Herrekjoler", prices: ["315 DKK"] },
           {
             name: "Canada goose jakke inkl. Imprægnering",
-            price: "fra 400 DKK",
+            prices: ["fra 400 DKK"],
           },
         ]}
         service={service}
@@ -44,35 +43,35 @@ export default function Prices() {
       <PriceList
         heading="Dametøj"
         items={[
-          { name: "Frakker", price: "250 DKK" },
-          { name: "Cotton coat", price: "225 DKK" },
-          { name: "Jakker", price: "169 DKK" },
-          { name: "Benklæder", price: "119 DKK" },
-          { name: "Kjoler, korte", price: "fra 175 DKK" },
-          { name: "Kjoler, lange", price: "fra 195 DKK" },
-          { name: "Kjoler, selskabs", price: "Efter aftale" },
-          { name: "Nederdele, korte", price: "95 DKK" },
-          { name: "Nederdele, lange", price: "125 DKK" },
-          { name: "Nederdele, uld/plissé", price: "165 DKK" },
-          { name: "Strikbluse", price: "75 DKK" },
-          { name: "Halstørklæder", price: "65 DKK" },
-          { name: "Silkebluse", price: "75 DKK" },
-          { name: "Benklæder, shorts", price: "65 DKK" },
+          { name: "Frakker", prices: ["250 DKK"] },
+          { name: "Cotton coat", prices: ["225 DKK"] },
+          { name: "Jakker", prices: ["169 DKK"] },
+          { name: "Benklæder", prices: ["119 DKK"] },
+          { name: "Kjoler, korte", prices: ["fra 175 DKK"] },
+          { name: "Kjoler, lange", prices: ["fra 195 DKK"] },
+          { name: "Kjoler, selskabs", prices: ["Efter aftale"] },
+          { name: "Nederdele, korte", prices: ["95 DKK"] },
+          { name: "Nederdele, lange", prices: ["125 DKK"] },
+          { name: "Nederdele, uld/plissé", prices: ["165 DKK"] },
+          { name: "Strikbluse", prices: ["75 DKK"] },
+          { name: "Halstørklæder", prices: ["65 DKK"] },
+          { name: "Silkebluse", prices: ["75 DKK"] },
+          { name: "Benklæder, shorts", prices: ["65 DKK"] },
         ]}
         service={service}
       />
       <PriceList
         heading="Diverse"
         items={[
-          { name: "Gardiner", price: "135 DKK/bane" },
-          { name: "Pudestykker", price: "65 DKK" },
-          { name: "Klokkestrenge fra", price: "65 DKK" },
-          { name: "Soveposer fra", price: "195 DKK" },
-          { name: "Sengetæpper", price: "135 DKK" },
-          { name: "Hyndebetræk", price: "135 DKK" },
-          { name: "Dyne", price: "1 stk. 275 DKK" },
-          { name: "Dyne", price: "2 stk. 350 DKK" },
-          { name: "Pude", price: "150 DKK" },
+          { name: "Gardiner", prices: ["135 DKK/bane"] },
+          { name: "Pudestykker", prices: ["65 DKK"] },
+          { name: "Klokkestrenge fra", prices: ["65 DKK"] },
+          { name: "Soveposer fra", prices: ["195 DKK"] },
+          { name: "Sengetæpper", prices: ["135 DKK"] },
+          { name: "Hyndebetræk", prices: ["135 DKK"] },
+          { name: "Dyne", prices: ["1 stk. 275 DKK"] },
+          { name: "Dyne", prices: ["2 stk. 350 DKK"] },
+          { name: "Pude", prices: ["150 DKK"] },
         ]}
         service={service}
       />
@@ -83,7 +82,7 @@ export default function Prices() {
 
 interface PriceItem {
   name: string;
-  price: string;
+  prices: string[];
   service?: string;
 }
 
@@ -101,12 +100,18 @@ function PriceList({ heading, items, service }: PriceListContentProps) {
         <ul>
           {items.map((item) => (
             <li key={item.name}>
-              <span
-                className={service === item.service ? styles.highlighted : ""}
-              >
-                {item.name}
-              </span>{" "}
-              <span className={styles.dots}></span> <span>{item.price}</span>
+              {item.prices.map((price) => (
+                <div>
+                  <span
+                    className={
+                      service === item.service ? styles.highlighted : ""
+                    }
+                  >
+                    {item.name}
+                  </span>
+                  <span>{price}</span>
+                </div>
+              ))}
             </li>
           ))}
         </ul>
