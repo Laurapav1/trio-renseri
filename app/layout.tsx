@@ -1,4 +1,6 @@
-import "./globals.css";
+import "./css/globals.css";
+import navbarStyles from "./css/navbar.module.css";
+import footerStyles from "./css/footer.module.css";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 
@@ -20,29 +22,29 @@ export default function RootLayout({
 
 function Navbar() {
   return (
-    <nav className="navbar">
+    <nav className={navbarStyles.navbar}>
       <img
-        className="logo"
+        className={navbarStyles.logo}
         src="https://scontent-cph2-1.xx.fbcdn.net/v/t39.30808-6/305667099_463962259077392_3529188224974767746_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-goarPXqciAQ7kNvgFdeue6&_nc_ht=scontent-cph2-1.xx&oh=00_AYB_EwPPBsAU2UmvnHmcsw8yl5siu5xwszKywRM_mRA-wg&oe=66C61F03"
         alt="Trio Renseri"
       />
-      <ul className="navbar-list">
-        <li className="navbar-item">
+      <ul className={navbarStyles.navbarList}>
+        <li className={navbarStyles.navbarItem}>
           <Link href="/" passHref>
             Forside
           </Link>
         </li>
-        <li className="navbar-item">
+        <li className={navbarStyles.navbarItem}>
           <Link href="/services" passHref>
             Services
           </Link>
         </li>
-        <li className="navbar-item">
+        <li className={navbarStyles.navbarItem}>
           <Link href="/priser" passHref>
             Priser
           </Link>
         </li>
-        <li className="navbar-item">
+        <li className={navbarStyles.navbarItem}>
           <Link href="/kontakt" passHref>
             Kontakt
           </Link>
@@ -54,9 +56,9 @@ function Navbar() {
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className="footer-content">
-        <div className="footer-section">
+    <footer className={footerStyles.footer}>
+      <div className={footerStyles.footerContent}>
+        <div className={footerStyles.footerSection}>
           <h4>Kontakt Os</h4>
           <ul>
             <li>Trio Renseri</li>
@@ -78,28 +80,30 @@ function Footer() {
             </li>
           </ul>
         </div>
-        <div className="footer-section">
+        <div className={footerStyles.footerSection}>
           <h4>Åbningstider</h4>
-          <ul className="hours-container">
-            <li className="opening-hours">
-              <span className="day">Mandag-fredag:</span>
-              <span className="time">08:30 - 17:30</span>
+          <ul className={footerStyles.hoursContainer}>
+            <li className={footerStyles.openingHours}>
+              <span className={footerStyles.day}>Mandag-fredag:</span>
+              <span className={footerStyles.time}>08:30 - 17:30</span>
             </li>
-            <li className="opening-hours">
-              <span className="day">Lørdag:</span>
-              <span className="time">10:00 - 13:00</span>
+            <li className={footerStyles.openingHours}>
+              <span className={footerStyles.day}>Lørdag:</span>
+              <span className={footerStyles.time}>10:00 - 13:00</span>
             </li>
           </ul>
         </div>
-        <div className="footer-section">
+        <div className={footerStyles.footerSection}>
           <h4>Følg Os</h4>
           <ul>
             <li>
               <SocialIcon
+                className={footerStyles.socialIcon}
                 target="_blank"
                 url="https://facebook.com/TrioRenseri"
               />
               <SocialIcon
+                className={footerStyles.socialIcon}
                 target="_blank"
                 url="https://instagram.com/triorenseri"
               />
@@ -107,7 +111,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <p className="footer-bottom-text">
+      <p className={footerStyles.footerBottomText}>
         © {new Date().getFullYear()} Trio Renseri. Alle rettigheder forbeholdes.
       </p>
     </footer>

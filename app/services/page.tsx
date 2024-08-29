@@ -14,72 +14,72 @@ export default function Services() {
         betyder mest for dig.
       </p>
       <div className={styles.servicesGrid}>
-        <Link href="/services/omforandring" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Omforandring af tøj</h2>
-            <p>
-              Tilpasning og reparation af alle slags tøj for den perfekte
-              pasform.
-            </p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Omforandring af tøj"
+          description="Tilpasning og reparation af alle slags tøj for den perfekte pasform."
+          link="/services/omforandring"
+        />
 
-        <Link href="/services/skjorteservice" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Skjorteservice</h2>
-            <p>Rens og strygning af skjorter, så de altid ser skarpe ud.</p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Skjorteservice"
+          description="Rens og strygning af skjorter, så de altid ser skarpe ud."
+          link="/services/skjorteservice"
+        />
 
-        <Link href="/services/gardinservice" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Gardinservice</h2>
-            <p>
-              Vi renser dine gardiner og sørger for, at de forbliver friske og
-              rene.
-            </p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Gardinservice"
+          description="Vi renser dine gardiner og sørger for, at de forbliver friske og rene."
+          link="/services/gardinservice"
+        />
 
-        <Link href="/services/taepperens" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Tæpperens</h2>
-            <p>Professionel rensning af tæpper, store som små.</p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Tæpperens"
+          description="Professionel rensning af tæpper, store som små."
+          link="/services/taepperens"
+        />
 
-        <Link href="/services/tekstilrens" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Tekstilrens</h2>
-            <p>Vi tilbyder skånsom og effektiv rensning af alle tekstiler.</p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Tekstilrens"
+          description="Vi tilbyder skånsom og effektiv rensning af alle tekstiler."
+          link="/services/tekstilrens"
+        />
 
-        <Link href="/services/brudekjolerens" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Brudekjole rens</h2>
-            <p>
-              Specialrensning af brudekjoler, så de forbliver i perfekt stand.
-            </p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Brudekjole rens"
+          description="Specialrensning af brudekjoler, så de forbliver i perfekt stand."
+          link="/services/brudekjolerens"
+        />
 
-        <Link href="/services/daabskjolevask" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Dåbskjole vask/rens</h2>
-            <p>Vi tager os af dåbskjoler med ekstra omsorg og præcision.</p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Dåbskjole vask/rens"
+          description="Vi tager os af dåbskjoler med ekstra omsorg og præcision."
+          link="/services/daabskjolevask"
+        />
 
-        <Link href="/services/vaskerulleservice" className={styles.serviceLink}>
-          <div className={styles.serviceCard}>
-            <h2 className={styles.serviceCardHeading}>Vaske/Rulle service</h2>
-            <p>
-              Lad os tage hånd om dit vasketøj, så det altid er klar til brug.
-            </p>
-          </div>
-        </Link>
+        <ServiceCard
+          title="Vaske/Rulle service"
+          description="Lad os tage hånd om dit vasketøj, så det altid er klar til brug."
+          link="/services/vaskerulleservice"
+        />
       </div>
     </div>
+  );
+}
+
+interface ServiceCardProps {
+  title: string;
+  description: string;
+  link: string;
+}
+
+function ServiceCard({ title, description, link }: ServiceCardProps) {
+  return (
+    <Link href={link} className={styles.serviceLink}>
+      <div className={styles.serviceCard}>
+        {" "}
+        <h2 className={styles.serviceCardHeading}>{title}</h2>
+        <p>{description}</p>
+      </div>
+    </Link>
   );
 }
