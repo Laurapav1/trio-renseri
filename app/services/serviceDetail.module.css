@@ -1,8 +1,7 @@
 /* serviceDetail.module.css */
 .container {
-  padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5rem auto;
   text-align: center;
 }
 
@@ -13,7 +12,6 @@
   width: 100vw;
   background-color: #f0f4f8;
   padding: 50px 20px;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,14 +35,30 @@
   line-height: 1.6;
 }
 
-/*Intro*/
+.steps h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+  color: #333;
+  position: relative;
+}
 
+.steps h2::before,
+.steps h2::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid hsl(0, 0%, 70%);
+  margin: 0 15px;
+}
+
+/*Intro*/
 .introContainer {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 20px; /* Afstand mellem introduktion og serviceboks */
-  margin: 20px 0;
 }
 
 .intro {
@@ -54,6 +68,7 @@
   font-size: 1.1rem;
   color: #555;
   line-height: 1.6;
+  align-self: center;
 }
 
 .serviceBox {
@@ -95,14 +110,7 @@
 /* Steps Section */
 /* Steps Section */
 .steps {
-  margin-top: 40px;
   text-align: center;
-}
-
-.steps h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #333;
 }
 
 .stepGrid {
@@ -114,7 +122,6 @@
 
 .step {
   background-color: #fff;
-  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -127,7 +134,8 @@
   width: 100%;
   height: 250px; /* Sætter en fast højde for alle billeder */
   object-fit: cover; /* Sørger for, at billedet fylder hele containeren uden at blive forvrænget */
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   margin-bottom: 15px;
 }
 
