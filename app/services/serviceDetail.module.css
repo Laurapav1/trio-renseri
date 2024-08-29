@@ -37,20 +37,59 @@
   line-height: 1.6;
 }
 
-.heroButton {
-  background-color: #0070f3;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s;
+/*Intro*/
+
+.introContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Afstand mellem introduktion og serviceboks */
+  margin: 20px 0;
 }
 
-.heroButton:hover {
-  background-color: #005bb5;
+.intro {
+  flex: 1; /* Sørger for, at introduktionen fylder det meste af pladsen */
+  max-width: 60%;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.serviceBox {
+  flex: 1; /* Sørger for, at boksen får plads ved siden af introduktionen */
+  max-width: 38%;
+  padding: 5px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.serviceBox h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.serviceBox h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.serviceBox ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.serviceBox ul li {
+  margin-bottom: 5px;
 }
 
 /* Steps Section */
