@@ -93,45 +93,73 @@
 }
 
 /* Steps Section */
+/* Steps Section */
 .steps {
-  display: flex;
-  justify-content: space-between;
   margin-top: 40px;
-  align-items: flex-start;
-  position: relative;
+  text-align: center;
+}
+
+.steps h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px;
 }
 
 .step {
-  text-align: center;
-  width: 30%;
-  position: relative;
-}
-
-.step:hover {
-  transform: translateY(-5px);
-}
-
-.step h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .step img {
   width: 100%;
-  max-width: 250px;
-  height: 300px;
-  object-fit: cover;
+  height: 250px; /* Sætter en fast højde for alle billeder */
+  object-fit: cover; /* Sørger for, at billedet fylder hele containeren uden at blive forvrænget */
   border-radius: 8px;
-  display: block;
-  margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: black;
 }
 
 .step p {
   font-size: 1rem;
   color: #666;
-  margin-top: 15px;
+  line-height: 1.5;
+}
+
+/* CTA Button */
+.ctaButton {
+  background-color: #0070f3;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  background-color: #005bb5;
 }
 
 .cta {
