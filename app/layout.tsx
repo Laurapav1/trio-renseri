@@ -45,6 +45,11 @@ function Navbar() {
           </Link>
         </li>
         <li className={navbarStyles.navbarItem}>
+          <Link href="/firmaRabar" passHref>
+            Firma Rabat
+          </Link>
+        </li>
+        <li className={navbarStyles.navbarItem}>
           <Link href="/kontakt" passHref>
             Kontakt
           </Link>

@@ -2,12 +2,16 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
+import { url } from "inspector";
 
 export default function Skjorteservice() {
   return (
     <>
       {/* Hero Section */}
-      <div className={styles.hero}>
+      <div
+        className={styles.hero}
+        style={{ backgroundImage: "url(/images/skjorte.jpg)" }}
+      >
         <h1>Din skjorte - vores ansvar</h1>
         <p>
           Perfekt rensede og strøgede skjorter – klar til enhver dag. Se,

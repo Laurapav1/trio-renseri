@@ -9,6 +9,8 @@ export default function Prices() {
   const service = searchParams.get("service");
 
   const skjorteservice = "skjorter";
+  const brudekjolerens = "brudekjolerens";
+  
   return (
     <>
       <PriceList
@@ -49,7 +51,7 @@ export default function Prices() {
           { name: "Benklæder", prices: ["119 DKK"] },
           { name: "Kjoler, korte", prices: ["fra 175 DKK"] },
           { name: "Kjoler, lange", prices: ["fra 195 DKK"] },
-          { name: "Kjoler, selskabs", prices: ["Efter aftale"] },
+          { name: "Kjoler, selskabs", prices: ["Efter aftale"], service: brudekjolerens},
           { name: "Nederdele, korte", prices: ["95 DKK"] },
           { name: "Nederdele, lange", prices: ["125 DKK"] },
           { name: "Nederdele, uld/plissé", prices: ["165 DKK"] },
