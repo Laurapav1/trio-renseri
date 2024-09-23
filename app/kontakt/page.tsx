@@ -32,7 +32,11 @@ export default function Kontakt() {
             />
             <select name="interest" className={styles.input} required>
               <option value="">Vælg en interesse</option>
-              <option value="tøj">Tøj</option>
+              <option value="omforandting af tøj">Tøj</option>
+              <option value="skjorteservide">Skjorteservice </option>
+              <option value="gardinservide">Gardinservice </option>
+              <option value="tæpperens">Tæpperens </option>
+              <option value="teksilrens">Tekstilrens</option>
               <option value="dyner">Dyner</option>
               <option value="selskabskjoler">Selskabskjoler</option>
             </select>

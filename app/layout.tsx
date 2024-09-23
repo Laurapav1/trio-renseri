@@ -25,7 +25,7 @@ function Navbar() {
     <nav className={navbarStyles.navbar}>
       <img
         className={navbarStyles.logo}
-        src="https://scontent-cph2-1.xx.fbcdn.net/v/t39.30808-6/305667099_463962259077392_3529188224974767746_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-goarPXqciAQ7kNvgFdeue6&_nc_ht=scontent-cph2-1.xx&oh=00_AYB_EwPPBsAU2UmvnHmcsw8yl5siu5xwszKywRM_mRA-wg&oe=66C61F03"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5AOrjhSd_rGMZ5POpNIqudoz7z9sjFis77Q&s"
         alt="Trio Renseri"
       />
       <ul className={navbarStyles.navbarList}>
@@ -44,11 +44,7 @@ function Navbar() {
             Priser
           </Link>
         </li>
-        <li className={navbarStyles.navbarItem}>
-          <Link href="/firmaRabar" passHref>
-            Firma Rabat
-          </Link>
-        </li>
+
         <li className={navbarStyles.navbarItem}>
           <Link href="/kontakt" passHref>
             Kontakt

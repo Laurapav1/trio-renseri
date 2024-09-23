@@ -2,21 +2,21 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: white;
+  background-color: #ffffff; /* Ren hvid baggrund */
   border-radius: 5px;
 }
 
 .prisliste {
-  background-color: hsl(0, 0%, 99%);
+  background-color: #fdf8f4; /* Lysere grå baggrund for prislisten */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 0.6rem rgba(0 0 0 / 0.25);
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtil skygge for mere dybde */
   text-align: center;
 }
 
 .prisliste h2 {
   font-size: 2rem;
-  color: #333;
+  color: #002366; /* Mørkeblå overskrift for elegance */
   margin-bottom: 3rem;
 }
 
@@ -27,31 +27,24 @@
 
 .prisliste ul li {
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1rem 0;
   font-size: 1.1rem;
-  color: #333;
+  border-bottom: 1px solid #d3d3d3; /* Tynd linje mellem elementer */
+  color: #333333; /* Mørkegrå tekst for et mere moderne udtryk */
+}
+
+.prisliste ul li:last-child {
+  border-bottom: none; /* Fjern linjen fra sidste element */
 }
 
 .prisliste ul li div {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.3rem;
-  font-size: 0.9rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
+  font-size: 1rem;
 }
 
 .prisliste ul li div:first-child {
-  font-size: 1rem;
   font-weight: 500;
-}
-
-.prisliste ul li div:last-child {
-  margin-bottom: 0;
-}
-
-.prisliste ul li:nth-child(odd) {
-  background-color: hsl(0, 0%, 94%);
 }
 
 .tilbud {
