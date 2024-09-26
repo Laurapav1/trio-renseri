@@ -1,5 +1,17 @@
+// page.tsx
+
+"use client";
+
+import React from "react";
 import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
 import styles from "./page.module.css";
+
+import "swiper/css/autoplay";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 export default function Home() {
   return (
@@ -21,7 +33,7 @@ export default function Home() {
         <div className={styles.gridContainer}>
           {/* Billedet til venstre */}
           <div className={styles.imageWrapper}>
-            <img src="/images/after-pants.jpg" alt="Laundry Process" />
+            <img src="/images/profil.jpg" alt="Laundry Process" />
           </div>
 
           {/* Teksten til højre */}
@@ -81,9 +93,64 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <Link href={"/priser?service=skjorter"} className={styles.ctaButton}>
+        <Link href={"/priser"} className={styles.ctaButton}>
           Se Priser
         </Link>
+      </section>
+
+      <section className={styles.serviceSection}>
+        <div className={styles.serviceBanner}>
+          <h1>Vi udfører</h1>
+        </div>
+        {/* Swiper Component */}
+        <Swiper
+          className={styles.mySwiper}
+          modules={[Autoplay, Navigation, Pagination]}
+          spaceBetween={30}
+          navigation
+          pagination={{ clickable: true }}
+          slidesPerView={1}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          loop={true}
+        >
+          {/* Slide 1 */}
+          <SwiperSlide>
+            <div className={styles.gridService}>
+              <div className={styles.swiperslidecontent}>
+                <img src="/images/skjorte.jpg" alt="Image 1" />
+              </div>
+              <div className={styles.textcontent}>
+                <div className={styles.iconTitle }>
+                  <img className={styles.icon}
+                    src="/images/shirt-icon.webp"
+                    alt="Icon"
+                  />
+                  <h2>Skjorte Service</h2>
+                </div>
+                <hr className={styles.divider} />
+                <p>✓ On-demand pickup and drop-off on your schedule</p>
+                <p>✓ Online order tracking and update notifications</p>
+                <p>✓ Regular pickup reminders at your request</p>
+              </div>
+            </div>
+          </SwiperSlide>
+          {/* Add more slides as needed */}
+
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <div className={styles.gridService}>
+              <div className={styles.swiperslidecontent}>
+                <img src="/images/before-pants.jpg" alt="Image 2" />
+              </div>
+              <div className={styles.textcontent}>
+                <h2>Gardin</h2>
+                <p>✓ Example point 1</p>
+                <p>✓ Example point 2</p>
+                <p>✓ Regular pickup reminders at your request</p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </section>
     </main>
   );

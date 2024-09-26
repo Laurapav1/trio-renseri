@@ -32,13 +32,14 @@
 
 .imageWrapper img {
   width: 70%;
+  padding-left: 70px;
   height: auto;
   border-radius: 10px; /* Tilføj afrundede hjørner for at matche stilen */
 }
 
 .textWrapper {
   text-align: left;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .textWrapper h2 {
@@ -108,6 +109,10 @@
 .icon img {
   width: 70px;
   height: auto;
+  background-color: #c5ac90;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 9px;
   margin-bottom: 15px;
 }
 
@@ -128,4 +133,75 @@
 
 .ctaButton:hover {
   background-color: #005bb5;
+}
+
+.serviceBanner h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #c5ac90;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 4.5;
+  color: #002366;
+  margin: 0;
+}
+/* Grid layout for image and text */
+.gridService {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 20px; /* Space between columns */
+  align-items: center;
+  padding: 20px;
+}
+
+/* Image container */
+.swiperslidecontent img {
+  width: 100%; /* Allows the image to scale responsively */
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Text content styles */
+.textcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the text */
+  justify-content: center; /* Center content vertically */
+  padding: 20px;
+  text-align: left; /* Center align text */
+}
+
+/* Icon and title styles */
+.iconTitle {
+  display: flex;
+  flex-direction: column; /* Stack icon and title vertically */
+  align-items: center;
+  gap: 10px; /* Space between icon and title */
+}
+
+.icon{
+  width: 30px; /* Adjust icon size */
+  height: 30px;
+}
+
+/* Divider line */
+.divider {
+  width: 300px;
+  height: 3px;
+  background-color: #c5ac90; /* Match color to design */
+  margin: 15px 0;
+}
+
+/* Header and paragraph text */
+.textcontent h2 {
+  font-size: 24px;
+  font-weight: bold; /* Make the text bold */
+  color: #002366; /* Custom color */
+  margin: 0;
+}
+
+.textcontent p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #555; /* Text color */
 }
