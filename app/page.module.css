@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Lad videoen fylde hele hero-sektionen */
+  height: 100vh;
   object-fit: cover;
 }
 /* Hero Section */
@@ -12,8 +12,8 @@
   align-items: center;
   height: 80vh;
   overflow: hidden;
-  margin-top: 0; /* Fjern margin */
-  padding-top: 0; /* Fjern padding */
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Process Section */
@@ -25,16 +25,14 @@
 /* Grid layout til billede og tekst */
 .gridContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* To kolonner */
-  gap: 30px; /* Afstand mellem kolonnerne */
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
   align-items: center;
 }
 
 .imageWrapper img {
-  width: 70%;
-  padding-left: 70px;
+  width: 100%;
   height: auto;
-  border-radius: 10px; /* Tilføj afrundede hjørner for at matche stilen */
 }
 
 .textWrapper {
@@ -54,21 +52,6 @@
   color: #555;
 }
 
-@media (max-width: 768px) {
-  /* Responsiv styling til små skærme */
-  .gridContainer {
-    grid-template-columns: 1fr; /* Skift til en kolonne på små skærme */
-  }
-
-  .imageWrapper {
-    margin-bottom: 20px;
-  }
-
-  .textWrapper {
-    padding-left: 0;
-  }
-}
-
 /* Steps Section */
 .stepsSection {
   padding: 60px 20px;
@@ -85,6 +68,7 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .step {
@@ -92,6 +76,7 @@
   padding: 20px;
   background-color: white;
   border-radius: 10px;
+  min-width: 12rem;
 }
 
 .step h3 {
@@ -135,29 +120,42 @@
   background-color: #005bb5;
 }
 
-.serviceBanner h1 {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: #c5ac90;
-  text-align: center;
-  font-size: 2rem;
-  line-height: 4.5;
-  color: #002366;
-  margin: 0;
+.serviceBanner {
+  background-color: #002366;
 }
+
+.serviceBanner h1 {
+  font-family: 'poppins', sans-serif !important;
+  font-weight: 300;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 4.5;
+  color: white;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 90px;
+}
+
 /* Grid layout for image and text */
 .gridService {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns */
-  gap: 20px; /* Space between columns */
+  grid-template-columns: 2fr 1fr; /* Two columns */
+  gap: 10px; /* Space between columns */
   align-items: center;
-  padding: 20px;
+  max-width: 1700px;
+}
+
+/* Image container */
+.swiperslidecontent {
+  padding-right: 10px; /* Reduce padding to make image extend more */
 }
 
 /* Image container */
 .swiperslidecontent img {
   width: 100%; /* Allows the image to scale responsively */
-  max-width: 600px;
-  height: 400px;
+  max-width: 900px;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -165,10 +163,7 @@
 .textcontent {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the text */
-  justify-content: center; /* Center content vertically */
-  padding: 20px;
-  text-align: left; /* Center align text */
+  align-items: center;
 }
 
 /* Icon and title styles */
@@ -176,32 +171,102 @@
   display: flex;
   flex-direction: column; /* Stack icon and title vertically */
   align-items: center;
-  gap: 10px; /* Space between icon and title */
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  width: 60%;
 }
 
-.icon{
-  width: 30px; /* Adjust icon size */
-  height: 30px;
+.serviceIcon {
+  width: 50px; /* Adjust icon size */
+  height: auto;
+  text-align: center;
 }
 
 /* Divider line */
 .divider {
-  width: 300px;
+  width: 600px;
   height: 3px;
-  background-color: #c5ac90; /* Match color to design */
-  margin: 15px 0;
+  background-color: #660500; /* Match color to design */
+  margin: 15px 0px;
+  transition: transform 0.3s ease;
 }
 
 /* Header and paragraph text */
 .textcontent h2 {
-  font-size: 24px;
-  font-weight: bold; /* Make the text bold */
-  color: #002366; /* Custom color */
-  margin: 0;
+  font-size: 45px;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #002366, #5977b2);
+  color: transparent; /* Custom color */
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .textcontent p {
   font-size: 16px;
   margin: 5px 0;
-  color: #555; /* Text color */
+  color: #555;
+  text-align: left;
+  width: 100%;
+}
+
+.ctaButtonService {
+  background-color: transparent; /* Transparent baggrund */
+  color: #002366; /* Mørk blå farve til teksten */
+  padding: 12px 25px;
+  border-radius: 5px; /* Let afrundede hjørner */
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid #002366; /* Mørk blå kant */
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+.ctaButtonService:hover {
+  background-color: #002366; /* Background changes on hover */
+  color: white; /* Text color changes */
+}
+
+@media (max-width: 768px) {
+  /* Responsiv styling til små skærme */
+  .gridContainer {
+    grid-template-columns: 1fr; /* Skift til en kolonne på små skærme */
+  }
+
+  .imageWrapper {
+    margin-bottom: 20px;
+  }
+
+  .textWrapper {
+    padding-left: 0;
+  }
+
+  /* not done */
+  /* Responsive styling for smaller screens */
+  @media (max-width: 768px) {
+    .gridService {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .textcontent {
+      max-width: 100%; /* Allow text content to take full width */
+    }
+
+    .textcontent h2 {
+      font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .textcontent p {
+      font-size: 0.9rem; /* Smaller font size for mobile */
+    }
+
+    .ctaButtonService {
+      font-size: 1rem; /* Smaller button text */
+    }
+  }
 }

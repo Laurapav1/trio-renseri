@@ -1,6 +1,8 @@
 "use client";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./kontakt.module.css";
+import { faEnvelope, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function Kontakt() {
   return (
@@ -9,27 +11,38 @@ export default function Kontakt() {
       <div className={styles.formContainer}>
         <div className={styles.formSection}>
           <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
-            <input
+            <div className={styles.inputContainer}>
+              <FontAwesomeIcon icon={faUser} className={styles.icon} />
+            <input 
+              className={styles.input}
               type="text"
               name="name"
               placeholder="Navn"
-              className={styles.input}
               required
             />
+            </div>
+            <div className={styles.inputContainer}>
+              <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
             <input
+              className={styles.input}
               type="email"
               name="email"
               placeholder="Email"
-              className={styles.input}
               required
             />
-            <input
+            </div>
+            <div className={styles.inputContainer}>
+              <FontAwesomeIcon icon={faPhone} className={styles.icon} />
+            <input 
+              className={styles.input}
               type="tel"
               name="phone"
               placeholder="Telefon"
-              className={styles.input}
               required
             />
+            </div>
+            <div className={styles.inputContainer}>
+
             <select name="interest" className={styles.input} required>
               <option value="">Vælg en interesse</option>
               <option value="omforandting af tøj">Tøj</option>
@@ -40,6 +53,7 @@ export default function Kontakt() {
               <option value="dyner">Dyner</option>
               <option value="selskabskjoler">Selskabskjoler</option>
             </select>
+            </div>
             <textarea
               name="message"
               placeholder="Besked"
@@ -52,10 +66,8 @@ export default function Kontakt() {
           </form>
         </div>
         <div className={styles.contactDetails}>
+          <h3>Trio Resneri</h3>
           <p>
-            <strong>Trio Renseri</strong>
-            <br />
-            <br />
             L. A. Rings Vej 19
             <br />
             8270, Højbjerg

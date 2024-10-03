@@ -76,7 +76,7 @@
   padding: 5px;
   background: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
@@ -106,7 +106,6 @@
   margin-bottom: 5px;
 }
 
-/* Steps Section */
 /* Steps Section */
 .steps {
   text-align: center;
