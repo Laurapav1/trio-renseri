@@ -1,5 +1,6 @@
 .container {
-  max-width: 1000px;
+  width: 90%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
@@ -9,6 +10,8 @@
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.6;
+  margin-bottom: 50px;
+  color: hsl(0, 0%, 29%)
 }
 
 .heading {
@@ -19,13 +22,15 @@
 
 .servicesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 30px;
+
 }
 
 .serviceCard {
   text-align: center;
   display: flex;
+  width: 100%;
   flex-direction: column;
   background-color: hsl(0, 0%, 96%);
 }
