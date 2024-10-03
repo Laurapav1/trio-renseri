@@ -280,7 +280,7 @@ export default function Home() {
           <SwiperSlide>
             <div className={styles.gridService}>
               <div className={styles.swiperslidecontent}>
-                <img src="/images/vaske.jpg" alt="Vaske/Rulle Service" />
+                <img src="/images/table.jpg" alt="Vaske/Rulle Service" />
               </div>
               <div className={styles.textcontent}>
                 <div className={styles.iconTitle}>

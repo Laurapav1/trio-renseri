@@ -20,17 +20,40 @@
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
 .serviceCard {
-  background-color: #f9f9f9;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 96%);
 }
 
-.serviceCard:hover{
+.serviceImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+.serviceTitleContainer {
+  background-color: #002366;
+  padding: 10px;
+  margin-top: -4px;
+}
+
+.serviceCardHeading {
+  color: white;
+  margin: 0;
+}
+
+.serviceDescription {
+  font-size: 1rem;
+  color: #555;
+}
+
+.serviceCard:hover {
   background-color: #eaeaea;
 }
 
@@ -42,12 +65,15 @@
 }
 
 .serviceCard h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 400;
   text-decoration: none;
+  letter-spacing: 0.7px;
 }
 
 .serviceCard p {
   font-size: 1rem;
   color: #555;
+  margin: 20px;
+  line-height: 1.2;
 }
