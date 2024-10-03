@@ -1,3 +1,4 @@
+/* globals.css */
 .container {
   width: 90%;
   max-width: 1400px;
@@ -11,7 +12,7 @@
   font-size: 1.25rem;
   line-height: 1.6;
   margin-bottom: 50px;
-  color: hsl(0, 0%, 29%)
+  color: hsl(0, 0%, 29%);
 }
 
 .heading {
@@ -24,7 +25,6 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   gap: 30px;
-
 }
 
 .serviceCard {
@@ -62,7 +62,6 @@
   background-color: #eaeaea;
 }
 
-/* fjerne linjen under links */
 .serviceLink {
   text-decoration: none;
   color: inherit;

@@ -9,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  background-color: #f0f4f8;
+  background-color: hsl(219, 100%, 20%);
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
