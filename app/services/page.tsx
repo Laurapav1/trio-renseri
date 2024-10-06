@@ -81,32 +81,14 @@ interface ServiceCardProps {
   imgURL: string;
 }
 
-function ServiceCard2({ title, description, link, imgURL }: ServiceCardProps) {
-  return (
-    <Link href={link} className={styles.serviceLink}>
-      <div className={styles.serviceCard}>
-        {" "}
-        <h2 className={styles.serviceCardHeading}>{title}</h2>
-        <p>{description}</p>
-      </div>
-    </Link>
-  );
-}
-
 function ServiceCard({ title, description, link, imgURL }: ServiceCardProps) {
   return (
-    <div className={styles.serviceCard}>
-      <Link href={link} className={styles.serviceLink}>
-        <img src={imgURL} alt={title} className={styles.serviceImage} />
-        <div className={styles.serviceTitleContainer}>
-          <h2 className={styles.serviceCardHeading}>{title}</h2>
-        </div>
-        <div className={styles.serviceCard}>
-          {" "}
-          <h2 className={styles.serviceCardHeading}></h2>
-          <p>{description}</p>
-        </div>
-      </Link>
-    </div>
+    <Link href={link} className={styles.serviceCard}>
+      <img src={imgURL} alt={title} className={styles.serviceImage} />
+      <div className={styles.serviceTitleContainer}>
+        <h2 className={styles.serviceCardHeading}>{title}</h2>
+      </div>
+      <p>{description}</p>
+    </Link>
   );
 }
