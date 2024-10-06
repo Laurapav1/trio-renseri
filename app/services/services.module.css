@@ -43,7 +43,7 @@
 }
 
 .serviceTitleContainer {
-  background-color: #002366;
+  background-color: var(--accent-color);
   padding: 10px;
   margin-top: -4px;
 }

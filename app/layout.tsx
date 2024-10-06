@@ -25,7 +25,7 @@ function Navbar() {
     <nav className={navbarStyles.navbar}>
       <img
         className={navbarStyles.logo}
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5AOrjhSd_rGMZ5POpNIqudoz7z9sjFis77Q&s"
+        src="/images/logo.svg"
         alt="Trio Renseri"
       />
       <ul className={navbarStyles.navbarList}>

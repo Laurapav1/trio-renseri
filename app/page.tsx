@@ -16,18 +16,6 @@ import "swiper/css/pagination";
 export default function Home() {
   return (
     <main>
-      {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.contents}></div>
-        <video
-          src="/videos/hero.mp4"
-          autoPlay
-          muted
-          loop
-          className={styles.video}
-        />
-      </section>
-
       {/* Process Section */}
       <section className={styles.processSection}>
         <div className={styles.gridContainer}>
@@ -100,11 +88,6 @@ export default function Home() {
 
       <section className={styles.serviceSection}>
         <div className={styles.serviceBanner}>
-          <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://fonts.googleapis.com/css?family=Poppins"
-          />
           <h1>Vi udfører</h1>
         </div>
         {/* Swiper Component */}

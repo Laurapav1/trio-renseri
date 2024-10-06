@@ -16,7 +16,7 @@
 
 .prisliste h2 {
   font-size: 2rem;
-  color: #002366; /* Mørkeblå overskrift for elegance */
+  color: var(--accent-color); /* Mørkeblå overskrift for elegance */
   margin-bottom: 3rem;
 }
 

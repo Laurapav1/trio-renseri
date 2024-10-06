@@ -1,6 +1,5 @@
 .footer {
-  background-color: hsl(0, 0%, 92%); /* Lys grå baggrund */
-  color: #333; /* Mørkegrå tekstfarve */
+  background-color: hsl(0, 0%, 92%);
   padding: 2rem;
   text-align: center;
 }
@@ -22,7 +21,6 @@
   margin-bottom: 1rem;
   text-transform: uppercase;
   font-size: 1.2rem;
-  color: #333;
 }
 
 .footerSection li {
@@ -43,6 +41,7 @@
   margin-top: 0;
   height: 35px !important;
   width: 35px !important;
+  padding: 0px;
 }
 
 .socialIcon:hover {
