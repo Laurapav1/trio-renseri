@@ -7,10 +7,9 @@
 }
 
 .prisliste {
-  background-color: #fdf8f4; /* Lysere grå baggrund for prislisten */
+  background-color: #fdf8f4; 
   padding: 20px;
   border-radius: 8px;
-  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtil skygge for mere dybde */
   text-align: center;
 }
 
@@ -29,12 +28,12 @@
   justify-content: space-between;
   padding: 1rem 0;
   font-size: 1.1rem;
-  border-bottom: 1px solid #d3d3d3; /* Tynd linje mellem elementer */
-  color: #333333; /* Mørkegrå tekst for et mere moderne udtryk */
+  border-bottom: 1px solid #d3d3d3; 
+  color: #333333; 
 }
 
 .prisliste ul li:last-child {
-  border-bottom: none; /* Fjern linjen fra sidste element */
+  border-bottom: none; 
 }
 
 .prisliste ul li div {
