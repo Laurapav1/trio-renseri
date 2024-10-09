@@ -1,13 +1,19 @@
-/* globals.css */
 .container {
-  margin: 40px;
+  margin: 16rem;
+  margin-top: 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    margin: 3rem;
+  }
 }
 
 .intro {
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.6;
-  margin-bottom: 50px;
+  margin-bottom: 4rem;
 }
 
 .heading {
