@@ -3,21 +3,17 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import { url } from "inspector";
+import HeroSection from "@/app/components/hero-section";
 
 export default function Skjorteservice() {
   return (
     <>
       {/* Hero Section */}
-      <div
-        className={styles.hero}
-        style={{ backgroundImage: "url(/images/skjorte.jpg)" }}
-      >
-        <h1>Din skjorte - vores ansvar</h1>
-        <p>
-          Perfekt rensede og strøgede skjorter – klar til enhver dag. Se,
-          hvordan vi gør dine skjorter klar fra start til slut.
-        </p>
-      </div>
+      <HeroSection
+        text="Tilpasning af dit tøj - vores ekspertise"
+        img="/images/skjorte.jpg"
+      />
+
 
       <div className={styles.container}>
         {/* Introduction and Box Section */}

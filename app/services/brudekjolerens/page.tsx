@@ -2,21 +2,16 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
+import HeroSection from "@/app/components/hero-section";
 
 export default function Brudekjolerens() {
   return (
     <>
       {/* Hero Section */}
-      <div
-        className={styles.hero}
-        style={{ backgroundImage: "url(/images/brudekjole.jpg)" }}
-      >
-        <h1>Din brudekjole - vores ansvar</h1>
-        <p>
-          Specialrensning af brudekjoler for at bevare deres skønhed og
-          elegance. Se, hvordan vi behandler din kjole med den største omhu.
-        </p>
-      </div>
+      <HeroSection
+        text="Tilpasning af dit tøj - vores ekspertise"
+        img="/images/bridedress2.jpg"
+      />
 
       <div className={styles.container}>
         {/* Introduction and Box Section */}

@@ -2,18 +2,13 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
+import HeroSection from "@/app/components/hero-section";
 
 export default function Vaskerulleservice() {
   return (
     <>
       {/* Hero Section */}
-      <div className={styles.hero}>
-        <h1>Dit vasketøj - vores ekspertise</h1>
-        <p>
-          Lad os tage os af dit vasketøj. Vi sørger for, at det altid er klar
-          til brug, perfekt vasket og rullet.
-        </p>
-      </div>
+      <HeroSection text="Din dug - vores ekspertise" img="/images/dug2.jpg" />
 
       <div className={styles.container}>
         {/* Introduction and Box Section */}

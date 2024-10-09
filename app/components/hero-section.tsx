@@ -4,14 +4,15 @@ import styles from "./hero-section.module.css";
 
 interface HeroSectionProps {
     text: string;
+    img: string;
 }
 
-function HeroSection({ text }: HeroSectionProps) {
+function HeroSection({ text, img }: HeroSectionProps) {
     return (
         <div className={styles.heroSection}>
             <div className={styles.overlay}></div>
             <Image
-                src="/images/hero-section-image.jpg"
+                src={img}
                 alt="Hero Background"
                 layout="fill"
                 objectFit="cover"

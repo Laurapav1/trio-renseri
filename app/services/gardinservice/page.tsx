@@ -2,18 +2,16 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
+import HeroSection from "@/app/components/hero-section";
 
 export default function Gardinservice() {
   return (
     <>
       {/* Hero Section */}
-      <div className={styles.hero}>
-        <h1>Dine gardiner - vores ansvar</h1>
-        <p>
-          Få dine gardiner til at se ud som nye med vores professionelle
-          renseservice. Se, hvordan vi gør det.
-        </p>
-      </div>
+      <HeroSection
+        text="Dine gardiner - vores ansvar"
+        img="/images/curtains2.jpg"
+      />
 
       <div className={styles.container}>
         {/* Introduction and Box Section */}

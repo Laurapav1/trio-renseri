@@ -2,21 +2,17 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
+import HeroSection from "@/app/components/hero-section";
 
 export default function Taepperens() {
   return (
     <>
       {/* Hero Section */}
-      <div
-        className={styles.hero}
-        style={{ backgroundImage: "url(/images/tæppe.jpg)" }}
-      >
-        <h1>Dit tæppe - vores ekspertise</h1>
-        <p>
-          Vi tilbyder professionel rensning af tæpper for at fjerne snavs og
-          pletter, så dine tæpper ser ud som nye.
-        </p>
-      </div>
+      {/* Hero Section */}
+      <HeroSection
+        text="Dit tæppe - vores ekspertise"
+        img="/images/tæppe.jpg"
+      />
 
       <div className={styles.container}>
         {/* Introduction and Box Section */}

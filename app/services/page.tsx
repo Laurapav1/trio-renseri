@@ -6,7 +6,7 @@ import HeroSection from "../components/hero-section";
 export default function Services() {
   return (
     <>
-      <HeroSection text="Vores ydelser" />
+      <HeroSection text="Vores ydelser" img="/images/hero-section-image.jpg" />
       <div className={styles.container}>
         <p className={styles.intro}>
           Velkommen til Trio Renseri – din pålidelige partner til hverdagens

@@ -2,31 +2,32 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
+import HeroSection from "@/app/components/hero-section";
 
 export default function Omforandring() {
   return (
     <>
       {/* Hero Section */}
-      <div className={styles.hero}>
-        <h1>Tilpasning af dit tøj - vores ekspertise</h1>
-        <p>
-          Få dit tøj til at sidde perfekt med vores omforandringstjenester. Se vores processer og hvordan vi tilpasser dit tøj.
-        </p>
-      </div>
+      <HeroSection
+        text="Tilpasning af dit tøj - vores ekspertise"
+        img="/images/sew3.jpg"
+      />
 
       <div className={styles.container}>
         {/* Introduction and Box Section */}
         <div className={styles.introContainer}>
           <div className={styles.intro}>
             <p>
-              Vores skræddere er specialiserede i tilpasning og omforandring af alle typer tøj, 
-              så det passer perfekt til dig. Vi sørger for, at hver eneste søm er præcis, hvor den skal være.
+              Vores skræddere er specialiserede i tilpasning og omforandring af
+              alle typer tøj, så det passer perfekt til dig. Vi sørger for, at
+              hver eneste søm er præcis, hvor den skal være.
             </p>
           </div>
           <div className={styles.serviceBox}>
             <h2>OMFORANDRING AF TØJ</h2>
             <p>
-              Vi tilbyder alt fra simple ændringer som oplægning af bukser til mere komplekse justeringer som taljering af jakkesæt.
+              Vi tilbyder alt fra simple ændringer som oplægning af bukser til
+              mere komplekse justeringer som taljering af jakkesæt.
             </p>
             <h3>Pris i alt (tilpasset og syet):</h3>
             <ul>
@@ -47,13 +48,19 @@ export default function Omforandring() {
             </div>
 
             <div className={styles.step}>
-              <img src="/images/step2-omforandring.jpg" alt="Trin 2 - Tilpasning" />
+              <img
+                src="/images/step2-omforandring.jpg"
+                alt="Trin 2 - Tilpasning"
+              />
               <h3>Trin 2: Tilpasning</h3>
               <p>Tøjet tilpasses efter dine mål og ønsker.</p>
             </div>
 
             <div className={styles.step}>
-              <img src="/images/step3-omforandring.jpg" alt="Trin 3 - Afsluttende Detaljer" />
+              <img
+                src="/images/step3-omforandring.jpg"
+                alt="Trin 3 - Afsluttende Detaljer"
+              />
               <h3>Trin 3: Afsluttende Detaljer</h3>
               <p>Tøjet gennemgås for den endelige finish og detaljer.</p>
             </div>
@@ -63,7 +70,10 @@ export default function Omforandring() {
         {/* Call to Action Section */}
         <div className={styles.cta}>
           <h2>Klar til en skræddersyet pasform?</h2>
-          <Link href={"/priser?service=omforandring"} className={styles.ctaButton}>
+          <Link
+            href={"/priser?service=omforandring"}
+            className={styles.ctaButton}
+          >
             Se Priser
           </Link>
         </div>

@@ -2,18 +2,16 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
+import HeroSection from "@/app/components/hero-section";
 
 export default function Daabskjolevask() {
   return (
     <>
       {/* Hero Section */}
-      <div className={styles.hero}>
-        <h1>Din dåbskjole - vores ansvar</h1>
-        <p>
-          Vi vasker og plejer dåbskjoler med stor omhu for at bevare deres arv.
-          Se vores proces.
-        </p>
-      </div>
+      <HeroSection
+        text="Din dåbskjole - vores ansvar"
+        img="/images/dress.jpg"
+      />
 
       <div className={styles.container}>
         {/* Introduction and Box Section */}
