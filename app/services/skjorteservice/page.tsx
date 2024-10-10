@@ -14,7 +14,6 @@ export default function Skjorteservice() {
         img="/images/skjorte.jpg"
       />
 
-
       <div className={styles.container}>
         {/* Introduction and Box Section */}
         <div className={styles.introContainer}>
@@ -41,31 +40,42 @@ export default function Skjorteservice() {
           </div>
         </div>
 
-        {/* Modern Steps Section */}
+        {/* Process Section */}
         <div className={styles.steps}>
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
-            <div className={styles.step}>
+            <div className={styles.process}>
               <img
                 src="/images/step1-skjorte.jpeg"
                 alt="Trin 1 - Før rengøring"
               />
-              <h3>Trin 1: Før rengøring</h3>
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>
+                  Trin 1: Før rengøring{" "}
+                </h3>
+              </div>
               <p>Vi inspicerer dine skjorter for pletter og skader.</p>
             </div>
 
-            <div className={styles.step}>
+            <div className={styles.process}>
               <img src="/images/step2-cleaning.jpg" alt="Trin 2 - Rensning" />
-              <h3>Trin 2: Rensning</h3>
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
+              </div>
               <p>Skjorterne gennemgår vores professionelle rensningsproces.</p>
             </div>
 
-            <div className={styles.step}>
+            <div className={styles.process}>
               <img
                 src="/images/step3-after.png"
                 alt="Trin 3 - Efter strygning"
               />
-              <h3>Trin 3: Efter strygning</h3>
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>
+                  Trin 3: Efter strygning
+                </h3>
+              </div>
+
               <p>Skjorterne stryges for at få dem til at se perfekte ud.</p>
             </div>
           </div>
