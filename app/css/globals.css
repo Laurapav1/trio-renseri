@@ -1,7 +1,7 @@
 :root {
   --background-color: hsl(0, 0%, 100%);
   --secondary-background-color: hsl(0, 0%, 96%);
-  --accent-color: hsl(219, 100%, 20%);
+  --accent-color: hsl(219, 80%, 16%);
   --text-color: hsl(0, 0%, 25%);
   --heading-color: hsl(0, 0%, 10%);
 }

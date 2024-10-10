@@ -23,11 +23,13 @@ export default function RootLayout({
 function Navbar() {
   return (
     <nav className={navbarStyles.navbar}>
-      <img
-        className={navbarStyles.logo}
-        src="/images/logo.svg"
-        alt="Trio Renseri"
-      />
+      <a href="/" className={navbarStyles.navbarLogoLink}>
+        <img
+          className={navbarStyles.logo}
+          src="/images/logo.svg"
+          alt="Trio Renseri"
+        />
+      </a>
       <ul className={navbarStyles.navbarList}>
         <li className={navbarStyles.navbarItem}>
           <Link href="/" passHref>
