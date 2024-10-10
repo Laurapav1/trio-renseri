@@ -42,27 +42,35 @@ export default function Taepperens() {
         <div className={styles.steps}>
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
-            <div className={styles.step}>
+            <div className={styles.process}>
               <img
                 src="/images/step1-taepperens.jpg"
                 alt="Trin 1 - Inspektion"
               />
-              <h3>Trin 1: Inspektion</h3>
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>Trin 1: Inspektion</h3>
+              </div>
               <p>Inspektion af tæppet for pletter og skader.</p>
             </div>
 
-            <div className={styles.step}>
+            <div className={styles.process}>
               <img src="/images/step2-taepperens.jpg" alt="Trin 2 - Rensning" />
-              <h3>Trin 2: Rensning</h3>
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
+              </div>
               <p>Tæppet rengøres med specielle teknikker og produkter.</p>
             </div>
 
-            <div className={styles.step}>
+            <div className={styles.process}>
               <img
                 src="/images/step3-taepperens.jpg"
                 alt="Trin 3 - Efterbehandling"
               />
-              <h3>Trin 3: Efterbehandling</h3>
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>
+                  Trin 3: Efterbehandling
+                </h3>
+              </div>
               <p>Tæppet tørres og efterbehandles for et friskt udseende.</p>
             </div>
           </div>

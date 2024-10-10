@@ -41,27 +41,33 @@ export default function Omforandring() {
         <div className={styles.steps}>
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
-            <div className={styles.step}>
-              <img src="/images/step1-omforandring.jpg" alt="Trin 1 - Måling" />
-              <h3>Trin 1: Måling</h3>
+            <div className={styles.process}>
+              <img src="/images/målingSy2.jpg" alt="Trin 1 - Måling" />
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>Trin 1: Måling</h3>
+              </div>
+
               <p>Vi tager nøjagtige mål for at sikre en perfekt pasform.</p>
             </div>
 
-            <div className={styles.step}>
-              <img
-                src="/images/step2-omforandring.jpg"
-                alt="Trin 2 - Tilpasning"
-              />
-              <h3>Trin 2: Tilpasning</h3>
+            <div className={styles.process}>
+              <img src="/images/tilpasningSy.jpg" alt="Trin 2 - Tilpasning" />
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>Trin 2: Tilpasning</h3>
+              </div>
               <p>Tøjet tilpasses efter dine mål og ønsker.</p>
             </div>
 
-            <div className={styles.step}>
+            <div className={styles.process}>
               <img
-                src="/images/step3-omforandring.jpg"
+                src="/images/færdigSy2.jpg"
                 alt="Trin 3 - Afsluttende Detaljer"
               />
-              <h3>Trin 3: Afsluttende Detaljer</h3>
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>
+                  Trin 3: Afsluttende Detaljer
+                </h3>
+              </div>
               <p>Tøjet gennemgås for den endelige finish og detaljer.</p>
             </div>
           </div>

@@ -40,35 +40,42 @@ export default function DynePudeVask() {
           </div>
         </div>
 
-        {/* Modern Steps Section */}
-        <div className={styles.steps}>
-          <h2>Processen</h2>
-          <div className={styles.stepGrid}>
-            <div className={styles.step}>
-              <img
-                src="/images/step1-duvet-inspection.jpg"
-                alt="Trin 1 - Før vask"
-              />
-              <h3>Trin 1: Før vask</h3>
-              <p>Vi inspicerer dine dyner og puder for pletter og skader.</p>
-            </div>
+    {/* Modern Steps Section */}
+<div className={styles.steps}>
+  <h2>Processen</h2>
+  <div className={styles.stepGrid}>
+    <div className={styles.process}>
+      <img
+        src="/images/step1-duvet-inspection.jpg"
+        alt="Trin 1 - Før vask"
+      />
+      <div className={styles.processContainer}>
+        <h3 className={styles.processHeading}>Trin 1: Før vask</h3>
+      </div>
+      <p>Vi inspicerer dine dyner og puder for pletter og skader.</p>
+    </div>
 
-            <div className={styles.step}>
-              <img src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
-              <h3>Trin 2: Vask</h3>
-              <p>Dyner og puder gennemgår vores skånsomme vaskemetoder.</p>
-            </div>
+    <div className={styles.process}>
+      <img src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
+      <div className={styles.processContainer}>
+        <h3 className={styles.processHeading}>Trin 2: Vask</h3>
+      </div>
+      <p>Dyner og puder gennemgår vores skånsomme vaskemetoder.</p>
+    </div>
 
-            <div className={styles.step}>
-              <img src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
-              <h3>Trin 3: Tørring</h3>
-              <p>
-                Vi tørrer dine dyner og puder grundigt, så de forbliver friske
-                og bløde.
-              </p>
-            </div>
-          </div>
-        </div>
+    <div className={styles.process}>
+      <img src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
+      <div className={styles.processContainer}>
+        <h3 className={styles.processHeading}>Trin 3: Tørring</h3>
+      </div>
+      <p>
+        Vi tørrer dine dyner og puder grundigt, så de forbliver friske
+        og bløde.
+      </p>
+    </div>
+  </div>
+</div>
+
 
         {/* Call to Action Section */}
         <div className={styles.cta}>

@@ -37,32 +37,36 @@ export default function Gardinservice() {
           </div>
         </div>
 
-        {/* Modern Steps Section */}
-        <div className={styles.steps}>
-          <h2>Processen</h2>
-          <div className={styles.stepGrid}>
-            <div className={styles.step}>
-              <img src="/images/step1-gardin.jpg" alt="Trin 1 - Inspektion" />
-              <h3>Trin 1: Inspektion</h3>
-              <p>Vi inspicerer gardinerne for støv og pletter.</p>
-            </div>
+      {/* Modern Steps Section */}
+<div className={styles.steps}>
+  <h2>Processen</h2>
+  <div className={styles.stepGrid}>
+    <div className={styles.process}>
+      <img src="/images/step1-gardin.jpg" alt="Trin 1 - Inspektion" />
+      <div className={styles.processContainer}>
+        <h3 className={styles.processHeading}>Trin 1: Inspektion</h3>
+      </div>
+      <p>Vi inspicerer gardinerne for støv og pletter.</p>
+    </div>
 
-            <div className={styles.step}>
-              <img src="/images/step2-gardin.jpg" alt="Trin 2 - Rensning" />
-              <h3>Trin 2: Rensning</h3>
-              <p>Gardinerne gennemgår en skånsom rensningsproces.</p>
-            </div>
+    <div className={styles.process}>
+      <img src="/images/step2-gardin.jpg" alt="Trin 2 - Rensning" />
+      <div className={styles.processContainer}>
+        <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
+      </div>
+      <p>Gardinerne gennemgår en skånsom rensningsproces.</p>
+    </div>
 
-            <div className={styles.step}>
-              <img
-                src="/images/step3-gardin.jpg"
-                alt="Trin 3 - Strygning og Efterbehandling"
-              />
-              <h3>Trin 3: Strygning og Efterbehandling</h3>
-              <p>Gardinerne stryges og hænges forsigtigt op.</p>
-            </div>
-          </div>
-        </div>
+    <div className={styles.process}>
+      <img src="/images/step3-gardin.jpg" alt="Trin 3 - Strygning og Efterbehandling" />
+      <div className={styles.processContainer}>
+        <h3 className={styles.processHeading}>Trin 3: Strygning og Efterbehandling</h3>
+      </div>
+      <p>Gardinerne stryges og hænges forsigtigt op.</p>
+    </div>
+  </div>
+</div>
+
 
         {/* Call to Action Section */}
         <div className={styles.cta}>

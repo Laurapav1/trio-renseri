@@ -42,13 +42,13 @@
 }
 
 .serviceBox {
-  flex: 1; /* Sørger for, at boksen får plads ved siden af introduktionen */
+  flex: 1;
   max-width: 38%;
-  padding: 5px;
-  background: #f9f9f9;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  position: relative;
+  background-size: cover;
 }
 
 .serviceBox h2 {
@@ -138,17 +138,7 @@
   margin-top: 50px;
 }
 
-.cta a {
-  background-color: #0070f3;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 15px;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
+
 
 .cta h2 {
   font-size: 2rem;

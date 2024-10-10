@@ -60,7 +60,8 @@ export default function Skjorteservice() {
             <div className={styles.process}>
               <img src="/images/step2-cleaning.jpg" alt="Trin 2 - Rensning" />
               <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
+                <h3 className={styles.processHeading}>
+                  Trin 2: Rensning</h3>
               </div>
               <p>Skjorterne gennemgår vores professionelle rensningsproces.</p>
             </div>
