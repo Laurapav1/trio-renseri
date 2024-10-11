@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import styles from "./page.module.css";
-
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -93,7 +92,7 @@ export default function Home() {
         {/* Swiper Component */}
         <Swiper
           className={styles.mySwiper}
-          modules={[Navigation, Pagination]}
+          modules={[Autoplay, Navigation, Pagination]}
           spaceBetween={30}
           navigation={true}
           navigation-next-el=".custom-next-button"

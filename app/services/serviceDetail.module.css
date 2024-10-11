@@ -117,13 +117,9 @@
 
 /* CTA Button */
 .ctaButton {
-  background-color: #0070f3;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 15px;
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
   font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
   display: inline-block;
@@ -131,11 +127,11 @@
 }
 
 .ctaButton:hover {
-  background-color: #005bb5;
+  background-color: hsl(210, 100%, 35%);
 }
 
 .cta {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 
