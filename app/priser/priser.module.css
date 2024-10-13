@@ -1,64 +1,50 @@
-.container {
-  margin: 24rem;
-  margin-top: 4rem;
-}
-
 @media screen and (max-width: 1200px) {
   .container {
     margin: 3rem;
   }
 }
 
-.prislisteContainer {
+.container {
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  border-radius: 5px;
+}
+
+.prislisteContainer {
+  margin-top: 2rem;
 }
 
 .prisliste h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1.3rem;
   color: #333;
-  position: relative;
-}
-
-.prisliste h2::before,
-.prisliste h2::after {
-  content: "";
-  flex: 1;
-  border-bottom: 1.5px solid #b3b3b3;
-  margin: 0 15px;
+  background-color: var(--accent-color);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .prisliste ul {
-  background-color: hsl(0, 0%, 98%);
-  margin: 4rem 6rem;
   list-style-type: none;
-  padding: 1rem;
+  padding: 0;
+  margin-bottom: 0;
 }
 
 .prisliste ul li {
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 9px;
   font-size: 1.1rem;
   border-bottom: 1px solid #d3d3d3;
   color: #333333;
-}
-
-.prisliste ul li:last-child {
-  border-bottom: none;
 }
 
 .prisliste ul li div {
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
-}
-
-.prisliste ul li div:first-child {
-  font-weight: 500;
 }
 
 .tilbud {
@@ -73,26 +59,34 @@
   font-weight: bold;
 }
 
-.highlighted {
-  color: blue;
-  font-weight: bold;
-}
-
 .tilbudContainer {
-  margin-top: 40px;
+  background: linear-gradient(
+    135deg,
+    #3d7cc4,
+    #0e2b50
+  ); /* Blå gradient baggrund */
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  color: white; /* Gør teksten hvid for bedre kontrast */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 5rem;
 }
 
 .tilbudContainer h3 {
-  font-size: 1.8rem;
+  font-size: 2rem; /* Gør overskriften større for mere opmærksomhed */
+  font-weight: bold;
   margin-bottom: 10px;
-  color: #2f22e6;
+  text-transform: uppercase; /* Gør teksten til store bogstaver for at understrege tilbuddet */
 }
 
 .tilbudContainer p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 1.2rem; /* Forstør teksten for bedre læsbarhed */
+  margin: 0;
+  font-weight: 500;
+}
+
+.highlighted {
+  color: var(--accent-color);
+  font-weight: bold;
 }
