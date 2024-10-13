@@ -14,7 +14,7 @@ export default function Prices() {
 
   return (
     <>
-      <HeroSection text="Prisliste" img="/images/money2.jpg" />
+      <HeroSection text="Priser" img="/images/money2.jpg" />
       <div className={styles.container}>
         <PriceList
           heading="Herretøj"
