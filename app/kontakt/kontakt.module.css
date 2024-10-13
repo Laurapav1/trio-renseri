@@ -7,14 +7,19 @@
 
 .formContainer {
   margin: 0px 1rem;
-  width: 30rem;
+  width: 34vw;
+}
+
+@media (max-width: 1200px) {
+  .formContainer {
+    width: 80vw;
+  }
 }
 
 .inputContainer {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
 }
 
 .icon {
@@ -56,11 +61,14 @@
   flex-direction: column;
 }
 
+.form > * {
+  margin-bottom: 1rem;
+}
+
 .button {
   padding: 10px;
-  margin: 10px 0;
   font-size: 1rem;
-  background-color: hsl(240, 55%, 40%);
+  background-color: var(--accent-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -69,13 +77,14 @@
 }
 
 .button:hover {
-  background-color: hsl(240, 55%, 50%);
+  background-color: var(--accent-highlight-color);
 }
 
 .contactDetails {
   padding: 10px;
   background-color: #f8f8f8;
   border-radius: 5px;
+  text-align: center;
 }
 
 .contactDetails h3 {

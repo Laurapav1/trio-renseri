@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import styles from "./priser.module.css";
 import { useParams, useSearchParams } from "next/navigation";
-import HeroSection from "../components/hero-section";
+import HeroSection from "../components/hero-section/hero-section";
 
 export default function Prices() {
   const searchParams = useSearchParams();
@@ -108,19 +108,16 @@ function PriceList({ heading, items, service }: PriceListContentProps) {
         <h2>{heading}</h2>
         <ul>
           {items.map((item) => (
-            <li key={item.name}>
-              {item.prices.map((price) => (
-                <div>
-                  <span
-                    className={
-                      service === item.service ? styles.highlighted : ""
-                    }
-                  >
-                    {item.name}
-                  </span>
-                  <span>{price}</span>
-                </div>
-              ))}
+            <li
+              key={item.name}
+              className={service === item.service ? styles.highlighted : ""}
+            >
+              <span>{item.name}</span>
+              <div>
+                {item.prices.map((price) => (
+                  <div>{price}</div>
+                ))}
+              </div>
             </li>
           ))}
         </ul>

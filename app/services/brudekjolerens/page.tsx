@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
-import HeroSection from "@/app/components/hero-section";
+import HeroSection from "@/app/components/hero-section/hero-section";
 
 export default function Brudekjolerens() {
   return (

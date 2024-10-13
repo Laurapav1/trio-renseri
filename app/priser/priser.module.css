@@ -23,7 +23,7 @@
   background-color: var(--accent-color);
   color: white;
   padding: 1rem;
-  border-radius: 2rem;
+  border-radius: 0.2rem;
   display: flex;
   justify-content: center;
 }
@@ -35,6 +35,7 @@
 }
 
 .prisliste ul li {
+  display: flex;
   justify-content: space-between;
   padding: 9px;
   font-size: 1.1rem;
@@ -42,8 +43,11 @@
   color: #333333;
 }
 
+.prisliste ul li:hover {
+  background-color: hsl(0, 0%, 98%);
+}
+
 .prisliste ul li div {
-  display: flex;
   justify-content: space-between;
   font-size: 1rem;
 }
@@ -90,4 +94,5 @@
 .highlighted {
   color: var(--accent-color);
   font-weight: bold;
+  background-color: hsl(0, 0%, 98%);
 }

@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
-import HeroSection from "@/app/components/hero-section";
+import HeroSection from "@/app/components/hero-section/hero-section";
 
 export default function Daabskjolevask() {
   return (
@@ -35,36 +35,40 @@ export default function Daabskjolevask() {
           </div>
         </div>
 
-       {/* Modern Steps Section */}
-<div className={styles.steps}>
-  <h2>Processen</h2>
-  <div className={styles.stepGrid}>
-    <div className={styles.process}>
-      <img src="/images/step1-daabskjole.jpg" alt="Trin 1 - Før vask" />
-      <div className={styles.processContainer}>
-        <h3 className={styles.processHeading}>Trin 1: Før vask</h3>
-      </div>
-      <p>Inspektion af dåbskjolen for skader og pletter.</p>
-    </div>
+        {/* Modern Steps Section */}
+        <div className={styles.steps}>
+          <h2>Processen</h2>
+          <div className={styles.stepGrid}>
+            <div className={styles.process}>
+              <img src="/images/step1-daabskjole.jpg" alt="Trin 1 - Før vask" />
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>Trin 1: Før vask</h3>
+              </div>
+              <p>Inspektion af dåbskjolen for skader og pletter.</p>
+            </div>
 
-    <div className={styles.process}>
-      <img src="/images/step2-daabskjole.jpg" alt="Trin 2 - Vask" />
-      <div className={styles.processContainer}>
-        <h3 className={styles.processHeading}>Trin 2: Vask</h3>
-      </div>
-      <p>Kjolen vaskes skånsomt med specielle midler.</p>
-    </div>
+            <div className={styles.process}>
+              <img src="/images/step2-daabskjole.jpg" alt="Trin 2 - Vask" />
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>Trin 2: Vask</h3>
+              </div>
+              <p>Kjolen vaskes skånsomt med specielle midler.</p>
+            </div>
 
-    <div className={styles.process}>
-      <img src="/images/step3-daabskjole.jpg" alt="Trin 3 - Efterbehandling" />
-      <div className={styles.processContainer}>
-        <h3 className={styles.processHeading}>Trin 3: Efterbehandling</h3>
-      </div>
-      <p>Kjolen stryges og opbevares forsigtigt.</p>
-    </div>
-  </div>
-</div>
-
+            <div className={styles.process}>
+              <img
+                src="/images/step3-daabskjole.jpg"
+                alt="Trin 3 - Efterbehandling"
+              />
+              <div className={styles.processContainer}>
+                <h3 className={styles.processHeading}>
+                  Trin 3: Efterbehandling
+                </h3>
+              </div>
+              <p>Kjolen stryges og opbevares forsigtigt.</p>
+            </div>
+          </div>
+        </div>
 
         {/* Call to Action Section */}
         <div className={styles.cta}>
