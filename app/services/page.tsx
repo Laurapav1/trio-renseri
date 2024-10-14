@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import styles from "./services.module.css";
-import HeroSection from "../components/hero-section/hero-section";
+import HeroSection from "../components/hero-section/page-hero-section";
 
 export default function Services() {
   return (

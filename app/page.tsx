@@ -13,16 +13,6 @@ import "swiper/css/pagination";
 export default function Home() {
   return (
     <>
-      <section className={styles.heroSection}>
-        <video autoPlay loop muted className={styles.heroVideo}>
-          <source src="/videos/forside.MOV" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className={styles.heroContent}>
-          <h1>Velkommen til Trio Renseri</h1>
-          <p>Professionel renseri med mere end 26 års erfaring.</p>
-        </div>
-      </section>
       <main>
         {/* Process Section */}
         <section className={styles.processSection}>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import HeroSection from "../components/hero-section/hero-section";
+import HeroSection from "../components/hero-section/page-hero-section";
 import styles from "@/app/firm/firm.module.css";
 
 export default function Firm() {

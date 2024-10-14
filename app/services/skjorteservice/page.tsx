@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import { url } from "inspector";
-import HeroSection from "@/app/components/hero-section/hero-section";
+import HeroSection from "@/app/components/hero-section/page-hero-section";
 
 export default function Skjorteservice() {
   return (

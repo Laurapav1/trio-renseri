@@ -4,7 +4,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./kontakt.module.css";
 import { faEnvelope, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
-import HeroSection from "../components/hero-section/hero-section";
+import HeroSection from "../components/hero-section/page-hero-section";
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
