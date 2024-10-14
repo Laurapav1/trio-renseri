@@ -4,7 +4,7 @@
   height: 30vh;
   display: flex;
   align-items: center;
-  justify-content: center; /* Align the content to the right */
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -14,8 +14,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-  backdrop-filter: blur(5px); /* Blur effect */
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
   z-index: 1;
 }
 

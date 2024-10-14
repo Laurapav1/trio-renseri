@@ -211,3 +211,62 @@
     height: 3px;
   }
 }
+
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: left;
+  color: white;
+  padding: 0 20px;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Optional: Add a semi-transparent overlay for better contrast */
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow for extra clarity */
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for the paragraph */
+}
+
+@media (min-width: 768px) {
+  .heroContent h1 {
+    font-size: 5rem;
+  }
+
+  .heroContent p {
+    font-size: 2rem;
+  }
+}
