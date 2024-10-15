@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import HeroSection from "../components/hero-section/page-hero-section";
-import styles from "@/app/firm/firm.module.css";
+import PageHeroSection from "../components/hero-section/page-hero-section";
 
 export default function Firm() {
   return (
     <>
       {/* Hero Section */}
-      <HeroSection text="Kunde Rabat" img="/images/dress.jpg" />
+      <PageHeroSection heading="Kunde Rabat" imagePath="/images/dress.jpg" />
     </>
   );
 }

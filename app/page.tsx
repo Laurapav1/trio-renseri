@@ -9,38 +9,51 @@ import styles from "./page.module.css";
 import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Navbar from "./components/navbar/navbar";
+import HomeHeroSection from "./components/hero-section/home-hero-section";
 
 export default function Home() {
   return (
     <>
+      {/* Wrapper to make Navbar and HeroSection fill 100vh */}
+      <div className={styles.heroWrapper}>
+        <Navbar />
+        <HomeHeroSection />
+      </div>
       <main>
-        {/* Process Section */}
-        <section className={styles.processSection}>
-          <div className={styles.gridContainer}>
-            {/* Billedet til venstre */}
-            <div className={styles.imageWrapper}>
-              <img src="/images/profil.jpg" alt="Laundry Process" />
-            </div>
-
-            {/* Teksten til højre */}
-            <div className={styles.textWrapper}>
-              <h2>Velkommen til Trio renseri</h2>
-              <p>
-                Vi er et professionelt erhvervsrenseri, der blev grundlagt i
-                1954 og har mere end 26 års erfaring. Vores kunder er og har
-                altid været den private forbruger eller den gode virksomhed, som
-                vi igennem tiden har serviceret med diverse vaske- og
-                renseriydelser.
-              </p>
-              <p>
-                Igennem årene er der sket en voldsom udvikling på både
-                tekstiler, former og farver, – men tiden har heller ikke stået
-                stille hos os.
-              </p>
-            </div>
+        <section className={styles.textWrapper}>
+          <h2>Professionelt Renseri Siden 1954</h2>
+          <p>
+            Hos Trio Renseri tilbyder vi førsteklasses renseri- og
+            tøjplejeservices til både private og virksomheder. Med over 26 års
+            erfaring sikrer vi, at dit tøj får den omsorg og opmærksomhed, det
+            fortjener. Fra sarte stoffer til hverdagstøj garanterer vi pletfri
+            resultater hver gang.
+          </p>
+        </section>
+        <section className={styles.aboutUs}>
+          <img src="/images/profil.jpg" alt="Why Choose Us Image" />
+          <div>
+            <h2>Velkommen til Trio renseri</h2>
+            <p>
+              Vi er et professionelt erhvervsrenseri, der blev grundlagt i 1954
+              og har mere end 26 års erfaring. Vores kunder er og har altid
+              været den private forbruger eller den gode virksomhed, som vi
+              igennem tiden har serviceret med diverse vaske- og renseriydelser.
+            </p>
+            <p>
+              Igennem årene er der sket en voldsom udvikling på både tekstiler,
+              former og farver, – men tiden har heller ikke stået stille hos os.
+            </p>
+            <h2>Hvorfor Vælge Trio Renseri?</h2>
+            <ul>
+              <li>Miljøvenlige renserimetoder</li>
+              <li>Over 26 års erfaring</li>
+              <li>Hurtig og pålidelig service</li>
+              <li>Ekspertpleje af sarte stoffer</li>
+            </ul>
           </div>
         </section>
-
         {/* New Section with Steps */}
         <section className={styles.stepsSection}>
           <h2>Sådan fungerer det </h2>

@@ -10,28 +10,18 @@
   align-items: center;
 }
 
-.imageWrapper img {
-  width: 100%;
-  height: auto;
-}
-
-.textWrapper {
-  text-align: left;
-}
-
 .textWrapper h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 
 .textWrapper p {
-  font-size: 1rem;
-  line-height: 1.4;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 /* Steps Section */
 .stepsSection {
-  margin: 20px;
+  margin: 5rem 10rem;
   text-align: center;
 }
 
@@ -171,14 +161,6 @@
     gap: 30px;
   }
 
-  .textWrapper h2 {
-    font-size: 2rem;
-  }
-
-  .textWrapper p {
-    font-size: 1.1rem;
-  }
-
   .stepsWrapper {
     flex-direction: row;
     justify-content: space-between;
@@ -269,4 +251,92 @@
   .heroContent p {
     font-size: 2rem;
   }
+}
+
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Makes the wrapper fill the full viewport height */
+}
+
+.heroWrapper > * {
+  flex-shrink: 0; /* Ensure the elements don't shrink */
+}
+
+.heroWrapper > nav {
+  flex: 0 0 auto; /* Navbar takes its natural height */
+}
+
+.heroWrapper > section {
+  flex: 1 0 auto; /* Hero section takes up the remaining space */
+}
+
+.aboutUs {
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.aboutUs img {
+  width: 44%;
+}
+
+.aboutUs div {
+  margin: 5rem;
+}
+
+.aboutUs h2 {
+  font-size: 2rem;
+}
+
+.aboutUs h2:not(:first-child) {
+  margin-top: 2.4rem;
+}
+
+.aboutUs p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.aboutUs ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.aboutUs ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUs ul li:before {
+  content: "✓";
+  padding-right: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+.textWrapper {
+  margin: 5rem 20rem;
+  text-align: center;
+}
+
+.textWrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.textWrapper ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.textWrapper ul li {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.textWrapper ul li:before {
+  content: "✓ ";
+  color: green;
+  font-weight: bold;
 }

@@ -4,7 +4,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./kontakt.module.css";
 import { faEnvelope, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
-import HeroSection from "../components/hero-section/page-hero-section";
+import PageHeroSection from "../components/hero-section/page-hero-section";
 
 const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
@@ -15,7 +15,7 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 export default function Kontakt() {
   return (
     <>
-      <HeroSection text="KONTAKT OS" img="/images/triofar.jpg" />
+      <PageHeroSection heading="KONTAKT OS" imagePath="/images/triofar.jpg" />
       <div className={styles.container}>
         <div className={styles.formContainer}>
           <div className={styles.formSection}>

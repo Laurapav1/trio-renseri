@@ -1,12 +1,15 @@
 "use client";
 import Link from "next/link";
 import styles from "./services.module.css";
-import HeroSection from "../components/hero-section/page-hero-section";
+import PageHeroSection from "../components/hero-section/page-hero-section";
 
 export default function Services() {
   return (
     <>
-      <HeroSection text="Vores ydelser" img="/images/hero-section-image.jpg" />
+      <PageHeroSection
+        heading="Vores ydelser"
+        imagePath="/images/hero-section-image.jpg"
+      />
       <div className={styles.container}>
         <p className={styles.intro}>
           Velkommen til Trio Renseri – din pålidelige partner til hverdagens
