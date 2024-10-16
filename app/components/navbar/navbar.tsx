@@ -19,7 +19,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <a href="/" className={styles.navbarLogoLink}>
-        <Image
+        <img
           className={styles.logo}
           src="/images/logo.svg"
           alt="Trio Renseri"

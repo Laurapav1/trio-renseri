@@ -43,7 +43,7 @@ export default function Tekstilrens() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <Image
+              <img
                 src="/images/step1-tekstilrens.jpg"
                 alt="Trin 1 - Inspektion"
               />
@@ -54,7 +54,7 @@ export default function Tekstilrens() {
             </div>
 
             <div className={styles.process}>
-              <Image
+              <img
                 src="/images/step2-tekstilrens.jpg"
                 alt="Trin 2 - Rensning"
               />
@@ -65,7 +65,7 @@ export default function Tekstilrens() {
             </div>
 
             <div className={styles.process}>
-              <Image
+              <img
                 src="/images/step3-tekstilrens.jpg"
                 alt="Trin 3 - Efterbehandling"
               />

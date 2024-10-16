@@ -46,7 +46,7 @@ export default function DynePudeVask() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <Image
+              <img
                 src="/images/step1-duvet-inspection.jpg"
                 alt="Trin 1 - Før vask"
               />
@@ -57,7 +57,7 @@ export default function DynePudeVask() {
             </div>
 
             <div className={styles.process}>
-              <Image src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
+              <img src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Vask</h3>
               </div>
@@ -65,7 +65,7 @@ export default function DynePudeVask() {
             </div>
 
             <div className={styles.process}>
-              <Image src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
+              <img src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 3: Tørring</h3>
               </div>

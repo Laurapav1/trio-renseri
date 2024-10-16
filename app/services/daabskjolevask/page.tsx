@@ -41,10 +41,7 @@ export default function Daabskjolevask() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <Image
-                src="/images/step1-daabskjole.jpg"
-                alt="Trin 1 - Før vask"
-              />
+              <img src="/images/step1-daabskjole.jpg" alt="Trin 1 - Før vask" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 1: Før vask</h3>
               </div>
@@ -52,7 +49,7 @@ export default function Daabskjolevask() {
             </div>
 
             <div className={styles.process}>
-              <Image src="/images/step2-daabskjole.jpg" alt="Trin 2 - Vask" />
+              <img src="/images/step2-daabskjole.jpg" alt="Trin 2 - Vask" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Vask</h3>
               </div>
@@ -60,7 +57,7 @@ export default function Daabskjolevask() {
             </div>
 
             <div className={styles.process}>
-              <Image
+              <img
                 src="/images/step3-daabskjole.jpg"
                 alt="Trin 3 - Efterbehandling"
               />

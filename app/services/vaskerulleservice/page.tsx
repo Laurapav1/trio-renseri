@@ -43,7 +43,7 @@ export default function Vaskerulleservice() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <Image
+              <img
                 src="/images/step1-vaskerulle.jpg"
                 alt="Trin 1 - Sortering"
               />
@@ -54,7 +54,7 @@ export default function Vaskerulleservice() {
             </div>
 
             <div className={styles.process}>
-              <Image src="/images/step2-vaskerulle.jpg" alt="Trin 2 - Vask" />
+              <img src="/images/step2-vaskerulle.jpg" alt="Trin 2 - Vask" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Vask</h3>
               </div>
@@ -64,7 +64,7 @@ export default function Vaskerulleservice() {
             </div>
 
             <div className={styles.process}>
-              <Image
+              <img
                 src="/images/step3-vaskerulle.jpg"
                 alt="Trin 3 - Rulle og Foldning"
               />

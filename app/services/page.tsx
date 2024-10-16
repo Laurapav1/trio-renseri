@@ -106,7 +106,7 @@ interface ServiceCardProps {
 function ServiceCard({ title, description, link, imgURL }: ServiceCardProps) {
   return (
     <Link href={link} className={styles.serviceCard}>
-      <Image src={imgURL} alt={title} className={styles.serviceImage} />
+      <img src={imgURL} alt={title} className={styles.serviceImage} />
       <div className={styles.serviceTitleContainer}>
         <h2 className={styles.serviceCardHeading}>{title}</h2>
       </div>
