@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./priser.module.css";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import PageHeroSection from "../components/hero-section/page-hero-section";
 
 export default function Prices() {

@@ -1,5 +1,6 @@
 import "./css/globals.css";
 import Footer from "./components/footer/footer";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Next.js",
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <Footer />
       </body>
     </html>
