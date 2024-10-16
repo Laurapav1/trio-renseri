@@ -8,11 +8,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen((prev) => !prev); // Improved readability
+    setIsOpen((prev) => !prev);
   };
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close the menu when a link is clicked (mobile)
+    setIsOpen(false); // Close menu on link click (mobile)
   };
 
   return (
@@ -37,33 +37,35 @@ export default function Navbar() {
       </div>
 
       {/* Navbar Links */}
-      <ul className={`${styles.navbarList} ${isOpen ? styles.active : ""}`}>
-        <li className={styles.navbarItem}>
-          <Link href="/" onClick={handleLinkClick}>
-            Forside
-          </Link>
-        </li>
-        <li className={styles.navbarItem}>
-          <Link href="/services" onClick={handleLinkClick}>
-            Services
-          </Link>
-        </li>
-        <li className={styles.navbarItem}>
-          <Link href="/priser" onClick={handleLinkClick}>
-            Priser
-          </Link>
-        </li>
-        <li className={styles.navbarItem}>
-          <Link href="/firm" onClick={handleLinkClick}>
-            KundeRabat
-          </Link>
-        </li>
-        <li className={styles.navbarItem}>
-          <Link href="/kontakt" onClick={handleLinkClick}>
-            Kontakt
-          </Link>
-        </li>
-      </ul>
+      <div className={styles.navbarContainer}>
+        <ul className={`${styles.navbarList} ${isOpen ? styles.active : ""}`}>
+          <li className={styles.navbarItem}>
+            <Link href="/" onClick={handleLinkClick}>
+              <span>Forside</span>
+            </Link>
+          </li>
+          <li className={styles.navbarItem}>
+            <Link href="/services" onClick={handleLinkClick}>
+              <span>Services</span>
+            </Link>
+          </li>
+          <li className={styles.navbarItem}>
+            <Link href="/priser" onClick={handleLinkClick}>
+              <span>Priser</span>
+            </Link>
+          </li>
+          <li className={styles.navbarItem}>
+            <Link href="/firm" onClick={handleLinkClick}>
+              <span>KundeRabat</span>
+            </Link>
+          </li>
+          <li className={styles.navbarItem}>
+            <Link href="/kontakt" onClick={handleLinkClick}>
+              <span>Kontakt</span>
+            </Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 }

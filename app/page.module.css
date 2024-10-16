@@ -1,22 +1,73 @@
-/* Process Section */
-.processSection {
-  margin: 20px;
+/* Wrapper for Navbar and HeroSection */
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.gridContainer {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  align-items: center;
+.heroWrapper > * {
+  flex-shrink: 0;
+}
+
+.heroWrapper > section {
+  flex-grow: 1;
+}
+
+/* Text (Intro) Section */
+.textWrapper {
+  margin: 5rem 20rem;
+  text-align: center;
 }
 
 .textWrapper h2 {
-  font-size: 1.8rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .textWrapper p {
   font-size: 1.2rem;
   line-height: 1.6;
+}
+
+/* About Us Section */
+.aboutUs {
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.aboutUs img {
+  width: 44%;
+}
+
+.aboutUs div {
+  margin: 5rem;
+}
+
+.aboutUs h2 {
+  font-size: 2rem;
+}
+
+.aboutUs p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.aboutUs ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.aboutUs ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUs ul li:before {
+  content: "✓";
+  padding-right: 1rem;
+  color: green;
+  font-weight: bold;
 }
 
 /* Steps Section */
@@ -54,10 +105,7 @@
 
 .icon img {
   width: 60px;
-  height: auto;
-  background-color: #c5ac90;
   border-radius: 50%;
-  border: 1px solid grey;
   padding: 7px;
   margin-bottom: 10px;
 }
@@ -69,8 +117,6 @@
   text-decoration: none;
   padding: 10px 20px;
   transition: background-color 0.3s;
-  display: inline-block;
-  margin-top: 10px;
 }
 
 .ctaButton:hover {
@@ -78,6 +124,10 @@
 }
 
 /* Service Section */
+.serviceSection {
+  margin: 5rem 0;
+}
+
 .serviceBanner {
   background-color: var(--accent-color);
   text-align: center;
@@ -111,26 +161,11 @@
   align-items: center;
 }
 
-.iconTitle {
-  text-align: center;
-}
-
-.serviceIcon {
-  width: 50px;
-}
-
 .textcontent h2 {
   font-size: 1.5rem;
   background-image: linear-gradient(to right, var(--accent-color), white 300%);
   color: transparent;
   background-clip: text;
-}
-
-.divider {
-  width: 100%;
-  height: 2px;
-  background-color: var(--accent-color);
-  margin: 1rem 0;
 }
 
 .textcontent p {
@@ -154,24 +189,11 @@
   color: white;
 }
 
-/* Media Queries for Larger Screens */
+/* Media Queries */
 @media (min-width: 768px) {
-  .gridContainer {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-
   .stepsWrapper {
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  .step {
-    min-width: 12rem;
-  }
-
-  .step h3 {
-    font-size: 1.5rem;
   }
 
   .gridService {
@@ -187,156 +209,4 @@
   .textcontent h2 {
     font-size: 45px;
   }
-
-  .divider {
-    width: 600px;
-    height: 3px;
-  }
-}
-
-.heroSection {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.heroVideo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-.heroContent {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: left;
-  color: white;
-  padding: 0 20px;
-  height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.3
-  ); /* Optional: Add a semi-transparent overlay for better contrast */
-}
-
-.heroContent h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow for extra clarity */
-}
-
-.heroContent p {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for the paragraph */
-}
-
-@media (min-width: 768px) {
-  .heroContent h1 {
-    font-size: 5rem;
-  }
-
-  .heroContent p {
-    font-size: 2rem;
-  }
-}
-
-.heroWrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Makes the wrapper fill the full viewport height */
-}
-
-.heroWrapper > * {
-  flex-shrink: 0; /* Ensure the elements don't shrink */
-}
-
-.heroWrapper > nav {
-  flex: 0 0 auto; /* Navbar takes its natural height */
-}
-
-.heroWrapper > section {
-  flex: 1 0 auto; /* Hero section takes up the remaining space */
-}
-
-.aboutUs {
-  display: flex;
-  align-items: center;
-  background-color: hsl(0, 0%, 94%);
-}
-
-.aboutUs img {
-  width: 44%;
-}
-
-.aboutUs div {
-  margin: 5rem;
-}
-
-.aboutUs h2 {
-  font-size: 2rem;
-}
-
-.aboutUs h2:not(:first-child) {
-  margin-top: 2.4rem;
-}
-
-.aboutUs p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-.aboutUs ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.aboutUs ul li {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.aboutUs ul li:before {
-  content: "✓";
-  padding-right: 1rem;
-  color: green;
-  font-weight: bold;
-}
-
-.textWrapper {
-  margin: 5rem 20rem;
-  text-align: center;
-}
-
-.textWrapper h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.textWrapper ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.textWrapper ul li {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.textWrapper ul li:before {
-  content: "✓ ";
-  color: green;
-  font-weight: bold;
 }

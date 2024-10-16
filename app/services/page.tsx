@@ -2,10 +2,12 @@
 import Link from "next/link";
 import styles from "./services.module.css";
 import PageHeroSection from "../components/hero-section/page-hero-section";
+import Navbar from "../components/navbar/navbar";
 
 export default function Services() {
   return (
     <>
+      <Navbar />
       <PageHeroSection
         heading="Vores ydelser"
         imagePath="/images/hero-section-image.jpg"

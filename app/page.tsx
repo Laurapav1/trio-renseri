@@ -21,6 +21,7 @@ export default function Home() {
         <HomeHeroSection />
       </div>
       <main>
+        {/* Intro Section */}
         <section className={styles.textWrapper}>
           <h2>Professionelt Renseri Siden 1954</h2>
           <p>
@@ -31,10 +32,12 @@ export default function Home() {
             resultater hver gang.
           </p>
         </section>
+
+        {/* About Us Section */}
         <section className={styles.aboutUs}>
-          <img src="/images/profil.jpg" alt="Why Choose Us Image" />
+          <img src="/images/profil.jpg" alt="Why Choose Us" />
           <div>
-            <h2>Velkommen til Trio renseri</h2>
+            <h2>Velkommen til Trio Renseri</h2>
             <p>
               Vi er et professionelt erhvervsrenseri, der blev grundlagt i 1954
               og har mere end 26 års erfaring. Vores kunder er og har altid
@@ -54,11 +57,11 @@ export default function Home() {
             </ul>
           </div>
         </section>
-        {/* New Section with Steps */}
+
+        {/* Steps Section */}
         <section className={styles.stepsSection}>
-          <h2>Sådan fungerer det </h2>
+          <h2>Sådan fungerer det</h2>
           <div className={styles.stepsWrapper}>
-            {/* Step 1 */}
             <div className={styles.step}>
               <div className={styles.icon}>
                 <img src="/images/schedule.png" alt="Schedule Pickup" />
@@ -69,8 +72,6 @@ export default function Home() {
                 Vi tager imod det og giver dig et nummer.
               </p>
             </div>
-
-            {/* Step 2 */}
             <div className={styles.step}>
               <div className={styles.icon}>
                 <img src="/images/laundryService.png" alt="Prepare Items" />
@@ -81,8 +82,6 @@ export default function Home() {
                 team. Vi sørger for, at det bliver rent og friskt.
               </p>
             </div>
-
-            {/* Step 3 */}
             <div className={styles.step}>
               <div className={styles.icon}>
                 <img src="/images/enjoy.png" alt="Enjoy Your Day" />
@@ -99,48 +98,27 @@ export default function Home() {
           </Link>
         </section>
 
+        {/* Service Section with Swiper */}
         <section className={styles.serviceSection}>
           <div className={styles.serviceBanner}>
             <h1>Vi udfører</h1>
           </div>
-          {/* Swiper Component */}
           <Swiper
             className={styles.mySwiper}
             modules={[Autoplay, Navigation, Pagination]}
             spaceBetween={30}
             navigation={true}
-            navigation-next-el=".custom-next-button"
-            navigation-prev-el=".custom-prev-button"
             pagination={{ clickable: true }}
             slidesPerView={1}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
           >
-            {/* Slide 1: omforandrig af tøj */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/sew.jpg" alt="Image 1" />
-                </div>
+                <img src="/images/sew.jpg" alt="Omforandring af tøj" />
                 <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/sewing-machine.png"
-                      alt="Icon"
-                    />
-                    <h2>Omforandring af tøj</h2>
-                  </div>
-                  <hr className={styles.divider} />
+                  <h2>Omforandring af tøj</h2>
                   <p>✓ Vi behandler dine skjorter med ekspertise og omhu.</p>
-                  <p>
-                    ✓ Vores professionelle rensning sikrer en frisk og skarp
-                    skjorte hver gang.
-                  </p>
-                  <p>
-                    ✓ Garanteret kvalitet – vi inspicerer og stryger hver
-                    skjorte til perfektion.
-                  </p>
                   <Link
                     href={"/services/skjorteservice"}
                     className={styles.ctaButtonService}
@@ -151,31 +129,12 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 2: Skjorte service*/}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/skjorte.jpg" alt="Image 1" />
-                </div>
+                <img src="/images/skjorte.jpg" alt="Skjorte service" />
                 <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/shirt-icon.webp"
-                      alt="Icon"
-                    />
-                    <h2>Skjorte Service</h2>
-                  </div>
-                  <hr className={styles.divider} />
+                  <h2>Skjorte Service</h2>
                   <p>✓ Vi behandler dine skjorter med ekspertise og omhu.</p>
-                  <p>
-                    ✓ Vores professionelle rensning sikrer en frisk og skarp
-                    skjorte hver gang.
-                  </p>
-                  <p>
-                    ✓ Garanteret kvalitet – vi inspicerer og stryger hver
-                    skjorte til perfektion.
-                  </p>
                   <Link
                     href={"/services/skjorteservice"}
                     className={styles.ctaButtonService}
@@ -186,181 +145,7 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 3: Gardin service*/}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/curtain.jpg" alt="Gardinservice" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/curtain-icon.png"
-                      alt="Icon"
-                    />
-                    <h2>Gardinservice</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi renser dine gardiner og sørger for, at de forbliver
-                    friske og rene.
-                  </p>
-                  <Link
-                    href={"/services/gardinservice"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se gardinservice
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 4: Tæpperens */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/floorcarpet.jpg" alt="Tæpperens" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/carpet.png"
-                      alt="Icon"
-                    />
-                    <h2>Tæpperens</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>✓ Professionel rensning af tæpper, store som små.</p>
-                  <Link
-                    href={"/services/taepperens"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se tæpperens
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 5: Tekstilrens */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/tekstil.jpg" alt="Tekstilrens" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/laundry.png"
-                      alt="Icon"
-                    />
-                    <h2>Tekstilrens</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi tilbyder skånsom og effektiv rensning af alle
-                    tekstiler.
-                  </p>
-                  <Link
-                    href={"/services/tekstilrens"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se tekstilrens
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 6: Vaske/Rulle Service */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/table.jpg" alt="Vaske/Rulle Service" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/wash-icon.webp"
-                      alt="Icon"
-                    />
-                    <h2>Vaske/Rulle Service</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Lad os tage hånd om dit vasketøj, så det altid er klar til
-                    brug.
-                  </p>
-                  <Link
-                    href={"/services/vaske"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se vaske/rulle service
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 7: Brudekjole Rens */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/bridedress.jpg" alt="Brudekjole Rens" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/bride-dress.png"
-                      alt="Icon"
-                    />
-                    <h2>Brudekjole Rens</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Specialrensning af brudekjoler, så de forbliver i perfekt
-                    stand.
-                  </p>
-                  <Link
-                    href={"/services/brudekjolerens"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se brudekjole rens
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 7: Dåbskjole Vask/Rens */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/gowndress.png" alt="Dåbskjole Vask/Rens" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/baby-dress.png"
-                      alt="Icon"
-                    />
-                    <h2>Dåbskjole Vask/Rens</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi tager os af dåbskjoler med ekstra omsorg og præcision.
-                  </p>
-                  <Link
-                    href={"/services/daabskjole"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se dåbskjole vask/rens
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
+            {/* Additional Swiper Slides */}
           </Swiper>
         </section>
       </main>

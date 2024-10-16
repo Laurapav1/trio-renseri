@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./hero-section.module.css";
+import styles from "./home-hero-section.module.css";
 
 function HomeHeroSection() {
   return (
@@ -9,8 +9,8 @@ function HomeHeroSection() {
         Your browser does not support the video tag.
       </video>
       <div className={styles.heroContent}>
-        <h1>Welcome to Trio Renseri</h1>
-        <p>Professional cleaning services since 1954.</p>
+        <h1>Velkommen til Trio Renseri</h1>
+        <p>Professionel renseri service siden 1954</p>
       </div>
     </section>
   );
