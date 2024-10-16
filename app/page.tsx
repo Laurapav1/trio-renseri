@@ -11,7 +11,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Navbar from "./components/navbar/navbar";
 import HomeHeroSection from "./components/hero-section/home-hero-section";
-import Image from "next/image";
 
 export default function Home() {
   return (

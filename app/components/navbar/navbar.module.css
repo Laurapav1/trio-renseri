@@ -1,28 +1,42 @@
 /* Navbar container */
 .navbar {
-  padding: 0.5rem;
+  height: 3.5rem; /* Adjust this height to match the logo */
+  padding: 0.5rem 1rem; /* Add padding for extra space around the logo and links */
   background: var(--accent-color);
   z-index: 1000;
-}
-
-.navbarContainer {
+  position: relative;
   display: flex;
-  justify-content: center;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Ensure space between logo on the left and hamburger on the right */
 }
 
 /* Logo styles */
 .navbarLogoLink {
   padding: 0;
+  position: relative; /* Keep the logo within the normal flow of the navbar */
 }
 
 .logo {
-  position: absolute;
-  height: 3rem;
+  height: 3rem; /* Same height as before */
   filter: brightness(0.8);
 }
 
 .logo:hover {
   filter: brightness(0.9);
+}
+
+/* Navbar links container */
+.navbarContainer {
+  margin-top: 0.7rem;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the navbar links */
+  position: absolute;
+  left: 50%;
+  transform: translateX(
+    -50%
+  ); /* Center the navbar container relative to the whole navbar */
 }
 
 /* Hamburger menu */
@@ -32,6 +46,8 @@
   cursor: pointer;
   gap: 0.3rem;
   padding: 0.5rem;
+  position: relative; /* Keep the hamburger within normal flow */
+  z-index: 10; /* Ensure the hamburger menu is clickable */
 }
 
 .hamburger div {
@@ -55,14 +71,10 @@
 
 /* Navbar list (hidden by default on mobile) */
 .navbarList {
+  width: 100%;
   padding: 0;
   margin: 0;
-  justify-content: space-between;
   list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
   background-color: var(--accent-color);
   opacity: 0;
   visibility: hidden;
@@ -116,6 +128,11 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+
+  .navbarContainer {
+    justify-content: center; /* Center the links for larger screens */
+    width: auto;
   }
 
   .navbarItem a {

@@ -1,6 +1,8 @@
 import "./css/globals.css";
 import Footer from "./components/footer/footer";
 import { Suspense } from "react";
+import { usePathname } from "next/navigation";
+import Navbar from "./components/navbar/navbar";
 
 export const metadata = {
   title: "Next.js",
