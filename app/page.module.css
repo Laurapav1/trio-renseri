@@ -216,7 +216,7 @@
   color: white;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .gridContainer {
     grid-template-columns: 1fr;
   }
@@ -230,11 +230,8 @@
     width: 80%; /* Justerer bredde for at se pæn ud på mobile enheder */
   }
 
-  .imageWrapper {
-    margin-bottom: 20px;
-  }
-
   .textWrapper {
+    margin: 5rem 2rem;
     padding-left: 0;
   }
 }

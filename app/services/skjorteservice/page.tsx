@@ -5,10 +5,12 @@ import Link from "next/link";
 import { url } from "inspector";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
 import Image from "next/image";
+import Navbar from "@/app/components/navbar/navbar";
 
 export default function Skjorteservice() {
   return (
     <>
+      <Navbar />
       {/* Hero Section */}
       <HeroSection
         heading="Tilpasning af dit tøj - vores ekspertise"

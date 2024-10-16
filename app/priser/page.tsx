@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import styles from "./priser.module.css";
 import { useSearchParams } from "next/navigation";
 import PageHeroSection from "../components/hero-section/page-hero-section";
+import Navbar from "../components/navbar/navbar";
 
 export default function Prices() {
   const searchParams = useSearchParams();
@@ -14,6 +15,7 @@ export default function Prices() {
 
   return (
     <>
+      <Navbar />
       <PageHeroSection heading="Priser" imagePath="/images/money2.jpg" />
       <div className={styles.container}>
         <PriceList
