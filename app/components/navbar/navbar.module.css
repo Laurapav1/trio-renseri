@@ -1,0 +1,124 @@
+/* Navbar container */
+.navbar {
+  padding: 0.5rem;
+  background: var(--accent-color);
+  z-index: 1000;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: center;
+}
+
+/* Logo styles */
+.navbarLogoLink {
+  padding: 0;
+}
+
+.logo {
+  position: absolute;
+  height: 3rem;
+  filter: brightness(0.8);
+}
+
+.logo:hover {
+  filter: brightness(0.9);
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.3rem;
+  padding: 0.5rem;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navbar list (hidden by default on mobile) */
+.navbarList {
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--accent-color);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbarList.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
+}
+
+.navbarItem {
+  text-align: center;
+}
+
+.navbarItem a {
+  display: flex;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbarItem span {
+  padding: 1rem 1.5rem;
+}
+
+.navbarItem a:hover {
+  color: hsl(0, 0%, 70%);
+}
+
+/* Media Queries for Larger Screens */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .navbarList {
+    flex-direction: row;
+    position: static;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .navbarItem a {
+    padding: 0;
+  }
+}

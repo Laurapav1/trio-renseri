@@ -1,5 +1,265 @@
-.video {
-  height: 80%;
+/* Wrapper for Navbar and HeroSection */
+.heroWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.heroWrapper > * {
+  flex-shrink: 0;
+}
+
+.heroWrapper > section {
+  flex-grow: 1;
+}
+
+/* Text (Intro) Section */
+.textWrapper {
+  margin: 5rem 20rem;
+  text-align: center;
+}
+
+.textWrapper h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.textWrapper p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* About Us Section */
+.aboutUs {
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 94%);
+}
+
+.aboutUs img {
+  width: 44%;
+}
+
+.aboutUs div {
+  margin: 5rem;
+}
+
+.aboutUs h2 {
+  font-size: 2rem;
+}
+
+.aboutUs p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.aboutUs ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.aboutUs ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUs ul li:before {
+  content: "✓";
+  padding-right: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+/* Steps Section */
+.stepsSection {
+  margin: 60px 20px;
+  text-align: center;
+}
+
+.stepsSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.stepsWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step {
+  flex: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  min-width: 12rem;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.icon img {
+  width: 70px;
+  height: auto;
+  background-color: #c5ac90;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 9px;
+  margin-bottom: 15px;
+}
+
+.ctaButton {
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  background-color: hsl(210, 100%, 35%);
+}
+
+.serviceBanner {
+  background-color: var(--accent-color);
+}
+
+.serviceBanner h1 {
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 2.8;
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+}
+
+.gridService {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  max-width: 1700px;
+}
+
+.swiperslidecontent img {
   width: 100%;
+  max-width: 900px;
+  height: 600px;
   object-fit: cover;
+}
+
+.textcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.iconTitle {
+  text-align: center;
+}
+
+.serviceIcon {
+  width: 50px;
+}
+
+.textcontent h2 {
+  font-size: 45px;
+  background-image: linear-gradient(to right, var(--accent-color), white 300%);
+  color: transparent;
+  background-clip: text;
+}
+
+/* Divideren */
+.divider {
+  width: 80%; /* Reduceret bredde på mobilen */
+  height: 3px;
+  background-color: var(--accent-color);
+  margin: 1.5rem auto; /* Centrerer divideren */
+}
+
+.textcontent p {
+  margin-left: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  color: #555;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.ctaButtonService {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
+  margin-top: 40px;
+}
+
+.ctaButtonService:hover {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+  .textcontent {
+    max-width: 100%;
+    text-align: center; /* Centrerer tekst på mobil */
+    align-items: center; /* Centrerer elementer */
+  }
+
+  .divider {
+    width: 80%; /* Justerer bredde for at se pæn ud på mobile enheder */
+  }
+
+  .imageWrapper {
+    margin-bottom: 20px;
+  }
+
+  .textWrapper {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .gridService {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .textcontent {
+    max-width: 100%;
+  }
+
+  .textcontent h2 {
+    font-size: 1.5rem;
+  }
+
+  .textcontent p {
+    font-size: 0.9rem;
+  }
+
+  .ctaButtonService {
+    font-size: 1rem;
+  }
 }

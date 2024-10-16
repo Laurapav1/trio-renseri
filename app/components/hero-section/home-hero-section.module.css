@@ -1,0 +1,38 @@
+.heroVideo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This ensures the video scales and maintains aspect ratio */
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Optional: Add semi-transparent overlay for better contrast */
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a text shadow for extra clarity */
+}
+
+.heroContent p {
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for the paragraph */
+}

@@ -1,113 +1,147 @@
 /* serviceDetail.module.css */
 .container {
-  padding: 20px;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 5rem auto;
   text-align: center;
 }
 
-.hero {
-  background-color: #f9f9f9;
-  padding: 50px;
-  margin-bottom: 40px;
+.steps h2 {
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  color: #555;
-  max-width: 800px;
-}
-
-.heroButton {
-  background-color: #0070f3;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-  margin-top: 20px;
-}
-
-.heroButton:hover {
-  background-color: #005bb5;
-}
-
-/* Before and After Slider */
-.compareContainer {
-  margin: 50px 0;
-}
-
-.compareContainer h2 {
-  margin-bottom: 20px;
+  justify-content: center;
   font-size: 2rem;
+  margin-top: 5rem;
+  color: #333;
+  position: relative;
+}
+
+.steps h2::before,
+.steps h2::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #b3b3b3;
+  margin: 0 15px;
+}
+
+/*Intro*/
+.introContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Afstand mellem introduktion og serviceboks */
+}
+
+.intro {
+  flex: 1; /* Sørger for, at introduktionen fylder det meste af pladsen */
+  max-width: 60%;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  align-self: center;
+}
+
+.serviceBox {
+  flex: 1;
+  max-width: 38%;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  background-size: cover;
+}
+
+.serviceBox h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.serviceBox h3 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.serviceBox ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.serviceBox ul li {
+  margin-bottom: 5px;
 }
 
 /* Steps Section */
 .steps {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px;
-  align-items: flex-start;
-  position: relative;
-}
-
-.step {
   text-align: center;
-  width: 30%; 
-  position: relative;
 }
 
-.step h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  position: relative;
+.stepGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
 }
 
-.step img {
+.process {
+  padding: 0px;
+  text-align: center;
+  background-color: var(--secondary-background-color);
+}
+
+.process img {
   width: 100%;
-  max-width: 250px;
-  height: 300px;
+  height: 18rem;
   object-fit: cover;
-  border-radius: 8px;
   display: block;
-  margin: 0 auto;
 }
 
-.step p {
-  font-size: 1rem;
-  color: #666;
-  margin-top: 15px;
+.processContainer {
+  background-color: var(--accent-color);
+  padding: 3px;
+}
+
+.process h3 {
+  color: white;
+}
+
+.process p {
+  margin: 20px;
+  line-height: 1.2;
+}
+
+/* CTA Button */
+.ctaButton {
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  background-color: hsl(210, 100%, 35%);
 }
 
 .cta {
-  margin-top: 50px;
+  margin-top: 100px;
 }
+
+
 
 .cta h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  margin: 2rem;
 }
 
-.cta button {
-  background-color: #0070f3;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  border: none;
-  cursor: pointer;
-}
-
-.cta button:hover {
+.cta a:hover {
   background-color: #005bb5;
 }
-

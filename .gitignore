@@ -35,7 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Exclude all files in the public directory
-/public/*
-# Include the empty .gitkeep file
-!/public/.gitkeep
+/public/videos

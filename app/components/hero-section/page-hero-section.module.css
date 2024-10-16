@@ -1,0 +1,31 @@
+.pageHeroSection {
+  position: relative;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow the container */
+}
+
+.pageHeroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: center/cover no-repeat; /* Same image path as the background */
+  filter: blur(8px); /* Adjust the blur value */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Controls the darkness (increase or decrease to your preference) */
+  z-index: 1; /* Keeps the overlay and blur behind the text */
+}
+
+.heroHeading {
+  z-index: 2; /* Keeps the text above the blur and darkened background */
+}
