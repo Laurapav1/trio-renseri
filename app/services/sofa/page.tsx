@@ -2,16 +2,16 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
-import { url } from "inspector";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
+import Image from "next/image";
 
 export default function Skjorteservice() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        text="Friske sofabetræk - vores ekspertise"
-        img="/images/sofa2.jpg"
+        heading="Friske sofabetræk - vores ekspertise"
+        imagePath="/images/sofa2.jpg"
       />
 
       <div className={styles.container}>
@@ -47,7 +47,7 @@ export default function Skjorteservice() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step1-sofa-inspection.jpg"
                 alt="Trin 1 - Før vask"
               />
@@ -60,7 +60,7 @@ export default function Skjorteservice() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
+              <Image src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Vask</h3>
               </div>
@@ -68,7 +68,7 @@ export default function Skjorteservice() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
+              <Image src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 3: Tørring</h3>
               </div>

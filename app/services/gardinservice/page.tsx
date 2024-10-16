@@ -3,14 +3,15 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
+import Image from "next/image";
 
 export default function Gardinservice() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        text="Dine gardiner - vores ansvar"
-        img="/images/curtains2.jpg"
+        heading="Dine gardiner - vores ansvar"
+        imagePath="/images/curtains2.jpg"
       />
 
       <div className={styles.container}>
@@ -42,7 +43,7 @@ export default function Gardinservice() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <img src="/images/step1-gardin.jpg" alt="Trin 1 - Inspektion" />
+              <Image src="/images/step1-gardin.jpg" alt="Trin 1 - Inspektion" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 1: Inspektion</h3>
               </div>
@@ -50,7 +51,7 @@ export default function Gardinservice() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step2-gardin.jpg" alt="Trin 2 - Rensning" />
+              <Image src="/images/step2-gardin.jpg" alt="Trin 2 - Rensning" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
               </div>
@@ -58,7 +59,7 @@ export default function Gardinservice() {
             </div>
 
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step3-gardin.jpg"
                 alt="Trin 3 - Strygning og Efterbehandling"
               />

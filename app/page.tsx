@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Navbar from "./components/navbar/navbar";
 import HomeHeroSection from "./components/hero-section/home-hero-section";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
 
         {/* About Us Section */}
         <section className={styles.aboutUs}>
-          <img src="/images/profil.jpg" alt="Why Choose Us" />
+          <Image src="/images/profil.jpg" alt="Why Choose Us" />
           <div>
             <h2>Velkommen til Trio Renseri</h2>
             <p>
@@ -64,7 +65,7 @@ export default function Home() {
           <div className={styles.stepsWrapper}>
             <div className={styles.step}>
               <div className={styles.icon}>
-                <img src="/images/schedule.png" alt="Schedule Pickup" />
+                <Image src="/images/schedule.png" alt="Schedule Pickup" />
               </div>
               <h3>1. Aflever dit tøj</h3>
               <p>
@@ -74,7 +75,7 @@ export default function Home() {
             </div>
             <div className={styles.step}>
               <div className={styles.icon}>
-                <img src="/images/laundryService.png" alt="Prepare Items" />
+                <Image src="/images/laundryService.png" alt="Prepare Items" />
               </div>
               <h3>2. Vi renser og vasker</h3>
               <p>
@@ -84,7 +85,7 @@ export default function Home() {
             </div>
             <div className={styles.step}>
               <div className={styles.icon}>
-                <img src="/images/enjoy.png" alt="Enjoy Your Day" />
+                <Image src="/images/enjoy.png" alt="Enjoy Your Day" />
               </div>
               <h3>3. Hent dit tøj</h3>
               <p>
@@ -116,11 +117,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/sew.jpg" alt="Image 1" />
+                  <Image src="/images/sew.jpg" alt="Image 1" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/sewing-machine.png"
                       alt="Icon"
@@ -151,11 +152,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/skjorte.jpg" alt="Image 1" />
+                  <Image src="/images/skjorte.jpg" alt="Image 1" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/shirt-icon.webp"
                       alt="Icon"
@@ -186,11 +187,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/curtain.jpg" alt="Gardinservice" />
+                  <Image src="/images/curtain.jpg" alt="Gardinservice" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/curtain-icon.png"
                       alt="Icon"
@@ -216,11 +217,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/floorcarpet.jpg" alt="Tæpperens" />
+                  <Image src="/images/floorcarpet.jpg" alt="Tæpperens" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/carpet.png"
                       alt="Icon"
@@ -243,11 +244,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/tekstil.jpg" alt="Tekstilrens" />
+                  <Image src="/images/tekstil.jpg" alt="Tekstilrens" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/laundry.png"
                       alt="Icon"
@@ -273,11 +274,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/table.jpg" alt="Vaske/Rulle Service" />
+                  <Image src="/images/table.jpg" alt="Vaske/Rulle Service" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/tablecloth.png"
                       alt="Icon"
@@ -303,11 +304,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/bridedress.jpg" alt="Brudekjole Rens" />
+                  <Image src="/images/bridedress.jpg" alt="Brudekjole Rens" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/bride-dress.png"
                       alt="Icon"
@@ -333,11 +334,14 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/gowndress.png" alt="Dåbskjole Vask/Rens" />
+                  <Image
+                    src="/images/gowndress.png"
+                    alt="Dåbskjole Vask/Rens"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/baby-dress.png"
                       alt="Icon"
@@ -362,11 +366,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/dyne.jpg" alt="Dyne/Pude Vask" />
+                  <Image src="/images/dyne.jpg" alt="Dyne/Pude Vask" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/pillow.png"
                       alt="Icon"
@@ -392,11 +396,11 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/sofa.jpg" alt="Sofabetræk Vask" />
+                  <Image src="/images/sofa.jpg" alt="Sofabetræk Vask" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/sofa.png"
                       alt="Icon"

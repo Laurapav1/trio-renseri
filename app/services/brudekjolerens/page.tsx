@@ -3,14 +3,15 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
+import Image from "next/image";
 
 export default function Brudekjolerens() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        text="Tilpasning af dit tøj - vores ekspertise"
-        img="/images/bridedress2.jpg"
+        heading="Tilpasning af dit tøj - vores ekspertise"
+        imagePath="/images/bridedress2.jpg"
       />
 
       <div className={styles.container}>
@@ -42,7 +43,7 @@ export default function Brudekjolerens() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step1-brudekjole.jpg"
                 alt="Trin 1 - Inspektion"
               />
@@ -53,7 +54,10 @@ export default function Brudekjolerens() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step2-brudekjole.jpg" alt="Trin 2 - Rensning" />
+              <Image
+                src="/images/step2-brudekjole.jpg"
+                alt="Trin 2 - Rensning"
+              />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
               </div>
@@ -61,7 +65,7 @@ export default function Brudekjolerens() {
             </div>
 
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step3-brudekjole.jpg"
                 alt="Trin 3 - Efterbehandling"
               />

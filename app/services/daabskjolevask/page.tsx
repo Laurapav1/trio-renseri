@@ -3,14 +3,15 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
+import Image from "next/image";
 
 export default function Daabskjolevask() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        text="Din dåbskjole - vores ansvar"
-        img="/images/dress.jpg"
+        heading="Din dåbskjole - vores ansvar"
+        imagePath="/images/dress.jpg"
       />
 
       <div className={styles.container}>
@@ -40,7 +41,10 @@ export default function Daabskjolevask() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <img src="/images/step1-daabskjole.jpg" alt="Trin 1 - Før vask" />
+              <Image
+                src="/images/step1-daabskjole.jpg"
+                alt="Trin 1 - Før vask"
+              />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 1: Før vask</h3>
               </div>
@@ -48,7 +52,7 @@ export default function Daabskjolevask() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step2-daabskjole.jpg" alt="Trin 2 - Vask" />
+              <Image src="/images/step2-daabskjole.jpg" alt="Trin 2 - Vask" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Vask</h3>
               </div>
@@ -56,7 +60,7 @@ export default function Daabskjolevask() {
             </div>
 
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step3-daabskjole.jpg"
                 alt="Trin 3 - Efterbehandling"
               />

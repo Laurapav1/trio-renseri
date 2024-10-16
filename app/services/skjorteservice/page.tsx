@@ -4,14 +4,15 @@ import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import { url } from "inspector";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
+import Image from "next/image";
 
 export default function Skjorteservice() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        text="Tilpasning af dit tøj - vores ekspertise"
-        img="/images/skjorte.jpg"
+        heading="Tilpasning af dit tøj - vores ekspertise"
+        imagePath="/images/skjorte.jpg"
       />
 
       <div className={styles.container}>
@@ -45,7 +46,7 @@ export default function Skjorteservice() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step1-skjorte.jpeg"
                 alt="Trin 1 - Før rengøring"
               />
@@ -58,7 +59,7 @@ export default function Skjorteservice() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step2-cleaning.jpg" alt="Trin 2 - Rensning" />
+              <Image src="/images/step2-cleaning.jpg" alt="Trin 2 - Rensning" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
               </div>
@@ -66,7 +67,7 @@ export default function Skjorteservice() {
             </div>
 
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step3-after.png"
                 alt="Trin 3 - Efter strygning"
               />

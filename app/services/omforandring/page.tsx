@@ -3,14 +3,15 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
+import Image from "next/image";
 
 export default function Omforandring() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        text="Tilpasning af dit tøj - vores ekspertise"
-        img="/images/sew3.jpg"
+        heading="Tilpasning af dit tøj - vores ekspertise"
+        imagePath="/images/sew3.jpg"
       />
 
       <div className={styles.container}>
@@ -42,7 +43,7 @@ export default function Omforandring() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <img src="/images/målingSy2.jpg" alt="Trin 1 - Måling" />
+              <Image src="/images/målingSy2.jpg" alt="Trin 1 - Måling" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 1: Måling</h3>
               </div>
@@ -51,7 +52,7 @@ export default function Omforandring() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/tilpasningSy.jpg" alt="Trin 2 - Tilpasning" />
+              <Image src="/images/tilpasningSy.jpg" alt="Trin 2 - Tilpasning" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Tilpasning</h3>
               </div>
@@ -59,7 +60,7 @@ export default function Omforandring() {
             </div>
 
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/færdigSy2.jpg"
                 alt="Trin 3 - Afsluttende Detaljer"
               />

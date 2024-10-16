@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./services.module.css";
 import PageHeroSection from "../components/hero-section/page-hero-section";
 import Navbar from "../components/navbar/navbar";
+import Image from "next/image";
 
 export default function Services() {
   return (
@@ -105,7 +106,7 @@ interface ServiceCardProps {
 function ServiceCard({ title, description, link, imgURL }: ServiceCardProps) {
   return (
     <Link href={link} className={styles.serviceCard}>
-      <img src={imgURL} alt={title} className={styles.serviceImage} />
+      <Image src={imgURL} alt={title} className={styles.serviceImage} />
       <div className={styles.serviceTitleContainer}>
         <h2 className={styles.serviceCardHeading}>{title}</h2>
       </div>

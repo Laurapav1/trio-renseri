@@ -3,14 +3,15 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
+import Image from "next/image";
 
 export default function Tekstilrens() {
   return (
     <>
       {/* Hero Section */}
       <HeroSection
-        text="Dit tekstil - vores ekspertise"
-        img="/images/tekstil2.jpg"
+        heading="Dit tekstil - vores ekspertise"
+        imagePath="/images/tekstil2.jpg"
       />
 
       <div className={styles.container}>
@@ -42,7 +43,7 @@ export default function Tekstilrens() {
           <h2>Processen</h2>
           <div className={styles.stepGrid}>
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step1-tekstilrens.jpg"
                 alt="Trin 1 - Inspektion"
               />
@@ -53,7 +54,7 @@ export default function Tekstilrens() {
             </div>
 
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step2-tekstilrens.jpg"
                 alt="Trin 2 - Rensning"
               />
@@ -64,7 +65,7 @@ export default function Tekstilrens() {
             </div>
 
             <div className={styles.process}>
-              <img
+              <Image
                 src="/images/step3-tekstilrens.jpg"
                 alt="Trin 3 - Efterbehandling"
               />

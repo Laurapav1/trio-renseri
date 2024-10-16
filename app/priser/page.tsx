@@ -114,8 +114,8 @@ function PriceList({ heading, items, service }: PriceListContentProps) {
             >
               <span>{item.name}</span>
               <div>
-                {item.prices.map((price) => (
-                  <div>{price}</div>
+                {item.prices.map((price, index) => (
+                  <div key={index}>{price}</div>
                 ))}
               </div>
             </li>
