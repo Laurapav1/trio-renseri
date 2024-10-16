@@ -45,7 +45,7 @@ export default function Taepperens() {
           <div className={styles.stepGrid}>
             <div className={styles.process}>
               <img
-                src="/images/step1-taepperens.jpg"
+                src="/images/service/dirty-carpet.jpeg"
                 alt="Trin 1 - Inspektion"
               />
               <div className={styles.processContainer}>
@@ -55,7 +55,7 @@ export default function Taepperens() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step2-taepperens.jpg" alt="Trin 2 - Rensning" />
+              <img src="/images/service/cleaning-carpet.jpeg" alt="Trin 2 - Rensning" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
               </div>
@@ -64,7 +64,7 @@ export default function Taepperens() {
 
             <div className={styles.process}>
               <img
-                src="/images/step3-taepperens.jpg"
+                src="/images/service/clean-carpet.jpeg"
                 alt="Trin 3 - Efterbehandling"
               />
               <div className={styles.processContainer}>

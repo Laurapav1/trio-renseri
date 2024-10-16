@@ -44,7 +44,7 @@ export default function Brudekjolerens() {
           <div className={styles.stepGrid}>
             <div className={styles.process}>
               <img
-                src="/images/step1-brudekjole.jpg"
+                src="/images/service/dirty-wedding.jpeg"
                 alt="Trin 1 - Inspektion"
               />
               <div className={styles.processContainer}>
@@ -54,7 +54,10 @@ export default function Brudekjolerens() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/step2-brudekjole.jpg" alt="Trin 2 - Rensning" />
+              <img
+                src="/images/service/cleaning-wedding.jpeg"
+                alt="Trin 2 - Rensning"
+              />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
               </div>
@@ -63,7 +66,7 @@ export default function Brudekjolerens() {
 
             <div className={styles.process}>
               <img
-                src="/images/step3-brudekjole.jpg"
+                src="/images/service/clean-wedding.jpeg"
                 alt="Trin 3 - Efterbehandling"
               />
               <div className={styles.processContainer}>
