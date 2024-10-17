@@ -45,13 +45,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.navbarItem}>
-            <Link href="/services" onClick={handleLinkClick}>
-              <span>Services</span>
+            <Link href="/tojrens" onClick={handleLinkClick}>
+              <span>Tøjrens</span>
             </Link>
           </li>
           <li className={styles.navbarItem}>
-            <Link href="/priser" onClick={handleLinkClick}>
-              <span>Priser</span>
+            <Link href="/skraadder" onClick={handleLinkClick}>
+              <span>Skrædder</span>
             </Link>
           </li>
           <li className={styles.navbarItem}>

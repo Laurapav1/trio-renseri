@@ -1,11 +1,11 @@
 "use client";
-import styles from "./services.module.css";
+import styles from "../components/service-card/service-card.module.css";
 import PageHeroSection from "../components/hero-section/page-hero-section";
 import Navbar from "../components/navbar/navbar";
 import ServiceCard from "../components/service-card/service-card";
 import Link from "next/link";
 
-export default function Services() {
+export default function Tojrens() {
   return (
     <>
       <Navbar />
@@ -24,13 +24,6 @@ export default function Services() {
           Se priser
         </Link>
         <div className={styles.servicesGrid}>
-          <ServiceCard
-            title="Omforandring af tøj"
-            description="Få tilpasset og repareret dit tøj for den perfekte pasform. Lad os give dit yndlingstøj nyt liv."
-            link="/services/omforandring"
-            imgURL="images/sew.jpg"
-          />
-
           <ServiceCard
             title="Skjorteservice"
             description="Rensning og strygning af skjorter, så de altid ser skarpe og velplejede ud – klar til hverdag og fest."

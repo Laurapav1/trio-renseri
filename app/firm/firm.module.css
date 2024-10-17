@@ -22,7 +22,6 @@
 }
 
 /* Firmaer Logo Section */
-/* Firmaer Logo Section */
 .companySection {
   text-align: center;
   padding: 3rem 2rem;
@@ -36,17 +35,22 @@
 }
 
 .companySection p {
-  font-size: 1.2rem; /* Lidt større skrift for bedre læsbarhed */
-  margin-bottom: 2rem;
-  color: #555; /* Dæmpet grå farve for et professionelt look */
+    font-size: 1.2rem; /* Samme skriftstørrelse som overskriften */
+    margin-bottom: 2rem;
+    color: #555; /* Dæmpet grå farve */
+    max-width: 800px; /* Begrænser bredden på teksten */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logoGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Juster minmax for bredere logoer */
+    gap: 2rem;
+    justify-items: center;
+    max-width: 1200px; /* Begræns bredden af logo grid */
+    margin: 0 auto; /* Centrerer grid i forhold til siden */
+  }
 
 .logoItem img {
   width: 150px;
@@ -61,55 +65,55 @@
 
 /* Studierabat og Pensionsrabat Sektion */
 .discountSection {
-    padding: 3rem 2rem;
-    text-align: center;
-    margin-top: 3rem;
-  }
-  
-  .discountContainer {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  
-  .discountSection h2 {
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: #2d2d2d;
-  }
-  
-  .discountSection p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #555;
-  }
-  
-  .discountDetails {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-  }
-  
-  .discountBox {
-    background-color: var(--accent-color);
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    transition: transform 0.3s ease;
-  }
-  
-  .discountBox h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #008f39;
-  }
-  
-  .discountBox p {
-    font-size: 1.1rem;
-    color: white;
-  }
-  
-  .discountBox:hover {
-    transform: scale(1.05);
-  }
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.discountContainer {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.discountSection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2d2d2d;
+}
+
+.discountSection p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.discountDetails {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.discountBox {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  transition: transform 0.3s ease;
+}
+
+.discountBox h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.discountBox p {
+  font-size: 1.1rem;
+  color: hsl(0, 0%, 96%);
+}
+
+.discountBox:hover {
+  transform: scale(1.05);
+}
