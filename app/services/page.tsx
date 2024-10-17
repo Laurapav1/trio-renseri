@@ -11,7 +11,7 @@ export default function Services() {
       <Navbar />
       <PageHeroSection
         heading="Vores ydelser"
-        imagePath="/images/hero-section-image.jpg"
+        imagePath="/images/vores-ydelser.jpg"
       />
       <div className={styles.container}>
         <p className={styles.intro}>
@@ -89,6 +89,12 @@ export default function Services() {
             description="Skånsom rensning af sofabetræk, der fjerner pletter og snavs, så din sofa fremstår frisk og indbydende."
             link="/services/sofa"
             imgURL="images/sofa.jpg"
+          />
+          <ServiceCard
+            title="Mange flere ydelser"
+            description="Har du særlige behov? Vi tilbyder mange flere renseri- og vaskeopgaver. Ring eller skriv til os for at høre nærmere"
+            link="/kontakt"
+            imgURL="images/kontakt.jpg"
           />
         </div>
       </div>

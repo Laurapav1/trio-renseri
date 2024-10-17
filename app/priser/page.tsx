@@ -131,11 +131,13 @@ function PriceList({ heading, items, service }: PriceListContentProps) {
 function Tilbud() {
   return (
     <div className={styles.tilbudContainer}>
-      <h3>Eksklusivt Tilbud!</h3>
-      <p>
-        Få 10% rabat på alle dine skjorteservices, når du bestiller online.
-        Gælder kun for nye kunder.
-      </p>
+      <h3>Kunde rabatter!</h3>
+      <ul>
+        <li>15% firmarabat for Logbuy kunder</li>
+        <li>10% studierabat</li>
+        <li>10% pensionistrabat</li>
+        <li>Og mange flere</li>
+      </ul>
     </div>
   );
 }

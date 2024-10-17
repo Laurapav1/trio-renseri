@@ -1,31 +1,31 @@
 .pageHeroSection {
   position: relative;
-  height: 25vh;
+  width: 100%;
+  height: 30vh; /* Ændret til samme højde som den gamle version */
   display: flex;
-  justify-content: center;
   align-items: center;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  background-size: cover;
+  justify-content: center; /* Centrerer indholdet */
+  overflow: hidden;
+  background-size: cover; /* Sikrer at billedet dækker hele området */
   background-position: center;
-  overflow: hidden; /* Ensures the pseudo-element doesn't overflow the container */
 }
 
-.pageHeroSection::before {
-  content: '';
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: center/cover no-repeat; /* Same image path as the background */
-  filter: blur(8px); /* Adjust the blur value */
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5; /* Controls the darkness (increase or decrease to your preference) */
-  z-index: 1; /* Keeps the overlay and blur behind the text */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Mørk overlay */
+  backdrop-filter: blur(5px); /* Tilføjer blur-effekt */
+  z-index: 1; /* Holder overlayen over billedet */
 }
 
 .heroHeading {
-  z-index: 2; /* Keeps the text above the blur and darkened background */
+  position: relative;
+  z-index: 2; /* Sørger for at teksten er over overlayen */
+  color: white;
+  text-align: center;
+  font-size: 2.4rem; /* Samme størrelse som din gamle kode */
+  font-weight: bold;
 }

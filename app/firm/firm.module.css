@@ -1,0 +1,17 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+.company-logo {
+  max-width: 150px; /* Justér bredden af logoerne */
+  height: auto;
+  object-fit: contain; /* Bevarer logoets proportioner */
+  margin: 0 auto;
+}
+.logo-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

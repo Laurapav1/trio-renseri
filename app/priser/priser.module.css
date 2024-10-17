@@ -44,51 +44,38 @@
 }
 
 .prisliste ul li:hover {
-  background-color: hsl(0, 0%, 98%);
+  background-color: hsl(0, 0%, 96%);
 }
 
 .prisliste ul li div {
   justify-content: space-between;
   font-size: 1rem;
 }
-
-.tilbud {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #333;
-}
-
-.tilbud a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 .tilbudContainer {
-  background: linear-gradient(
-    135deg,
-    #3d7cc4,
-    #0e2b50
-  ); /* Blå gradient baggrund */
-  padding: 20px;
-  border-radius: 10px;
+  color: black;
+  padding: 1.5rem;
+  border-radius: 5px;
   text-align: center;
-  color: white; /* Gør teksten hvid for bedre kontrast */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 5rem;
+  max-width: 350px;
+  margin: 4rem auto;
+  border: 1px solid black;
 }
 
 .tilbudContainer h3 {
-  font-size: 2rem; /* Gør overskriften større for mere opmærksomhed */
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-transform: uppercase; /* Gør teksten til store bogstaver for at understrege tilbuddet */
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
-.tilbudContainer p {
-  font-size: 1.2rem; /* Forstør teksten for bedre læsbarhed */
+.tilbudContainer ul {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
-  font-weight: 500;
+}
+
+.tilbudContainer ul li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
 }
 
 .highlighted {

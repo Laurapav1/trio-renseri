@@ -25,11 +25,11 @@ export default function Home() {
         <section className={styles.textWrapper}>
           <h2>Professionelt Renseri Siden 1954</h2>
           <p>
-            Hos Trio Renseri tilbyder vi førsteklasses renseri- og
-            tøjplejeservices til både private og virksomheder. Med over 26 års
-            erfaring sikrer vi, at dit tøj får den omsorg og opmærksomhed, det
-            fortjener. Fra sarte stoffer til hverdagstøj garanterer vi pletfri
-            resultater hver gang.
+            Hos Trio Renseri har vi siden 1954 leveret førsteklasses renseri- og
+            tøjplejeservices til både private kunder og virksomheder. Med mere
+            end 26 års erfaring sørger vi for, at dit tøj altid modtager den
+            opmærksomhed og pleje, det fortjener – uanset om det er hverdagstøj
+            eller sarte materialer.
           </p>
         </section>
 
@@ -39,21 +39,24 @@ export default function Home() {
           <div>
             <h2>Velkommen til Trio Renseri</h2>
             <p>
-              Vi er et professionelt erhvervsrenseri, der blev grundlagt i 1954
-              og har mere end 26 års erfaring. Vores kunder er og har altid
-              været den private forbruger eller den gode virksomhed, som vi
-              igennem tiden har serviceret med diverse vaske- og renseriydelser.
+              Hos Trio Renseri forstår vi, at dit tøj ikke bare er tekstiler –
+              det er en del af din hverdag og ofte forbundet med både
+              affektionsværdi og funktionalitet. Vi tilbyder derfor
+              skræddersyede løsninger, der sikrer, at dine tekstiler behandles
+              med omhu og ekspertise.
             </p>
             <p>
               Igennem årene er der sket en voldsom udvikling på både tekstiler,
               former og farver, – men tiden har heller ikke stået stille hos os.
+              Derfor kan du trygt stole på, at vi leverer de bedste metoder, når
+              det kommer til rens og vedligeholdelse af dine tekstiler.
             </p>
             <h2>Hvorfor Vælge Trio Renseri?</h2>
             <ul>
               <li>Miljøvenlige renserimetoder</li>
               <li>Over 26 års erfaring</li>
-              <li>Hurtig og pålidelig service</li>
-              <li>Ekspertpleje af sarte stoffer</li>
+              <li>Pålidelig og hurtig service</li>
+              <li>Specialpleje af sarte tekstiler </li>
             </ul>
           </div>
         </section>
