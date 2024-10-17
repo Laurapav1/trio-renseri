@@ -51,7 +51,7 @@ export default function Home() {
               Derfor kan du trygt stole på, at vi leverer de bedste metoder, når
               det kommer til rens og vedligeholdelse af dine tekstiler.
             </p>
-            <h2>Hvorfor Vælge Trio Renseri?</h2>
+            <h3>Hvorfor Vælge Trio Renseri?</h3>
             <ul>
               <li>Miljøvenlige renserimetoder</li>
               <li>Over 26 års erfaring</li>

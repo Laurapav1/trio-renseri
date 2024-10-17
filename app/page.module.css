@@ -34,10 +34,13 @@
   display: flex;
   align-items: center;
   background-color: hsl(0, 0%, 94%);
+  padding: 2rem;
 }
 
 .aboutUs img {
   width: 44%;
+  max-width: 100%; /* Sikrer at billedet ikke bliver for stort på små skærme */
+  height: auto; /* Beholder korrekt forhold mellem bredde og højde */
 }
 
 .aboutUs div {
@@ -47,6 +50,11 @@
 .aboutUs h2 {
   font-size: 2rem;
 }
+
+.aboutUs h3 {
+  font-size: 1.5rem;
+}
+
 
 .aboutUs p {
   font-size: 1.1rem;
@@ -68,6 +76,39 @@
   padding-right: 1rem;
   color: green;
   font-weight: bold;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+  .aboutUs {
+    flex-direction: column; /* Stabler elementerne vertikalt på små skærme */
+    padding: 2rem 1rem; /* Reducerer padding på små skærme */
+  }
+
+  .aboutUs img {
+    width: 100%; /* Gør billedet fuld bredde på små skærme */
+    margin-bottom: 2rem; /* Tilføjer afstand mellem billedet og teksten */
+  }
+
+  .aboutUs div {
+    margin: 2rem 0; /* Mindsker margin på små skærme */
+  }
+
+  .aboutUs h2 {
+    font-size: 1.8rem; /* Gør overskriften lidt mindre på mobil */
+  }
+
+  .aboutUs p {
+    font-size: 1rem; /* Mindre tekststørrelse for bedre mobiltilpasning */
+  }
+
+  .aboutUs ul {
+    margin-left: 2rem;
+  }
+
+  .aboutUs ul li {
+    font-size: 1rem;
+  }
 }
 
 /* Steps Section */
