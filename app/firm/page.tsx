@@ -1,57 +1,60 @@
 "use client";
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import PageHeroSection from "../components/hero-section/page-hero-section";
-import Navbar from "../components/navbar/navbar";
 
-// Importer virksomhedens logoer (opdater stierne med de faktiske)
-const companyLogos = [
-  { src: "/images/firm/tdc.png", alt: "TDC" },
-  { src: "/images/firm/salling-group.png", alt: "Salling Group" },
-  { src: "/images/firm/deloitte.png", alt: "Deloitte" },
-  { src: "/logos/post-dk.png", alt: "Post Danmark" },
-  { src: "/logos/telia.png", alt: "Telia" },
-  { src: "/logos/nykredit.png", alt: "Nykredit" },
-  { src: "/logos/jysk.png", alt: "Jysk" },
-  { src: "/logos/mcdonalds.png", alt: "McDonald" },
-  // Tilføj flere virksomheder her
-];
+import React from "react";
+import Navbar from "../components/navbar/navbar";
+import PageHeroSection from "../components/hero-section/page-hero-section";
+import styles from "./firm.module.css";
 
 export default function Firm() {
+  const companies = [
+    { name: "TDC", imgPath: "/images/firm/tdc.png" },
+    { name: "Salling Group", imgPath: "/images/firm/salling-group.png" },
+    { name: "Deloitte", imgPath: "/images/firm/deloitte.png" },
+    { name: "Post Danmark", imgPath: "/images/firm/postdanmarks.png" },
+    { name: "Tetra Pack", imgPath: "/images/firm/tetrapack.png" },
+    { name: "Telia", imgPath: "/images/firm/telia.png" },
+    { name: "Nykredit", imgPath: "/images/firm/nykredit.png" },
+    { name: "Jysk", imgPath: "/images/firm/jysk.png" },
+    { name: "McDonald's", imgPath: "/images/firm/mcdonalds.png" },
+    { name: "Arla", imgPath: "/images/firm/arla.png" },
+    { name: "BRF Kredit", imgPath: "/images/firm/brfkredit.png" },
+    { name: "AFG", imgPath: "/images/firm/afg.png" },
+  ];
+
   return (
     <>
       <Navbar />
-      <PageHeroSection heading="Kunde Rabat" imagePath="/images/dress.jpg" />
+      <PageHeroSection heading="Kunde Rabat" imagePath="/images/sale.jpg" />
 
-      <div className="container">
-        <h2>Firmaer med Rabat</h2>
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={1} // Viser 3 logoer samtidig
-          autoplay={{ delay: 5000, disableOnInteraction: false }} // Autoplay
-          loop={true} // Loop slides
-          pagination={{ clickable: true }} // Pagination dots
-          breakpoints={{
-            640: {
-              slidesPerView: 1, // 1 logo på små skærme
-            },
-            768: {
-              slidesPerView: 2, // 2 logoer på mellemstore skærme
-            },
-            1024: {
-              slidesPerView: 3, // 3 logoer på store skærme
-            },
-          }}
-        >
-          {companyLogos.map((logo, index) => (
-            <SwiperSlide key={index}>
-              <div className="logo-slide">
-                <img src={logo.src} alt={logo.alt} className="company-logo" />
-              </div>
-            </SwiperSlide>
+      {/* Intro Section */}
+      <section className={styles.textWrapper}>
+        <h2>Få Eksklusive Rabatter</h2>
+        <p>
+          Hos Trio Renseri tilbyder vi en række særlige rabatter til vores
+          kunder. Er du erhvervskunde, studerende eller pensionist, har vi
+          eksklusive rabatter, der passer til dine behov. Vi samarbejder med
+          Logbuy for at tilbyde firmarabatter, og vi modtager også dit vasketøj
+          til vask og rulning.
+        </p>
+      </section>
+
+      {/* Company firm Section */}
+      <section className={styles.companySection}>
+        <h2>Disse virksomheder har tillid til os</h2>
+        <p>
+          Nedenfor kan du se en liste over nogle af de virksomheder, der
+          allerede benytter sig af vores firmarabatter. Er du i tvivl om, din
+          virksomhed er på listen? Ring til os og hør nærmere – vi er altid klar
+          til at hjælpe.
+        </p>
+        <div className={styles.logoGrid}>
+          {companies.map((company) => (
+            <div key={company.name} className={styles.logoItem}>
+              <img src={company.imgPath} alt={company.name} />
+            </div>
           ))}
-        </Swiper>
-      </div>
+        </div>
+      </section>
     </>
   );
 }
