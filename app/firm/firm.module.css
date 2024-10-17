@@ -59,6 +59,57 @@
   transition: transform 0.3s ease;
 }
 
-.logoItem img:hover {
-  transform: scale(1.05); /* Let animation ved hover */
-}
+/* Studierabat og Pensionsrabat Sektion */
+.discountSection {
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .discountContainer {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .discountSection h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #2d2d2d;
+  }
+  
+  .discountSection p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  .discountDetails {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .discountBox {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    transition: transform 0.3s ease;
+  }
+  
+  .discountBox h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #008f39;
+  }
+  
+  .discountBox p {
+    font-size: 1.1rem;
+    color: white;
+  }
+  
+  .discountBox:hover {
+    transform: scale(1.05);
+  }

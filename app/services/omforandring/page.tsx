@@ -9,7 +9,7 @@ import Navbar from "@/app/components/navbar/navbar";
 export default function Omforandring() {
   return (
     <>
-    <Navbar />
+      <Navbar />
       {/* Hero Section */}
       <HeroSection
         heading="Tilpasning af dit tøj - vores ekspertise"
@@ -54,7 +54,7 @@ export default function Omforandring() {
             </div>
 
             <div className={styles.process}>
-              <img src="/images/tilpasningSy.jpg" alt="Trin 2 - Tilpasning" />
+              <img src="/images/tilpasningsy.jpg" alt="Trin 2 - Tilpasning" />
               <div className={styles.processContainer}>
                 <h3 className={styles.processHeading}>Trin 2: Tilpasning</h3>
               </div>

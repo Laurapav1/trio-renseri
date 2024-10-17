@@ -55,6 +55,26 @@ export default function Firm() {
           ))}
         </div>
       </section>
+
+       {/* Studierabat og Pensionsrabat Sektion */}
+       <section className={styles.discountSection}>
+        <div className={styles.discountContainer}>
+          <h2>Vi tilbyder også rabatter til studerende og pensionister!</h2>
+          <p>
+            Hos Trio Renseri tilbyder vi ikke kun firmarabatter, men også særlige rabatter til studerende og pensionister. Få 10% rabat, når du fremviser gyldigt studie- eller pensionistkort ved betaling.
+          </p>
+          <div className={styles.discountDetails}>
+            <div className={styles.discountBox}>
+              <h3>Studierabat</h3>
+              <p>Få 10% rabat med gyldigt studiekort.</p>
+            </div>
+            <div className={styles.discountBox}>
+              <h3>Pensionsrabat</h3>
+              <p>Få 10% rabat med gyldigt pensionistkort.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
