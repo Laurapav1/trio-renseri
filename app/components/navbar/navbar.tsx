@@ -45,8 +45,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.navbarItem}>
-            <Link href="/tojrens" onClick={handleLinkClick}>
-              <span>Tøjrens</span>
+            <Link href="/services" onClick={handleLinkClick}>
+              <span>Services</span>
             </Link>
           </li>
           <li className={styles.navbarItem}>
@@ -55,8 +55,13 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.navbarItem}>
-            <Link href="/firm" onClick={handleLinkClick}>
-              <span>KundeRabat</span>
+            <Link href="/priser" onClick={handleLinkClick}>
+              <span>Priser</span>
+            </Link>
+          </li>
+          <li className={styles.navbarItem}>
+            <Link href="/rabatter" onClick={handleLinkClick}>
+              <span>Rabatter</span>
             </Link>
           </li>
           <li className={styles.navbarItem}>

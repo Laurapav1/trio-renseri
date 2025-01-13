@@ -34,52 +34,12 @@ export default function Vaskerulleservice() {
             </p>
             <h3>Pris i alt (vasket og rullet):</h3>
             <ul>
-              <li>Linned - 50 kr. pr. stk.</li>
-              <li>Skjorter - 25 kr. pr. stk.</li>
+              <li>Duge Vask og rul - 65 kr. pr. meter</li>
+              <li>Duge kun rul - 55 kr. pr. meter</li>
+              <li>Sengetøj vasket og rullet - 85 kr. pr. kg</li>
+              <li>Sengetøj kun rullet - 75 kr. pr. kg</li>
+              <li>Servietter - 15 kr. pr. stk.</li>
             </ul>
-          </div>
-        </div>
-
-        {/* Modern Steps Section */}
-        <div className={styles.steps}>
-          <h2>Processen</h2>
-          <div className={styles.stepGrid}>
-            <div className={styles.process}>
-              <img
-                src="/images/step1-vaskerulle.jpg"
-                alt="Trin 1 - Sortering"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 1: Sortering</h3>
-              </div>
-              <p>Vasketøjet sorteres efter farve og stof.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img src="/images/step2-vaskerulle.jpg" alt="Trin 2 - Vask" />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 2: Vask</h3>
-              </div>
-              <p>
-                Tøjet vaskes med de bedste vaskemidler for skånsom behandling.
-              </p>
-            </div>
-
-            <div className={styles.process}>
-              <img
-                src="/images/step3-vaskerulle.jpg"
-                alt="Trin 3 - Rulle og Foldning"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>
-                  Trin 3: Rulle og Foldning
-                </h3>
-              </div>
-              <p>
-                Tøjet rulles og foldes præcist for et friskt og klar-til-brug
-                look.
-              </p>
-            </div>
           </div>
         </div>
 

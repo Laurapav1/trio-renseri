@@ -56,12 +56,14 @@ export default function Firm() {
         </div>
       </section>
 
-       {/* Studierabat og Pensionsrabat Sektion */}
-       <section className={styles.discountSection}>
+      {/* Studierabat og Pensionsrabat Sektion */}
+      <section className={styles.discountSection}>
         <div className={styles.discountContainer}>
           <h2>Vi tilbyder også rabatter til studerende og pensionister!</h2>
           <p>
-            Hos Trio Renseri tilbyder vi ikke kun firmarabatter, men også særlige rabatter til studerende og pensionister. Få 10% rabat, når du fremviser gyldigt studie- eller pensionistkort ved betaling.
+            Hos Trio Renseri tilbyder vi ikke kun firmarabatter, men også
+            særlige rabatter til studerende og pensionister. Få 10% rabat, når
+            du fremviser gyldigt studie- eller pensionistkort ved betaling.
           </p>
           <div className={styles.discountDetails}>
             <div className={styles.discountBox}>

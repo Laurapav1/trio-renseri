@@ -36,46 +36,17 @@ export default function DynePudeVask() {
             </p>
             <h3>Pris i alt (vasket og tørret):</h3>
             <ul>
-              <li>1 dyne - 150 kr.</li>
-              <li>1 pude - 50 kr.</li>
-              <li>2 dyner + 2 puder - 350 kr.</li>
+              <li>1 dyne - 275 kr.</li>
+              <li>2 dyner - 350 kr.</li>
+              <li>1 pude - 150 kr.</li>
+              <li>2 puder - 225 kr.</li>
+              <br></br>
+              <li>Silkedyne - 245 kr.</li>
+              <li>Børnedyne- 120 kr.</li>
+              <li>Dobbeltdyne - 300 kr.</li>
+              <li>Kugledyne - fra: 450 kr.</li>
+              <li>Sovepose - 195 kr.</li>
             </ul>
-          </div>
-        </div>
-
-        {/* Modern Steps Section */}
-        <div className={styles.steps}>
-          <h2>Processen</h2>
-          <div className={styles.stepGrid}>
-            <div className={styles.process}>
-              <img
-                src="/images/step1-duvet-inspection.jpg"
-                alt="Trin 1 - Før vask"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 1: Før vask</h3>
-              </div>
-              <p>Vi inspicerer dine dyner og puder for pletter og skader.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 2: Vask</h3>
-              </div>
-              <p>Dyner og puder gennemgår vores skånsomme vaskemetoder.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 3: Tørring</h3>
-              </div>
-              <p>
-                Vi tørrer dine dyner og puder grundigt, så de forbliver friske
-                og bløde.
-              </p>
-            </div>
           </div>
         </div>
 

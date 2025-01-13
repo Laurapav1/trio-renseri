@@ -3,9 +3,9 @@
 import React, { useState } from "react";
 import styles from "./priser.module.css";
 import { useSearchParams } from "next/navigation";
-import PageHeroSection from "../../components/hero-section/page-hero-section";
-import Navbar from "../../components/navbar/navbar";
-import PriceList from "../../components/prisliste/prisliste";
+import PageHeroSection from "../components/hero-section/page-hero-section";
+import Navbar from "../components/navbar/navbar";
+import PriceList from "../components/prisliste/prisliste";
 
 export default function Prices() {
   const searchParams = useSearchParams();

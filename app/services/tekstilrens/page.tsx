@@ -40,47 +40,6 @@ export default function Tekstilrens() {
           </div>
         </div>
 
-        {/* Modern Steps Section */}
-        <div className={styles.steps}>
-          <h2>Processen</h2>
-          <div className={styles.stepGrid}>
-            <div className={styles.process}>
-              <img
-                src="/images/step1-tekstilrens.jpg"
-                alt="Trin 1 - Inspektion"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 1: Inspektion</h3>
-              </div>
-              <p>Inspektion af tekstiler for pletter og skader.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img
-                src="/images/step2-tekstilrens.jpg"
-                alt="Trin 2 - Rensning"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
-              </div>
-              <p>Tekstilerne vaskes skånsomt med specialprodukter.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img
-                src="/images/step3-tekstilrens.jpg"
-                alt="Trin 3 - Efterbehandling"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>
-                  Trin 3: Efterbehandling
-                </h3>
-              </div>
-              <p>Tekstilerne efterbehandles for et nyt og friskt look.</p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action Section */}
         <div className={styles.cta}>
           <h2>Klar til at få rene og friske tekstiler?</h2>

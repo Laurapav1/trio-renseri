@@ -39,48 +39,8 @@ export default function Skjorteservice() {
             <ul>
               <li>1 stk. - 25 kr.</li>
               <li>5 stk. - 110 kr.</li>
+              <li>+ smokingskjorte 50 kr.</li>
             </ul>
-          </div>
-        </div>
-
-        {/* Process Section */}
-        <div className={styles.steps}>
-          <h2>Processen</h2>
-          <div className={styles.stepGrid}>
-            <div className={styles.process}>
-              <img
-                src="/images/step1-skjorte.jpeg"
-                alt="Trin 1 - Før rengøring"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>
-                  Trin 1: Før rengøring{" "}
-                </h3>
-              </div>
-              <p>Vi inspicerer dine skjorter for pletter og skader.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img src="/images/step2-cleaning.jpg" alt="Trin 2 - Rensning" />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 2: Rensning</h3>
-              </div>
-              <p>Skjorterne gennemgår vores professionelle rensningsproces.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img
-                src="/images/step3-after.png"
-                alt="Trin 3 - Efter strygning"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>
-                  Trin 3: Efter strygning
-                </h3>
-              </div>
-
-              <p>Skjorterne stryges for at få dem til at se perfekte ud.</p>
-            </div>
           </div>
         </div>
 
