@@ -61,46 +61,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Steps Section */}
-        <section className={styles.stepsSection}>
-          <h2>Sådan fungerer det</h2>
-          <div className={styles.stepsWrapper}>
-            <div className={styles.step}>
-              <div className={styles.icon}>
-                <img src="/images/schedule.png" alt="Schedule Pickup" />
-              </div>
-              <h3>1. Aflever dit tøj</h3>
-              <p>
-                Kom forbi vores butik med dit tøj, som skal renses eller vaskes.
-                Vi tager imod det og giver dig et nummer.
-              </p>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.icon}>
-                <img src="/images/laundryService.png" alt="Prepare Items" />
-              </div>
-              <h3>2. Vi renser og vasker</h3>
-              <p>
-                Dit tøj bliver behandlet med den største omhu af vores erfarne
-                team. Vi sørger for, at det bliver rent og friskt.
-              </p>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.icon}>
-                <img src="/images/enjoy.png" alt="Enjoy Your Day" />
-              </div>
-              <h3>3. Hent dit tøj</h3>
-              <p>
-                Når dit tøj er klart, kan du komme og hente det. Brug det
-                nummer, du har fået, når du afleverede tøjet.
-              </p>
-            </div>
-          </div>
-          <Link href={"/priser"} className={styles.ctaButton}>
-            Se Priser
-          </Link>
-        </section>
-
         {/* Service Section with Swiper */}
         <section className={styles.serviceSection}>
           <div className={styles.serviceBanner}>
