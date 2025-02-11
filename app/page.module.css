@@ -62,8 +62,8 @@
 .boatServiceText {
   width: 50%;
   background-color: #f2f2f2;
-  box-sizing: border-box; 
-  padding: 2rem;        
+  box-sizing: border-box;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,7 +126,6 @@
   }
 }
 
-
 /* ------------------------------------
    BÅDSERVICE-SEKTION
    (Tekst i grå boks venstre, billede flush højre)
@@ -137,7 +136,6 @@
   margin: 0 auto;
   min-height: 400px;
 }
-
 
 .boatServiceText h2 {
   font-size: 2rem;
@@ -170,36 +168,11 @@
   color: green;
 }
 
-/* CTA-knap i tekstkolonnen */
-.boatServiceText .ctaButtonService {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.2rem;
-  text-decoration: none;
-  border: 2px solid var(--accent-color);
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-  color: var(--accent-color);
-}
-
-.boatServiceText .ctaButtonService:hover {
-  background-color: var(--accent-color);
-  color: #fff;
-}
-
-
 /* 2) BÅDSERVICE: højre kolonne (billede) */
 .boatServiceImage {
-  width: 50%;              /* Halvdelen af sektionens bredde */
-  overflow: hidden;        /* Samme opsætning som ovenfor */
-  display: flex;           /* Valgfrit men ofte nyttigt, hvis du vil centrere noget */
-}
-
-/* Billedkolonne til højre (uden zoom/hover) */
-.boatServiceImage {
-  width: 50%;
-  overflow: hidden; /* sikrer at overflødige billedkanter skjules */
+  width: 50%; /* Halvdelen af sektionens bredde */
+  overflow: hidden; /* Samme opsætning som ovenfor */
+  display: flex; /* Valgfrit men ofte nyttigt, hvis du vil centrere noget */
 }
 
 /* Billedet udfylder containeren med 'cover' */
@@ -209,7 +182,6 @@
   object-fit: cover;
   display: block;
 }
-
 
 /* Responsivt layout for bådservice */
 @media (max-width: 768px) {
@@ -239,7 +211,6 @@
     font-size: 1rem;
   }
 }
-
 
 /* ------------------------------------
    Service Banner (Swiper)

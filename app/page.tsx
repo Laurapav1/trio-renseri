@@ -81,15 +81,12 @@ export default function Home() {
               <li>Omfattende vask/rens og imprægnering</li>
               <li>Vask/rens af hynder, puder, måtter og gardiner</li>
             </ul>
-            <Link
-              href="/services/batservice"
-              className={styles.ctaButtonService}
-            >
+            <Link href="/services/batservice" className={styles.boatButton}>
               Se bådservice
             </Link>
           </div>
           <div className={styles.boatServiceImage}>
-            <img src="/images/profil.jpg" alt="Bådservice" />
+            <img src="/images/baad2.jpg" alt="Bådservice" />
           </div>
         </section>
 
