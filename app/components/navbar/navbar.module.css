@@ -1,23 +1,23 @@
 /* Navbar container */
 .navbar {
-  height: 3.5rem; /* Adjust this height to match the logo */
-  padding: 0.5rem 1rem; /* Add padding for extra space around the logo and links */
+  height: 3.5rem;
+  padding: 0.5rem 1rem;
   background: var(--accent-color);
   z-index: 1000;
   position: relative;
   display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Ensure space between logo on the left and hamburger on the right */
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Logo styles */
 .navbarLogoLink {
   padding: 0;
-  position: relative; /* Keep the logo within the normal flow of the navbar */
+  position: relative;
 }
 
 .logo {
-  height: 3rem; /* Same height as before */
+  height: 3rem;
   filter: brightness(0.8);
 }
 
@@ -31,12 +31,10 @@
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: center; /* Center the navbar links */
+  justify-content: center;
   position: absolute;
   left: 50%;
-  transform: translateX(
-    -50%
-  ); /* Center the navbar container relative to the whole navbar */
+  transform: translateX(-50%);
 }
 
 /* Hamburger menu */
@@ -46,8 +44,8 @@
   cursor: pointer;
   gap: 0.3rem;
   padding: 0.5rem;
-  position: relative; /* Keep the hamburger within normal flow */
-  z-index: 10; /* Ensure the hamburger menu is clickable */
+  position: relative;
+  z-index: 10;
 }
 
 .hamburger div {
@@ -93,7 +91,7 @@
 }
 
 .navbarItem {
-  text-align: center;
+  position: relative; /* For desktop dropdown positioning */
 }
 
 .navbarItem a {
@@ -115,10 +113,10 @@
   color: hsl(0, 0%, 70%);
 }
 
-/* Media Queries for Larger Screens */
+/* Dropdown menu - Desktop styles (hover) */
 @media (min-width: 768px) {
   .hamburger {
-    display: none;
+    display: none; /* Hide hamburger on desktop */
   }
 
   .navbarList {
@@ -131,11 +129,57 @@
   }
 
   .navbarContainer {
-    justify-content: center; /* Center the links for larger screens */
+    justify-content: center;
     width: auto;
   }
 
   .navbarItem a {
     padding: 0;
   }
+
+  /* On desktop, show the dropdown absolutely positioned below the parent */
+  .dropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--accent-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+/* Mobile override - make the dropdown expand inline */
+@media (max-width: 767px) {
+  .dropdownMenu {
+    position: static;       /* Removes absolute positioning */
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 1rem;     /* Indent a bit if you like */
+    margin-top: 0.5rem;     /* Spacing above submenu */
+  }
+}
+
+/* Dropdown items */
+.dropdownItem {
+  text-align: left;
+}
+
+.dropdownItem a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownItem a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: hsl(0, 0%, 70%);
 }
