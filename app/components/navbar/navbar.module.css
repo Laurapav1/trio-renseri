@@ -10,6 +10,18 @@
   justify-content: space-between;
 }
 
+/* Navbar links container */
+.navbarContainer {
+  margin-top: 0.7rem;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* Logo styles */
 .navbarLogoLink {
   padding: 0;
@@ -23,18 +35,6 @@
 
 .logo:hover {
   filter: brightness(0.9);
-}
-
-/* Navbar links container */
-.navbarContainer {
-  margin-top: 0.7rem;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Hamburger menu */
@@ -67,12 +67,19 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Remove bullet points from lists */
+.navbarList,
+.navbarList li,
+.dropdownMenu,
+.dropdownMenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Navbar list (hidden by default on mobile) */
 .navbarList {
   width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
   background-color: var(--accent-color);
   opacity: 0;
   visibility: hidden;
@@ -90,6 +97,7 @@
   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
 }
 
+/* Navbar items */
 .navbarItem {
   position: relative; /* For desktop dropdown positioning */
 }
@@ -113,8 +121,8 @@
   color: hsl(0, 0%, 70%);
 }
 
-/* Dropdown menu - Desktop styles (hover) */
-@media (min-width: 768px) {
+/* Desktop (>= 768px) */
+@media (min-width: 1000px) {
   .hamburger {
     display: none; /* Hide hamburger on desktop */
   }
@@ -137,37 +145,31 @@
     padding: 0;
   }
 
-  /* On desktop, show the dropdown absolutely positioned below the parent */
+  /* Dropdown menu for desktop (hover) */
   .dropdownMenu {
     position: absolute;
     top: 100%;
     left: 0;
     background-color: var(--accent-color);
-    list-style: none;
-    padding: 0;
-    margin: 0;
     min-width: 200px;
     z-index: 1000;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
 }
 
-/* Mobile override - make the dropdown expand inline */
+/* Mobile (< 768px) */
 @media (max-width: 767px) {
+  /* Dropdown menu expands inline */
   .dropdownMenu {
-    position: static;       /* Removes absolute positioning */
+    position: static;
     background-color: transparent;
     box-shadow: none;
-    padding-left: 1rem;     /* Indent a bit if you like */
-    margin-top: 0.5rem;     /* Spacing above submenu */
+    padding-left: 1rem; /* Indent if desired */
+    margin-top: 0.5rem; /* Spacing above submenu */
   }
 }
 
 /* Dropdown items */
-.dropdownItem {
-  text-align: left;
-}
-
 .dropdownItem a {
   display: block;
   padding: 0.5rem 1rem;
