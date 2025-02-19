@@ -75,19 +75,25 @@ export default function Navbar() {
                 }
               }}
             >
-              Services
+              <span>Services</span>
             </Link>
 
             {/* Only render the submenu if it's open */}
             {isServicesDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/tekstil-service" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/tekstil-service"
+                    onClick={handleLinkClick}
+                  >
                     Tekstil Service
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/skjorteservice" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/skjorteservice"
+                    onClick={handleLinkClick}
+                  >
                     Skjorteservice
                   </Link>
                 </li>
@@ -117,7 +123,10 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/madrasbetraek" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/madrasbetraek"
+                    onClick={handleLinkClick}
+                  >
                     Madrasbetræk
                   </Link>
                 </li>
@@ -127,12 +136,18 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/udlejning-af-mobel" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/udlejning-af-mobel"
+                    onClick={handleLinkClick}
+                  >
                     Udlejning af møbel
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/taepperensmaskine" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/taepperensmaskine"
+                    onClick={handleLinkClick}
+                  >
                     Tæpperensmaskine
                   </Link>
                 </li>

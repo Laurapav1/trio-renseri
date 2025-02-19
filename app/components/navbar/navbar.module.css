@@ -52,7 +52,7 @@
   width: 25px;
   height: 3px;
   background-color: white;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .hamburger.active div:nth-child(1) {
@@ -84,7 +84,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,7 +94,7 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
 }
 
 /* Navbar items */
@@ -110,7 +110,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .navbarItem span {
@@ -147,13 +147,13 @@
 
   /* Dropdown menu for desktop (hover) */
   .dropdownMenu {
+    top: 3rem;
     position: absolute;
-    top: 100%;
-    left: 0;
+    left: 0.5rem;
     background-color: var(--accent-color);
     min-width: 200px;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 1px solid hsl(219, 80%, 10%);
   }
 }
 
@@ -178,7 +178,7 @@
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0;
 }
 
 .dropdownItem a:hover {
