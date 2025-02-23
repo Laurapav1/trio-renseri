@@ -201,7 +201,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li className={styles.navbarItem}>
-            <Link href="/rabatter" onClick={handleLinkClick}>
+            <Link href="/kunderabat" onClick={handleLinkClick}>
               <span>Rabatter</span>
             </Link>
           </li>

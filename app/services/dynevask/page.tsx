@@ -13,7 +13,7 @@ export default function DynePudeVask() {
       {/* Hero Section */}
       <HeroSection
         heading="Friske dyner og puder - vores ekspertise"
-        imagePath="/images/dyne2.jpg"
+        imagePath="/images/dynepude.jpg"
       />
 
       <div className={styles.container}>
