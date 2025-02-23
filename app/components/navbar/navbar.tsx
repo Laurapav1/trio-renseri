@@ -82,10 +82,7 @@ export default function Navbar() {
             {isServicesDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/tekstil-service"
-                    onClick={handleLinkClick}
-                  >
+                  <Link href="/services/tekstilrens" onClick={handleLinkClick}>
                     Tekstil Service
                   </Link>
                 </li>
@@ -98,27 +95,36 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/brudetoj" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/brudekjolerens"
+                    onClick={handleLinkClick}
+                  >
                     Brudetøj
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/dyne-puder" onClick={handleLinkClick}>
+                  <Link href="/services/dynevask" onClick={handleLinkClick}>
                     Dyne/Puder
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/vask-af-duge" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/vaskerulleservice"
+                    onClick={handleLinkClick}
+                  >
                     Vask af Duge
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/gardiner" onClick={handleLinkClick}>
+                  <Link
+                    href="/services/gardinservice"
+                    onClick={handleLinkClick}
+                  >
                     Gardiner
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/taepper" onClick={handleLinkClick}>
+                  <Link href="/services/taepperens" onClick={handleLinkClick}>
                     Tæpper
                   </Link>
                 </li>
@@ -131,24 +137,13 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/mobeltetraek" onClick={handleLinkClick}>
+                  <Link href="/services/mobelbetraak" onClick={handleLinkClick}>
                     Møbelbetræk
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/udlejning-af-mobel"
-                    onClick={handleLinkClick}
-                  >
-                    Udlejning af møbel
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/taepperensmaskine"
-                    onClick={handleLinkClick}
-                  >
-                    Tæpperensmaskine
+                  <Link href="/services/udlejning" onClick={handleLinkClick}>
+                    Udlejning af maskine
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
