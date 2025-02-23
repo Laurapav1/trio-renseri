@@ -6,13 +6,19 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
+    // When closing the mobile menu, also close the dropdown
+    if (isOpen) {
+      setIsServicesDropdownOpen(false);
+    }
     setIsOpen((prev) => !prev);
   };
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close menu on link click (mobile)
+    setIsOpen(false); // Close mobile menu on link click
+    setIsServicesDropdownOpen(false);
   };
 
   return (
@@ -25,7 +31,7 @@ export default function Navbar() {
         />
       </a>
 
-      {/* Hamburger Menu */}
+      {/* Hamburger Menu (Mobile Toggle) */}
       <div
         className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
         onClick={toggleMenu}
@@ -44,11 +50,111 @@ export default function Navbar() {
               <span>Forside</span>
             </Link>
           </li>
-          <li className={styles.navbarItem}>
-            <Link href="/services" onClick={handleLinkClick}>
+
+          {/* Services with Submenu */}
+          <li
+            className={styles.navbarItem}
+            // On desktop, show submenu on hover
+            onMouseEnter={() => {
+              if (!isOpen) setIsServicesDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              if (!isOpen) setIsServicesDropdownOpen(false);
+            }}
+          >
+            <Link
+              href="/services"
+              onClick={(e) => {
+                if (isOpen) {
+                  // On mobile: prevent immediate navigation, expand/collapse submenu
+                  e.preventDefault();
+                  setIsServicesDropdownOpen((prev) => !prev);
+                } else {
+                  // On desktop: navigate normally and close menus
+                  handleLinkClick();
+                }
+              }}
+            >
               <span>Services</span>
             </Link>
+
+            {/* Only render the submenu if it's open */}
+            {isServicesDropdownOpen && (
+              <ul className={styles.dropdownMenu}>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/tekstilrens" onClick={handleLinkClick}>
+                    Tekstil Service
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link
+                    href="/services/skjorteservice"
+                    onClick={handleLinkClick}
+                  >
+                    Skjorteservice
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link
+                    href="/services/brudekjolerens"
+                    onClick={handleLinkClick}
+                  >
+                    Brudetøj
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/dynevask" onClick={handleLinkClick}>
+                    Dyne/Puder
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link
+                    href="/services/vaskerulleservice"
+                    onClick={handleLinkClick}
+                  >
+                    Vask af Duge
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link
+                    href="/services/gardinservice"
+                    onClick={handleLinkClick}
+                  >
+                    Gardiner
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/taepperens" onClick={handleLinkClick}>
+                    Tæpper
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link
+                    href="/services/madrasbetraek"
+                    onClick={handleLinkClick}
+                  >
+                    Madrasbetræk
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/mobelbetraak" onClick={handleLinkClick}>
+                    Møbelbetræk
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/udlejning" onClick={handleLinkClick}>
+                    Udlejning af maskine
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/baadkalache" onClick={handleLinkClick}>
+                    Bådkalache
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
+
           <li className={styles.navbarItem}>
             <Link href="/skraadder" onClick={handleLinkClick}>
               <span>Skrædder</span>

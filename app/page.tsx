@@ -34,9 +34,11 @@ export default function Home() {
         </section>
 
         {/* About Us Section */}
-        <section className={styles.aboutUs}>
-          <img src="/images/profil.jpg" alt="Why Choose Us" />
-          <div>
+        <section className={styles.aboutUsSection}>
+          <div className={styles.imageContainer}>
+            <img src="/images/profil.jpg" alt="Velkommen til Trio Renseri" />
+          </div>
+          <div className={styles.textContainer}>
             <h2>Velkommen til Trio Renseri</h2>
             <p>
               Hos Trio Renseri forstår vi, at dit tøj ikke bare er tekstiler –
@@ -47,7 +49,7 @@ export default function Home() {
             </p>
             <p>
               Igennem årene er der sket en voldsom udvikling på både tekstiler,
-              former og farver, – men tiden har heller ikke stået stille hos os.
+              former og farver – men tiden har heller ikke stået stille hos os.
               Derfor kan du trygt stole på, at vi leverer de bedste metoder, når
               det kommer til rens og vedligeholdelse af dine tekstiler.
             </p>
@@ -56,49 +58,36 @@ export default function Home() {
               <li>Miljøvenlige renserimetoder</li>
               <li>Over 26 års erfaring</li>
               <li>Pålidelig og hurtig service</li>
-              <li>Specialpleje af sarte tekstiler </li>
+              <li>Specialpleje af sarte tekstiler</li>
             </ul>
           </div>
         </section>
 
-        {/* Steps Section */}
-        <section className={styles.stepsSection}>
-          <h2>Sådan fungerer det</h2>
-          <div className={styles.stepsWrapper}>
-            <div className={styles.step}>
-              <div className={styles.icon}>
-                <img src="/images/schedule.png" alt="Schedule Pickup" />
-              </div>
-              <h3>1. Aflever dit tøj</h3>
-              <p>
-                Kom forbi vores butik med dit tøj, som skal renses eller vaskes.
-                Vi tager imod det og giver dig et nummer.
-              </p>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.icon}>
-                <img src="/images/laundryService.png" alt="Prepare Items" />
-              </div>
-              <h3>2. Vi renser og vasker</h3>
-              <p>
-                Dit tøj bliver behandlet med den største omhu af vores erfarne
-                team. Vi sørger for, at det bliver rent og friskt.
-              </p>
-            </div>
-            <div className={styles.step}>
-              <div className={styles.icon}>
-                <img src="/images/enjoy.png" alt="Enjoy Your Day" />
-              </div>
-              <h3>3. Hent dit tøj</h3>
-              <p>
-                Når dit tøj er klart, kan du komme og hente det. Brug det
-                nummer, du har fået, når du afleverede tøjet.
-              </p>
-            </div>
+        {/* Bådservice-sektionen med teksten til venstre, billedet til højre */}
+        <section className={styles.boatServiceSection}>
+          <div className={styles.boatServiceText}>
+            <h2>Service til både</h2>
+            <p>
+              Udover vores klassiske renseri- og tøjplejeservices tilbyder vi
+              omfattende service til både. Vi hjælper dig med alt fra rensning
+              af kalacher og udskiftning af ruder til opfriskning af
+              bådpressening samt vask/rens og imprægnering.
+            </p>
+            <h3>Vores bådservice omfatter:</h3>
+            <ul>
+              <li>Rensning af kalacher</li>
+              <li>Udskiftning af ruder</li>
+              <li>Opfriskning af bådpressening</li>
+              <li>Omfattende vask/rens og imprægnering</li>
+              <li>Vask/rens af hynder, puder, måtter og gardiner</li>
+            </ul>
+            <Link href="/services/batservice" className={styles.boatButton}>
+              Se bådservice
+            </Link>
           </div>
-          <Link href={"/priser"} className={styles.ctaButton}>
-            Se Priser
-          </Link>
+          <div className={styles.boatServiceImage}>
+            <img src="/images/baad2.jpg" alt="Bådservice" />
+          </div>
         </section>
 
         {/* Service Section with Swiper */}

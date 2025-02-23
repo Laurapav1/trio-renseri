@@ -1,28 +1,13 @@
 /* Navbar container */
 .navbar {
-  height: 3.5rem; /* Adjust this height to match the logo */
-  padding: 0.5rem 1rem; /* Add padding for extra space around the logo and links */
+  height: 3.5rem;
+  padding: 0.5rem 1rem;
   background: var(--accent-color);
   z-index: 1000;
   position: relative;
   display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: space-between; /* Ensure space between logo on the left and hamburger on the right */
-}
-
-/* Logo styles */
-.navbarLogoLink {
-  padding: 0;
-  position: relative; /* Keep the logo within the normal flow of the navbar */
-}
-
-.logo {
-  height: 3rem; /* Same height as before */
-  filter: brightness(0.8);
-}
-
-.logo:hover {
-  filter: brightness(0.9);
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Navbar links container */
@@ -31,12 +16,25 @@
   top: 0;
   width: 100%;
   display: flex;
-  justify-content: center; /* Center the navbar links */
+  justify-content: center;
   position: absolute;
   left: 50%;
-  transform: translateX(
-    -50%
-  ); /* Center the navbar container relative to the whole navbar */
+  transform: translateX(-50%);
+}
+
+/* Logo styles */
+.navbarLogoLink {
+  padding: 0;
+  position: relative;
+}
+
+.logo {
+  height: 3rem;
+  filter: brightness(0.8);
+}
+
+.logo:hover {
+  filter: brightness(0.9);
 }
 
 /* Hamburger menu */
@@ -46,15 +44,15 @@
   cursor: pointer;
   gap: 0.3rem;
   padding: 0.5rem;
-  position: relative; /* Keep the hamburger within normal flow */
-  z-index: 10; /* Ensure the hamburger menu is clickable */
+  position: relative;
+  z-index: 10;
 }
 
 .hamburger div {
   width: 25px;
   height: 3px;
   background-color: white;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .hamburger.active div:nth-child(1) {
@@ -69,17 +67,24 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+/* Remove bullet points from lists */
+.navbarList,
+.navbarList li,
+.dropdownMenu,
+.dropdownMenu li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Navbar list (hidden by default on mobile) */
 .navbarList {
   width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
   background-color: var(--accent-color);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,11 +94,12 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
 }
 
+/* Navbar items */
 .navbarItem {
-  text-align: center;
+  position: relative; /* For desktop dropdown positioning */
 }
 
 .navbarItem a {
@@ -104,7 +110,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   padding: 0.5rem 1rem;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
 .navbarItem span {
@@ -115,10 +121,10 @@
   color: hsl(0, 0%, 70%);
 }
 
-/* Media Queries for Larger Screens */
-@media (min-width: 768px) {
+/* Desktop (>= 768px) */
+@media (min-width: 1000px) {
   .hamburger {
-    display: none;
+    display: none; /* Hide hamburger on desktop */
   }
 
   .navbarList {
@@ -131,11 +137,51 @@
   }
 
   .navbarContainer {
-    justify-content: center; /* Center the links for larger screens */
+    justify-content: center;
     width: auto;
   }
 
   .navbarItem a {
     padding: 0;
   }
+
+  /* Dropdown menu for desktop (hover) */
+  .dropdownMenu {
+    top: 3rem;
+    position: absolute;
+    left: 0.5rem;
+    background-color: var(--accent-color);
+    min-width: 200px;
+    z-index: 1000;
+    border: 1px solid hsl(219, 80%, 10%);
+  }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+  /* Dropdown menu expands inline */
+  .dropdownMenu {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding-left: 1rem; /* Indent if desired */
+    margin-top: 0.5rem; /* Spacing above submenu */
+  }
+}
+
+/* Dropdown items */
+.dropdownItem a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-radius: 0;
+}
+
+.dropdownItem a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: hsl(0, 0%, 70%);
 }

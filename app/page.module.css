@@ -1,4 +1,6 @@
-/* Wrapper for Navbar and HeroSection */
+/* ------------------------------------
+   Wrapper for Navbar and HeroSection
+------------------------------------ */
 .heroWrapper {
   display: flex;
   flex-direction: column;
@@ -13,7 +15,9 @@
   flex-grow: 1;
 }
 
-/* Text (Intro) Section */
+/* ------------------------------------
+   Text (Intro) Section
+------------------------------------ */
 .textWrapper {
   margin: 5rem 20rem;
   text-align: center;
@@ -29,148 +33,188 @@
   line-height: 1.6;
 }
 
-/* About Us Section */
-.aboutUs {
+/* ------------------------------------
+   ABOUT US Section
+   (Billede venstre, grå boks højre)
+------------------------------------ */
+.aboutUsSection {
   display: flex;
-  align-items: center;
-  background-color: hsl(0, 0%, 94%);
+  width: 100%;
+  margin: 0 auto;
+  min-height: 400px; /* Giver sektionen en minimumshøjde */
+}
+
+/* Venstre kolonne: Billede */
+.imageContainer {
+  flex: 1;
+  overflow: hidden; /* Skjuler evt. beskæring */
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Højre kolonne: Tekst (grå baggrund) */
+.textContainer,
+.boatServiceText {
+  width: 50%;
+  background-color: #f2f2f2;
+  box-sizing: border-box;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.aboutUs img {
-  width: 44%;
-  max-width: 100%; /* Sikrer at billedet ikke bliver for stort på små skærme */
-  height: auto; /* Beholder korrekt forhold mellem bredde og højde */
-}
-
-.aboutUs div {
-  margin: 5rem;
-}
-
-.aboutUs h2 {
+.textContainer h2 {
   font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.aboutUs h3 {
-  font-size: 1.5rem;
-}
-
-
-.aboutUs p {
+.textContainer p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.aboutUs ul {
+.textContainer h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.textContainer ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 1rem 0;
 }
 
-.aboutUs ul li {
+.textContainer ul li {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
-.aboutUs ul li:before {
+.textContainer ul li::before {
   content: "✓";
-  padding-right: 1rem;
+  position: absolute;
+  left: 0;
   color: green;
-  font-weight: bold;
 }
 
-/* Media Queries for Mobile */
+/* Responsiv About Us */
 @media (max-width: 768px) {
-  .aboutUs {
-    flex-direction: column; /* Stabler elementerne vertikalt på små skærme */
-    padding: 2rem 1rem; /* Reducerer padding på små skærme */
+  .aboutUsSection {
+    flex-direction: column; /* Billede øverst */
+    min-height: auto;
   }
-
-  .aboutUs img {
-    width: 100%; /* Gør billedet fuld bredde på små skærme */
-    margin-bottom: 2rem; /* Tilføjer afstand mellem billedet og teksten */
+  .imageContainer {
+    width: 100%;
+    height: auto;
+    flex: none;
   }
-
-  .aboutUs div {
-    margin: 2rem 0; /* Mindsker margin på små skærme */
+  .imageContainer img {
+    height: auto;
+    max-height: none;
   }
-
-  .aboutUs h2 {
-    font-size: 1.8rem; /* Gør overskriften lidt mindre på mobil */
+  .textContainer {
+    width: 100%;
+    flex: none;
+    padding: 1.5rem;
   }
+}
 
-  .aboutUs p {
-    font-size: 1rem; /* Mindre tekststørrelse for bedre mobiltilpasning */
+/* ------------------------------------
+   BÅDSERVICE-SEKTION
+   (Tekst i grå boks venstre, billede flush højre)
+------------------------------------ */
+.boatServiceSection {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 400px;
+}
+
+.boatServiceText h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.boatServiceText p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.boatServiceText ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.boatServiceText ul li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.boatServiceText ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: green;
+}
+
+/* 2) BÅDSERVICE: højre kolonne (billede) */
+.boatServiceImage {
+  width: 50%; /* Halvdelen af sektionens bredde */
+  overflow: hidden; /* Samme opsætning som ovenfor */
+  display: flex; /* Valgfrit men ofte nyttigt, hvis du vil centrere noget */
+}
+
+/* Billedet udfylder containeren med 'cover' */
+.boatServiceImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsivt layout for bådservice */
+@media (max-width: 768px) {
+  .boatServiceSection {
+    flex-direction: column; /* Tekst øverst, billede nederst */
+    min-height: auto;
   }
-
-  .aboutUs ul {
-    margin-left: 2rem;
+  .boatServiceText {
+    width: 100%;
+    padding: 1.5rem;
+    flex: none;
   }
-
-  .aboutUs ul li {
+  .boatServiceImage {
+    width: 100%;
+    height: auto;
+    flex: none;
+  }
+  .boatServiceImage img {
+    height: auto;
+    max-height: none;
+  }
+  .boatServiceText h2 {
+    font-size: 1.8rem;
+  }
+  .boatServiceText p,
+  .boatServiceText ul li {
     font-size: 1rem;
   }
 }
 
-/* Steps Section */
-.stepsSection {
-  margin: 60px 20px;
-  text-align: center;
-}
-
-.stepsSection h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.stepsWrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.step {
-  flex: 1;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  min-width: 12rem;
-}
-
-.step h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.step p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.icon img {
-  width: 70px;
-  height: auto;
-  background-color: #c5ac90;
-  border-radius: 50%;
-  border: 1px solid grey;
-  padding: 9px;
-  margin-bottom: 15px;
-}
-
-.ctaButton {
-  background-color: var(--accent-color);
-  color: hsl(0, 0%, 100%);
-  font-size: 1.2rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.ctaButton:hover {
-  background-color: hsl(210, 100%, 35%);
-}
-
+/* ------------------------------------
+   Service Banner (Swiper)
+------------------------------------ */
 .serviceBanner {
   background-color: var(--accent-color);
 }
@@ -185,6 +229,7 @@
   text-transform: uppercase;
 }
 
+/* Grid layout for rens/vaske-løsninger */
 .gridService {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -226,12 +271,12 @@
   background-clip: text;
 }
 
-/* Divideren */
+/* Divider */
 .divider {
-  width: 80%; /* Reduceret bredde på mobilen */
+  width: 80%;
   height: 3px;
   background-color: var(--accent-color);
-  margin: 1.5rem auto; /* Centrerer divideren */
+  margin: 1.5rem auto;
 }
 
 .textcontent p {
@@ -263,14 +308,12 @@
   }
   .textcontent {
     max-width: 100%;
-    text-align: center; /* Centrerer tekst på mobil */
-    align-items: center; /* Centrerer elementer */
+    text-align: center;
+    align-items: center;
   }
-
   .divider {
-    width: 80%; /* Justerer bredde for at se pæn ud på mobile enheder */
+    width: 80%;
   }
-
   .textWrapper {
     margin: 5rem 2rem;
     padding-left: 0;
@@ -284,19 +327,15 @@
     align-items: center;
     padding: 10px;
   }
-
   .textcontent {
     max-width: 100%;
   }
-
   .textcontent h2 {
     font-size: 1.5rem;
   }
-
   .textcontent p {
     font-size: 0.9rem;
   }
-
   .ctaButtonService {
     font-size: 1rem;
   }
