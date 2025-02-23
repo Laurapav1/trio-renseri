@@ -9,15 +9,15 @@ export default function Kunderabat() {
   return (
     <>
       <Navbar />
-      <PageHeroSection heading="Kunderabat" imagePath="/images/sale.jpg" />
+      <PageHeroSection heading="Kunderabat" imagePath="/images/sale2.jpg" />
 
       {/* Intro Section */}
       <section className={styles.textWrapper}>
         <h2>Få Eksklusive Rabatter</h2>
         <p>
-          Hos Trio Renseri tilbyder vi særlige rabatter på tekstiltøj. Er du
-          studerende eller pensionist, kan du få 15% rabat på tekstiltøj med
-          gyldigt studie- eller pensionistkort ved betaling.
+          Hos Trio Renseri tilbyder vi særlige rabatter på rensning af
+          tekstiltøj. Er du studerende eller pensionist, kan du få 15% rabat på
+          tekstiltøj med gyldigt studie- eller pensionistkort ved betaling.
         </p>
         <div className={styles.discountDetails}>
           <div className={styles.discountBox}>

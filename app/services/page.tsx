@@ -43,7 +43,7 @@ export default function Tojrens() {
             title="Brudetøj"
             description="Skånsom rensning af brudekjoler, der bevarer deres glans og skønhed."
             link="/services/brudekjolerens"
-            imgURL="images/bridedress.jpg"
+            imgURL="images/bridedress5.jpg"
           />
 
           <ServiceCard
@@ -78,7 +78,7 @@ export default function Tojrens() {
             title="Madrasbetræk"
             description="Skånsom rensning af madrasbetræk, der holder dem friske og behagelige."
             link="/services/madrasbetraek"
-            imgURL="images/mattress.jpg"
+            imgURL="images/madrass.jpg"
           />
 
           <ServiceCard
