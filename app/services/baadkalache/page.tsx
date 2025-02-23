@@ -12,7 +12,7 @@ export default function BaadKalache() {
       {/* Hero Section */}
       <HeroSection
         heading="Vedligeholdelse og rensning"
-        imagePath="/images/boat-cover.jpg"
+        imagePath="/images/baad2.jpg"
       />
 
       <div className={styles.container}>

@@ -7,6 +7,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
+  const [isSkraedderDropdownOpen, setIsSkraedderDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     // When closing the mobile menu, also close the dropdown
@@ -155,11 +156,45 @@ export default function Navbar() {
             )}
           </li>
 
-          <li className={styles.navbarItem}>
-            <Link href="/skraadder" onClick={handleLinkClick}>
+          {/* Services with Submenu */}
+          <li
+            className={styles.navbarItem}
+            // On desktop, show submenu on hover
+            onMouseEnter={() => {
+              if (!isOpen) setIsSkraedderDropdownOpen(true);
+            }}
+            onMouseLeave={() => {
+              if (!isOpen) setIsSkraedderDropdownOpen(false);
+            }}
+          >
+            <Link
+              href="/skraedder"
+              onClick={(e) => {
+                if (isOpen) {
+                  // On mobile: prevent immediate navigation, expand/collapse submenu
+                  e.preventDefault();
+                  setIsSkraedderDropdownOpen((prev) => !prev);
+                } else {
+                  // On desktop: navigate normally and close menus
+                  handleLinkClick();
+                }
+              }}
+            >
               <span>Skrædder</span>
             </Link>
+
+            {/* Only render the submenu if it's open */}
+            {isSkraedderDropdownOpen && (
+              <ul className={styles.dropdownMenu}>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/tekstilrens" onClick={handleLinkClick}>
+                    Tekstil Service
+                  </Link>
+                </li>
+              </ul>
+            )}
           </li>
+
           <li className={styles.navbarItem}>
             <Link href="/priser" onClick={handleLinkClick}>
               <span>Priser</span>
