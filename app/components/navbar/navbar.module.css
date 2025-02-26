@@ -87,13 +87,14 @@
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 .navbarList.active {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  text-align: center;
   transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
 }
 
@@ -161,7 +162,9 @@
 /* Mobile (< 768px) */
 @media (max-width: 767px) {
 
-  
+  .navbarList.active {
+    text-align: center;
+  }
   /* Dropdown menu expands inline */
   .dropdownMenu {
     position: static;

@@ -182,8 +182,8 @@ export default function Navbar() {
             {isSkraedderDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/tekstilrens" onClick={handleLinkClick}>
-                    Tekstil Service
+                  <Link href="/skraedder/priser" onClick={handleLinkClick}>
+                    Priser
                   </Link>
                 </li>
               </ul>
