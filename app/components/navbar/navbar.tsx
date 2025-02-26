@@ -13,6 +13,7 @@ export default function Navbar() {
     // When closing the mobile menu, also close the dropdown
     if (isOpen) {
       setIsServicesDropdownOpen(false);
+      setIsSkraedderDropdownOpen(false);
     }
     setIsOpen((prev) => !prev);
   };
@@ -20,6 +21,7 @@ export default function Navbar() {
   const handleLinkClick = () => {
     setIsOpen(false); // Close mobile menu on link click
     setIsServicesDropdownOpen(false);
+    setIsSkraedderDropdownOpen(false);
   };
 
   return (
@@ -54,8 +56,7 @@ export default function Navbar() {
 
           {/* Services with Submenu */}
           <li
-            className={styles.navbarItem}
-            // On desktop, show submenu on hover
+            className={`${styles.navbarItem} ${styles.hasDropdown}`} // Tilføj hasDropdown
             onMouseEnter={() => {
               if (!isOpen) setIsServicesDropdownOpen(true);
             }}
@@ -71,7 +72,6 @@ export default function Navbar() {
                   e.preventDefault();
                   setIsServicesDropdownOpen((prev) => !prev);
                 } else {
-                  // On desktop: navigate normally and close menus
                   handleLinkClick();
                 }
               }}
@@ -79,7 +79,6 @@ export default function Navbar() {
               <span>Services</span>
             </Link>
 
-            {/* Only render the submenu if it's open */}
             {isServicesDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li className={styles.dropdownItem}>
@@ -156,10 +155,9 @@ export default function Navbar() {
             )}
           </li>
 
-          {/* Services with Submenu */}
+          {/* Skrædder with Submenu */}
           <li
-            className={styles.navbarItem}
-            // On desktop, show submenu on hover
+            className={`${styles.navbarItem} ${styles.hasDropdown}`} // Tilføj hasDropdown
             onMouseEnter={() => {
               if (!isOpen) setIsSkraedderDropdownOpen(true);
             }}
@@ -171,11 +169,9 @@ export default function Navbar() {
               href="/skraedder"
               onClick={(e) => {
                 if (isOpen) {
-                  // On mobile: prevent immediate navigation, expand/collapse submenu
                   e.preventDefault();
                   setIsSkraedderDropdownOpen((prev) => !prev);
                 } else {
-                  // On desktop: navigate normally and close menus
                   handleLinkClick();
                 }
               }}
@@ -183,12 +179,11 @@ export default function Navbar() {
               <span>Skrædder</span>
             </Link>
 
-            {/* Only render the submenu if it's open */}
             {isSkraedderDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/tekstilrens" onClick={handleLinkClick}>
-                    Tekstil Service
+                  <Link href="/skraedder/priser" onClick={handleLinkClick}>
+                    Priser
                   </Link>
                 </li>
               </ul>

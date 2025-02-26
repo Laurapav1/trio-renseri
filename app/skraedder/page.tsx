@@ -5,7 +5,7 @@ import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
 import Navbar from "@/app/components/navbar/navbar";
 
-export default function Skraadder() {
+export default function Skraedder() {
   return (
     <>
       <Navbar />
@@ -27,7 +27,7 @@ export default function Skraadder() {
           </div>
           <div className={styles.serviceBox}>
             <h2>OMFORANDRING AF TØJ</h2>
-            <Link href={"/skraadder/priser"} className={styles.ctaButton}>
+            <Link href={"/skraedder/priser"} className={styles.ctaButton}>
               Se ydelser og priser
             </Link>
           </div>
