@@ -12,7 +12,7 @@
 
 /* Navbar links container */
 .navbarContainer {
-  margin-top: 0.7rem;
+  margin-top: 0rem;
   top: 0;
   width: 100%;
   display: flex;
@@ -137,6 +137,7 @@
   }
 
   .navbarContainer {
+    margin-top: 0.7rem;
     justify-content: center;
     width: auto;
   }
@@ -159,6 +160,8 @@
 
 /* Mobile (< 768px) */
 @media (max-width: 767px) {
+
+  
   /* Dropdown menu expands inline */
   .dropdownMenu {
     position: static;
