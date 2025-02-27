@@ -55,13 +55,19 @@ export default function Kontakt() {
               <div className={styles.inputContainer}>
                 <select name="interest" className={styles.input} required>
                   <option value="">Vælg en interesse</option>
-                  <option value="omforandting af tøj">Tøj</option>
-                  <option value="skjorteservide">Skjorteservice </option>
-                  <option value="gardinservide">Gardinservice </option>
-                  <option value="tæpperens">Tæpperens </option>
-                  <option value="teksilrens">Tekstilrens</option>
-                  <option value="dyner">Dyner</option>
-                  <option value="selskabskjoler">Selskabskjoler</option>
+                  <option value="sekstilservice">Tekstil service</option>
+                  <option value="Skjorteservide">Skjorte service</option>
+                  <option value="Brudetøj">Brudeyøj</option>
+                  <option value="Dyner/puder">Dyner/puder</option>
+                  <option value="vaskafduge">Vask af duge</option>
+                  <option value="gardinservide">Gardiner</option>
+                  <option value="tæpperens">Tæpper</option>
+                  <option value="madrasbetræk">Madrasbetræk</option>
+                  <option value="mobelbetræk">Møbelbetræk</option>
+                  <option value="udlejning">
+                    Udlejning af møbel og tæpperensmaskine
+                  </option>
+                  <option value="baadkalache">Båd kalache</option>
                 </select>
               </div>
               <textarea

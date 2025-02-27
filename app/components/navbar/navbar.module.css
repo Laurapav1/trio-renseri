@@ -161,7 +161,6 @@
 
 /* Mobile (< 768px) */
 @media (max-width: 767px) {
-
   .navbarList.active {
     text-align: center;
   }
