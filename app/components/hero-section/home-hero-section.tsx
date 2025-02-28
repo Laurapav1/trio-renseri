@@ -4,8 +4,14 @@ import styles from "./home-hero-section.module.css";
 function HomeHeroSection() {
   return (
     <section className={styles.homeHeroSection}>
-      <video autoPlay loop muted className={styles.heroVideo}>
-        <source src="/videos/forside.MOV" type="video/mp4" />
+      <video
+        autoPlay
+        loop
+        muted
+        className={styles.heroVideo}
+        poster="/images/hero-placeholder.jpg"
+      >
+        <source src="/videos/forside.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className={styles.heroContent}>
