@@ -125,6 +125,18 @@
   }
 }
 
+@media (max-width: 768px) {
+  .crossSection {
+    flex-direction: column;
+  }
+  .crossImageContainer {
+    order: 1;
+  }
+  .crossTextContainer {
+    order: 2;
+  }
+}
+
 /* ------------------------------------
    Service Banner (Swiper)
 ------------------------------------ */
