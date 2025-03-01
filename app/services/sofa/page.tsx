@@ -44,44 +44,6 @@ export default function Sofa() {
           </div>
         </div>
 
-        {/* Modern Steps Section */}
-        <div className={styles.steps}>
-          <h2>Processen</h2>
-          <div className={styles.stepGrid}>
-            <div className={styles.process}>
-              <img
-                src="/images/step1-sofa-inspection.jpg"
-                alt="Trin 1 - Før vask"
-              />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 1: Før vask</h3>
-              </div>
-              <p>
-                Vi inspicerer betrækkene for pletter, slid og eventuelle skader.
-              </p>
-            </div>
-
-            <div className={styles.process}>
-              <img src="/images/step2-washing.jpg" alt="Trin 2 - Vask" />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 2: Vask</h3>
-              </div>
-              <p>Sofabetrækkene vaskes grundigt med skånsomme metoder.</p>
-            </div>
-
-            <div className={styles.process}>
-              <img src="/images/step3-drying.jpg" alt="Trin 3 - Tørring" />
-              <div className={styles.processContainer}>
-                <h3 className={styles.processHeading}>Trin 3: Tørring</h3>
-              </div>
-              <p>
-                Vi tørrer betrækkene omhyggeligt for at sikre, at de er friske
-                og klar til brug.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Call to Action Section */}
         <div className={styles.cta}>
           <h2>Klar til en frisk sofa?</h2>
