@@ -97,9 +97,8 @@
 
 .crossTextContainer ul li::before {
   content: "✓";
-  position: absolute;
-  right: 0;
   color: green;
+  margin-right: 0.5rem;
 }
 
 /* Mobile Adjustments for Cross Sections */

@@ -66,33 +66,27 @@ export default function Home() {
         {/* Textile Section */}
         <section className={styles.crossSection}>
           <div className={styles.crossTextContainer}>
-            <h2>Tekstilrens for Almindeligt Tøj</h2>
+            <h2>Tekstilrens</h2>
             <p>
-              Vi tilbyder specialiseret tekstilrens til dagligdags tøj, der
-              sikrer, at dine yndlingsklæder bevarer deres farve, form og
-              kvalitet. Vores metoder er skånsomme, men effektive, og vi
-              benytter de nyeste teknikker inden for rengøring af almindelige
-              tekstiler.
+              Vi tilbyder professionel tekstilrens, der sikrer, at dit tøj
+              forbliver rent og velplejet. Vores specialiserede metoder fjerner
+              pletter og bevarer både farve og form, så dit tøj altid fremstår
+              friskt.
             </p>
             <p>
-              Uanset om det drejer sig om bluser, bukser eller andre
-              beklædningsgenstande, sørger vi for, at din garderobe altid
-              fremstår frisk og indbydende.
+              Uanset om det drejer sig om dagligdags beklædning eller finere
+              tøj, kan du trygt overlade din garderobe til os.
             </p>
-            <h3>Hvorfor Vælge Vores Tekstilrens?</h3>
+            <h3>Fordele ved vores tekstilrens</h3>
             <ul>
-              <li>Skånsom rensning af almindeligt tøj</li>
-              <li>Fastholdelse af farver og kvalitet</li>
-              <li>Erfaring med moderne tekstilpleje</li>
-              <li>Effektiv og miljøvenlig metode</li>
+              <li>Skånsom og effektiv rensning</li>
+              <li>Fastholdelse af farver og form</li>
+              <li>Moderne og miljøvenlige metoder</li>
+              <li>Erfaring med alle typer tekstiler</li>
             </ul>
           </div>
           <div className={styles.crossImageContainer}>
-            {/* Update the image source as needed */}
-            <img
-              src="/images/textile.jpg"
-              alt="Tekstilrens for Almindeligt Tøj"
-            />
+            <img src="/images/textile.jpg" alt="Tekstilrens" />
           </div>
         </section>
 
@@ -119,7 +113,7 @@ export default function Home() {
             </ul>
             <Link href="/services/batservice" className={styles.boatButton}>
               Se bådservice
-            </Link> 
+            </Link>
           </div>
         </section>
 
