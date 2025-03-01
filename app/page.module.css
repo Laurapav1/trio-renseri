@@ -37,7 +37,7 @@
    ABOUT US Section
    (Billede venstre, grå boks højre)
 ------------------------------------ */
-.rightSection {
+.crossSection {
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -45,12 +45,12 @@
 }
 
 /* Venstre kolonne: Billede */
-.rightImageContainer {
+.crossImageContainer {
   flex: 1;
   overflow: hidden; /* Skjuler evt. beskæring */
 }
 
-.rightImageContainer img {
+.crossImageContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -58,8 +58,7 @@
 }
 
 /* Højre kolonne: Tekst (grå baggrund) */
-.rightTextContainer,
-.leftTextContainer {
+.crossTextContainer {
   width: 50%;
   background-color: #f2f2f2;
   box-sizing: border-box;
@@ -69,35 +68,35 @@
   justify-content: center;
 }
 
-.rightTextContainer h2 {
+.crossTextContainer h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.rightTextContainer p {
+.crossTextContainer p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.rightTextContainer h3 {
+.crossTextContainer h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
 }
 
-.rightTextContainer ul {
+.crossTextContainer ul {
   list-style-type: none;
   padding-right: 0;
   margin: 1rem 0;
 }
 
-.rightTextContainer ul li {
+.crossTextContainer ul li {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   padding-right: 1.5rem;
   position: relative;
 }
 
-.rightTextContainer ul li::before {
+.crossTextContainer ul li::before {
   content: "✓";
   position: absolute;
   right: 0;
@@ -106,109 +105,23 @@
 
 /* Responsiv About Us */
 @media (max-width: 768px) {
-  .rightSection {
+  .crossSection {
     flex-direction: column; /* Billede øverst */
     min-height: auto;
   }
-  .rightImageContainer {
+  .crossImageContainer {
     width: 100%;
     height: auto;
     flex: none;
   }
-  .rightImageContainer img {
-    height: auto;
-    max-height: none;
-  }
-  .rightTextContainer {
-    width: 100%;
-    flex: none;
-    padding: 1.5rem;
-  }
-}
-
-/* ------------------------------------
-   BÅDSERVICE-SEKTION
-   (Tekst i grå boks venstre, billede flush højre)
------------------------------------- */
-.leftSection {
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 400px;
-}
-
-.leftTextContainer h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.leftTextContainer p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-.leftTextContainer ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1rem;
-}
-
-.leftTextContainer ul li {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  padding-right: 1.5rem;
-  position: relative;
-}
-
-.leftTextContainer ul li::before {
-  content: "✓";
-  position: absolute;
-  right: 0;
-  color: green;
-}
-
-/* 2) BÅDSERVICE: højre kolonne (billede) */
-.leftImageContainer {
-  width: 50%; /* Halvdelen af sektionens bredde */
-  overflow: hidden; /* Samme opsætning som ovenfor */
-  display: flex; /* Valgfrit men ofte nyttigt, hvis du vil centrere noget */
-}
-
-/* Billedet udfylder containeren med 'cover' */
-.leftImageContainer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Responsivt layout for bådservice */
-@media (max-width: 768px) {
-  .leftSection {
-    flex-direction: column; /* Tekst øverst, billede nederst */
-    min-height: auto;
-  }
-  .leftTextContainer {
-    width: 100%;
-    padding: 1.5rem;
-    flex: none;
-  }
-  .leftImageContainer {
-    width: 100%;
-    height: auto;
-    flex: none;
-  }
-  .leftImageContainer img {
+  .crossImageContainer img {
     height: auto;
     max-height: none;
   }
-  .leftTextContainer h2 {
-    font-size: 1.8rem;
-  }
-  .leftTextContainer p,
-  .leftTextContainer ul li {
-    font-size: 1rem;
+  .crossTextContainer {
+    width: 100%;
+    flex: none;
+    padding: 1.5rem;
   }
 }
 
