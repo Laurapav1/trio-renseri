@@ -34,11 +34,11 @@ export default function Home() {
         </section>
 
         {/* About Us Section */}
-        <section className={styles.aboutUsSection}>
-          <div className={styles.imageContainer}>
+        <section className={styles.rightSection}>
+          <div className={styles.rightImageContainer}>
             <img src="/images/profil.jpg" alt="Velkommen til Trio Renseri" />
           </div>
-          <div className={styles.textContainer}>
+          <div className={styles.rightTextContainer}>
             <h2>Velkommen til Trio Renseri</h2>
             <p>
               Hos Trio Renseri forstår vi, at dit tøj ikke bare er tekstiler –
@@ -64,8 +64,8 @@ export default function Home() {
         </section>
 
         {/* Bådservice-sektionen med teksten til venstre, billedet til højre */}
-        <section className={styles.boatServiceSection}>
-          <div className={styles.boatServiceText}>
+        <section className={styles.leftSection}>
+          <div className={styles.leftTextContainer}>
             <h2>Service til både</h2>
             <p>
               Udover vores klassiske renseri- og tøjplejeservices tilbyder vi
@@ -85,8 +85,38 @@ export default function Home() {
               Se bådservice
             </Link>
           </div>
-          <div className={styles.boatServiceImage}>
+          <div className={styles.leftImageContainer}>
             <img src="/images/baad2.jpg" alt="Bådservice" />
+          </div>
+        </section>
+
+        {/* About Us Section */}
+        <section className={styles.rightSection}>
+          <div className={styles.rightImageContainer}>
+            <img src="/images/profil.jpg" alt="Velkommen til Trio Renseri" />
+          </div>
+          <div className={styles.rightTextContainer}>
+            <h2>Velkommen til Trio Renseri</h2>
+            <p>
+              Hos Trio Renseri forstår vi, at dit tøj ikke bare er tekstiler –
+              det er en del af din hverdag og ofte forbundet med både
+              affektionsværdi og funktionalitet. Vi tilbyder derfor
+              skræddersyede løsninger, der sikrer, at dine tekstiler behandles
+              med omhu og ekspertise.
+            </p>
+            <p>
+              Igennem årene er der sket en voldsom udvikling på både tekstiler,
+              former og farver – men tiden har heller ikke stået stille hos os.
+              Derfor kan du trygt stole på, at vi leverer de bedste metoder, når
+              det kommer til rens og vedligeholdelse af dine tekstiler.
+            </p>
+            <h3>Hvorfor Vælge Trio Renseri?</h3>
+            <ul>
+              <li>Miljøvenlige renserimetoder</li>
+              <li>Over 26 års erfaring</li>
+              <li>Pålidelig og hurtig service</li>
+              <li>Specialpleje af sarte tekstiler</li>
+            </ul>
           </div>
         </section>
 

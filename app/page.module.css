@@ -37,7 +37,7 @@
    ABOUT US Section
    (Billede venstre, grå boks højre)
 ------------------------------------ */
-.aboutUsSection {
+.rightSection {
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -45,12 +45,12 @@
 }
 
 /* Venstre kolonne: Billede */
-.imageContainer {
+.rightImageContainer {
   flex: 1;
   overflow: hidden; /* Skjuler evt. beskæring */
 }
 
-.imageContainer img {
+.rightImageContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -58,8 +58,8 @@
 }
 
 /* Højre kolonne: Tekst (grå baggrund) */
-.textContainer,
-.boatServiceText {
+.rightTextContainer,
+.leftTextContainer {
   width: 50%;
   background-color: #f2f2f2;
   box-sizing: border-box;
@@ -69,57 +69,57 @@
   justify-content: center;
 }
 
-.textContainer h2 {
+.rightTextContainer h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.textContainer p {
+.rightTextContainer p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.textContainer h3 {
+.rightTextContainer h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
 }
 
-.textContainer ul {
+.rightTextContainer ul {
   list-style-type: none;
-  padding-left: 0;
+  padding-right: 0;
   margin: 1rem 0;
 }
 
-.textContainer ul li {
+.rightTextContainer ul li {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   position: relative;
 }
 
-.textContainer ul li::before {
+.rightTextContainer ul li::before {
   content: "✓";
   position: absolute;
-  left: 0;
+  right: 0;
   color: green;
 }
 
 /* Responsiv About Us */
 @media (max-width: 768px) {
-  .aboutUsSection {
+  .rightSection {
     flex-direction: column; /* Billede øverst */
     min-height: auto;
   }
-  .imageContainer {
+  .rightImageContainer {
     width: 100%;
     height: auto;
     flex: none;
   }
-  .imageContainer img {
+  .rightImageContainer img {
     height: auto;
     max-height: none;
   }
-  .textContainer {
+  .rightTextContainer {
     width: 100%;
     flex: none;
     padding: 1.5rem;
@@ -130,53 +130,53 @@
    BÅDSERVICE-SEKTION
    (Tekst i grå boks venstre, billede flush højre)
 ------------------------------------ */
-.boatServiceSection {
+.leftSection {
   display: flex;
   width: 100%;
   margin: 0 auto;
   min-height: 400px;
 }
 
-.boatServiceText h2 {
+.leftTextContainer h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.boatServiceText p {
+.leftTextContainer p {
   font-size: 1.1rem;
   line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.boatServiceText ul {
+.leftTextContainer ul {
   list-style: none;
   padding: 0;
   margin-bottom: 1rem;
 }
 
-.boatServiceText ul li {
+.leftTextContainer ul li {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   position: relative;
 }
 
-.boatServiceText ul li::before {
+.leftTextContainer ul li::before {
   content: "✓";
   position: absolute;
-  left: 0;
+  right: 0;
   color: green;
 }
 
 /* 2) BÅDSERVICE: højre kolonne (billede) */
-.boatServiceImage {
+.leftImageContainer {
   width: 50%; /* Halvdelen af sektionens bredde */
   overflow: hidden; /* Samme opsætning som ovenfor */
   display: flex; /* Valgfrit men ofte nyttigt, hvis du vil centrere noget */
 }
 
 /* Billedet udfylder containeren med 'cover' */
-.boatServiceImage img {
+.leftImageContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -185,29 +185,29 @@
 
 /* Responsivt layout for bådservice */
 @media (max-width: 768px) {
-  .boatServiceSection {
+  .leftSection {
     flex-direction: column; /* Tekst øverst, billede nederst */
     min-height: auto;
   }
-  .boatServiceText {
+  .leftTextContainer {
     width: 100%;
     padding: 1.5rem;
     flex: none;
   }
-  .boatServiceImage {
+  .leftImageContainer {
     width: 100%;
     height: auto;
     flex: none;
   }
-  .boatServiceImage img {
+  .leftImageContainer img {
     height: auto;
     max-height: none;
   }
-  .boatServiceText h2 {
+  .leftTextContainer h2 {
     font-size: 1.8rem;
   }
-  .boatServiceText p,
-  .boatServiceText ul li {
+  .leftTextContainer p,
+  .leftTextContainer ul li {
     font-size: 1rem;
   }
 }
@@ -266,7 +266,7 @@
 
 .textcontent h2 {
   font-size: 45px;
-  background-image: linear-gradient(to right, var(--accent-color), white 300%);
+  background-image: linear-gradient(to left, var(--accent-color), white 300%);
   color: transparent;
   background-clip: text;
 }
@@ -280,7 +280,7 @@
 }
 
 .textcontent p {
-  margin-left: 2rem;
+  margin-right: 2rem;
   margin-top: 0;
   margin-bottom: 0.7rem;
   color: #555;
@@ -316,7 +316,7 @@
   }
   .textWrapper {
     margin: 5rem 2rem;
-    padding-left: 0;
+    padding-right: 0;
   }
 }
 
