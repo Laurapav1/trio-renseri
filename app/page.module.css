@@ -16,7 +16,7 @@
 }
 
 /* ------------------------------------
-   Text (Intro) Section
+   Intro (Text) Section
 ------------------------------------ */
 .textWrapper {
   margin: 5rem 20rem;
@@ -34,20 +34,19 @@
 }
 
 /* ------------------------------------
-   ABOUT US Section
-   (Billede venstre, grå boks højre)
+   Cross Section (About, Textile, Boat, etc.)
 ------------------------------------ */
 .crossSection {
   display: flex;
   width: 100%;
   margin: 0 auto;
-  min-height: 400px; /* Giver sektionen en minimumshøjde */
+  min-height: 400px;
 }
 
-/* Venstre kolonne: Billede */
+/* Image Container */
 .crossImageContainer {
   flex: 1;
-  overflow: hidden; /* Skjuler evt. beskæring */
+  overflow: hidden;
 }
 
 .crossImageContainer img {
@@ -57,7 +56,7 @@
   display: block;
 }
 
-/* Højre kolonne: Tekst (grå baggrund) */
+/* Text Container */
 .crossTextContainer {
   width: 50%;
   background-color: #f2f2f2;
@@ -103,37 +102,27 @@
   color: green;
 }
 
-/* Responsiv About Us */
+/* Mobile Adjustments for Cross Sections */
 @media (max-width: 768px) {
   .crossSection {
-    flex-direction: column; /* Billede øverst */
+    flex-direction: column;
     min-height: auto;
   }
-  .crossImageContainer {
-    width: 100%;
-    height: auto;
-    flex: none;
-  }
-  .crossImageContainer img {
-    height: auto;
-    max-height: none;
-  }
+  .crossImageContainer,
   .crossTextContainer {
     width: 100%;
     flex: none;
     padding: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .crossSection {
-    flex-direction: column;
   }
   .crossImageContainer {
     order: 1;
   }
   .crossTextContainer {
     order: 2;
+  }
+  .crossImageContainer img {
+    height: auto;
+    max-height: none;
   }
 }
 
@@ -154,7 +143,9 @@
   text-transform: uppercase;
 }
 
-/* Grid layout for rens/vaske-løsninger */
+/* ------------------------------------
+   Service Section (Grid & Slides)
+------------------------------------ */
 .gridService {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -170,6 +161,7 @@
   object-fit: cover;
 }
 
+/* Service Text Content */
 .textcontent {
   display: flex;
   flex-direction: column;
@@ -205,14 +197,15 @@
 }
 
 .textcontent p {
-  margin-right: 2rem;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 0.7rem;
   color: #555;
   width: 100%;
   word-wrap: break-word;
+  margin-right: 2rem;
 }
 
+/* CTA Button */
 .ctaButtonService {
   color: var(--accent-color);
   font-size: 1.2rem;
@@ -227,6 +220,7 @@
   color: white;
 }
 
+/* Additional Responsiveness */
 @media (max-width: 1100px) {
   .gridContainer {
     grid-template-columns: 1fr;
@@ -251,9 +245,6 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-  }
-  .textcontent {
-    max-width: 100%;
   }
   .textcontent h2 {
     font-size: 1.5rem;
