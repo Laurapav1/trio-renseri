@@ -16,7 +16,7 @@
 }
 
 /* ------------------------------------
-   Text (Intro) Section
+   Intro (Text) Section
 ------------------------------------ */
 .textWrapper {
   margin: 5rem 20rem;
@@ -34,32 +34,30 @@
 }
 
 /* ------------------------------------
-   ABOUT US Section
-   (Billede venstre, grå boks højre)
+   Cross Section (About, Textile, Boat, etc.)
 ------------------------------------ */
-.aboutUsSection {
+.crossSection {
   display: flex;
   width: 100%;
   margin: 0 auto;
-  min-height: 400px; /* Giver sektionen en minimumshøjde */
+  min-height: 400px;
 }
 
-/* Venstre kolonne: Billede */
-.imageContainer {
+/* Image Container */
+.crossImageContainer {
   flex: 1;
-  overflow: hidden; /* Skjuler evt. beskæring */
+  overflow: hidden;
 }
 
-.imageContainer img {
+.crossImageContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Højre kolonne: Tekst (grå baggrund) */
-.textContainer,
-.boatServiceText {
+/* Text Container */
+.crossTextContainer {
   width: 50%;
   background-color: #f2f2f2;
   box-sizing: border-box;
@@ -69,146 +67,61 @@
   justify-content: center;
 }
 
-.textContainer h2 {
+.crossTextContainer h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.textContainer p {
+.crossTextContainer p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
-.textContainer h3 {
+.crossTextContainer h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
 }
 
-.textContainer ul {
+.crossTextContainer ul {
   list-style-type: none;
-  padding-left: 0;
+  padding-right: 0;
   margin: 1rem 0;
 }
 
-.textContainer ul li {
+.crossTextContainer ul li {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   position: relative;
 }
 
-.textContainer ul li::before {
+.crossTextContainer ul li::before {
   content: "✓";
-  position: absolute;
-  left: 0;
   color: green;
+  margin-right: 0.5rem;
 }
 
-/* Responsiv About Us */
+/* Mobile Adjustments for Cross Sections */
 @media (max-width: 768px) {
-  .aboutUsSection {
-    flex-direction: column; /* Billede øverst */
+  .crossSection {
+    flex-direction: column;
     min-height: auto;
   }
-  .imageContainer {
-    width: 100%;
-    height: auto;
-    flex: none;
-  }
-  .imageContainer img {
-    height: auto;
-    max-height: none;
-  }
-  .textContainer {
+  .crossImageContainer,
+  .crossTextContainer {
     width: 100%;
     flex: none;
     padding: 1.5rem;
   }
-}
-
-/* ------------------------------------
-   BÅDSERVICE-SEKTION
-   (Tekst i grå boks venstre, billede flush højre)
------------------------------------- */
-.boatServiceSection {
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  min-height: 400px;
-}
-
-.boatServiceText h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.boatServiceText p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-}
-
-.boatServiceText ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1rem;
-}
-
-.boatServiceText ul li {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.boatServiceText ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: green;
-}
-
-/* 2) BÅDSERVICE: højre kolonne (billede) */
-.boatServiceImage {
-  width: 50%; /* Halvdelen af sektionens bredde */
-  overflow: hidden; /* Samme opsætning som ovenfor */
-  display: flex; /* Valgfrit men ofte nyttigt, hvis du vil centrere noget */
-}
-
-/* Billedet udfylder containeren med 'cover' */
-.boatServiceImage img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* Responsivt layout for bådservice */
-@media (max-width: 768px) {
-  .boatServiceSection {
-    flex-direction: column; /* Tekst øverst, billede nederst */
-    min-height: auto;
+  .crossImageContainer {
+    order: 1;
   }
-  .boatServiceText {
-    width: 100%;
-    padding: 1.5rem;
-    flex: none;
+  .crossTextContainer {
+    order: 2;
   }
-  .boatServiceImage {
-    width: 100%;
-    height: auto;
-    flex: none;
-  }
-  .boatServiceImage img {
+  .crossImageContainer img {
     height: auto;
     max-height: none;
-  }
-  .boatServiceText h2 {
-    font-size: 1.8rem;
-  }
-  .boatServiceText p,
-  .boatServiceText ul li {
-    font-size: 1rem;
   }
 }
 
@@ -229,7 +142,9 @@
   text-transform: uppercase;
 }
 
-/* Grid layout for rens/vaske-løsninger */
+/* ------------------------------------
+   Service Section (Grid & Slides)
+------------------------------------ */
 .gridService {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -245,6 +160,7 @@
   object-fit: cover;
 }
 
+/* Service Text Content */
 .textcontent {
   display: flex;
   flex-direction: column;
@@ -266,7 +182,7 @@
 
 .textcontent h2 {
   font-size: 45px;
-  background-image: linear-gradient(to right, var(--accent-color), white 300%);
+  background-image: linear-gradient(to left, var(--accent-color), white 300%);
   color: transparent;
   background-clip: text;
 }
@@ -280,14 +196,15 @@
 }
 
 .textcontent p {
-  margin-left: 2rem;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 0.7rem;
   color: #555;
   width: 100%;
   word-wrap: break-word;
+  margin-right: 2rem;
 }
 
+/* CTA Button */
 .ctaButtonService {
   color: var(--accent-color);
   font-size: 1.2rem;
@@ -302,6 +219,7 @@
   color: white;
 }
 
+/* Additional Responsiveness */
 @media (max-width: 1100px) {
   .gridContainer {
     grid-template-columns: 1fr;
@@ -316,7 +234,7 @@
   }
   .textWrapper {
     margin: 5rem 2rem;
-    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -326,9 +244,6 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-  }
-  .textcontent {
-    max-width: 100%;
   }
   .textcontent h2 {
     font-size: 1.5rem;

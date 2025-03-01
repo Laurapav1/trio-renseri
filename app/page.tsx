@@ -34,11 +34,11 @@ export default function Home() {
         </section>
 
         {/* About Us Section */}
-        <section className={styles.aboutUsSection}>
-          <div className={styles.imageContainer}>
+        <section className={styles.crossSection}>
+          <div className={styles.crossImageContainer}>
             <img src="/images/profil.jpg" alt="Velkommen til Trio Renseri" />
           </div>
-          <div className={styles.textContainer}>
+          <div className={styles.crossTextContainer}>
             <h2>Velkommen til Trio Renseri</h2>
             <p>
               Hos Trio Renseri forstår vi, at dit tøj ikke bare er tekstiler –
@@ -63,9 +63,39 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Bådservice-sektionen med teksten til venstre, billedet til højre */}
-        <section className={styles.boatServiceSection}>
-          <div className={styles.boatServiceText}>
+        {/* Textile Section */}
+        <section className={styles.crossSection}>
+          <div className={styles.crossTextContainer}>
+            <h2>Tekstilrens</h2>
+            <p>
+              Vi tilbyder professionel tekstilrens, der sikrer, at dit tøj
+              forbliver rent og velplejet. Vores specialiserede metoder fjerner
+              pletter og bevarer både farve og form, så dit tøj altid fremstår
+              friskt.
+            </p>
+            <p>
+              Uanset om det drejer sig om dagligdags beklædning eller finere
+              tøj, kan du trygt overlade din garderobe til os.
+            </p>
+            <h3>Fordele ved vores tekstilrens</h3>
+            <ul>
+              <li>Skånsom og effektiv rensning</li>
+              <li>Fastholdelse af farver og form</li>
+              <li>Moderne og miljøvenlige metoder</li>
+              <li>Erfaring med alle typer tekstiler</li>
+            </ul>
+          </div>
+          <div className={styles.crossImageContainer}>
+            <img src="/images/textile.jpg" alt="Tekstilrens" />
+          </div>
+        </section>
+
+        {/* Boat Service Section */}
+        <section className={styles.crossSection}>
+          <div className={styles.crossImageContainer}>
+            <img src="/images/baad2.jpg" alt="Bådservice" />
+          </div>
+          <div className={styles.crossTextContainer}>
             <h2>Service til både</h2>
             <p>
               Udover vores klassiske renseri- og tøjplejeservices tilbyder vi
@@ -85,9 +115,6 @@ export default function Home() {
               Se bådservice
             </Link>
           </div>
-          <div className={styles.boatServiceImage}>
-            <img src="/images/baad2.jpg" alt="Bådservice" />
-          </div>
         </section>
 
         {/* Service Section with Swiper */}
@@ -105,6 +132,7 @@ export default function Home() {
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
           >
+            {/* Swiper Slides */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
