@@ -31,7 +31,7 @@ export default function Brudekjolerens() {
             om dit dyrebare klenodie.
           </p>
           <section className={styles.priceSection}>
-            <h3>Priser</h3>
+            <h2>Priser</h2>
             <ul>
               <li>Efter aftale</li>
             </ul>
