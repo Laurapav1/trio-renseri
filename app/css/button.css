@@ -1,0 +1,28 @@
+/* CTA Button */
+.ctaButton {
+  background-color: var(--accent-color);
+  color: hsl(0, 0%, 100%);
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.ctaButton:hover {
+  background-color: hsl(210, 100%, 35%);
+}
+
+.cta {
+  margin-top: 100px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin: 2rem;
+}
+
+.cta a:hover {
+  background-color: #005bb5;
+}

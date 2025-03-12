@@ -4,15 +4,15 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 3rem;
-  gap: 2rem; /* Afstand mellem tekst og billede */
+  gap: 4rem; /* Afstand mellem tekst og billede */
 }
 
 /* Tekstsektionen til venstre */
 .textContainer {
   flex: 1;
+  order: 2; /* Tekst kommer efter billedet */
   color: #333;
 }
-
 .textContainer h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -27,9 +27,15 @@
 /* Billedsektionen til højre */
 .imageContainer {
   flex: 1;
+  order: 1; /* Billede kommer først */
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .image {
@@ -42,9 +48,8 @@
 /* Prissektion i bunden */
 .priceSection {
   max-width: 1200px;
-  margin: 2rem auto 4rem;
   text-align: center;
-  padding: 0 1rem;
+  padding: 2rem;
 }
 
 .priceSection h2 {
@@ -104,12 +109,6 @@
   border-radius: 8px;
   overflow: hidden; /* hvis du vil klippe billede-kanter */
 }
-
-.image {
-  /* Du kan evt. tilføje egne styling-regler her. 
-     fill + objectFit: "cover" i TSX giver normalt, hvad du har brug for. */
-}
-
 
 /* CTA Button */
 .ctaButton {
