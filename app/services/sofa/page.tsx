@@ -16,45 +16,47 @@ export default function Sofa() {
         imagePath="/images/sofa2.jpg"
       />
 
-      <div className={styles.container}>
-        {/* Introduction and Box Section */}
-        <div className={styles.introContainer}>
-          <div className={styles.intro}>
-            <p>
-              Vi tilbyder professionel vask og rensning af sofabetræk, så din
-              sofa altid ser flot og indbydende ud. Vores skånsomme metoder
-              fjerner effektivt pletter, støv og allergener, samtidig med at
-              betrækkets farver og kvalitet bevares. Fra inspektion til vask og
-              tørring, sørger vi for, at dine betræk får den mest omhyggelige
-              behandling.
-            </p>
-          </div>
-          <div className={styles.serviceBox}>
-            <h2>SOFABETRÆK VASK</h2>
-            <p>
-              Vi har stor erfaring med rensning af sofabetræk, uanset størrelse
-              og materiale. Sidste år rensede vi mere end 5.000 sofabetræk.
-            </p>
-            <h3>Pris i alt (vasket og tørret):</h3>
+      {/* Sektion med tekst (venstre) og billede (højre) */}
+      <section className={styles.wrapper}>
+        <div className={styles.textContainer}>
+          <h1>Specialiseret rensning af skjorter</h1>
+          <p>
+            Vi tilbyder professionel vask og rensning af sofabetræk, så din sofa
+            altid ser flot og indbydende ud. Vores skånsomme metoder fjerner
+            effektivt pletter, støv og allergener, samtidig med at betrækkets
+            farver og kvalitet bevares. Fra inspektion til vask og tørring,
+            sørger vi for, at dine betræk får den mest omhyggelige behandling.
+          </p>
+          <p>
+            Vi har stor erfaring med rensning af sofabetræk, uanset størrelse og
+            materiale. Sidste år rensede vi mere end 5.000 sofabetræk.
+          </p>
+          <section className={styles.priceSection}>
+            <h2>Pris i alt (vasket og tørret):</h2>
             <ul>
               <li>1 sæde - 200 kr.</li>
               <li>3 sæder - 500 kr.</li>
               <li>Hjørnesofa - 800 kr.</li>
             </ul>
-          </div>
+            <Link
+              href={"/priser?service=brudekjolerens"}
+              className={styles.ctaButton}
+            >
+              Se andre priser
+            </Link>
+          </section>
         </div>
 
-        {/* Call to Action Section */}
-        <div className={styles.cta}>
-          <h2>Klar til en frisk sofa?</h2>
-          <Link
-            href={"/priser?service=sofabetraek"}
-            className={styles.ctaButton}
-          >
-            Se Priser
-          </Link>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/images/sofa2.jpg"
+            alt="sofa"
+            fill
+            style={{ objectFit: "cover" }}
+            className={styles.image}
+          />
         </div>
-      </div>
+      </section>
     </>
   );
 }

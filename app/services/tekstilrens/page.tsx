@@ -16,41 +16,44 @@ export default function Tekstilrens() {
         imagePath="/images/tekstil2.jpg"
       />
 
-      <div className={styles.container}>
-        {/* Introduction and Box Section */}
-        <div className={styles.introContainer}>
-          <div className={styles.intro}>
-            <p>
-              Vi er specialister i rensning af forskellige tekstiler og tilbyder
-              en sikker og effektiv rensning af alt fra møbelbetræk til tunge
-              gardiner.
-            </p>
-          </div>
-          <div className={styles.serviceBox}>
-            <h2>TEKSTILRENS</h2>
-            <p>
-              Vores professionelle rensning sikrer, at dine tekstiler forbliver
-              friske, rene og smukke.
-            </p>
-            <h3>Pris i alt (renset og plejet):</h3>
+      {/* Sektion med tekst (venstre) og billede (højre) */}
+      <section className={styles.wrapper}>
+        <div className={styles.textContainer}>
+          <h1>Specialiseret rensning af tæpper</h1>
+          <p>
+            Vi er specialister i rensning af forskellige tekstiler og tilbyder
+            en sikker og effektiv rensning af alt fra møbelbetræk til tunge
+            gardiner.
+          </p>
+          <p>
+            Vores professionelle rensning sikrer, at dine tekstiler forbliver
+            friske, rene og smukke.
+          </p>
+          <section className={styles.priceSection}>
+            <h2>Pris i alt (renset og plejet):</h2>
             <ul>
               <li>Puder - 100 kr. pr. stk.</li>
               <li>Sofabetræk - 300 kr.</li>
             </ul>
-          </div>
+            <Link
+              href={"/priser?service=brudekjolerens"}
+              className={styles.ctaButton}
+            >
+              Se andre priser
+            </Link>
+          </section>
         </div>
 
-        {/* Call to Action Section */}
-        <div className={styles.cta}>
-          <h2>Klar til at få rene og friske tekstiler?</h2>
-          <Link
-            href={"/priser?service=tekstilrens"}
-            className={styles.ctaButton}
-          >
-            Se Priser
-          </Link>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/images/tekstil2.jpg"
+            alt="tekstil"
+            fill
+            style={{ objectFit: "cover" }}
+            className={styles.image}
+          />
         </div>
-      </div>
+      </section>
     </>
   );
 }

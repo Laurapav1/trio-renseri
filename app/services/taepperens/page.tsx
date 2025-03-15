@@ -16,41 +16,43 @@ export default function Taepperens() {
         imagePath="/images/tæppe.jpg"
       />
 
-      <div className={styles.container}>
-        {/* Introduction and Box Section */}
-        <div className={styles.introContainer}>
-          <div className={styles.intro}>
-            <p>
-              Vi bruger de bedste teknikker og produkter til at rense tæpper af
-              enhver type og størrelse, så de igen føles friske og ser smukke
-              ud.
-            </p>
-          </div>
-          <div className={styles.serviceBox}>
-            <h2>TÆPPERENS</h2>
-            <p>
-              Fra mindre måtter til store væg-til-væg tæpper, vi har erfaringen
-              og udstyret til at håndtere det hele.
-            </p>
-            <h3>Pris i alt (renset og plejet):</h3>
+      {/* Sektion med tekst (venstre) og billede (højre) */}
+      <section className={styles.wrapper}>
+        <div className={styles.textContainer}>
+          <h1>Specialiseret rensning af tæpper</h1>
+          <p>
+            Vi bruger de bedste teknikker og produkter til at rense tæpper af
+            enhver type og størrelse, så de igen føles friske og ser smukke ud.
+          </p>
+          <p>
+            Fra mindre måtter til store væg-til-væg tæpper, vi har erfaringen og
+            udstyret til at håndtere det hele.
+          </p>
+          <section className={styles.priceSection}>
+            <h2>Pris i alt (renset og plejet):</h2>
             <ul>
               <li>Lille tæppe - 200 kr.</li>
               <li>Stort tæppe - 800 kr.</li>
             </ul>
-          </div>
+            <Link
+              href={"/priser?service=brudekjolerens"}
+              className={styles.ctaButton}
+            >
+              Se andre priser
+            </Link>
+          </section>
         </div>
 
-        {/* Call to Action Section */}
-        <div className={styles.cta}>
-          <h2>Vil du give dit tæppe en ny start?</h2>
-          <Link
-            href={"/priser?service=taepperens"}
-            className={styles.ctaButton}
-          >
-            Se Priser
-          </Link>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/images/tæppe.jpg"
+            alt="tæppe"
+            fill
+            style={{ objectFit: "cover" }}
+            className={styles.image}
+          />
         </div>
-      </div>
+      </section>
     </>
   );
 }

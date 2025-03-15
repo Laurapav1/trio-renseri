@@ -48,7 +48,7 @@ export default function Brudekjolerens() {
           <Image
             src="/images/clean-wedding.jpeg"
             alt="Brudekjole"
-            fill // Bemærk: brug fill i stedet for width/height
+            fill 
             style={{ objectFit: "cover" }}
             className={styles.image}
           />
