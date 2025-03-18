@@ -30,7 +30,7 @@ export default function Mobelbetraek() {
             og friskt udseende.
           </p>
           <section className={styles.priceSection}>
-            <h2>Pris i alt (vasket og renset):</h2>
+            <h3>Pris i alt (vasket og renset):</h3>
             <ul>
               <li>135 kr.</li>
               <li>+imprægnering - 200 kr. pr. kg.</li>

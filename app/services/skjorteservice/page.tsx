@@ -33,7 +33,7 @@ export default function Skjorteservice() {
             vaskede vi mere end 28.000 skjorter.
           </p>
           <section className={styles.priceSection}>
-            <h2>Pris i alt (vasket og strøget):</h2>
+            <h3>Pris i alt (vasket og strøget):</h3>
             <ul>
               <li>1 stk. - 25 kr.</li>
               <li>5 stk. - 110 kr.</li>

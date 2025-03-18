@@ -31,7 +31,7 @@ export default function Brudekjolerens() {
             om dit dyrebare klenodie.
           </p>
           <section className={styles.priceSection}>
-            <h2>Priser</h2>
+            <h3>Priser</h3>
             <ul>
               <li>Efter aftale</li>
             </ul>
@@ -48,7 +48,7 @@ export default function Brudekjolerens() {
           <Image
             src="/images/clean-wedding.jpeg"
             alt="Brudekjole"
-            fill 
+            fill
             style={{ objectFit: "cover" }}
             className={styles.image}
           />

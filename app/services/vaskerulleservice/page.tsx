@@ -30,7 +30,7 @@ export default function Vaskerulleservice() {
             altid føles friske og er klare til brug.
           </p>
           <section className={styles.priceSection}>
-            <h2>Pris i alt (vasket og rullet):</h2>
+            <h3>Pris i alt (vasket og rullet):</h3>
             <ul>
               <li>Duge Vask og rul - 65 kr. pr. meter</li>
               <li>Duge kun rul - 55 kr. pr. meter</li>

@@ -29,7 +29,7 @@ export default function Taepperens() {
             udstyret til at håndtere det hele.
           </p>
           <section className={styles.priceSection}>
-            <h2>Pris i alt (renset og plejet):</h2>
+            <h3>Pris i alt (renset og plejet):</h3>
             <ul>
               <li>Lille tæppe - 200 kr.</li>
               <li>Stort tæppe - 800 kr.</li>

@@ -30,7 +30,7 @@ export default function Madrasbetraek() {
             forlænger levetiden for dine madrasser.
           </p>
           <section className={styles.priceSection}>
-            <h2>Priser</h2>
+            <h3>Priser</h3>
             <ul>
               <li>Enkeltmadrasbetræk - 300 kr.</li>
               <li>Dobbelmadrasbetræk - 500 kr.</li>

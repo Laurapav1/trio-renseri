@@ -32,7 +32,7 @@ export default function DynePudeVask() {
             med at friske mere end 10.000 dyner og puder op.
           </p>
           <section className={styles.priceSection}>
-            <h2>Priser</h2>
+            <h3>Priser</h3>
             <ul>
               <li>1 dyne - 275 kr.</li>
               <li>2 dyner - 350 kr.</li>

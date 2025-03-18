@@ -99,7 +99,7 @@ export default function Tojrens() {
             title="Båd Kalache"
             description="Rensning og vedligeholdelse af båd kalache, så de forbliver i topform."
             link="/services/baadkalache"
-            imgURL="images/boat.jpg"
+            imgURL="images/baad2.jpg"
           />
         </div>
       </div>

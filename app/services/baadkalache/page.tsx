@@ -30,7 +30,7 @@ export default function BaadKalache() {
             metoder til at beskytte materialet og forlænge levetiden.
           </p>
           <section className={styles.priceSection}>
-            <h2>Priser</h2>
+            <h3>Priser</h3>
             <ul>
               <li>Efter aftale</li>
             </ul>

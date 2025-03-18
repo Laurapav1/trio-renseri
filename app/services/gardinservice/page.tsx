@@ -16,29 +16,29 @@ export default function Gardinservice() {
         imagePath="/images/curtains2.jpg"
       />
 
-       {/* Sektion med tekst (venstre) og billede (højre) */}
-       <section className={styles.wrapper}>
+      {/* Sektion med tekst (venstre) og billede (højre) */}
+      <section className={styles.wrapper}>
         <div className={styles.textContainer}>
           <h1>Specialiseret rensning af brudekjoler</h1>
           <p>
-          Vores gardinservice renser og plejer dine gardiner skånsomt for at
-              fjerne støv, allergener og pletter. Vi sikrer, at dine gardiner
-              bevarer deres farver og struktur.
+            Vores gardinservice renser og plejer dine gardiner skånsomt for at
+            fjerne støv, allergener og pletter. Vi sikrer, at dine gardiner
+            bevarer deres farver og struktur.
           </p>
           <p>
-          Vi tilbyder en komplet rensning af alle typer gardiner, fra lette
-          stofgardiner til tunge mørklægningsgardiner.
+            Vi tilbyder en komplet rensning af alle typer gardiner, fra lette
+            stofgardiner til tunge mørklægningsgardiner.
           </p>
           <section className={styles.priceSection}>
-            <h2>Priser</h2>
+            <h3>Priser</h3>
             <ul>
               <li>135 kr. pr. bane</li>
             </ul>
-            <h3>Velourgardiner</h3>
+            <h4>Velourgardiner</h4>
             <ul>
               <li>155 kr. pr. bane</li>
             </ul>
-            <h3>Rens af foldegardiner</h3>
+            <h4>Rens af foldegardiner</h4>
             <ul>
               <li>Indhent tilbud</li>
             </ul>
@@ -55,7 +55,7 @@ export default function Gardinservice() {
           <Image
             src="/images/clean-wedding.jpeg"
             alt="Brudekjole"
-            fill 
+            fill
             style={{ objectFit: "cover" }}
             className={styles.image}
           />

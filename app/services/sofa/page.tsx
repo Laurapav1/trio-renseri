@@ -32,7 +32,7 @@ export default function Sofa() {
             materiale. Sidste år rensede vi mere end 5.000 sofabetræk.
           </p>
           <section className={styles.priceSection}>
-            <h2>Pris i alt (vasket og tørret):</h2>
+            <h3>Pris i alt (vasket og tørret):</h3>
             <ul>
               <li>1 sæde - 200 kr.</li>
               <li>3 sæder - 500 kr.</li>

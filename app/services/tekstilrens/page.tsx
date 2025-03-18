@@ -30,7 +30,7 @@ export default function Tekstilrens() {
             friske, rene og smukke.
           </p>
           <section className={styles.priceSection}>
-            <h2>Pris i alt (renset og plejet):</h2>
+            <h3>Pris i alt (renset og plejet):</h3>
             <ul>
               <li>Puder - 100 kr. pr. stk.</li>
               <li>Sofabetræk - 300 kr.</li>

@@ -30,7 +30,7 @@ export default function Udlejning() {
             at bruge og giver fantastiske resultater.
           </p>
           <section className={styles.priceSection}>
-            <h2>Pris i alt (inkl. leje og vejledning):</h2>
+            <h3>Pris i alt (inkl. leje og vejledning):</h3>
             <ul>
               <li>Rensningsmaskine - 500 kr. pr. dag</li>
               <li>Ekstra rengøringsmiddel - 100 kr.</li>
