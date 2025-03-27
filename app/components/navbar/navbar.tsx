@@ -82,6 +82,11 @@ export default function Navbar() {
             {isServicesDropdownOpen && (
               <ul className={styles.dropdownMenu}>
                 <li className={styles.dropdownItem}>
+                  <Link href="/services" onClick={handleLinkClick}>
+                    Services
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
                   <Link href="/services/tekstilrens" onClick={handleLinkClick}>
                     Tekstil Service
                   </Link>
@@ -181,6 +186,11 @@ export default function Navbar() {
 
             {isSkraedderDropdownOpen && (
               <ul className={styles.dropdownMenu}>
+                <li className={styles.dropdownItem}>
+                  <Link href="/skraedder" onClick={handleLinkClick}>
+                    Skrædder
+                  </Link>
+                </li>
                 <li className={styles.dropdownItem}>
                   <Link href="/skraedder/priser" onClick={handleLinkClick}>
                     Priser

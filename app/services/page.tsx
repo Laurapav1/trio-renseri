@@ -20,7 +20,7 @@ export default function Tojrens() {
           dit tøj, uanset om det er den daglige skjorte eller den særlige
           brudekjole.
         </p>
-        <Link href={"/tojrens/priser"} className={styles.ctaButton}>
+        <Link href={"/priser"} className={styles.ctaButton}>
           Se priser
         </Link>
         <div className={styles.servicesGrid}>
