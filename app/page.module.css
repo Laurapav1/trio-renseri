@@ -111,7 +111,6 @@
   .crossTextContainer {
     width: 100%;
     flex: none;
-    padding: 1.5rem;
   }
   .crossImageContainer {
     order: 1;
