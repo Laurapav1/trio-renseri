@@ -148,9 +148,7 @@
 
   /* Dropdown menu for desktop (hover) */
   .dropdownMenu {
-    top: 3rem;
     position: absolute;
-    left: 0.5rem;
     background-color: var(--accent-color);
     min-width: 200px;
     z-index: 1000;
@@ -163,20 +161,29 @@
   .navbarList.active {
     text-align: center;
   }
+
   /* Dropdown menu expands inline */
   .dropdownMenu {
-    position: static;
     background-color: transparent;
     box-shadow: none;
-    padding-left: 1rem; /* Indent if desired */
-    margin-top: 0.5rem; /* Spacing above submenu */
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .navbarList li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 10%; /* Centers the 80% width line */
+    bottom: 0;
+    width: 80%;
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--accent-color) 90%, white 3%);
   }
 }
 
 /* Dropdown items */
 .dropdownItem a {
-  display: block;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   color: hsl(0, 0%, 100%);
   text-decoration: none;
   font-size: 1rem;
