@@ -41,6 +41,18 @@
   background: transparent;
 }
 
+.input:invalid {
+  color: hsl(0, 0%, 45%); /* lighter color for the placeholder option */
+}
+
+.input {
+  color: #333; /* normal color for valid selections */
+}
+
+.input:focus:invalid {
+  color: #333; /* or your normal text color */
+}
+
 .textarea {
   min-height: 100px;
   font-size: 1rem;

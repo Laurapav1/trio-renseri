@@ -54,7 +54,9 @@ export default function Kontakt() {
               </div>
               <div className={styles.inputContainer}>
                 <select name="interest" className={styles.input} required>
-                  <option value="">Vælg en interesse</option>
+                  <option value="" disabled selected hidden>
+                    Vælg en interesse
+                  </option>
                   <option value="omforandting af tøj">Tøj</option>
                   <option value="skjorteservide">Skjorteservice </option>
                   <option value="gardinservide">Gardinservice </option>
