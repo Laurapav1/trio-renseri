@@ -111,9 +111,11 @@ export default function Home() {
               <li>Omfattende vask/rens og imprægnering</li>
               <li>Vask/rens af hynder, puder, måtter og gardiner</li>
             </ul>
-            <Link href="/services/batservice" className={styles.boatButton}>
-              Se bådservice
-            </Link>
+            <div className={styles.ctaButtonContainer}>
+              <Link href="/services/batservice" className={styles.ctaButton}>
+                Se bådservice
+              </Link>
+            </div>
           </div>
         </section>
 
