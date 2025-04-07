@@ -16,48 +16,51 @@ export default function Gardinservice() {
         imagePath="/images/curtains2.jpg"
       />
 
-      <div className={styles.container}>
-        {/* Introduction and Box Section */}
-        <div className={styles.introContainer}>
-          <div className={styles.intro}>
-            <p>
-              Vores gardinservice renser og plejer dine gardiner skånsomt for at
-              fjerne støv, allergener og pletter. Vi sikrer, at dine gardiner
-              bevarer deres farver og struktur.
-            </p>
-          </div>
-          <div className={styles.serviceBox}>
-            <h2>GARDINSERVICE</h2>
-            <p>
-              Vi tilbyder en komplet rensning af alle typer gardiner, fra lette
-              stofgardiner til tunge mørklægningsgardiner.
-            </p>
-            <h3>Renser/Vasker af gardiner</h3>
+      {/* Sektion med tekst (venstre) og billede (højre) */}
+      <section className={styles.wrapper}>
+        <div className={styles.textContainer}>
+          <h1>Specialiseret rensning af brudekjoler</h1>
+          <p>
+            Vores gardinservice renser og plejer dine gardiner skånsomt for at
+            fjerne støv, allergener og pletter. Vi sikrer, at dine gardiner
+            bevarer deres farver og struktur.
+          </p>
+          <p>
+            Vi tilbyder en komplet rensning af alle typer gardiner, fra lette
+            stofgardiner til tunge mørklægningsgardiner.
+          </p>
+          <section className={styles.priceSection}>
+            <h3>Priser</h3>
             <ul>
               <li>135 kr. pr. bane</li>
             </ul>
-            <h3>Velourgardiner</h3>
+            <h4>Velourgardiner</h4>
             <ul>
               <li>155 kr. pr. bane</li>
             </ul>
-            <h3>Rens af foldegardiner</h3>
+            <h4>Rens af foldegardiner</h4>
             <ul>
               <li>Indhent tilbud</li>
             </ul>
-          </div>
+            <Link
+              href={"/priser?service=brudekjolerens"}
+              className={styles.ctaButton}
+            >
+              Se andre priser
+            </Link>
+          </section>
         </div>
 
-        {/* Call to Action Section */}
-        <div className={styles.cta}>
-          <h2>Vil du have rene og friske gardiner?</h2>
-          <Link
-            href={"/priser?service=gardinservice"}
-            className={styles.ctaButton}
-          >
-            Se Priser
-          </Link>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/images/clean-wedding.jpeg"
+            alt="Brudekjole"
+            fill
+            style={{ objectFit: "cover" }}
+            className={styles.image}
+          />
         </div>
-      </div>
+      </section>
     </>
   );
 }

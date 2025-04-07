@@ -1,119 +1,113 @@
-/* serviceDetail.module.css */
-.container {
-  max-width: 1200px;
-  margin: 5rem auto;
-  text-align: center;
-  padding: 0 1rem;
-}
-
-.steps h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  margin-top: 5rem;
-  color: #333;
-  position: relative;
-}
-
-.steps h2::before,
-.steps h2::after {
-  content: "";
-  flex: 1;
-  border-bottom: 1px solid #b3b3b3;
-  margin: 0 15px;
-}
-
-/*Intro*/
-.introContainer {
+/* Wrapper til tekst (venstre) og billede (højre) */
+.wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 20px; /* Afstand mellem introduktion og serviceboks */
+  padding: 3rem;
+  gap: 4rem; /* Afstand mellem tekst og billede */
 }
 
-.intro {
-  flex: 1; /* Sørger for, at introduktionen fylder det meste af pladsen */
-  max-width: 60%;
-  text-align: left;
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-  align-self: center;
-}
-
-.serviceBox {
+/* Tekstsektionen til venstre */
+.textContainer {
   flex: 1;
-  max-width: 38%;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
+  order: 2; /* Tekst kommer efter billedet */
+  color: #333;
+}
+.textContainer h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.textContainer p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Billedsektionen til højre */
+.imageContainer {
+  flex: 1;
+  order: 1; /* Billede kommer først */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  background-size: cover;
+  width: 400px;
+  height: 500px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.serviceBox h2 {
-  text-align: center;
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #333;
+.image {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.serviceBox h3 {
+/* Prissektion i bunden */
+.priceSection {
+  max-width: 1200px;
   text-align: center;
-  margin-top: 20px;
-  font-size: 1.2rem;
-  color: #333;
+  padding: 2rem;
 }
 
-.serviceBox ul {
-  text-align: center;
+.priceSection h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.priceSection ul {
   list-style: none;
   padding: 0;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
 }
 
-.serviceBox ul li {
-  margin-bottom: 5px;
+.priceSection ul li {
+  margin: 0.5rem 0;
 }
 
-/* Steps Section */
-.steps {
-  text-align: center;
+/* CTA-knap til priser */
+.ctaButton {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #0070f3; /* Eksempel på blå farve */
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.stepGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
+.ctaButton:hover {
+  background-color: #005bb5; /* Mørkere blå ved hover */
 }
 
-.process {
-  padding: 0px;
-  text-align: center;
-  background-color: var(--secondary-background-color);
+/* Responsiv tilpasning */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .textContainer,
+  .imageContainer {
+    max-width: 100%;
+  }
+
+  .textContainer h1 {
+    font-size: 1.5rem;
+  }
 }
 
-.process img {
-  width: 100%;
-  height: 18rem;
-  object-fit: cover;
-  display: block;
-}
-
-.processContainer {
-  background-color: var(--accent-color);
-  padding: 3px;
-}
-
-.process h3 {
-  color: white;
-}
-
-.process p {
-  margin: 20px;
-  line-height: 1.2;
+.imageContainer {
+  position: relative; /* påkrævet for at fill kan virke */
+  width: 400px; /* fast bredde */
+  height: 500px; /* fast højde */
+  border-radius: 8px;
+  overflow: hidden; /* hvis du vil klippe billede-kanter */
 }
 
 /* CTA Button */
@@ -124,7 +118,9 @@
   text-decoration: none;
   transition: background-color 0.3s;
   display: inline-block;
-  margin-top: 10px;
+  margin-bottom: 4rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ctaButton:hover {
@@ -143,35 +139,4 @@
 
 .cta a:hover {
   background-color: #005bb5;
-}
-
-/* Medieforespørgsel til mobil */
-@media (max-width: 768px) {
-  .introContainer {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .intro {
-    max-width: 100%;
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .serviceBox {
-    max-width: 100%;
-    padding: 15px;
-  }
-
-  .serviceBox h2 {
-    font-size: 1.4rem;
-  }
-
-  .serviceBox h3 {
-    font-size: 1.1rem;
-  }
-
-  .serviceBox ul li {
-    font-size: 0.9rem;
-  }
 }

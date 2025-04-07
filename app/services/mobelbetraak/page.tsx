@@ -4,6 +4,7 @@ import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
 import Navbar from "@/app/components/navbar/navbar";
+import Image from "next/image";
 
 export default function Mobelbetraek() {
   return (
@@ -15,41 +16,44 @@ export default function Mobelbetraek() {
         imagePath="/images/sofa-cover.jpg"
       />
 
-      <div className={styles.container}>
-        {/* Introduction and Box Section */}
-        <div className={styles.introContainer}>
-          <div className={styles.intro}>
-            <p>
-              Professionel rensning af møbelbetræk sikrer, at dine møbler
-              forbliver pæne og fri for pletter. Vi tager os af alt fra sofaer
-              til lænestole.
-            </p>
-          </div>
-          <div className={styles.serviceBox}>
-            <h2>MØBELBETRÆK</h2>
-            <p>
-              Vores rensning fjerner pletter og snavs, så dine møbler får et nyt
-              og friskt udseende.
-            </p>
+      {/* Sektion med tekst (venstre) og billede (højre) */}
+      <section className={styles.wrapper}>
+        <div className={styles.textContainer}>
+          <h1>Specialiseret rensning af madrasbetræk</h1>
+          <p>
+            Professionel rensning af møbelbetræk sikrer, at dine møbler
+            forbliver pæne og fri for pletter. Vi tager os af alt fra sofaer til
+            lænestole.
+          </p>
+          <p>
+            Vores rensning fjerner pletter og snavs, så dine møbler får et nyt
+            og friskt udseende.
+          </p>
+          <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og renset):</h3>
             <ul>
               <li>135 kr.</li>
               <li>+imprægnering - 200 kr. pr. kg.</li>
             </ul>
-          </div>
+            <Link
+              href={"/priser?service=brudekjolerens"}
+              className={styles.ctaButton}
+            >
+              Se andre priser
+            </Link>
+          </section>
         </div>
 
-        {/* Call to Action Section */}
-        <div className={styles.cta}>
-          <h2>Vil du have dit møbelbetræk frisket op?</h2>
-          <Link
-            href={"/priser?service=moebelbetraek"}
-            className={styles.ctaButton}
-          >
-            Se Priser
-          </Link>
+        <div className={styles.imageContainer}>
+          <Image
+            src="/images/sofa-cover.jpg"
+            alt="mobelbetraek"
+            fill
+            style={{ objectFit: "cover" }}
+            className={styles.image}
+          />
         </div>
-      </div>
+      </section>
     </>
   );
 }
