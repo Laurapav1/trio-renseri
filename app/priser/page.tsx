@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import PageHeroSection from "../components/hero-section/page-hero-section";
 import Navbar from "../components/navbar/navbar";
 import PriceList from "../components/prisliste/prisliste";
+import Link from "next/link";
 
 export default function Prices() {
   const searchParams = useSearchParams();
@@ -95,13 +96,18 @@ export default function Prices() {
 function Tilbud() {
   return (
     <div className={styles.tilbudContainer}>
-      <h3>Kunde rabatter!</h3>
-      <ul>
-        <li>15% firmarabat for Logbuy kunder</li>
-        <li>10% studierabat</li>
-        <li>10% pensionistrabat</li>
-        <li>Og mange flere</li>
-      </ul>
+      <Link href="/kunderabat">
+        <div className={styles.tilbudHeader}>
+          <h3>Kunde rabatter!</h3>
+        </div>
+        <div className={styles.tilbudContent}>
+          <ul>
+            <li>15% studierabat</li>
+            <li>15% pensionistrabat</li>
+            <li>Klik for at læse mere</li>
+          </ul>
+        </div>
+      </Link>
     </div>
   );
 }

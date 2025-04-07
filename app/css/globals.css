@@ -16,10 +16,13 @@ body {
 
 a {
   color: var(--text-color);
-}
-
-a {
   text-decoration: none;
   border-radius: 0.3rem;
   padding: 12px 25px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
