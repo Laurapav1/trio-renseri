@@ -41,6 +41,11 @@
   background: transparent;
 }
 
+.inputContainer select.input {
+  padding-left: 0.4rem;
+  color: hsl(0, 0%, 45%); /* lighter color for the placeholder option */
+}
+
 .input:invalid {
   color: hsl(0, 0%, 45%); /* lighter color for the placeholder option */
 }

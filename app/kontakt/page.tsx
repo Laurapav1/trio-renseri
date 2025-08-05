@@ -57,13 +57,19 @@ export default function Kontakt() {
                   <option value="" disabled selected hidden>
                     Vælg en interesse
                   </option>
-                  <option value="omforandting af tøj">Tøj</option>
-                  <option value="skjorteservide">Skjorteservice </option>
-                  <option value="gardinservide">Gardinservice </option>
-                  <option value="tæpperens">Tæpperens </option>
                   <option value="teksilrens">Tekstilrens</option>
-                  <option value="dyner">Dyner</option>
-                  <option value="selskabskjoler">Selskabskjoler</option>
+                  <option value="skjorteservide">Skjorteservice </option>
+                  <option value="brudetøj">Brudetøj</option>
+                  <option value="dyner og puder">Dyner/Puder</option>
+                  <option value="vask af duge">Vask af duge</option>
+                  <option value="gardin">Gardinservice </option>
+                  <option value="tæpper">Tæpper</option>
+                  <option value="møbelbetræk">Møbelbetræk</option>
+                  <option value="udlejning af møbel og tæpperrensmaskine">
+                    Udlejning af møbel og tæpperrensmaskine
+                  </option>
+                  <option value="båd kalache">Båd Kalache</option>
+                  <option value="andet">Andet</option>
                 </select>
               </div>
               <textarea
