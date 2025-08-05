@@ -13,24 +13,19 @@ export default function Skjorteservice() {
       <Navbar />
       {/* Hero Section */}
       <HeroSection
-        heading="Tilpasning af dit tøj - vores ekspertise"
+        heading="Din skjorte - vores ansvar"
         imagePath="/images/skjorte.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af skjorter</h1>
+          <h1>Kvalitet rens/vask af skjorter</h1>
           <p>
-            Vi er specialister i at give dine skjorter den bedste behandling.
-            Vores proces sikrer, at dine skjorter altid er i top stand, klar til
-            at blive båret med selvtillid. Fra inspektion til rensning og
-            strygning, vi tager os af hvert eneste trin for at sikre den højeste
-            kvalitet.
+          Vi søger for din skjorte får den behandling den fortjener og til Aarhus billigste pris.
           </p>
           <p>
-            Vi har stor ekspertise i at vaske og stryge skjorter. Sidste år
-            vaskede vi mere end 28.000 skjorter.
+           Sidste år vaskede vi mere end 25.000 skjorter.
           </p>
           <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og strøget):</h3>

@@ -23,11 +23,11 @@ export default function Home() {
       <main>
         {/* Intro Section */}
         <section className={styles.textWrapper}>
-          <h2>Professionelt Renseri Siden 1954</h2>
+          <h2>Højt kvalitet af rens </h2>
           <p>
-            Hos Trio Renseri har vi siden 1954 leveret førsteklasses renseri- og
+            Hos Trio Renseri har vi leveret førsteklasses renseri- og
             tøjplejeservices til både private kunder og virksomheder. Med mere
-            end 26 års erfaring sørger vi for, at dit tøj altid modtager den
+            end 30 års erfaring sørger vi for, at dit tøj altid modtager den
             opmærksomhed og pleje, det fortjener – uanset om det er hverdagstøj
             eller sarte materialer.
           </p>
@@ -41,24 +41,24 @@ export default function Home() {
           <div className={styles.crossTextContainer}>
             <h2>Velkommen til Trio Renseri</h2>
             <p>
-              Hos Trio Renseri forstår vi, at dit tøj ikke bare er tekstiler –
-              det er en del af din hverdag og ofte forbundet med både
-              affektionsværdi og funktionalitet. Vi tilbyder derfor
-              skræddersyede løsninger, der sikrer, at dine tekstiler behandles
-              med omhu og ekspertise.
+              Hos Trio Renseri forstår vi, at dit tøj er mere end blot
+              beklædning – det er en del af din identitet og huser både minder
+              og stil. Derfor tilbyder vi skræddersyede løsninger, der sikrer,
+              at dine favoritstykker behandles med den rette omhu og
+              vedligeholdelse.
             </p>
             <p>
-              Igennem årene er der sket en voldsom udvikling på både tekstiler,
-              former og farver – men tiden har heller ikke stået stille hos os.
-              Derfor kan du trygt stole på, at vi leverer de bedste metoder, når
-              det kommer til rens og vedligeholdelse af dine tekstiler.
+              I takt med at både mode og materialer udvikler sig, holder vi
+              konstant øje med de nyeste teknikker og metoder. Du kan trygt
+              overlade din garderobe til os, velvidende at vi kombinerer
+              tradition med innovation for at levere de bedste resultater.
             </p>
             <h3>Hvorfor Vælge Trio Renseri?</h3>
             <ul>
-              <li>Miljøvenlige renserimetoder</li>
+              <li>Miljøvenlige metoder og materialer</li>
               <li>Over 26 års erfaring</li>
               <li>Pålidelig og hurtig service</li>
-              <li>Specialpleje af sarte tekstiler</li>
+              <li>Specialiseret pleje af sarte stoffer</li>
             </ul>
           </div>
         </section>
@@ -72,10 +72,6 @@ export default function Home() {
               forbliver rent og velplejet. Vores specialiserede metoder fjerner
               pletter og bevarer både farve og form, så dit tøj altid fremstår
               friskt.
-            </p>
-            <p>
-              Uanset om det drejer sig om dagligdags beklædning eller finere
-              tøj, kan du trygt overlade din garderobe til os.
             </p>
             <h3>Fordele ved vores tekstilrens</h3>
             <ul>
@@ -99,17 +95,14 @@ export default function Home() {
             <h2>Service til både</h2>
             <p>
               Udover vores klassiske renseri- og tøjplejeservices tilbyder vi
-              omfattende service til både. Vi hjælper dig med alt fra rensning
-              af kalacher og udskiftning af ruder til opfriskning af
-              bådpressening samt vask/rens og imprægnering.
+              omfattende service til både. Vi hjælper dig med alt fra vask og
+              imprægnering af kalacher til alt slags af reperationer -
+              udskiftning af rude, lynlåse osv
             </p>
             <h3>Vores bådservice omfatter:</h3>
             <ul>
-              <li>Rensning af kalacher</li>
-              <li>Udskiftning af ruder</li>
-              <li>Opfriskning af bådpressening</li>
-              <li>Omfattende vask/rens og imprægnering</li>
-              <li>Vask/rens af hynder, puder, måtter og gardiner</li>
+              <li>vask og imrægnering af kalacher</li>
+              <li>Udskiftning af ruder og lynlåse</li>
             </ul>
             <div className={styles.ctaButtonContainer}>
               <Link href="/services/batservice" className={styles.ctaButton}>
@@ -134,36 +127,30 @@ export default function Home() {
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             loop={true}
           >
-            {/* Swiper Slides */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/sew.jpg" alt="Image 1" />
+                  <img src="/images/tekstil.jpg" alt="Tekstilrens" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/sewing-machine.png"
+                      src="/images/icons/laundry.png"
                       alt="Icon"
                     />
-                    <h2>Omforandring af tøj</h2>
+                    <h2>Tekstilrens</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>✓ Vi behandler dine skjorter med ekspertise og omhu.</p>
                   <p>
-                    ✓ Vores professionelle rensning sikrer en frisk og skarp
-                    skjorte hver gang.
-                  </p>
-                  <p>
-                    ✓ Garanteret kvalitet – vi inspicerer og stryger hver
-                    skjorte til perfektion.
+                    ✓ Vi tilbyder skånsom og effektiv rensning af alle
+                    tekstiler.
                   </p>
                   <Link
-                    href={"/services/skjorteservice"}
+                    href={"/services/tekstilrens"}
                     className={styles.ctaButtonService}
                   >
-                    Se skjorte service
+                    Se tekstilrens
                   </Link>
                 </div>
               </div>
@@ -187,13 +174,10 @@ export default function Home() {
                   <hr className={styles.divider} />
                   <p>✓ Vi behandler dine skjorter med ekspertise og omhu.</p>
                   <p>
-                    ✓ Vores professionelle rensning sikrer en frisk og skarp
-                    skjorte hver gang.
+                    ✓ Vores professionelle vask/rensning sikrer en frisk og
+                    skarp skjorte hver gang.
                   </p>
-                  <p>
-                    ✓ Garanteret kvalitet – vi inspicerer og stryger hver
-                    skjorte til perfektion.
-                  </p>
+                  <p>✓ Garanteret kvalitet –</p>
                   <Link
                     href={"/services/skjorteservice"}
                     className={styles.ctaButtonService}
@@ -204,7 +188,97 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 3: Gardin service*/}
+            {/* Slide : Brudekjole Rens */}
+            <SwiperSlide>
+              <div className={styles.gridService}>
+                <div className={styles.swiperslidecontent}>
+                  <img src="/images/bridedress.jpg" alt="Brudekjole Rens" />
+                </div>
+                <div className={styles.textcontent}>
+                  <div className={styles.iconTitle}>
+                    <img
+                      className={styles.serviceIcon}
+                      src="/images/icons/bride-dress.png"
+                      alt="Icon"
+                    />
+                    <h2>Brudekjole Rens</h2>
+                  </div>
+                  <hr className={styles.divider} />
+                  <p>
+                    ✓ Specialrensning af brudekjoler, så de forbliver i perfekt
+                    stand.
+                  </p>
+                  <Link
+                    href={"/services/brudekjolerens"}
+                    className={styles.ctaButtonService}
+                  >
+                    Se brudekjole rens
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Slide 8: Dyne/Pude Vask */}
+            <SwiperSlide>
+              <div className={styles.gridService}>
+                <div className={styles.swiperslidecontent}>
+                  <img src="/images/dyne.jpg" alt="Dyne/Pude Vask" />
+                </div>
+                <div className={styles.textcontent}>
+                  <div className={styles.iconTitle}>
+                    <img
+                      className={styles.serviceIcon}
+                      src="/images/icons/pillow.png"
+                      alt="Icon"
+                    />
+                    <h2>Dyne/Pude Vask</h2>
+                  </div>
+                  <hr className={styles.divider} />
+                  <p>
+                    ✓ Få dine dyner og puder vasket med den største omhu, så de
+                    holder sig friske og rene.
+                  </p>
+                  <Link
+                    href={"/services/dynepude"}
+                    className={styles.ctaButtonService}
+                  >
+                    Se dyne/pude vask
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Slide: Duge */}
+            <SwiperSlide>
+              <div className={styles.gridService}>
+                <div className={styles.swiperslidecontent}>
+                  <img src="/images/table.jpg" alt="Vask af duge" />
+                </div>
+                <div className={styles.textcontent}>
+                  <div className={styles.iconTitle}>
+                    <img
+                      className={styles.serviceIcon}
+                      src="/images/icons/pillow.png"
+                      alt="Icon"
+                    />
+                    <h2>Vask af duge</h2>
+                  </div>
+                  <hr className={styles.divider} />
+                  <p>
+                    ✓ Få dine duge vasket og rullet, så de altid er klar til
+                    brug.
+                  </p>
+                  <Link
+                    href={"/services/vaskerulleservice"}
+                    className={styles.ctaButtonService}
+                  >
+                    Se vask af duge
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Slide Gardin service*/}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
@@ -261,186 +335,124 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 5: Tekstilrens */}
+            {/* Slide: møbelbetræk */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/tekstil.jpg" alt="Tekstilrens" />
+                  <img src="/images/sofa.jpg" alt="Møbelbetræk" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/laundry.png"
+                      src="/images/icons/tablecloth.png" // ÆNDRE
                       alt="Icon"
                     />
-                    <h2>Tekstilrens</h2>
+                    <h2>Rensing af madrasbetræk</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>
-                    ✓ Vi tilbyder skånsom og effektiv rensning af alle
-                    tekstiler.
+                    ✓ Vi renser dine madrasser og holder dem friske og rene.
                   </p>
                   <Link
-                    href={"/services/tekstilrens"}
+                    href={"/services/sofa"}
                     className={styles.ctaButtonService}
                   >
-                    Se tekstilrens
+                    Se madrasbetræk service
                   </Link>
                 </div>
               </div>
             </SwiperSlide>
 
-            {/* Slide 6: Vaske/Rulle Service */}
+            {/* Slide: Udlejning af mødel og tæpperens */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/table.jpg" alt="Vaske/Rulle Service" />
+                  <img src="/images/ÆNDRE.jpg" alt="Udlejning" /> {/* ÆNDRE */}
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/tablecloth.png"
+                      src="/images/icons/tablecloth.png" // ÆNDRE
                       alt="Icon"
                     />
-                    <h2>Vaske/Rulle Service</h2>
+                    <h2>Udlejning af møbel og tæpperensmaskine</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>
-                    ✓ Lad os tage hånd om dit vasketøj, så det altid er klar til
-                    brug.
+                    ✓ Lej professionelle maskiner til rensning af møbler og
+                    tæpper.
                   </p>
                   <Link
-                    href={"/services/vaske"}
+                    href={"/services/sofa"} // ændre
                     className={styles.ctaButtonService}
                   >
-                    Se vaske/rulle service
+                    Se udlejning service
                   </Link>
                 </div>
               </div>
             </SwiperSlide>
 
-            {/* Slide 7: Brudekjole Rens */}
+            {/* Slide: Båd kalache */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/bridedress.jpg" alt="Brudekjole Rens" />
+                  <img src="/images/baad2.jpg" alt="baadkalache" />{" "}
+                  {/* ÆNDRE */}
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/bride-dress.png"
+                      src="/images/icons/tablecloth.png" // ÆNDRE
                       alt="Icon"
                     />
-                    <h2>Brudekjole Rens</h2>
+                    <h2>Rensing og vedligeholdelse af båd kalache</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>
-                    ✓ Specialrensning af brudekjoler, så de forbliver i perfekt
-                    stand.
+                    ✓ Vi renser dine madrasser og holder dem friske og rene.
                   </p>
                   <Link
-                    href={"/services/brudekjolerens"}
+                    href={"/services/baadkalache"}
                     className={styles.ctaButtonService}
                   >
-                    Se brudekjole rens
+                    Se båd kalache service
                   </Link>
                 </div>
               </div>
             </SwiperSlide>
 
-            {/* Slide 7: Dåbskjole Vask/Rens */}
+            {/* Swiper Slides */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.swiperslidecontent}>
-                  <img src="/images/gowndress.png" alt="Dåbskjole Vask/Rens" />
+                  <img src="/images/sew3.jpg" alt="sew" />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/baby-dress.png"
+                      src="/images/icons/sewing-machine.png"
                       alt="Icon"
                     />
-                    <h2>Dåbskjole Vask/Rens</h2>
+                    <h2>Omforandring af tøj</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>
-                    ✓ Vi tager os af dåbskjoler med ekstra omsorg og præcision.
+                    ✓ Vi tilbyder skræddersyede løsninger til omforandring af
+                    tøj.
                   </p>
                   <Link
-                    href={"/services/daabskjole"}
+                    href={"/services/skraedder"}
                     className={styles.ctaButtonService}
                   >
-                    Se dåbskjole vask/rens
+                    Se omforandring service
                   </Link>
                 </div>
               </div>
             </SwiperSlide>
-
-            {/* Slide 8: Dyne/Pude Vask */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/dyne.jpg" alt="Dyne/Pude Vask" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/pillow.png"
-                      alt="Icon"
-                    />
-                    <h2>Dyne/Pude Vask</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Få dine dyner og puder vasket med den største omhu, så de
-                    holder sig friske og rene.
-                  </p>
-                  <Link
-                    href={"/services/dynepude"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se dyne/pude vask
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Slide 9: Sofabetræk Vask */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/sofa.jpg" alt="Sofabetræk Vask" />
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/sofa.png"
-                      alt="Icon"
-                    />
-                    <h2>Sofabetræk Vask</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi renser dine sofabetræk skånsomt, så de fremstår som nye
-                    igen.
-                  </p>
-                  <Link
-                    href={"/services/sofabetraek"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se sofabetræk vask
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Additional Swiper Slides */}
           </Swiper>
         </section>
       </main>

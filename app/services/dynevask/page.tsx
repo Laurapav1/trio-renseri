@@ -37,13 +37,13 @@ export default function DynePudeVask() {
               <li>1 dyne - 275 kr.</li>
               <li>2 dyner - 350 kr.</li>
               <li>1 pude - 150 kr.</li>
-              <li>2 puder - 225 kr.</li>
+              <li>2 puder - 250 kr.</li>
               <br></br>
-              <li>Silkedyne - 245 kr.</li>
+              <li>Silkedyne - 275 kr.</li>
               <li>Børnedyne- 120 kr.</li>
               <li>Dobbeltdyne - 300 kr.</li>
               <li>Kugledyne - fra: 450 kr.</li>
-              <li>Sovepose - 195 kr.</li>
+              <li>Sovepose - fra 195 kr.</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

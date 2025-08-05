@@ -21,9 +21,9 @@ export default function Vaskerulleservice() {
         <div className={styles.textContainer}>
           <h1>Specialiseret rensning af tæpper</h1>
           <p>
-            Vores vaske- og rulleservice sikrer, at dit tøj er friskt, blødt og
-            klart til at blive brugt. Fra sengetøj til dagligt tøj, vi håndterer
-            det hele.
+            Vores vaske- og rulleservice sikrer, at dine duge eller sengetøj er friskt, blødt og
+            klart til at blive brugt. 
+
           </p>
           <p>
             Vi vasker og ruller tøj og sengetøj med omhu for at sikre, at de

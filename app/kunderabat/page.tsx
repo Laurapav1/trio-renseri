@@ -13,7 +13,7 @@ export default function Kunderabat() {
 
       {/* Intro Section */}
       <section className={styles.textWrapper}>
-        <h2>Få Eksklusive Rabatter</h2>
+        <h2>Vi tilbyder rabatter</h2>
         <p>
           Hos Trio Renseri tilbyder vi særlige rabatter på rensning af
           tekstiltøj. Er du studerende eller pensionist, kan du få 15% rabat på
