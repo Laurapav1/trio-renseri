@@ -26,6 +26,7 @@
 .textWrapper h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  background-color: bisque;
 }
 
 .textWrapper p {
@@ -120,29 +121,6 @@
 
 .ctaButton:hover {
   background-color: hsl(210, 100%, 35%);
-}
-
-/* Mobile Adjustments for Cross Sections */
-@media (max-width: 768px) {
-  .crossSection {
-    flex-direction: column;
-    min-height: auto;
-  }
-  .crossImageContainer,
-  .crossTextContainer {
-    width: 100%;
-    flex: none;
-  }
-  .crossImageContainer {
-    order: 1;
-  }
-  .crossTextContainer {
-    order: 2;
-  }
-  .crossImageContainer img {
-    height: auto;
-    max-height: none;
-  }
 }
 
 /* ------------------------------------
@@ -273,5 +251,24 @@
   }
   .ctaButtonService {
     font-size: 1rem;
+  }
+  .crossSection {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .crossImageContainer,
+  .crossTextContainer {
+    width: 100%;
+    flex: none;
+  }
+  .crossImageContainer {
+    order: 1;
+  }
+  .crossTextContainer {
+    order: 2;
+  }
+  .crossImageContainer img {
+    height: auto;
+    max-height: none;
   }
 }
