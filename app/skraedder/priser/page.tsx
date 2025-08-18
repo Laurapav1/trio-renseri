@@ -1,11 +1,11 @@
 // components/PriceList.tsx
 "use client";
-import React, { useState } from "react";
+
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/app/components/navbar/navbar";
 import PageHeroSection from "@/app/components/hero-section/page-hero-section";
-import styles from "./priser.module.css";
 import PriceList from "@/app/components/prisliste/prisliste";
+import styles from "@/app/components/prices-page/prices-page.module.css";
 import Link from "next/link";
 
 export default function Prices() {
@@ -33,7 +33,7 @@ export default function Prices() {
             { name: "Lårvidde", prices: ["170 DKK"] },
             { name: "Ny lynlås", prices: ["170 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Jakker"
@@ -44,7 +44,7 @@ export default function Prices() {
             { name: "Vat på skulder", prices: ["125 DKK"] },
             { name: "Ny lynlås", prices: ["375 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Kjoler"
@@ -54,7 +54,7 @@ export default function Prices() {
             { name: "Ny lynlås", prices: ["190 DKK"] },
             { name: "Kjoler korte", prices: ["fra 160 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Skindjakker"
@@ -64,7 +64,7 @@ export default function Prices() {
             { name: "Knapper", prices: ["75 DKK"] },
             { name: "Nyt foer - foer fra", prices: ["650 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <Tilbud />
       </div>
