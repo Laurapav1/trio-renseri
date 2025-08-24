@@ -101,6 +101,10 @@
   background-color: hsl(210, 100%, 35%);
 }
 
+.serviceSection {
+  margin-bottom: 1rem;
+}
+
 .serviceBanner {
   background: var(--accent-color);
   margin: 0;
