@@ -1,19 +1,15 @@
-// components/PriceList.tsx
 "use client";
-import React, { useState } from "react";
-import styles from "./priser.module.css";
+
 import { useSearchParams } from "next/navigation";
-import PageHeroSection from "../components/hero-section/page-hero-section";
-import Navbar from "../components/navbar/navbar";
-import PriceList from "../components/prisliste/prisliste";
+import Navbar from "@/app/components/navbar/navbar";
+import PageHeroSection from "@/app/components/hero-section/page-hero-section";
+import PriceList from "@/app/components/prisliste/prisliste";
+import styles from "@/app/components/prices-page/prices-page.module.css";
 import Link from "next/link";
 
 export default function Prices() {
   const searchParams = useSearchParams();
   const service = searchParams.get("service");
-
-  const skjorteservice = "skjorter";
-  const brudekjolerens = "brudekjolerens";
 
   return (
     <>
@@ -26,7 +22,6 @@ export default function Prices() {
             {
               name: "Skjorter",
               prices: ["1 stk. 25 DKK", "5 stk. 110DKK"],
-              service: skjorteservice,
             },
             { name: "Frakker", prices: ["250 DKK"] },
             { name: "Frakke ¾", prices: ["195 DKK"] },
@@ -47,7 +42,7 @@ export default function Prices() {
               prices: ["fra 400 DKK"],
             },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Dametøj"
@@ -61,7 +56,6 @@ export default function Prices() {
             {
               name: "Kjoler, selskabs",
               prices: ["Efter aftale"],
-              service: brudekjolerens,
             },
             { name: "Nederdele, korte", prices: ["95 DKK"] },
             { name: "Nederdele, lange", prices: ["125 DKK"] },
@@ -71,7 +65,7 @@ export default function Prices() {
             { name: "Silkebluse", prices: ["75 DKK"] },
             { name: "Benklæder, shorts", prices: ["65 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Diverse"
@@ -85,7 +79,7 @@ export default function Prices() {
             { name: "Dyne", prices: ["1 stk. 275 DKK", "2 stk. 350 DKK"] },
             { name: "Pude", prices: ["150 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <Tilbud />
       </div>

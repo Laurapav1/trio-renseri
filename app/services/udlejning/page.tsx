@@ -26,7 +26,7 @@ export default function Udlejning() {
             rengøringen.
           </p>
           <p>
-            Vi tilbyder udlejning af effektive rensningsmaskiner, der er lette
+            Vi tilbyder udlejning af effektive rensningsmaskine, der er let
             at bruge og giver fantastiske resultater.
           </p>
           <section className={styles.priceSection}>

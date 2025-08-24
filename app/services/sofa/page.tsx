@@ -29,7 +29,7 @@ export default function Sofa() {
           </p>
           <p>
             Vi har stor erfaring med rensning af sofabetræk, uanset størrelse og
-            materiale. Sidste år rensede vi mere end 5.000 sofabetræk.
+            materiale. 
           </p>
           <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og tørret):</h3>

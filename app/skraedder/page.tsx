@@ -11,7 +11,7 @@ export default function Skraedder() {
       <Navbar />
       {/* Hero Section */}
       <HeroSection
-        heading="Tilpasning af dit tøj - vores ekspertise"
+        heading="Reparationer og omforandringer - stor erfaring "
         imagePath="/images/sew3.jpg"
       />
 
@@ -20,13 +20,13 @@ export default function Skraedder() {
         <div className={styles.introContainer}>
           <div className={styles.intro}>
             <p>
-              Vores skræddere er specialiserede i tilpasning og omforandring af
+              Vores skræddere er specialiserede i reparation og omforandring af
               alle typer tøj, så det passer perfekt til dig. Vi sørger for, at
               hver eneste søm er præcis, hvor den skal være.
             </p>
           </div>
           <div className={styles.serviceBox}>
-            <h2>OMFORANDRING AF TØJ</h2>
+            <h2>REPARATION AF TØJ</h2>
             <Link href={"/skraedder/priser"} className={styles.ctaButton}>
               Se ydelser og priser
             </Link>

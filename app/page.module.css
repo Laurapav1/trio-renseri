@@ -1,62 +1,47 @@
-/* ------------------------------------
-   Wrapper for Navbar and HeroSection
------------------------------------- */
+/* ===== Wrapper (Navbar + Hero) ===== */
 .heroWrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-
 .heroWrapper > * {
   flex-shrink: 0;
 }
-
 .heroWrapper > section {
   flex-grow: 1;
 }
 
-/* ------------------------------------
-   Intro (Text) Section
------------------------------------- */
+/* ===== Intro ===== */
 .textWrapper {
   margin: 5rem 20rem;
   text-align: center;
 }
-
 .textWrapper h2 {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-
 .textWrapper p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
 
-/* ------------------------------------
-   Cross Section (About, Textile, Boat, etc.)
------------------------------------- */
+/* ===== Cross sections ===== */
 .crossSection {
   display: flex;
   width: 100%;
   margin: 0 auto;
   min-height: 400px;
 }
-
-/* Image Container */
 .crossImageContainer {
   flex: 1;
   overflow: hidden;
 }
-
 .crossImageContainer img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-/* Text Container */
 .crossTextContainer {
   width: 50%;
   background-color: #f2f2f2;
@@ -66,35 +51,29 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .crossTextContainer h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .crossTextContainer p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
-
 .crossTextContainer h3 {
   font-size: 1.5rem;
   margin-top: 2rem;
 }
-
 .crossTextContainer ul {
-  list-style-type: none;
+  list-style: none;
   padding-right: 0;
   margin: 1rem 0;
 }
-
 .crossTextContainer ul li {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
   padding-right: 1.5rem;
   position: relative;
 }
-
 .crossTextContainer ul li::before {
   content: "✓";
   color: green;
@@ -106,24 +85,190 @@
   justify-content: center;
   margin-top: 20px;
 }
-
 .ctaButton {
   background-color: var(--accent-color);
-  color: hsl(0, 0%, 100%);
+  color: #fff;
   font-size: 1.2rem;
   text-decoration: none;
   transition: background-color 0.3s;
   display: inline-block;
   margin-top: 10px;
   width: fit-content;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
 }
-
 .ctaButton:hover {
   background-color: hsl(210, 100%, 35%);
 }
 
-/* Mobile Adjustments for Cross Sections */
+.serviceBanner {
+  background: var(--accent-color);
+  margin: 0;
+}
+.serviceBanner h1 {
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 2.8;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Swiper container: no top padding -> removes the white strip */
+.mySwiper {
+  max-width: 100vw;
+  margin: 0;
+  padding: 0 0 2.2rem;
+}
+
+/* Arrows (SHOW on all sizes) */
+.mySwiper :global(.swiper-button-prev),
+.mySwiper :global(.swiper-button-next) {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: saturate(120%) blur(2px);
+}
+.mySwiper :global(.swiper-button-prev::after),
+.mySwiper :global(.swiper-button-next::after) {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Bullets */
+.mySwiper :global(.swiper-pagination-bullets) {
+  bottom: 8px !important;
+}
+.mySwiper :global(.swiper-pagination-bullet) {
+  width: 8px;
+  height: 8px;
+  opacity: 0.5;
+}
+.mySwiper :global(.swiper-pagination-bullet-active) {
+  opacity: 1;
+  background: var(--accent-color);
+}
+
+/* Slide grid */
+.gridService {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0; /* no inner gap -> image hits edges */
+  align-items: center;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Media (left side) */
+.mediaBox {
+  width: 100%;
+  height: clamp(420px, 58vh, 680px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+.mediaBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text side */
+.textcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.iconTitle {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.serviceIcon {
+  width: 42px;
+  height: 42px;
+}
+
+.textcontent h2 {
+  font-size: 2.4rem;
+  background-image: linear-gradient(to left, var(--accent-color), white 300%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.divider {
+  width: 80%;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 1.2rem auto;
+}
+.textcontent p {
+  margin: 0 0 0.7rem 0;
+  color: #555;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.ctaButtonService {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: 2px solid var(--accent-color);
+  transition: all 0.3s ease;
+  margin-top: 28px;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+}
+.ctaButtonService:hover {
+  background: var(--accent-color);
+  color: white;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .textWrapper {
+    margin: 5rem 2rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .gridService {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 0;
+  }
+
+  /* Stable, edge-to-edge hero image on mobile */
+  .mediaBox {
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 0;
+  }
+
+  .textcontent {
+    padding: 1rem;
+  }
+  .textcontent h2 {
+    font-size: 1.6rem;
+  }
+  .textcontent p {
+    font-size: 0.95rem;
+  }
+
+  /* Cross sections stack */
   .crossSection {
     flex-direction: column;
     min-height: auto;
@@ -145,133 +290,8 @@
   }
 }
 
-/* ------------------------------------
-   Service Banner (Swiper)
------------------------------------- */
-.serviceBanner {
-  background-color: var(--accent-color);
-}
-
-.serviceBanner h1 {
-  margin: 0;
-  font-weight: 300;
-  text-align: center;
-  font-size: 2.5rem;
-  line-height: 2.8;
-  color: hsl(0, 0%, 100%);
-  text-transform: uppercase;
-}
-
-/* ------------------------------------
-   Service Section (Grid & Slides)
------------------------------------- */
-.gridService {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  max-width: 1700px;
-}
-
-.swiperslidecontent img {
-  width: 100%;
-  max-width: 900px;
-  height: 600px;
-  object-fit: cover;
-}
-
-/* Service Text Content */
-.textcontent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 20px;
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-.iconTitle {
-  text-align: center;
-}
-
-.serviceIcon {
-  width: 50px;
-}
-
-.textcontent h2 {
-  font-size: 45px;
-  background-image: linear-gradient(to left, var(--accent-color), white 300%);
-  color: transparent;
-  background-clip: text;
-}
-
-/* Divider */
-.divider {
-  width: 80%;
-  height: 3px;
-  background-color: var(--accent-color);
-  margin: 1.5rem auto;
-}
-
-.textcontent p {
-  margin: 0;
-  margin-bottom: 0.7rem;
-  color: #555;
-  width: 100%;
-  word-wrap: break-word;
-  margin-right: 2rem;
-}
-
-/* CTA Button */
-.ctaButtonService {
-  color: var(--accent-color);
-  font-size: 1.2rem;
-  text-decoration: none;
-  border: 2px solid var(--accent-color);
-  transition: all 0.3s ease;
-  margin-top: 40px;
-}
-
-.ctaButtonService:hover {
-  background-color: var(--accent-color);
-  color: white;
-}
-
-/* Additional Responsiveness */
-@media (max-width: 1100px) {
-  .gridContainer {
-    grid-template-columns: 1fr;
-  }
-  .textcontent {
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-  }
-  .divider {
-    width: 80%;
-  }
-  .textWrapper {
-    margin: 5rem 2rem;
-    padding-right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .gridService {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+@media (min-width: 769px) and (max-width: 1024px) {
   .textcontent h2 {
-    font-size: 1.5rem;
-  }
-  .textcontent p {
-    font-size: 0.9rem;
-  }
-  .ctaButtonService {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 }

@@ -1,11 +1,12 @@
 // components/PriceList.tsx
 "use client";
-import React, { useState } from "react";
+
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/app/components/navbar/navbar";
 import PageHeroSection from "@/app/components/hero-section/page-hero-section";
 import PriceList from "@/app/components/prisliste/prisliste";
-import styles from "../../components/prisliste/prisliste.module.css";
+import styles from "@/app/components/prices-page/prices-page.module.css";
+import Link from "next/link";
 
 export default function Prices() {
   const searchParams = useSearchParams();
@@ -32,7 +33,7 @@ export default function Prices() {
             { name: "Lårvidde", prices: ["170 DKK"] },
             { name: "Ny lynlås", prices: ["170 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Jakker"
@@ -43,7 +44,7 @@ export default function Prices() {
             { name: "Vat på skulder", prices: ["125 DKK"] },
             { name: "Ny lynlås", prices: ["375 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Kjoler"
@@ -53,7 +54,7 @@ export default function Prices() {
             { name: "Ny lynlås", prices: ["190 DKK"] },
             { name: "Kjoler korte", prices: ["fra 160 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <PriceList
           heading="Skindjakker"
@@ -63,7 +64,7 @@ export default function Prices() {
             { name: "Knapper", prices: ["75 DKK"] },
             { name: "Nyt foer - foer fra", prices: ["650 DKK"] },
           ]}
-          service={service}
+          highlightService={service}
         />
         <Tilbud />
       </div>
@@ -74,13 +75,18 @@ export default function Prices() {
 function Tilbud() {
   return (
     <div className={styles.tilbudContainer}>
-      <h3>Kunde rabatter!</h3>
-      <ul>
-        <li>15% firmarabat for Logbuy kunder</li>
-        <li>10% studierabat</li>
-        <li>10% pensionistrabat</li>
-        <li>Og mange flere</li>
-      </ul>
+      <Link href="/kunderabat">
+        <div className={styles.tilbudHeader}>
+          <h3>Kunde rabatter!</h3>
+        </div>
+        <div className={styles.tilbudContent}>
+          <ul>
+            <li>15% studierabat</li>
+            <li>15% pensionistrabat</li>
+            <li>Klik for at læse mere</li>
+          </ul>
+        </div>
+      </Link>
     </div>
   );
 }

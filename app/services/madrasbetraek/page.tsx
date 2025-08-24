@@ -19,11 +19,14 @@ export default function Madrasbetraek() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af madrasbetræk</h1>
+          <h1>
+            Specialiseret rensning af madrasbetræk og alle typer madrasser
+          </h1>
           <p>
-            Vi tilbyder professionel rensning af madrasbetræk for at sikre, at
-            dit soveområde er rent, friskt og fri for allergener. Perfekt til at
-            skabe et sundt og hygiejnisk miljø i hjemmet.
+            Vi tilbyder professionel rensning af madrasbetræk samt alle typer
+            madrasser – herunder top-, under-, boks- og Hästens madraser.– Vi sikrer, at dit soveområde er rent, friskt og fri
+            for allergener. Perfekt til at skabe et sundt og hygiejnisk miljø i
+            hjemmet.
           </p>
           <p>
             Skånsom og effektiv rensning af madrasbetræk, der fjerner pletter og
@@ -32,8 +35,8 @@ export default function Madrasbetraek() {
           <section className={styles.priceSection}>
             <h3>Priser</h3>
             <ul>
-              <li>Enkeltmadrasbetræk - 300 kr.</li>
-              <li>Dobbelmadrasbetræk - 500 kr.</li>
+              <li>85kr pr kilo.</li>
+              <li>.</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

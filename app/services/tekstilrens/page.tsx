@@ -12,34 +12,26 @@ export default function Tekstilrens() {
       <Navbar />
       {/* Hero Section */}
       <HeroSection
-        heading="Dit tekstil - vores ekspertise"
+        heading="Dit tøj - vores ansvar"
         imagePath="/images/tekstil2.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af tæpper</h1>
+          <h1>Rens af tøj og tekstiler i høj kvalitet</h1>
           <p>
-            Vi er specialister i rensning af forskellige tekstiler og tilbyder
-            en sikker og effektiv rensning af alt fra møbelbetræk til tunge
-            gardiner.
+            Uanset om det gælder dagligt tøj eller udsøgte selskabskjoler, får
+            din tøj den bedst mulige pleje.
           </p>
-          <p>
-            Vores professionelle rensning sikrer, at dine tekstiler forbliver
-            friske, rene og smukke.
-          </p>
+          <p></p>
           <section className={styles.priceSection}>
             <h3>Pris i alt (renset og plejet):</h3>
-            <ul>
-              <li>Puder - 100 kr. pr. stk.</li>
-              <li>Sofabetræk - 300 kr.</li>
-            </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=tekstilrens"}
               className={styles.ctaButton}
             >
-              Se andre priser
+              Se priser
             </Link>
           </section>
         </div>

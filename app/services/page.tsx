@@ -75,8 +75,8 @@ export default function Tojrens() {
           />
 
           <ServiceCard
-            title="Madrasbetræk"
-            description="Skånsom rensning af madrasbetræk, der holder dem friske og behagelige."
+            title="Madrasser"
+            description="Skånsom rensning af madrasser, der holder dem friske og behagelige."
             link="/services/madrasbetraek"
             imgURL="images/madrass.jpg"
           />
