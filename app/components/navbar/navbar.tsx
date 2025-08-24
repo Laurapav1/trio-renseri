@@ -1,34 +1,38 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import styles from "./navbar.module.css";
 import Link from "next/link";
+import styles from "./navbar.module.css";
+
+type Panel = "services" | "skraedder" | null;
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
-  const [isSkraedderDropdownOpen, setIsSkraedderDropdownOpen] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [openPanel, setOpenPanel] = useState<Panel>(null);
 
-  const toggleMenu = () => {
-    if (isOpen) {
-      setIsServicesDropdownOpen(false);
-      setIsSkraedderDropdownOpen(false);
-    }
-    setIsOpen((prev) => !prev);
+  const toggleDrawer = () => {
+    setDrawerOpen((prev) => {
+      const next = !prev;
+      if (!next) setOpenPanel(null);
+      return next;
+    });
   };
 
-  const handleLinkClick = () => {
-    setIsOpen(false);
-    setIsServicesDropdownOpen(false);
-    setIsSkraedderDropdownOpen(false);
+  const togglePanel = (id: Exclude<Panel, null>) => {
+    setOpenPanel((prev) => (prev === id ? null : id));
+  };
+
+  const closeAll = () => {
+    setDrawerOpen(false);
+    setOpenPanel(null);
   };
 
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
-        setIsServicesDropdownOpen(false);
-        setIsSkraedderDropdownOpen(false);
+        setDrawerOpen(false);
+        setOpenPanel(null);
+        document.body.style.overflow = "";
       }
     };
     onResize();
@@ -36,258 +40,225 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  useEffect(() => {
+    const orig = document.body.style.overflow;
+    document.body.style.overflow = drawerOpen ? "hidden" : orig || "";
+    return () => {
+      document.body.style.overflow = orig || "";
+    };
+  }, [drawerOpen]);
+
+  const onParentClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: Exclude<Panel, null>
+  ) => {
+    if (drawerOpen) {
+      e.preventDefault();
+      togglePanel(id);
+    }
+  };
+
   return (
-    <nav className={styles.navbar} aria-label="Primary">
-      <a
-        href="/"
-        className={styles.navbarLogoLink}
-        aria-label="Trio Renseri - Forside"
-      >
-        <img
-          className={styles.logo}
-          src="/images/logo.svg"
-          alt="Trio Renseri"
-        />
-      </a>
-
-      <button
-        className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
-        onClick={toggleMenu}
-        aria-label="Toggle navigation menu"
-        aria-expanded={isOpen}
-        aria-controls="primary-nav"
-        type="button"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </button>
-
-      <div className={styles.navbarContainer}>
-        <ul
-          id="primary-nav"
-          className={`${styles.navbarList} ${isOpen ? styles.active : ""}`}
-          role="menubar"
+    <>
+      <nav className={styles.navbar} aria-label="Hovednavigation">
+        <a
+          href="/"
+          className={styles.navbarLogoLink}
+          aria-label="Trio Renseri - Forside"
+          onClick={closeAll}
         >
-          <li className={styles.navbarItem} role="none">
-            <Link href="/" onClick={handleLinkClick} role="menuitem">
-              <span>Forside</span>
-            </Link>
-          </li>
+          <img
+            className={styles.logo}
+            src="/images/logo.svg"
+            alt="Trio Renseri"
+          />
+        </a>
 
-          {/* Services */}
-          <li
-            className={`${styles.navbarItem} ${styles.hasDropdown} ${
-              isOpen && isServicesDropdownOpen ? styles.expanded : ""
+        <button
+          type="button"
+          className={`${styles.hamburger} ${drawerOpen ? styles.active : ""}`}
+          aria-label="Åbn/luk menu"
+          aria-expanded={drawerOpen}
+          aria-controls="primary-nav"
+          onClick={toggleDrawer}
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <div className={styles.navbarContainer}>
+          <ul
+            id="primary-nav"
+            className={`${styles.navbarList} ${
+              drawerOpen ? styles.active : ""
             }`}
-            role="none"
-            onMouseEnter={() => !isOpen && setIsServicesDropdownOpen(true)}
-            onMouseLeave={() => !isOpen && setIsServicesDropdownOpen(false)}
           >
-            <Link
-              href="/services"
-              role="menuitem"
-              aria-haspopup="true"
-              aria-expanded={isOpen ? isServicesDropdownOpen : undefined}
-              onClick={(e) => {
-                if (isOpen) {
-                  e.preventDefault();
-                  setIsServicesDropdownOpen((p) => !p);
-                } else {
-                  handleLinkClick();
-                }
-              }}
-            >
-              <span>Services</span>
-            </Link>
+            <li className={styles.navbarItem}>
+              <Link href="/" onClick={closeAll}>
+                <span>Forside</span>
+              </Link>
+            </li>
 
-            <ul
-              className={`${styles.dropdownMenu} ${
-                isOpen && isServicesDropdownOpen ? styles.open : ""
+            {/* SERVICES */}
+            <li
+              className={`${styles.navbarItem} ${styles.hasDropdown} ${
+                drawerOpen && openPanel === "services" ? styles.expanded : ""
               }`}
-              role="menu"
+              onMouseEnter={() =>
+                window.innerWidth >= 1024 && setOpenPanel("services")
+              }
+              onMouseLeave={() =>
+                window.innerWidth >= 1024 && setOpenPanel(null)
+              }
             >
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Services
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/tekstilrens"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Tekstil Service
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/skjorteservice"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Skjorteservice
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/brudekjolerens"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Brudetøj
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/dynevask"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Dyne/Puder
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/vaskerulleservice"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Vask af Duge
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/gardinservice"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Gardiner
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/taepperens"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Tæpper
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/madrasbetraek"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Madrasbetræk
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/mobelbetraak"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Møbelbetræk
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/udlejning"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Udlejning af maskine
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/services/baadkalache"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Bådkalache
-                </Link>
-              </li>
-            </ul>
-          </li>
+              <Link
+                href="/services"
+                className={styles.parentTrigger}
+                aria-expanded={drawerOpen && openPanel === "services"}
+                aria-controls="submenu-services"
+                onClick={(e) => onParentClick(e, "services")}
+              >
+                <span>Services</span>
+                <i className={styles.chevron} aria-hidden />
+              </Link>
 
-          {/* Skrædder */}
-          <li
-            className={`${styles.navbarItem} ${styles.hasDropdown} ${
-              isOpen && isSkraedderDropdownOpen ? styles.expanded : ""
-            }`}
-            role="none"
-            onMouseEnter={() => !isOpen && setIsSkraedderDropdownOpen(true)}
-            onMouseLeave={() => !isOpen && setIsSkraedderDropdownOpen(false)}
-          >
-            <Link
-              href="/skraedder"
-              role="menuitem"
-              aria-haspopup="true"
-              aria-expanded={isOpen ? isSkraedderDropdownOpen : undefined}
-              onClick={(e) => {
-                if (isOpen) {
-                  e.preventDefault();
-                  setIsSkraedderDropdownOpen((p) => !p);
-                } else {
-                  handleLinkClick();
-                }
-              }}
-            >
-              <span>Skrædder</span>
-            </Link>
+              <ul
+                id="submenu-services"
+                className={`${styles.dropdownMenu} ${
+                  drawerOpen && openPanel === "services" ? styles.open : ""
+                }`}
+              >
+                <li className={`${styles.dropdownItem} ${styles.groupHeader}`}>
+                  <Link href="/services" onClick={closeAll}>
+                    Se alle services
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/tekstilrens" onClick={closeAll}>
+                    Tekstil service
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/skjorteservice" onClick={closeAll}>
+                    Skjorteservice
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/brudekjolerens" onClick={closeAll}>
+                    Brudetøj
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/dynevask" onClick={closeAll}>
+                    Dyner & puder
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/vaskerulleservice" onClick={closeAll}>
+                    Vask af duge
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/gardinservice" onClick={closeAll}>
+                    Gardiner
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/taepperens" onClick={closeAll}>
+                    Tæpper
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/madrasbetraek" onClick={closeAll}>
+                    Madrasbetræk
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/mobelbetraak" onClick={closeAll}>
+                    Møbelbetræk
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/udlejning" onClick={closeAll}>
+                    Udlejning af maskine
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/services/baadkalache" onClick={closeAll}>
+                    Bådkaleche
+                  </Link>
+                </li>
+              </ul>
+            </li>
 
-            <ul
-              className={`${styles.dropdownMenu} ${
-                isOpen && isSkraedderDropdownOpen ? styles.open : ""
+            {/* SKRÆDDER */}
+            <li
+              className={`${styles.navbarItem} ${styles.hasDropdown} ${
+                drawerOpen && openPanel === "skraedder" ? styles.expanded : ""
               }`}
-              role="menu"
+              onMouseEnter={() =>
+                window.innerWidth >= 1024 && setOpenPanel("skraedder")
+              }
+              onMouseLeave={() =>
+                window.innerWidth >= 1024 && setOpenPanel(null)
+              }
             >
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/skraedder"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Skrædder
-                </Link>
-              </li>
-              <li className={styles.dropdownItem} role="none">
-                <Link
-                  href="/skraedder/priser"
-                  onClick={handleLinkClick}
-                  role="menuitem"
-                >
-                  Priser
-                </Link>
-              </li>
-            </ul>
-          </li>
+              <Link
+                href="/skraedder"
+                className={styles.parentTrigger}
+                aria-expanded={drawerOpen && openPanel === "skraedder"}
+                aria-controls="submenu-skraedder"
+                onClick={(e) => onParentClick(e, "skraedder")}
+              >
+                <span>Skrædder</span>
+                <i className={styles.chevron} aria-hidden />
+              </Link>
 
-          <li className={styles.navbarItem} role="none">
-            <Link href="/priser" onClick={handleLinkClick} role="menuitem">
-              <span>Priser</span>
-            </Link>
-          </li>
-          <li className={styles.navbarItem} role="none">
-            <Link href="/kunderabat" onClick={handleLinkClick} role="menuitem">
-              <span>Rabatter</span>
-            </Link>
-          </li>
-          <li className={styles.navbarItem} role="none">
-            <Link href="/kontakt" onClick={handleLinkClick} role="menuitem">
-              <span>Kontakt</span>
-            </Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+              <ul
+                id="submenu-skraedder"
+                className={`${styles.dropdownMenu} ${
+                  drawerOpen && openPanel === "skraedder" ? styles.open : ""
+                }`}
+              >
+                <li className={`${styles.dropdownItem} ${styles.groupHeader}`}>
+                  <Link href="/skraedder" onClick={closeAll}>
+                    Om skrædderiet
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
+                  <Link href="/skraedder/priser" onClick={closeAll}>
+                    Priser
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li className={styles.navbarItem}>
+              <Link href="/priser" onClick={closeAll}>
+                <span>Priser</span>
+              </Link>
+            </li>
+            <li className={styles.navbarItem}>
+              <Link href="/kunderabat" onClick={closeAll}>
+                <span>Rabatter</span>
+              </Link>
+            </li>
+            <li className={styles.navbarItem}>
+              <Link href="/kontakt" onClick={closeAll}>
+                <span>Kontakt</span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      {/* SCRIM OUTSIDE NAV: sits under the whole navbar, over page content */}
+      <div
+        className={`${styles.scrim} ${drawerOpen ? styles.scrimVisible : ""}`}
+        onClick={toggleDrawer}
+        aria-hidden="true"
+      />
+    </>
   );
 }

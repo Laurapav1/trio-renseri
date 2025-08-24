@@ -1,9 +1,19 @@
-/* Navbar */
+/* ==================================
+   Trio Renseriet - Navbar (unified color + fixed stacking)
+   ================================== */
+
 .navbar {
+  --submenu-indent: 1.25rem; /* set to 0 for no indent */
+  --submenu-bg: color-mix(
+    in srgb,
+    var(--accent-color) 78%,
+    black 22%
+  ); /* darker sheet for subitems */
+
   padding: 0.5rem 1rem;
   background: var(--accent-color);
-  z-index: 1000;
   position: relative;
+  z-index: 1100; /* ↑ nav above scrim */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,14 +24,14 @@
 .navbarLogoLink {
   padding: 0;
   position: relative;
-  z-index: 1010;
+  z-index: 1;
 }
 .logo {
   height: 3rem;
-  filter: brightness(0.8);
+  filter: brightness(0.92);
 }
 .logo:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.98);
 }
 
 /* Hamburger */
@@ -32,14 +42,14 @@
   padding: 0.5rem;
   cursor: pointer;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   border: 0;
   background: transparent;
 }
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background: #fff;
   transition: transform 0.2s ease, opacity 0.2s ease;
   display: block;
 }
@@ -53,6 +63,39 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Scrim lives OUTSIDE nav and sits under it */
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+  z-index: 1000; /* ↓ under navbar */
+}
+.scrimVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Container + list (drawer same color as bar) */
+.navbarContainer {
+  position: static;
+  width: 100%;
+  order: 3;
+}
+.navbarList {
+  display: none;
+  width: 100%;
+  background: var(--accent-color); /* exact same as bar */
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+.navbarList.active {
+  display: flex;
+}
+
 /* Resets */
 .navbarList,
 .navbarList li,
@@ -62,104 +105,127 @@
   margin: 0;
   padding: 0;
 }
-
-/* Container */
-.navbarContainer {
-  position: static;
-  width: 100%;
-  order: 3;
-}
-
-/* List (mobile closed by default) */
-.navbarList {
-  display: none;
-  width: 100%;
-  background-color: var(--accent-color);
-  flex-direction: column;
-  align-items: stretch;
-}
-.navbarList.active {
-  display: flex;
-}
-
-/* Items */
 .navbarItem {
   position: relative;
 }
+.navbarList > li {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Links */
 .navbarItem a {
   display: flex;
-  color: hsl(0, 0%, 100%);
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  padding: 0.5rem 1rem; /* right inset = 1rem */
-  transition: color 0.2s ease;
+  letter-spacing: 0.06rem;
+  padding: 0.5rem 1rem;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.navbarItem a:hover {
+  color: hsl(0 0% 82%);
 }
 .navbarItem span {
   padding: 1rem 1.5rem;
-} /* left text edge = 1.5rem */
-.navbarItem a:hover {
-  color: hsl(0, 0%, 70%);
+}
+.parentTrigger {
+  position: relative;
 }
 
-/* ---------------- MOBILE (<=1023px) ---------------- */
+/* Chevron (mobile only) */
+.chevron {
+  margin-left: auto;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: transform 0.18s ease;
+  display: none;
+}
+.expanded .chevron {
+  transform: rotate(45deg);
+}
+
+/* ===========================
+   Mobile
+   =========================== */
 @media (max-width: 1023px) {
-  /* Top-level separators as a gradient (no borders, no rounding, consistent insets) */
+  .chevron {
+    display: inline-block;
+  }
+
+  /* No separators/tints on parents */
   .navbarList > li > a {
-    background-image: linear-gradient(
-      to right,
-      transparent 1.5rem,
-      color-mix(in srgb, var(--accent-color) 90%, white 3%) 1.5rem
-        calc(100% - 1rem),
-      transparent calc(100% - 1rem)
-    );
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-    background-position: bottom left;
+    background: none !important;
   }
-  .navbarList > li:last-child > a {
-    background-image: none;
+  .navbarList > li + li::before {
+    content: none !important;
+    display: none !important;
   }
-
-  /* Remove the parent separator when expanded (to avoid double line above submenu) */
   .navbarList > li.expanded > a {
-    background-image: none;
+    background: none !important;
   }
 
-  /* Submenu container: single continuous rail (no gaps) */
+  /* CLOSED submenu: invisible */
   .dropdownMenu {
-    display: none; /* toggled by .open */
-    padding: 0.25rem 0;
-    margin-left: 1.5rem; /* indent equals top-level text left edge */
-    box-shadow: inset 2px 0 0
-      color-mix(in srgb, var(--accent-color) 60%, white 40%);
-    background: transparent;
-  }
-  .open {
     display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    margin-left: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dropdownMenu {
+      transition: none;
+    }
   }
 
-  /* Submenu items: own gradient separators (full width of submenu block) */
-  .dropdownMenu .dropdownItem a {
-    padding: 0.9rem 1rem 0.9rem 0.5rem; /* text sits 0.5rem right of rail */
-    line-height: 1.5;
-    background-image: linear-gradient(
-      to right,
-      color-mix(in srgb, var(--accent-color) 78%, white 18%) 0 calc(100%),
-      transparent 0
-    );
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-    background-position: bottom left;
+  /* OPEN submenu: only darker sheet */
+  .dropdownMenu.open {
+    max-height: 40rem;
+    margin-left: var(--submenu-indent);
+    padding: 0.25rem 0;
+    background: var(--submenu-bg);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
   }
-  .dropdownMenu .dropdownItem:last-child a {
-    background-image: none;
+
+  .groupHeader a {
+    font-weight: 600;
+    padding: 0.9rem 1rem 0.9rem 0.75rem;
+  }
+
+  .dropdownMenu .dropdownItem a {
+    padding: 0.8rem 1rem 0.8rem 0.75rem;
+    line-height: 1.5;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
   }
 }
 
-/* ---------------- DESKTOP (>=1024px) ---------------- */
+/* ===========================
+   Desktop
+   =========================== */
 @media (min-width: 1024px) {
+  .scrim {
+    display: none;
+  }
   .hamburger {
     display: none;
   }
@@ -171,28 +237,36 @@
     width: auto;
     order: 0;
   }
-
   .navbarList {
     display: flex;
     flex-direction: row;
-    background-color: transparent;
+    background: transparent;
   }
 
   .navbarItem a {
     padding: 0;
   }
+  .navbarItem span {
+    padding: 1rem 1.25rem;
+  }
 
-  /* Desktop dropdowns on hover */
+  .chevron {
+    display: none;
+  }
+
   .dropdownMenu {
     position: absolute;
     top: 100%;
     left: 0;
-    min-width: 240px;
-    background-color: var(--accent-color);
-    z-index: 1000;
-    border: 1px solid hsl(219, 80%, 10%);
+    min-width: 260px;
+    background: var(--accent-color);
+    border: 1px solid hsl(219 80% 10%);
+    border-radius: 0.5rem;
     display: none;
     padding: 0.25rem 0;
+    margin-left: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1200; /* above nav text */
   }
   .hasDropdown:hover .dropdownMenu {
     display: block;
@@ -201,7 +275,9 @@
   .dropdownItem a {
     padding: 1rem 1.25rem;
     line-height: 1.55;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.04rem;
+    border: 0;
+    background: transparent;
   }
   .dropdownMenu li + li a {
     border-top: 1px solid color-mix(in srgb, var(--accent-color) 85%, white 8%);
