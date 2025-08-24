@@ -1,73 +1,102 @@
-/* Navbar container */
+/* ==================================
+   Trio Renseriet - Navbar (unified color + fixed stacking)
+   ================================== */
+
 .navbar {
+  --submenu-indent: 1.25rem; /* set to 0 for no indent */
+  --submenu-bg: color-mix(
+    in srgb,
+    var(--accent-color) 78%,
+    black 22%
+  ); /* darker sheet for subitems */
+
   padding: 0.5rem 1rem;
   background: var(--accent-color);
-  z-index: 1000;
   position: relative;
+  z-index: 1100; /* ↑ nav above scrim */
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Navbar links container */
-.navbarContainer {
-  margin-top: 0rem;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Logo styles */
+/* Logo */
 .navbarLogoLink {
   padding: 0;
   position: relative;
-  z-index: 1010;
+  z-index: 1;
 }
-
 .logo {
   height: 3rem;
-  filter: brightness(0.8);
+  filter: brightness(0.92);
 }
-
 .logo:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.98);
 }
 
-/* Hamburger menu */
+/* Hamburger */
 .hamburger {
   display: flex;
   flex-direction: column;
-  cursor: pointer;
   gap: 0.3rem;
   padding: 0.5rem;
+  cursor: pointer;
   position: relative;
-  z-index: 10;
+  z-index: 1;
+  border: 0;
+  background: transparent;
 }
-
-.hamburger div {
+.hamburger span {
   width: 25px;
   height: 3px;
-  background-color: white;
-  transition: all 0.2s ease;
+  background: #fff;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  display: block;
 }
-
-.hamburger.active div:nth-child(1) {
+.hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
-.hamburger.active div:nth-child(2) {
+.hamburger.active span:nth-child(2) {
   opacity: 0;
 }
-
-.hamburger.active div:nth-child(3) {
+.hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Remove bullet points from lists */
+/* Scrim lives OUTSIDE nav and sits under it */
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+  z-index: 1000; /* ↓ under navbar */
+}
+.scrimVisible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Container + list (drawer same color as bar) */
+.navbarContainer {
+  position: static;
+  width: 100%;
+  order: 3;
+}
+.navbarList {
+  display: none;
+  width: 100%;
+  background: var(--accent-color); /* exact same as bar */
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+}
+.navbarList.active {
+  display: flex;
+}
+
+/* Resets */
 .navbarList,
 .navbarList li,
 .dropdownMenu,
@@ -76,124 +105,183 @@
   margin: 0;
   padding: 0;
 }
-
-/* Navbar list (hidden by default on mobile) */
-.navbarList {
-  width: 100%;
-  background-color: var(--accent-color);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0.2s;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-.navbarList.active {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  text-align: center;
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0s linear 0s;
-}
-
-/* Navbar items */
 .navbarItem {
-  position: relative; /* For desktop dropdown positioning */
+  position: relative;
+}
+.navbarList > li {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
+/* Links */
 .navbarItem a {
   display: flex;
-  color: hsl(0, 0%, 100%);
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
   text-decoration: none;
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.06rem;
   padding: 0.5rem 1rem;
-  transition: color 0.2s ease;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
-
+.navbarItem a:hover {
+  color: hsl(0 0% 82%);
+}
 .navbarItem span {
   padding: 1rem 1.5rem;
 }
-
-.navbarItem a:hover {
-  color: hsl(0, 0%, 70%);
+.parentTrigger {
+  position: relative;
 }
 
-/* Desktop (>= 768px) */
-@media (min-width: 1024px) {
-  .hamburger {
-    display: none; /* Hide hamburger on desktop */
+/* Chevron (mobile only) */
+.chevron {
+  margin-left: auto;
+  margin-right: 1.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  transition: transform 0.18s ease;
+  display: none;
+}
+.expanded .chevron {
+  transform: rotate(45deg);
+}
+
+/* ===========================
+   Mobile
+   =========================== */
+@media (max-width: 1023px) {
+  .chevron {
+    display: inline-block;
   }
 
-  .navbarList {
-    flex-direction: row;
-    position: static;
-    background-color: transparent;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+  /* No separators/tints on parents */
+  .navbarList > li > a {
+    background: none !important;
+  }
+  .navbarList > li + li::before {
+    content: none !important;
+    display: none !important;
+  }
+  .navbarList > li.expanded > a {
+    background: none !important;
+  }
+
+  /* CLOSED submenu: invisible */
+  .dropdownMenu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    margin-left: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .dropdownMenu {
+      transition: none;
+    }
+  }
+
+  /* OPEN submenu: only darker sheet */
+  .dropdownMenu.open {
+    max-height: 40rem;
+    margin-left: var(--submenu-indent);
+    margin-right: var(--submenu-indent);
+    padding: 0.25rem 0;
+    background: var(--submenu-bg);
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .groupHeader a {
+    font-weight: 600;
+    padding: 0.9rem 1rem 0.9rem 0.75rem;
+  }
+
+  .dropdownMenu .dropdownItem a {
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+    line-height: 1.5;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ===========================
+   Desktop
+   =========================== */
+@media (min-width: 1024px) {
+  .scrim {
+    display: none;
+  }
+  .hamburger {
+    display: none;
   }
 
   .navbarContainer {
-    margin-top: 0.7rem;
-    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     width: auto;
+    order: 0;
+  }
+  .navbarList {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
   }
 
   .navbarItem a {
     padding: 0;
   }
+  .navbarItem span {
+    padding: 1rem 1.25rem;
+  }
 
-  /* Dropdown menu for desktop (hover) */
+  .chevron {
+    display: none;
+  }
+
   .dropdownMenu {
     position: absolute;
-    background-color: var(--accent-color);
-    min-width: 200px;
-    z-index: 1000;
-    border: 1px solid hsl(219, 80%, 10%);
+    top: 100%;
+    left: 0;
+    min-width: 260px;
+    background: var(--accent-color);
+    border: 1px solid hsl(219 80% 10%);
+    border-radius: 0.5rem;
+    display: none;
+    padding: 0.25rem 0;
+    margin-left: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1200; /* above nav text */
   }
-}
-
-/* Mobile (< 768px) */
-@media (max-width: 767px) {
-  .navbarList.active {
-    text-align: center;
-  }
-
-  /* Dropdown menu expands inline */
-  .dropdownMenu {
-    background-color: transparent;
-    box-shadow: none;
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
+  .hasDropdown:hover .dropdownMenu {
+    display: block;
   }
 
-  .navbarList li:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: 10%; /* Centers the 80% width line */
-    bottom: 0;
-    width: 80%;
-    border-bottom: 1px solid
-      color-mix(in srgb, var(--accent-color) 90%, white 3%);
+  .dropdownItem a {
+    padding: 1rem 1.25rem;
+    line-height: 1.55;
+    letter-spacing: 0.04rem;
+    border: 0;
+    background: transparent;
   }
-}
-
-/* Dropdown items */
-.dropdownItem a {
-  padding: 1rem 1rem;
-  color: hsl(0, 0%, 100%);
-  text-decoration: none;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  border-radius: 0;
-}
-
-.dropdownItem a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: hsl(0, 0%, 70%);
+  .dropdownMenu li + li a {
+    border-top: 1px solid color-mix(in srgb, var(--accent-color) 85%, white 8%);
+  }
 }
