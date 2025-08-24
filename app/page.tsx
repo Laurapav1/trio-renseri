@@ -2,17 +2,29 @@
 
 import React from "react";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import styles from "./page.module.css";
-import "swiper/css/autoplay";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import Navbar from "./components/navbar/navbar";
 import HomeHeroSection from "./components/hero-section/home-hero-section";
 
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import {
+  Autoplay,
+  Navigation,
+  Pagination,
+  A11y,
+  Keyboard,
+} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import styles from "./page.module.css";
+
 export default function Home() {
+  const prefersReducedMotion =
+    typeof window !== "undefined" &&
+    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+
   return (
     <>
       {/* Wrapper to make Navbar and HeroSection fill 100vh */}
@@ -86,7 +98,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Boat Service Section */}
+        {/* Boat */}
         <section className={styles.crossSection}>
           <div className={styles.crossImageContainer}>
             <img src="/images/baad2.jpg" alt="Bådservice" />
@@ -117,37 +129,45 @@ export default function Home() {
           <div className={styles.serviceBanner}>
             <h1>Vi udfører</h1>
           </div>
+
           <Swiper
             className={styles.mySwiper}
             modules={[Autoplay, Navigation, Pagination]}
-            spaceBetween={30}
-            navigation={true}
-            pagination={{ clickable: true }}
             slidesPerView={1}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            loop={true}
+            spaceBetween={30}
+            loop
+            navigation
+            pagination={{ clickable: true, dynamicBullets: true }}
+            autoplay={{
+              delay: 3200,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={550}
           >
+            {/* Tekstilrens */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/tekstil.jpg" alt="Tekstilrens" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/tekstil.jpg"
+                    alt="Tekstilrens"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
                       src="/images/icons/laundry.png"
-                      alt="Icon"
+                      alt=""
                     />
                     <h2>Tekstilrens</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi tilbyder skånsom og effektiv rensning af alle
-                    tekstiler.
-                  </p>
+                  <p>✓ Skånsom og effektiv rensning af alle tekstiler.</p>
                   <Link
-                    href={"/services/tekstilrens"}
+                    href="/services/tekstilrens"
                     className={styles.ctaButtonService}
                   >
                     Se tekstilrens
@@ -156,30 +176,29 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 2: Skjorte service*/}
+            {/* Skjorte service */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/skjorte.jpg" alt="Image 1" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/skjorte.jpg"
+                    alt="Skjorte service"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
                       src="/images/shirt-icon.webp"
-                      alt="Icon"
+                      alt=""
                     />
                     <h2>Skjorte Service</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>✓ Vi behandler dine skjorter med ekspertise og omhu.</p>
-                  <p>
-                    ✓ Vores professionelle vask/rensning sikrer en frisk og
-                    skarp skjorte hver gang.
-                  </p>
-                  <p>✓ Garanteret kvalitet –</p>
+                  <p>✓ Ekspertise og omhu for en skarp skjorte – hver gang.</p>
                   <Link
-                    href={"/services/skjorteservice"}
+                    href="/services/skjorteservice"
                     className={styles.ctaButtonService}
                   >
                     Se skjorte service
@@ -188,28 +207,32 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide : Brudekjole Rens */}
+            {/* Brudekjole Rens */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/bridedress.jpg" alt="Brudekjole Rens" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/bridedress.jpg"
+                    alt="Brudekjole rens"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
                       src="/images/icons/bride-dress.png"
-                      alt="Icon"
+                      alt=""
                     />
                     <h2>Brudekjole Rens</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>
-                    ✓ Specialrensning af brudekjoler, så de forbliver i perfekt
-                    stand.
+                    ✓ Skånsom specialrensning – bevarer kjolens form og
+                    detaljer.
                   </p>
                   <Link
-                    href={"/services/brudekjolerens"}
+                    href="/services/brudekjolerens"
                     className={styles.ctaButtonService}
                   >
                     Se brudekjole rens
@@ -218,28 +241,29 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 8: Dyne/Pude Vask */}
+            {/* Dyne/Pude */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/dyne.jpg" alt="Dyne/Pude Vask" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/dyne.jpg"
+                    alt="Dyne og pude vask"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
                       src="/images/icons/pillow.png"
-                      alt="Icon"
+                      alt=""
                     />
                     <h2>Dyne/Pude Vask</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>
-                    ✓ Få dine dyner og puder vasket med den største omhu, så de
-                    holder sig friske og rene.
-                  </p>
+                  <p>✓ Skånsom vask – holder fyldet luftigt og friskt.</p>
                   <Link
-                    href={"/services/dynepude"}
+                    href="/services/dynepude"
                     className={styles.ctaButtonService}
                   >
                     Se dyne/pude vask
@@ -248,28 +272,29 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide: Duge */}
+            {/* Duge */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/table.jpg" alt="Vask af duge" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/table.jpg"
+                    alt="Vask af duge"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/pillow.png"
-                      alt="Icon"
+                      src="/images/icons/tablecloth.png"
+                      alt=""
                     />
                     <h2>Vask af duge</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>
-                    ✓ Få dine duge vasket og rullet, så de altid er klar til
-                    brug.
-                  </p>
+                  <p>✓ Vasket og rullet – klar til brug.</p>
                   <Link
-                    href={"/services/vaskerulleservice"}
+                    href="/services/vaskerulleservice"
                     className={styles.ctaButtonService}
                   >
                     Se vask af duge
@@ -278,28 +303,29 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide Gardin service*/}
+            {/* Gardinservice */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/curtain.jpg" alt="Gardinservice" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/curtain.jpg"
+                    alt="Gardinservice"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
                       src="/images/icons/curtain-icon.png"
-                      alt="Icon"
+                      alt=""
                     />
                     <h2>Gardinservice</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi renser dine gardiner og sørger for, at de forbliver
-                    friske og rene.
-                  </p>
+                  <p>✓ Rens, vedligehold og friskhed til dine gardiner.</p>
                   <Link
-                    href={"/services/gardinservice"}
+                    href="/services/gardinservice"
                     className={styles.ctaButtonService}
                   >
                     Se gardinservice
@@ -308,25 +334,29 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide 4: Tæpperens */}
+            {/* Tæpperens */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/floorcarpet.jpg" alt="Tæpperens" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/floorcarpet.jpg"
+                    alt="Tæpperens"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
                       src="/images/icons/carpet.png"
-                      alt="Icon"
+                      alt=""
                     />
                     <h2>Tæpperens</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>✓ Professionel rensning af tæpper, store som små.</p>
+                  <p>✓ Professionel rens – små og store tæpper.</p>
                   <Link
-                    href={"/services/taepperens"}
+                    href="/services/taepperens"
                     className={styles.ctaButtonService}
                   >
                     Se tæpperens
@@ -335,27 +365,29 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide: møbelbetræk */}
+            {/* Madrasbetræk */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/sofa.jpg" alt="Møbelbetræk" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/sofa.jpg"
+                    alt="Rens af madrasbetræk"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/tablecloth.png" // ÆNDRE
-                      alt="Icon"
+                      src="/images/icons/tablecloth.png"
+                      alt=""
                     />
-                    <h2>Rensing af madrasbetræk</h2>
+                    <h2>Rens af madrasbetræk</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi renser dine madrasser og holder dem friske og rene.
-                  </p>
+                  <p>✓ Friskhed og hygiejne til madrasser.</p>
                   <Link
-                    href={"/services/sofa"}
+                    href="/services/sofa"
                     className={styles.ctaButtonService}
                   >
                     Se madrasbetræk service
@@ -364,91 +396,63 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Slide: Udlejning af mødel og tæpperens */}
+            {/* Udlejning */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/ÆNDRE.jpg" alt="Udlejning" /> {/* ÆNDRE */}
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/rental.jpg"
+                    alt="Udlejning af maskiner"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/tablecloth.png" // ÆNDRE
-                      alt="Icon"
+                      src="/images/icons/tablecloth.png"
+                      alt=""
                     />
-                    <h2>Udlejning af møbel og tæpperensmaskine</h2>
+                    <h2>Udlejning af møbel- og tæpperens</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>
-                    ✓ Lej professionelle maskiner til rensning af møbler og
-                    tæpper.
-                  </p>
+                  <p>✓ Lej professionelle maskiner til hjemmebrug.</p>
                   <Link
-                    href={"/services/sofa"} // ændre
+                    href="/services/sofa"
                     className={styles.ctaButtonService}
                   >
-                    Se udlejning service
+                    Se udlejning
                   </Link>
                 </div>
               </div>
             </SwiperSlide>
 
-            {/* Slide: Båd kalache */}
+            {/* Omforandring */}
             <SwiperSlide>
               <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/baad2.jpg" alt="baadkalache" />{" "}
-                  {/* ÆNDRE */}
-                </div>
-                <div className={styles.textcontent}>
-                  <div className={styles.iconTitle}>
-                    <img
-                      className={styles.serviceIcon}
-                      src="/images/icons/tablecloth.png" // ÆNDRE
-                      alt="Icon"
-                    />
-                    <h2>Rensing og vedligeholdelse af båd kalache</h2>
-                  </div>
-                  <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi renser dine madrasser og holder dem friske og rene.
-                  </p>
-                  <Link
-                    href={"/services/baadkalache"}
-                    className={styles.ctaButtonService}
-                  >
-                    Se båd kalache service
-                  </Link>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            {/* Swiper Slides */}
-            <SwiperSlide>
-              <div className={styles.gridService}>
-                <div className={styles.swiperslidecontent}>
-                  <img src="/images/sew3.jpg" alt="sew" />
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/sew3.jpg"
+                    alt="Omforandring af tøj"
+                    loading="lazy"
+                  />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
                       src="/images/icons/sewing-machine.png"
-                      alt="Icon"
+                      alt=""
                     />
                     <h2>Omforandring af tøj</h2>
                   </div>
                   <hr className={styles.divider} />
-                  <p>
-                    ✓ Vi tilbyder skræddersyede løsninger til omforandring af
-                    tøj.
-                  </p>
+                  <p>✓ Skræddersyede løsninger der passer perfekt.</p>
                   <Link
-                    href={"/services/skraedder"}
+                    href="/services/skraedder"
                     className={styles.ctaButtonService}
                   >
-                    Se omforandring service
+                    Se omforandring
                   </Link>
                 </div>
               </div>
