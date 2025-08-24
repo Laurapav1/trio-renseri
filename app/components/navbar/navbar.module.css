@@ -143,6 +143,7 @@
 /* Chevron (mobile only) */
 .chevron {
   margin-left: auto;
+  margin-right: 1.25rem;
   width: 0.75rem;
   height: 0.75rem;
   border-right: 2px solid #fff;
@@ -198,6 +199,7 @@
   .dropdownMenu.open {
     max-height: 40rem;
     margin-left: var(--submenu-indent);
+    margin-right: var(--submenu-indent);
     padding: 0.25rem 0;
     background: var(--submenu-bg);
     border: 0;
@@ -211,7 +213,7 @@
   }
 
   .dropdownMenu .dropdownItem a {
-    padding: 0.8rem 1rem 0.8rem 0.75rem;
+    padding: 0.8rem 1.5rem 0.8rem 1.5rem;
     line-height: 1.5;
     background: transparent !important;
     border: 0 !important;
