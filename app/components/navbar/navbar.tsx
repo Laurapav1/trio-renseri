@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 
@@ -10,7 +10,6 @@ export default function Navbar() {
   const [isSkraedderDropdownOpen, setIsSkraedderDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
-    // When closing the mobile menu, also close the dropdown
     if (isOpen) {
       setIsServicesDropdownOpen(false);
       setIsSkraedderDropdownOpen(false);
@@ -19,14 +18,31 @@ export default function Navbar() {
   };
 
   const handleLinkClick = () => {
-    setIsOpen(false); // Close mobile menu on link click
+    setIsOpen(false);
     setIsServicesDropdownOpen(false);
     setIsSkraedderDropdownOpen(false);
   };
 
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+        setIsServicesDropdownOpen(false);
+        setIsSkraedderDropdownOpen(false);
+      }
+    };
+    onResize();
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   return (
-    <nav className={styles.navbar}>
-      <a href="/" className={styles.navbarLogoLink}>
+    <nav className={styles.navbar} aria-label="Primary">
+      <a
+        href="/"
+        className={styles.navbarLogoLink}
+        aria-label="Trio Renseri - Forside"
+      >
         <img
           className={styles.logo}
           src="/images/logo.svg"
@@ -34,43 +50,49 @@ export default function Navbar() {
         />
       </a>
 
-      {/* Hamburger Menu (Mobile Toggle) */}
-      <div
+      <button
         className={`${styles.hamburger} ${isOpen ? styles.active : ""}`}
         onClick={toggleMenu}
         aria-label="Toggle navigation menu"
+        aria-expanded={isOpen}
+        aria-controls="primary-nav"
+        type="button"
       >
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
 
-      {/* Navbar Links */}
       <div className={styles.navbarContainer}>
-        <ul className={`${styles.navbarList} ${isOpen ? styles.active : ""}`}>
-          <li className={styles.navbarItem}>
-            <Link href="/" onClick={handleLinkClick}>
+        <ul
+          id="primary-nav"
+          className={`${styles.navbarList} ${isOpen ? styles.active : ""}`}
+          role="menubar"
+        >
+          <li className={styles.navbarItem} role="none">
+            <Link href="/" onClick={handleLinkClick} role="menuitem">
               <span>Forside</span>
             </Link>
           </li>
 
-          {/* Services with Submenu */}
+          {/* Services */}
           <li
-            className={`${styles.navbarItem} ${styles.hasDropdown}`} // Tilføj hasDropdown
-            onMouseEnter={() => {
-              if (!isOpen) setIsServicesDropdownOpen(true);
-            }}
-            onMouseLeave={() => {
-              if (!isOpen) setIsServicesDropdownOpen(false);
-            }}
+            className={`${styles.navbarItem} ${styles.hasDropdown} ${
+              isOpen && isServicesDropdownOpen ? styles.expanded : ""
+            }`}
+            role="none"
+            onMouseEnter={() => !isOpen && setIsServicesDropdownOpen(true)}
+            onMouseLeave={() => !isOpen && setIsServicesDropdownOpen(false)}
           >
             <Link
               href="/services"
+              role="menuitem"
+              aria-haspopup="true"
+              aria-expanded={isOpen ? isServicesDropdownOpen : undefined}
               onClick={(e) => {
                 if (isOpen) {
-                  // On mobile: prevent immediate navigation, expand/collapse submenu
                   e.preventDefault();
-                  setIsServicesDropdownOpen((prev) => !prev);
+                  setIsServicesDropdownOpen((p) => !p);
                 } else {
                   handleLinkClick();
                 }
@@ -79,103 +101,141 @@ export default function Navbar() {
               <span>Services</span>
             </Link>
 
-            {isServicesDropdownOpen && (
-              <ul className={styles.dropdownMenu}>
-                <li className={styles.dropdownItem}>
-                  <Link href="/services" onClick={handleLinkClick}>
-                    Services
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="/services/tekstilrens" onClick={handleLinkClick}>
-                    Tekstil Service
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/skjorteservice"
-                    onClick={handleLinkClick}
-                  >
-                    Skjorteservice
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/brudekjolerens"
-                    onClick={handleLinkClick}
-                  >
-                    Brudetøj
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="/services/dynevask" onClick={handleLinkClick}>
-                    Dyne/Puder
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/vaskerulleservice"
-                    onClick={handleLinkClick}
-                  >
-                    Vask af Duge
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/gardinservice"
-                    onClick={handleLinkClick}
-                  >
-                    Gardiner
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="/services/taepperens" onClick={handleLinkClick}>
-                    Tæpper
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link
-                    href="/services/madrasbetraek"
-                    onClick={handleLinkClick}
-                  >
-                    Madrasbetræk
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="/services/mobelbetraak" onClick={handleLinkClick}>
-                    Møbelbetræk
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="/services/udlejning" onClick={handleLinkClick}>
-                    Udlejning af maskine
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="/services/baadkalache" onClick={handleLinkClick}>
-                    Bådkalache
-                  </Link>
-                </li>
-              </ul>
-            )}
+            <ul
+              className={`${styles.dropdownMenu} ${
+                isOpen && isServicesDropdownOpen ? styles.open : ""
+              }`}
+              role="menu"
+            >
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Services
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/tekstilrens"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Tekstil Service
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/skjorteservice"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Skjorteservice
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/brudekjolerens"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Brudetøj
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/dynevask"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Dyne/Puder
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/vaskerulleservice"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Vask af Duge
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/gardinservice"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Gardiner
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/taepperens"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Tæpper
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/madrasbetraek"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Madrasbetræk
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/mobelbetraak"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Møbelbetræk
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/udlejning"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Udlejning af maskine
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/services/baadkalache"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Bådkalache
+                </Link>
+              </li>
+            </ul>
           </li>
 
-          {/* Skrædder with Submenu */}
+          {/* Skrædder */}
           <li
-            className={`${styles.navbarItem} ${styles.hasDropdown}`} // Tilføj hasDropdown
-            onMouseEnter={() => {
-              if (!isOpen) setIsSkraedderDropdownOpen(true);
-            }}
-            onMouseLeave={() => {
-              if (!isOpen) setIsSkraedderDropdownOpen(false);
-            }}
+            className={`${styles.navbarItem} ${styles.hasDropdown} ${
+              isOpen && isSkraedderDropdownOpen ? styles.expanded : ""
+            }`}
+            role="none"
+            onMouseEnter={() => !isOpen && setIsSkraedderDropdownOpen(true)}
+            onMouseLeave={() => !isOpen && setIsSkraedderDropdownOpen(false)}
           >
             <Link
               href="/skraedder"
+              role="menuitem"
+              aria-haspopup="true"
+              aria-expanded={isOpen ? isSkraedderDropdownOpen : undefined}
               onClick={(e) => {
                 if (isOpen) {
                   e.preventDefault();
-                  setIsSkraedderDropdownOpen((prev) => !prev);
+                  setIsSkraedderDropdownOpen((p) => !p);
                 } else {
                   handleLinkClick();
                 }
@@ -184,34 +244,45 @@ export default function Navbar() {
               <span>Skrædder</span>
             </Link>
 
-            {isSkraedderDropdownOpen && (
-              <ul className={styles.dropdownMenu}>
-                <li className={styles.dropdownItem}>
-                  <Link href="/skraedder" onClick={handleLinkClick}>
-                    Skrædder
-                  </Link>
-                </li>
-                <li className={styles.dropdownItem}>
-                  <Link href="/skraedder/priser" onClick={handleLinkClick}>
-                    Priser
-                  </Link>
-                </li>
-              </ul>
-            )}
+            <ul
+              className={`${styles.dropdownMenu} ${
+                isOpen && isSkraedderDropdownOpen ? styles.open : ""
+              }`}
+              role="menu"
+            >
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/skraedder"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Skrædder
+                </Link>
+              </li>
+              <li className={styles.dropdownItem} role="none">
+                <Link
+                  href="/skraedder/priser"
+                  onClick={handleLinkClick}
+                  role="menuitem"
+                >
+                  Priser
+                </Link>
+              </li>
+            </ul>
           </li>
 
-          <li className={styles.navbarItem}>
-            <Link href="/priser" onClick={handleLinkClick}>
+          <li className={styles.navbarItem} role="none">
+            <Link href="/priser" onClick={handleLinkClick} role="menuitem">
               <span>Priser</span>
             </Link>
           </li>
-          <li className={styles.navbarItem}>
-            <Link href="/kunderabat" onClick={handleLinkClick}>
+          <li className={styles.navbarItem} role="none">
+            <Link href="/kunderabat" onClick={handleLinkClick} role="menuitem">
               <span>Rabatter</span>
             </Link>
           </li>
-          <li className={styles.navbarItem}>
-            <Link href="/kontakt" onClick={handleLinkClick}>
+          <li className={styles.navbarItem} role="none">
+            <Link href="/kontakt" onClick={handleLinkClick} role="menuitem">
               <span>Kontakt</span>
             </Link>
           </li>
