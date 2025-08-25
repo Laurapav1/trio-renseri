@@ -54,15 +54,15 @@ export default function Tojrens() {
           />
 
           <ServiceCard
-            title="Vask af duge"
-            description="Vask, tørring og rulning af tøj, så det altid er klar til brug."
+            title="Vask af duge/sengetøj"
+            description="Vask, tørring og rulning af duge og sengetøj, så det altid er klar til brug."
             link="/services/vaskerulleservice"
             imgURL="images/table.jpg"
           />
 
           <ServiceCard
             title="Gardiner"
-            description="Rensning af gardiner, så de fremstår friske og indbydende i dit hjem."
+            description="Rensning/vask af gardiner, så de fremstår friske og indbydende i dit hjem."
             link="/services/gardinservice"
             imgURL="images/curtain.jpg"
           />
@@ -77,7 +77,7 @@ export default function Tojrens() {
           <ServiceCard
             title="Madrasser"
             description="Skånsom rensning af madrasser, der holder dem friske og behagelige."
-            link="/services/madrasbetraek"
+            link="/services/madrasser"
             imgURL="images/madrass.jpg"
           />
 
@@ -96,8 +96,8 @@ export default function Tojrens() {
           />
 
           <ServiceCard
-            title="Båd Kalache"
-            description="Rensning og vedligeholdelse af båd kalache, så de forbliver i topform."
+            title="Bådkaleche"
+            description="Rensning og vedligeholdelse af bådkaleche, så de forbliver i topform."
             link="/services/baadkalache"
             imgURL="images/baad2.jpg"
           />

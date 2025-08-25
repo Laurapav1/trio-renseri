@@ -68,7 +68,7 @@ export default function Home() {
             <h3>Hvorfor Vælge Trio Renseri?</h3>
             <ul>
               <li>Miljøvenlige metoder og materialer</li>
-              <li>Over 26 års erfaring</li>
+              <li>Over 30 års erfaring</li>
               <li>Pålidelig og hurtig service</li>
               <li>Specialiseret pleje af sarte stoffer</li>
             </ul>

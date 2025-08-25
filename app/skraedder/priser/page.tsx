@@ -25,24 +25,23 @@ export default function Prices() {
           items={[
             { name: "Oplægning stikning", prices: ["150 DKK"] },
             { name: "Oplægning m/lynlås", prices: ["210 DKK"] },
-            { name: "Oplægning blindstik", prices: ["150 DKK"] },
-            { name: "Oplægning m/slidbånd/opslag", prices: ["160 DKK"] },
-            { name: "Oplægning m/slidt kant jeans", prices: ["160 DKK"] },
-            { name: "Oplægning m/knaphul/snor", prices: ["190 DKK"] },
-            { name: "Livvidde+/-", prices: ["150 DKK"] },
-            { name: "Lårvidde", prices: ["170 DKK"] },
-            { name: "Ny lynlås", prices: ["170 DKK"] },
+            { name: "Oplægning blindstik", prices: ["175 DKK"] },
+            { name: "Oplægning m/slidbånd/opslag", prices: ["175 DKK"] },
+            { name: "Oplægning m/slidt kant jeans", prices: ["195 DKK"] },
+            { name: "Oplægning m/knaphul/snor", prices: ["195 DKK"] },
+            { name: "Livvidde+/-", prices: ["175 DKK"] },
+            { name: "Lårvidde", prices: ["195 DKK"] },
+            { name: "Ny lynlås", prices: ["175 DKK"] },
           ]}
           highlightService={service}
         />
         <PriceList
           heading="Jakker"
           items={[
-            { name: "Ærmer +/-", prices: ["250 DKK"] },
+            { name: "Ærmer +/-", prices: ["275 DKK"] },
             { name: "Ærmer - (ved skulder)", prices: ["300 DKK"] },
             { name: "Længde +/-", prices: ["300 DKK"] },
-            { name: "Vat på skulder", prices: ["125 DKK"] },
-            { name: "Ny lynlås", prices: ["375 DKK"] },
+            { name: "Ny lynlås", prices: ["fra 375 DKK"] },
           ]}
           highlightService={service}
         />
@@ -51,42 +50,22 @@ export default function Prices() {
           items={[
             { name: "Stropper kortes fra", prices: ["80 DKK"] },
             { name: "Ind i ærmegab", prices: ["110 DKK"] },
-            { name: "Ny lynlås", prices: ["190 DKK"] },
-            { name: "Kjoler korte", prices: ["fra 160 DKK"] },
+            { name: "Ny lynlås", prices: ["fra 190 DKK"] },
+            { name: "Kjoler korte", prices: ["fra 175 DKK"] },
           ]}
           highlightService={service}
         />
         <PriceList
           heading="Skindjakker"
           items={[
-            { name: "Ærmer +/-", prices: ["300 DKK"] },
+            { name: "Ærmer +/-", prices: ["fra 300 DKK"] },
             { name: "Ny lynlås excl lynlås", prices: ["320 DKK"] },
-            { name: "Knapper", prices: ["75 DKK"] },
-            { name: "Nyt foer - foer fra", prices: ["650 DKK"] },
+            { name: "Knapper", prices: ["fra 50 DKK"] },
+            { name: "Nyt foer excl foer", prices: ["fra 650 DKK"] },
           ]}
           highlightService={service}
         />
-        <Tilbud />
       </div>
     </>
-  );
-}
-
-function Tilbud() {
-  return (
-    <div className={styles.tilbudContainer}>
-      <Link href="/kunderabat">
-        <div className={styles.tilbudHeader}>
-          <h3>Kunde rabatter!</h3>
-        </div>
-        <div className={styles.tilbudContent}>
-          <ul>
-            <li>15% studierabat</li>
-            <li>15% pensionistrabat</li>
-            <li>Klik for at læse mere</li>
-          </ul>
-        </div>
-      </Link>
-    </div>
   );
 }

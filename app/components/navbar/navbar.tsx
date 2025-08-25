@@ -170,8 +170,8 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
-                  <Link href="/services/madrasbetraek" onClick={closeAll}>
-                    Madrasbetræk
+                  <Link href="/services/madrasser" onClick={closeAll}>
+                    Madrasser
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>

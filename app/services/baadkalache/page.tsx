@@ -18,21 +18,20 @@ export default function BaadKalache() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af bådkalache</h1>
+          <h1>Specialiseret vask og imprægnering af bådkalecher</h1>
           <p>
-            Vi tilbyder professionel rensning og vedligeholdelse af båd
-            kalacher, så de bevarer deres funktionalitet og æstetik. Vores
-            ekspertise sikrer, at din båd kalache forbliver i topform gennem
-            alle sæsoner.
+            Vi tilbyder professionel vask og vedligeholdelse af bådkaleche, så
+            de bevarer deres funktionalitet og æstetik. Vores ekspertise sikrer,
+            at din bådkaleche forbliver i topform gennem alle sæsoner.
           </p>
           <p>
-            Vi renser og plejer båd kalacher med stor omhu og anvender de bedste
-            metoder til at beskytte materialet og forlænge levetiden.
+            Vi vasker og imprægnerer bådkalecheer med stor omhu og anvender de
+            bedste metoder til at beskytte materialet og forlænge levetiden.
           </p>
           <section className={styles.priceSection}>
             <h3>Priser</h3>
             <ul>
-              <li>Efter aftale</li>
+              <li>395 DKK pr. kg.</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

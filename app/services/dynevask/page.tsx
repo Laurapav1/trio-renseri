@@ -24,12 +24,8 @@ export default function DynePudeVask() {
             Vi er specialister i at give dine dyner og puder den bedste pleje.
             Vores skånsomme vaskemetoder sikrer, at dine dyner og puder bliver
             rene og fri for allergener, så du kan sove trygt og komfortabelt.
-            Fra inspektion til vask og tørring, vi sørger for, at dine tekstiler
-            får den mest omhyggelige behandling.
-          </p>
-          <p>
-            Vi har stor erfaring med vask af dyner og puder. Sidste år hjalp vi
-            med at friske mere end 10.000 dyner og puder op.
+            Fra inspektion til vask og tørring, vi sørger for, at de får den
+            mest omhyggelige behandling.
           </p>
           <section className={styles.priceSection}>
             <h3>Priser</h3>

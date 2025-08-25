@@ -19,7 +19,7 @@ export default function Gardinservice() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af brudekjoler</h1>
+          <h1>Specialiseret rensning/vask af gardiner</h1>
           <p>
             Vores gardinservice renser og plejer dine gardiner skånsomt for at
             fjerne støv, allergener og pletter. Vi sikrer, at dine gardiner
@@ -40,7 +40,7 @@ export default function Gardinservice() {
             </ul>
             <h4>Rens af foldegardiner</h4>
             <ul>
-              <li>Indhent tilbud</li>
+              <li>Efter aftale</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

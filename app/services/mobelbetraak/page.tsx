@@ -19,7 +19,7 @@ export default function Mobelbetraek() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af madrasbetræk</h1>
+          <h1>Specialiseret rensning af møbelbetræk</h1>
           <p>
             Professionel rensning af møbelbetræk sikrer, at dine møbler
             forbliver pæne og fri for pletter. Vi tager os af alt fra sofaer til
@@ -33,7 +33,7 @@ export default function Mobelbetraek() {
             <h3>Pris i alt (vasket og renset):</h3>
             <ul>
               <li>135 kr.</li>
-              <li>+imprægnering - 200 kr. pr. kg.</li>
+              <li>+imprægnering - 225 kr. pr. kg.</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

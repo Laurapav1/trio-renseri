@@ -19,21 +19,22 @@ export default function Udlejning() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af tæpper</h1>
+          <h1>Udlejning af møbel- og tæpperensmaskine</h1>
           <p>
             Lej en professionel rensningsmaskine til møbler og tæpper, og gør
             dit hjem pænt og rent. Perfekt til selv at tage kontrol over
             rengøringen.
           </p>
           <p>
-            Vi tilbyder udlejning af effektive rensningsmaskine, der er let
-            at bruge og giver fantastiske resultater.
+            Vi tilbyder udlejning af effektive rensningsmaskine, der er let at
+            bruge og giver fantastiske resultater.
           </p>
           <section className={styles.priceSection}>
             <h3>Pris i alt (inkl. leje og vejledning):</h3>
             <ul>
-              <li>Rensningsmaskine - 500 kr. pr. dag</li>
+              <li>Rensningsmaskine - 275 kr. pr. dag</li>
               <li>Ekstra rengøringsmiddel - 100 kr.</li>
+              <li>Udlejning i weekender - 375 kr.</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

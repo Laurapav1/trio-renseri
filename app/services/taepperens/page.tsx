@@ -31,8 +31,7 @@ export default function Taepperens() {
           <section className={styles.priceSection}>
             <h3>Pris i alt (renset og plejet):</h3>
             <ul>
-              <li>Lille tæppe - 200 kr.</li>
-              <li>Stort tæppe - 800 kr.</li>
+              <li>Efter aftale</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}
