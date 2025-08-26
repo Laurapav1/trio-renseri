@@ -9,7 +9,7 @@ export default function Kunderabat() {
   return (
     <>
       <Navbar />
-      <PageHeroSection heading="Kunderabat" imagePath="/images/sale2.jpg" />
+      <PageHeroSection heading="Kunderabat" imagePath="/images/rabat.jpg" />
 
       {/* Intro Section */}
       <section className={styles.container}>
