@@ -12,7 +12,7 @@ export default function BaadKalache() {
       <Navbar />
       <HeroSection
         heading="Vedligeholdelse og rensning"
-        imagePath="/images/baad2.jpg"
+        imagePath="/images/sunset.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}

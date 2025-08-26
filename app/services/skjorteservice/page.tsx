@@ -29,9 +29,9 @@ export default function Skjorteservice() {
           <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og strøget):</h3>
             <ul>
-              <li>1 stk. - 25 kr.</li>
-              <li>5 stk. - 110 kr.</li>
-              <li>+ smokingskjorte 50 kr.</li>
+              <li>1 stk. - 25 DKK</li>
+              <li>5 stk. - 110 DKK</li>
+              <li>+ smokingskjorte 50 DKK</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

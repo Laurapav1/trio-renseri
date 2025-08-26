@@ -13,7 +13,7 @@ export default function Gardinservice() {
       {/* Hero Section */}
       <HeroSection
         heading="Dine gardiner - vores ansvar"
-        imagePath="/images/curtains2.jpg"
+        imagePath="/images/curtain.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -32,11 +32,11 @@ export default function Gardinservice() {
           <section className={styles.priceSection}>
             <h3>Priser</h3>
             <ul>
-              <li>135 kr. pr. bane</li>
+              <li>135 DKK pr. bane</li>
             </ul>
             <h4>Velourgardiner</h4>
             <ul>
-              <li>155 kr. pr. bane</li>
+              <li>155 DKK pr. bane</li>
             </ul>
             <h4>Rens af foldegardiner</h4>
             <ul>
@@ -53,8 +53,8 @@ export default function Gardinservice() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/clean-wedding.jpeg"
-            alt="Brudekjole"
+            src="/images/curtains2.jpg"
+            alt="gardin"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

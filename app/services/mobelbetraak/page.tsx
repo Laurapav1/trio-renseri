@@ -13,7 +13,7 @@ export default function Mobelbetraek() {
       {/* Hero Section */}
       <HeroSection
         heading="Møbelbetræk - Rensning og pleje"
-        imagePath="/images/sofa-cover.jpg"
+        imagePath="/images/sofa2.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -33,7 +33,7 @@ export default function Mobelbetraek() {
             <h3>Pris i alt (vasket og renset):</h3>
             <ul>
               <li>135 kr.</li>
-              <li>+imprægnering - 225 kr. pr. kg.</li>
+              <li>+imprægnering - 225 DKK pr. kg.</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}
@@ -46,7 +46,7 @@ export default function Mobelbetraek() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/sofa-cover.jpg"
+            src="/images/sofa2.jpg"
             alt="mobelbetraek"
             fill
             style={{ objectFit: "cover" }}

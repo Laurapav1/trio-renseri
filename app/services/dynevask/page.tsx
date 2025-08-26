@@ -30,16 +30,16 @@ export default function DynePudeVask() {
           <section className={styles.priceSection}>
             <h3>Priser</h3>
             <ul>
-              <li>1 dyne - 275 kr.</li>
-              <li>2 dyner - 350 kr.</li>
-              <li>1 pude - 150 kr.</li>
-              <li>2 puder - 250 kr.</li>
+              <li>1 dyne - 275 DKK</li>
+              <li>2 dyner - 350 DKK</li>
+              <li>1 pude - 150 DKK</li>
+              <li>2 puder - 250 DKK</li>
               <br></br>
-              <li>Silkedyne - 275 kr.</li>
-              <li>Børnedyne- 120 kr.</li>
-              <li>Dobbeltdyne - 300 kr.</li>
-              <li>Kugledyne - fra: 450 kr.</li>
-              <li>Sovepose - fra 195 kr.</li>
+              <li>Silkedyne - 275 DKK</li>
+              <li>Børnedyne- 120 DKK</li>
+              <li>Dobbeltdyne - 300 DKK</li>
+              <li>Kugledyne - fra: 450 DKK</li>
+              <li>Sovepose - fra 195 DKK</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

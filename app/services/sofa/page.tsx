@@ -29,14 +29,14 @@ export default function Sofa() {
           </p>
           <p>
             Vi har stor erfaring med rensning af sofabetræk, uanset størrelse og
-            materiale. 
+            materiale.
           </p>
           <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og tørret):</h3>
             <ul>
-              <li>1 sæde - 200 kr.</li>
-              <li>3 sæder - 500 kr.</li>
-              <li>Hjørnesofa - 800 kr.</li>
+              <li>1 sæde - 200 DKK</li>
+              <li>3 sæder - 500 DKK</li>
+              <li>Hjørnesofa - 800 DKK</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

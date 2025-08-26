@@ -69,6 +69,7 @@ export default function Kontakt() {
                     Udlejning af møbel og tæpperrensmaskine
                   </option>
                   <option value="båd kalache">Båd Kalache</option>
+                  <option value="odre">Odre</option>
                   <option value="andet">Andet</option>
                 </select>
               </div>

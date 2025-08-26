@@ -13,7 +13,7 @@ export default function Vaskerulleservice() {
       {/* Hero Section */}
       <HeroSection
         heading="Din dug - vores ekspertise"
-        imagePath="/images/dug2.jpg"
+        imagePath="/images/tablecloth.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -21,9 +21,8 @@ export default function Vaskerulleservice() {
         <div className={styles.textContainer}>
           <h1>Specialiseret rensning af tæpper</h1>
           <p>
-            Vores vaske- og rulleservice sikrer, at dine duge eller sengetøj er friskt, blødt og
-            klart til at blive brugt. 
-
+            Vores vaske- og rulleservice sikrer, at dine duge eller sengetøj er
+            friskt, blødt og klart til at blive brugt.
           </p>
           <p>
             Vi vasker og ruller tøj og sengetøj med omhu for at sikre, at de
@@ -49,7 +48,7 @@ export default function Vaskerulleservice() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/tekstil2.jpg"
+            src="/images/table.jpg"
             alt="tekstil"
             fill
             style={{ objectFit: "cover" }}

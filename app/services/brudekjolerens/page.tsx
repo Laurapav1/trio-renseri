@@ -26,9 +26,9 @@ export default function Brudekjolerens() {
             blonder til fine perler og sten.
           </p>
           <p>
-            Vi gennemgår hver kjole omhyggeligt og tilpasser
-            rensningen til kjolens materiale, så du trygt kan lade os tage hånd
-            om dit dyrebare klenodie.
+            Vi gennemgår hver kjole omhyggeligt og tilpasser rensningen til
+            kjolens materiale, så du trygt kan lade os tage hånd om dit dyrebare
+            klenodie.
           </p>
           <section className={styles.priceSection}>
             <h3>Priser</h3>

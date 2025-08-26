@@ -33,7 +33,7 @@ export default function Daabskjolevask() {
             </p>
             <h3>Pris i alt (vasket og plejet):</h3>
             <ul>
-              <li>Dåbskjole - 500 kr.</li>
+              <li>Dåbskjole - 500 DKK</li>
             </ul>
           </div>
         </div>

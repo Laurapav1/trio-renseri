@@ -34,7 +34,7 @@ export default function Madrasser() {
             <h3>Priser</h3>
             <h4>Topmadras</h4>
             <ul>
-              <li>95 pr. kg.</li>
+              <li>95 DKK pr. kg.</li>
             </ul>
             <h4>Madrasser</h4>
             <ul>

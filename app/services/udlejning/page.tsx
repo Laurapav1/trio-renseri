@@ -13,7 +13,7 @@ export default function Udlejning() {
       {/* Hero Section */}
       <HeroSection
         heading="Udlejning af møbel- og tæpperensmaskine"
-        imagePath="/images/rental-machine.jpg"
+        imagePath="/images/maskine.jpeg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -32,9 +32,9 @@ export default function Udlejning() {
           <section className={styles.priceSection}>
             <h3>Pris i alt (inkl. leje og vejledning):</h3>
             <ul>
-              <li>Rensningsmaskine - 275 kr. pr. dag</li>
-              <li>Ekstra rengøringsmiddel - 100 kr.</li>
-              <li>Udlejning i weekender - 375 kr.</li>
+              <li>Rensningsmaskine - 275 DKK pr. dag</li>
+              <li>Ekstra rengøringsmiddel - 100 DKK</li>
+              <li>Udlejning i weekender - 375 DKK</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}
@@ -47,7 +47,7 @@ export default function Udlejning() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/tekstil2.jpg"
+            src="/images/maskine.jpeg"
             alt="tekstil"
             fill
             style={{ objectFit: "cover" }}

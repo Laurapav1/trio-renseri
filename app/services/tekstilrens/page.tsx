@@ -13,7 +13,7 @@ export default function Tekstilrens() {
       {/* Hero Section */}
       <HeroSection
         heading="Dit tøj - vores ansvar"
-        imagePath="/images/tekstil2.jpg"
+        imagePath="/images/tekstil.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -38,7 +38,7 @@ export default function Tekstilrens() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/tekstil2.jpg"
+            src="/images/tekstil.jpg"
             alt="tekstil"
             fill
             style={{ objectFit: "cover" }}

@@ -94,7 +94,7 @@ export default function Home() {
             </ul>
           </div>
           <div className={styles.crossImageContainer}>
-            <img src="/images/textile.jpg" alt="Tekstilrens" />
+            <img src="/images/tekstil.jpg" alt="Tekstilrens" />
           </div>
         </section>
 
@@ -212,7 +212,7 @@ export default function Home() {
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
                   <img
-                    src="/images/bridedress.jpg"
+                    src="/images/clean-wedding.jpeg"
                     alt="Brudekjole rens"
                     loading="lazy"
                   />
@@ -263,7 +263,7 @@ export default function Home() {
                   <hr className={styles.divider} />
                   <p>✓ Skånsom vask – holder fyldet luftigt og friskt.</p>
                   <Link
-                    href="/services/dynepude"
+                    href="/services/dynevask"
                     className={styles.ctaButtonService}
                   >
                     Se dyne/pude vask
@@ -308,7 +308,7 @@ export default function Home() {
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
                   <img
-                    src="/images/curtain.jpg"
+                    src="/images/curtains2.jpg"
                     alt="Gardinservice"
                     loading="lazy"
                   />
@@ -371,7 +371,7 @@ export default function Home() {
                 <div className={styles.mediaBox}>
                   <img
                     src="/images/sofa.jpg"
-                    alt="Rens af madrasbetræk"
+                    alt="Vask af madrasser"
                     loading="lazy"
                   />
                 </div>
@@ -382,7 +382,7 @@ export default function Home() {
                       src="/images/icons/tablecloth.png"
                       alt=""
                     />
-                    <h2>Rens af madrasbetræk</h2>
+                    <h2>Vask af madrasser</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>✓ Friskhed og hygiejne til madrasser.</p>
@@ -390,7 +390,7 @@ export default function Home() {
                     href="/services/sofa"
                     className={styles.ctaButtonService}
                   >
-                    Se madrasbetræk service
+                    Se madrasservice
                   </Link>
                 </div>
               </div>
@@ -401,7 +401,7 @@ export default function Home() {
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
                   <img
-                    src="/images/rental.jpg"
+                    src="/images/maskine.jpeg"
                     alt="Udlejning af maskiner"
                     loading="lazy"
                   />
@@ -413,7 +413,7 @@ export default function Home() {
                       src="/images/icons/tablecloth.png"
                       alt=""
                     />
-                    <h2>Udlejning af møbel- og tæpperens</h2>
+                    <h2>Udlejning af møbel- og tæpperensmaskine</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>✓ Lej professionelle maskiner til hjemmebrug.</p>
@@ -448,10 +448,7 @@ export default function Home() {
                   </div>
                   <hr className={styles.divider} />
                   <p>✓ Skræddersyede løsninger der passer perfekt.</p>
-                  <Link
-                    href="/services/skraedder"
-                    className={styles.ctaButtonService}
-                  >
+                  <Link href="/skraedder" className={styles.ctaButtonService}>
                     Se omforandring
                   </Link>
                 </div>
