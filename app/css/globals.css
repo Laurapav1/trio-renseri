@@ -5,6 +5,7 @@
   --accent-highlight-color: hsl(219, 80%, 26%);
   --text-color: hsl(0, 0%, 25%);
   --heading-color: hsl(0, 0%, 10%);
+  --nav-h: 64px;
 }
 
 body {

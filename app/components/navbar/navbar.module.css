@@ -1,11 +1,11 @@
 /* ==================================
-   Trio Renseriet - Navbar
+   Trio Renseriet - Navbar (sticky + hide on scroll)
    ================================== */
 
 .navbar {
   --submenu-indent: 1.25rem;
   --submenu-bg: color-mix(in srgb, var(--accent-color) 78%, black 22%);
-  /* --nav-h is set from JS */
+  /* --nav-h is set via JS */
   padding: 0.5rem 1rem;
   background: var(--accent-color);
   position: relative;
@@ -14,6 +14,21 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  /* smooth slide in/out */
+  transform: translateY(0);
+  transition: transform 0.22s ease;
+}
+.navbarSticky {
+  position: sticky;
+  top: 0;
+}
+.navHidden {
+  transform: translateY(-100%);
+}
+
+.navbarElevated {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
 }
 
 /* Logo */
@@ -160,22 +175,21 @@
     display: inline-block;
   }
 
-  /* Make the entire drawer the scroll container */
+  /* Entire drawer is the scroll container */
   .navbarList {
     position: fixed;
     top: var(--nav-h, 64px);
     left: 0;
     right: 0;
     bottom: 0;
-    overflow-y: auto; /* <-- only scroll here */
+    overflow-y: auto; /* <-- scrolls here */
     -webkit-overflow-scrolling: touch;
-    overscroll-behavior: contain; /* prevent scroll chaining to body */
+    overscroll-behavior: contain; /* prevent background scroll chaining */
     z-index: 1105; /* above scrim (1000) */
     background: var(--accent-color);
     padding-bottom: max(12px, env(safe-area-inset-bottom));
   }
 
-  /* No separators/tints on parents */
   .navbarList > li > a {
     background: none !important;
   }
@@ -187,9 +201,9 @@
     background: none !important;
   }
 
-  /* Submenu: just show/hide, no inner scroll/cap */
+  /* Submenu expands inline (no internal scroll) */
   .dropdownMenu {
-    display: none; /* hidden by default */
+    display: none;
     margin-left: var(--submenu-indent);
     margin-right: var(--submenu-indent);
     padding: 0.25rem 0;
@@ -199,7 +213,7 @@
     box-shadow: none;
   }
   .dropdownMenu.open {
-    display: block; /* expands inline */
+    display: block;
   }
 
   .groupHeader a {

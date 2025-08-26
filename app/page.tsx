@@ -7,13 +7,7 @@ import HomeHeroSection from "./components/hero-section/home-hero-section";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  A11y,
-  Keyboard,
-} from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -27,9 +21,8 @@ export default function Home() {
 
   return (
     <>
-      {/* Wrapper to make Navbar and HeroSection fill 100vh */}
-      <div className={styles.heroWrapper}>
-        <Navbar />
+      <Navbar />
+      <div className={styles.heroViewport}>
         <HomeHeroSection />
       </div>
       <main>

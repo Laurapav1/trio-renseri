@@ -1,14 +1,11 @@
-/* ===== Wrapper (Navbar + Hero) ===== */
-.heroWrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+.heroViewport {
+  /* Use dynamic viewport height to avoid iOS toolbar jumps */
+  min-height: calc(100dvh - var(--nav-h, 64px));
+  display: grid;
 }
-.heroWrapper > * {
-  flex-shrink: 0;
-}
-.heroWrapper > section {
-  flex-grow: 1;
+
+.heroViewport > * {
+  min-height: inherit; /* key: stop using 100vh inside the hero */
 }
 
 /* ===== Intro ===== */

@@ -6,9 +6,15 @@ import styles from "./navbar.module.css";
 
 type Panel = "services" | "skraedder" | null;
 
+const HIDE_ON_SCROLL = true; // flip to false if you ever want sticky-only
+const HIDE_DELTA = 12; // how many px of scroll before toggling
+const HIDE_MIN_TOP = 24; // never hide when near very top
+
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openPanel, setOpenPanel] = useState<Panel>(null);
+  const [navHidden, setNavHidden] = useState(false);
+  const [navElevated, setNavElevated] = useState(false); // adds shadow when scrolled
   const navRef = useRef<HTMLElement | null>(null);
 
   const toggleDrawer = () => {
@@ -41,26 +47,66 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  // Lock background scroll; the drawer itself will scroll
+  // Lock background scroll while drawer is open (drawer itself scrolls)
   useEffect(() => {
     const orig = document.body.style.overflow;
     document.body.style.overflow = drawerOpen ? "hidden" : orig || "";
+    if (drawerOpen) setNavHidden(false); // always show header when drawer opens
     return () => {
       document.body.style.overflow = orig || "";
     };
   }, [drawerOpen]);
 
-  // Measure navbar height -> CSS var --nav-h
+  // Measure navbar height -> CSS var --nav-h (used by the drawer top offset)
   useLayoutEffect(() => {
     if (!navRef.current) return;
     const el = navRef.current;
-    const setVar = () =>
-      el.style.setProperty("--nav-h", `${el.offsetHeight}px`);
+    const setVar = () => {
+      const h = `${el.offsetHeight}px`;
+      el.style.setProperty("--nav-h", h); // for navbar CSS
+      document.documentElement.style.setProperty("--nav-h", h); // for page CSS
+    };
     setVar();
     const ro = new ResizeObserver(setVar);
     ro.observe(el);
     return () => ro.disconnect();
   }, []);
+
+  // Sticky + hide-on-scroll
+  useEffect(() => {
+    if (!HIDE_ON_SCROLL) return;
+
+    let lastY = 0;
+    let ticking = false;
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = Math.max(0, window.scrollY || window.pageYOffset || 0);
+        const delta = y - lastY;
+
+        // Add subtle shadow when scrolled
+        setNavElevated(y > 2);
+
+        if (!drawerOpen) {
+          if (y > HIDE_MIN_TOP && delta > HIDE_DELTA) {
+            setNavHidden(true); // scrolling down
+          } else if (delta < -HIDE_DELTA) {
+            setNavHidden(false); // scrolling up
+          }
+        } else {
+          setNavHidden(false); // menu open => always visible
+        }
+
+        lastY = y;
+        ticking = false;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [drawerOpen]);
 
   const onParentClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -74,7 +120,16 @@ export default function Navbar() {
 
   return (
     <>
-      <nav ref={navRef} className={styles.navbar} aria-label="Hovednavigation">
+      <nav
+        ref={navRef}
+        className={[
+          styles.navbar,
+          styles.navbarSticky, // position: sticky; top: 0
+          navHidden ? styles.navHidden : "",
+          navElevated ? styles.navElevated : "",
+        ].join(" ")}
+        aria-label="Hovednavigation"
+      >
         <a
           href="/"
           className={styles.navbarLogoLink}
