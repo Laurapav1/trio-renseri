@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./navbar.module.css";
 
@@ -9,6 +9,7 @@ type Panel = "services" | "skraedder" | null;
 export default function Navbar() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [openPanel, setOpenPanel] = useState<Panel>(null);
+  const navRef = useRef<HTMLElement | null>(null);
 
   const toggleDrawer = () => {
     setDrawerOpen((prev) => {
@@ -40,6 +41,7 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  // Lock background scroll; the drawer itself will scroll
   useEffect(() => {
     const orig = document.body.style.overflow;
     document.body.style.overflow = drawerOpen ? "hidden" : orig || "";
@@ -47,6 +49,18 @@ export default function Navbar() {
       document.body.style.overflow = orig || "";
     };
   }, [drawerOpen]);
+
+  // Measure navbar height -> CSS var --nav-h
+  useLayoutEffect(() => {
+    if (!navRef.current) return;
+    const el = navRef.current;
+    const setVar = () =>
+      el.style.setProperty("--nav-h", `${el.offsetHeight}px`);
+    setVar();
+    const ro = new ResizeObserver(setVar);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   const onParentClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -60,7 +74,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={styles.navbar} aria-label="Hovednavigation">
+      <nav ref={navRef} className={styles.navbar} aria-label="Hovednavigation">
         <a
           href="/"
           className={styles.navbarLogoLink}
@@ -253,7 +267,7 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* SCRIM OUTSIDE NAV: sits under the whole navbar, over page content */}
+      {/* Scrim */}
       <div
         className={`${styles.scrim} ${drawerOpen ? styles.scrimVisible : ""}`}
         onClick={toggleDrawer}
