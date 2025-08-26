@@ -44,7 +44,7 @@ export default function Taepperens() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/tæppe.jpg"
+            src="/images/floorcarpet.jpg"
             alt="tæppe"
             fill
             style={{ objectFit: "cover" }}

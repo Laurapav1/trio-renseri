@@ -13,7 +13,7 @@ export default function Mobelbetraek() {
       {/* Hero Section */}
       <HeroSection
         heading="Møbelbetræk - Rensning og pleje"
-        imagePath="/images/sofa2.jpg"
+        imagePath="/images/sofa4.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -46,7 +46,7 @@ export default function Mobelbetraek() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/sofa2.jpg"
+            src="/images/sofa3.jpg"
             alt="mobelbetraek"
             fill
             style={{ objectFit: "cover" }}

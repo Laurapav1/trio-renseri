@@ -13,7 +13,7 @@ export default function Udlejning() {
       {/* Hero Section */}
       <HeroSection
         heading="Udlejning af møbel- og tæpperensmaskine"
-        imagePath="/images/maskine.jpeg"
+        imagePath="/images/clean.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}

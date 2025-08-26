@@ -13,7 +13,7 @@ export default function Madrasser() {
       {/* Hero Section */}
       <HeroSection
         heading=" Madrasser - vores ansvar"
-        imagePath="/images/mattress-cover.jpg"
+        imagePath="/images/madras.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -51,8 +51,8 @@ export default function Madrasser() {
 
         <div className={styles.imageContainer}>
           <Image
-            src="/images/.jpeg"
-            alt="Brudekjole"
+            src="/images/madrass.jpg"
+            alt="madrasser"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

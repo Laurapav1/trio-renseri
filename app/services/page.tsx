@@ -43,7 +43,7 @@ export default function Tojrens() {
             title="Brudetøj"
             description="Skånsom rensning af brudekjoler, der bevarer deres glans og skønhed."
             link="/services/brudekjolerens"
-            imgURL="images/bridedress5.jpg"
+            imgURL="images/clean-wedding.jpeg"
           />
 
           <ServiceCard
@@ -64,7 +64,7 @@ export default function Tojrens() {
             title="Gardiner"
             description="Rensning/vask af gardiner, så de fremstår friske og indbydende i dit hjem."
             link="/services/gardinservice"
-            imgURL="images/curtain.jpg"
+            imgURL="images/curtains2.jpg"
           />
 
           <ServiceCard
@@ -84,15 +84,15 @@ export default function Tojrens() {
           <ServiceCard
             title="Møbelbetræk"
             description="Skånsom rensning af sofabetræk, der fjerner pletter og snavs, så din sofa fremstår frisk og indbydende."
-            link="/services/sofa"
-            imgURL="images/sofa.jpg"
+            link="/services/mobelbetraak"
+            imgURL="images/sofa3.jpg"
           />
 
           <ServiceCard
             title="Udlejning af møbel og tæpperensmaskine"
             description="Lej professionelle maskiner til rensning af møbler og tæpper, og få det til at se nyt ud."
             link="/services/udlejning"
-            imgURL="images/rental.jpg"
+            imgURL="images/maskine.jpeg"
           />
 
           <ServiceCard

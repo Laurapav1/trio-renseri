@@ -365,12 +365,11 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Madrasbetræk */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
                   <img
-                    src="/images/sofa.jpg"
+                    src="/images/madrass.jpg"
                     alt="Vask af madrasser"
                     loading="lazy"
                   />
@@ -379,7 +378,7 @@ export default function Home() {
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/tablecloth.png"
+                      src="/images/icons/mattress.png"
                       alt=""
                     />
                     <h2>Vask af madrasser</h2>
@@ -387,10 +386,44 @@ export default function Home() {
                   <hr className={styles.divider} />
                   <p>✓ Friskhed og hygiejne til madrasser.</p>
                   <Link
-                    href="/services/sofa"
+                    href="/services/madrasser"
                     className={styles.ctaButtonService}
                   >
                     Se madrasservice
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className={styles.gridService}>
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/sofa3.jpg"
+                    alt="Vask af madrasser"
+                    loading="lazy"
+                  />
+                </div>
+                <div className={styles.textcontent}>
+                  <div className={styles.iconTitle}>
+                    <img
+                      className={styles.serviceIcon}
+                      src="/images/icons/sofa.png"
+                      alt=""
+                    />
+                    <h2>Resning af møbelbetræk</h2>
+                  </div>
+                  <hr className={styles.divider} />
+                  <p>
+                    ✓ Professionel rensning af sofaer, lænestole og andre
+                    møbelbetræk.
+                  </p>
+                  <p>✓ Fjerner pletter og forlænger møblernes levetid.</p>
+                  <Link
+                    href="/services/mobelbetraak"
+                    className={styles.ctaButtonService}
+                  >
+                    Se møbelbetræk service
                   </Link>
                 </div>
               </div>
@@ -410,7 +443,7 @@ export default function Home() {
                   <div className={styles.iconTitle}>
                     <img
                       className={styles.serviceIcon}
-                      src="/images/icons/tablecloth.png"
+                      src="/images/icons/udlejning.png"
                       alt=""
                     />
                     <h2>Udlejning af møbel- og tæpperensmaskine</h2>
@@ -418,10 +451,42 @@ export default function Home() {
                   <hr className={styles.divider} />
                   <p>✓ Lej professionelle maskiner til hjemmebrug.</p>
                   <Link
-                    href="/services/sofa"
+                    href="/services/udlejning"
                     className={styles.ctaButtonService}
                   >
                     Se udlejning
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+
+            {/* Bådkaleche */}
+            <SwiperSlide>
+              <div className={styles.gridService}>
+                <div className={styles.mediaBox}>
+                  <img
+                    src="/images/baad2.jpg"
+                    alt="Rensning af bådkaleche"
+                    loading="lazy"
+                  />
+                </div>
+                <div className={styles.textcontent}>
+                  <div className={styles.iconTitle}>
+                    <img
+                      className={styles.serviceIcon}
+                      src="/images/icons/boat.png"
+                      alt=""
+                    />
+                    <h2>Rensning af bådkaleche</h2>
+                  </div>
+                  <hr className={styles.divider} />
+                  <p>✓ Vask og imprægnering af bådkalecher.</p>
+                  <p>✓ Beskytter materialet og forlænger levetiden.</p>
+                  <Link
+                    href="/services/baadkalache"
+                    className={styles.ctaButtonService}
+                  >
+                    Se bådkaleche service
                   </Link>
                 </div>
               </div>

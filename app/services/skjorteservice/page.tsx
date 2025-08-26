@@ -14,7 +14,7 @@ export default function Skjorteservice() {
       {/* Hero Section */}
       <HeroSection
         heading="Din skjorte - vores ansvar"
-        imagePath="/images/skjorte.jpg"
+        imagePath="/images/vores-ydelser.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
