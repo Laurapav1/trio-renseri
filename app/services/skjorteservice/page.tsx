@@ -23,7 +23,7 @@ export default function Skjorteservice() {
           <h1>Kvalitet rens/vask af skjorter</h1>
           <p>
             Vi sørger for, at din skjorte får den behandling den fortjener og
-            til Aarhus' billigste pris.
+            til Aarhus{"'"} billigste pris.
           </p>
           <p>Sidste år vaskede vi mere end 25.000 skjorter.</p>
           <section className={styles.priceSection}>
