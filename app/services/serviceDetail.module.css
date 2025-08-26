@@ -69,45 +69,8 @@
 }
 
 /* CTA-knap til priser */
-.ctaButton {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 10px 20px;
-  background-color: #0070f3; /* Eksempel på blå farve */
-  color: #fff;
-  font-size: 1.2rem;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
 .ctaButton:hover {
-  background-color: #005bb5; /* Mørkere blå ved hover */
-}
-
-/* Responsiv tilpasning */
-@media (max-width: 768px) {
-  .wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .textContainer,
-  .imageContainer {
-    max-width: 100%;
-  }
-
-  .textContainer h1 {
-    font-size: 1.5rem;
-  }
-}
-
-.imageContainer {
-  position: relative; /* påkrævet for at fill kan virke */
-  width: 400px; /* fast bredde */
-  height: 500px; /* fast højde */
-  border-radius: 8px;
-  overflow: hidden; /* hvis du vil klippe billede-kanter */
+  background-color: hsl(210, 100%, 35%); /* Mørkere blå ved hover */
 }
 
 /* CTA Button */
@@ -118,13 +81,42 @@
   text-decoration: none;
   transition: background-color 0.3s;
   display: inline-block;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
-.ctaButton:hover {
-  background-color: hsl(210, 100%, 35%);
+/* Responsiv tilpasning */
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .textContainer,
+  .imageContainer {
+    max-width: 100%;
+  }
+
+  .textContainer h1 {
+    font-size: 1.5rem;
+  }
+
+  .ctaButton {
+    margin-bottom: 0;
+  }
+}
+
+.imageContainer {
+  position: relative; /* påkrævet for at fill kan virke */
+  width: 400px; /* fast bredde */
+  height: 500px; /* fast højde */
+  border-radius: 8px;
+  overflow: hidden; /* hvis du vil klippe billede-kanter */
 }
 
 .cta {

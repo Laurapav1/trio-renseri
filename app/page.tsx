@@ -92,6 +92,12 @@ export default function Home() {
               <li>Moderne og miljøvenlige metoder</li>
               <li>Erfaring med alle typer tekstiler</li>
             </ul>
+
+            <div className={styles.ctaButtonContainer}>
+              <Link href="/services/tekstilrens" className={styles.ctaButton}>
+                Se tekstilrens
+              </Link>
+            </div>
           </div>
           <div className={styles.crossImageContainer}>
             <img src="/images/tekstil.jpg" alt="Tekstilrens" />
