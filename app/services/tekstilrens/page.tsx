@@ -13,7 +13,7 @@ export default function Tekstilrens() {
       {/* Hero Section */}
       <HeroSection
         heading="Dit tøj - vores ansvar"
-        imagePath="/images/tekstil.jpg"
+        imagePath="/images/tekstil1.jpg"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}

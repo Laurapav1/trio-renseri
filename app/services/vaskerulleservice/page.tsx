@@ -28,6 +28,7 @@ export default function Vaskerulleservice() {
             Vi vasker og ruller tøj og sengetøj med omhu for at sikre, at de
             altid føles friske og er klare til brug.
           </p>
+
           <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og rullet):</h3>
             <ul>
