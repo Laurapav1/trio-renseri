@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/app/components/navbar/navbar";
 import PageHeroSection from "@/app/components/hero-section/page-hero-section";
@@ -7,84 +8,82 @@ import PriceList from "@/app/components/prisliste/prisliste";
 import styles from "@/app/components/prices-page/prices-page.module.css";
 import Link from "next/link";
 
+type PriceItem = { name: string; prices: string[] };
+type PriceSection = { heading: string; items: PriceItem[] };
+type PricesJson = { sections: PriceSection[] };
+
+function isValidJson(data: any): data is PricesJson {
+  return (
+    data &&
+    Array.isArray(data.sections) &&
+    data.sections.every(
+      (sec: any) =>
+        typeof sec.heading === "string" &&
+        Array.isArray(sec.items) &&
+        sec.items.every(
+          (item: any) =>
+            typeof item.name === "string" &&
+            Array.isArray(item.prices) &&
+            item.prices.every((p: any) => typeof p === "string")
+        )
+    )
+  );
+}
+
 export default function Prices() {
   const searchParams = useSearchParams();
   const service = searchParams.get("service");
+
+  const [sections, setSections] = useState<PriceSection[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  const load = useCallback(async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch(`/prices.json?ts=${Date.now()}`, {
+        cache: "no-store",
+      });
+      if (!res.ok) throw new Error(res.statusText);
+      const data = await res.json();
+      if (!isValidJson(data))
+        throw new Error("Priser-filen har et forkert format.");
+      setSections(data.sections);
+    } catch (e: any) {
+      setError(e?.message || "Kunne ikke hente priser.");
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    load();
+  }, [load]);
 
   return (
     <>
       <Navbar />
       <PageHeroSection heading="Priser" imagePath="/images/money2.jpg" />
+
       <div className={styles.container}>
-        <PriceList
-          heading="Herretøj"
-          items={[
-            {
-              name: "Skjorter",
-              prices: ["1 stk. 25 DKK", "5 stk. 110DKK"],
-            },
-            { name: "Frakker", prices: ["250 DKK"] },
-            { name: "Frakke ¾", prices: ["195 DKK"] },
-            { name: "Cotton coat", prices: ["225 DKK"] },
-            { name: "Jakker", prices: ["169 DKK"] },
-            { name: "Benklæder", prices: ["119 DKK"] },
-            { name: "Habit", prices: ["269 DKK"] },
-            { name: "Slips", prices: ["75 DKK"] },
-            { name: "Vindjakker", prices: ["fra 195 DKK"] },
-            { name: "Dunejakker", prices: ["fra 250 DKK"] },
-            { name: "Dunefrakker", prices: ["fra 300 DKK"] },
-            { name: "Veste", prices: ["75 DKK"] },
-            { name: "Veste, vind, dun", prices: ["185 DKK"] },
-            { name: "Smoking", prices: ["295 DKK"] },
-            { name: "Herrekjoler", prices: ["315 DKK"] },
-            {
-              name: "Canada goose jakke inkl. Imprægnering",
-              prices: ["fra 400 DKK"],
-            },
-          ]}
-          highlightService={service}
-        />
-        <PriceList
-          heading="Dametøj"
-          items={[
-            { name: "Frakker", prices: ["250 DKK"] },
-            { name: "Cotton coat", prices: ["225 DKK"] },
-            { name: "Jakker", prices: ["169 DKK"] },
-            { name: "Benklæder", prices: ["119 DKK"] },
-            { name: "Kjoler, korte", prices: ["fra 175 DKK"] },
-            { name: "Kjoler, lange", prices: ["fra 225 DKK"] },
-            {
-              name: "Kjoler, selskabs",
-              prices: ["Efter aftale"],
-            },
-            {
-              name: "Brudekjoler",
-              prices: ["fra 595 DKK"],
-            },
-            { name: "Nederdele, korte", prices: ["95 DKK"] },
-            { name: "Nederdele, lange", prices: ["125 DKK"] },
-            { name: "Nederdele, uld/plissé", prices: ["165 DKK"] },
-            { name: "Strikbluse", prices: ["75 DKK"] },
-            { name: "Halstørklæder", prices: ["65 DKK"] },
-            { name: "Silkebluse", prices: ["85 DKK"] },
-            { name: "Benklæder, shorts", prices: ["75 DKK"] },
-          ]}
-          highlightService={service}
-        />
-        <PriceList
-          heading="Diverse"
-          items={[
-            { name: "Gardiner", prices: ["135 DKK/bane"] },
-            { name: "Pudestykker", prices: ["65 DKK"] },
-            { name: "Klokkestrenge fra", prices: ["65 DKK"] },
-            { name: "Soveposer", prices: ["fra 195 DKK"] },
-            { name: "Sengetæpper", prices: ["135 DKK pr. kg. "] },
-            { name: "Hyndebetræk", prices: ["135 DKK pr. kg."] },
-            { name: "Dyne", prices: ["1 stk. 275 DKK", "2 stk. 350 DKK"] },
-            { name: "Pude", prices: ["150 DKK"] },
-          ]}
-          highlightService={service}
-        />
+        {loading && <p>Indlæser…</p>}
+        {!loading && error && (
+          <div style={{ color: "red", marginBottom: 16 }}>
+            <p>{error}</p>
+            <button onClick={load}>Prøv igen</button>
+          </div>
+        )}
+
+        {sections?.map((sec) => (
+          <PriceList
+            key={sec.heading}
+            heading={sec.heading}
+            items={sec.items}
+            highlightService={service}
+          />
+        ))}
+
         <Tilbud />
       </div>
     </>
