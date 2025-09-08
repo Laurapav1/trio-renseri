@@ -19,7 +19,7 @@ export default function Tekstilrens() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Rens af tøj og tekstiler i høj kvalitet</h1>
+          <h1>Rens af tøj i høj kvalitet</h1>
           <p>
             Uanset om det gælder dagligt tøj eller udsøgte selskabskjoler, får
             din tøj den bedst mulige pleje.

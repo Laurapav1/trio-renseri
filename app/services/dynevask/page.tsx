@@ -19,7 +19,7 @@ export default function DynePudeVask() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af brudekjoler</h1>
+          <h1>Specialiseret rensning af dyner og puder</h1>
           <p>
             Vi er specialister i at give dine dyner og puder den bedste pleje.
             Vores skånsomme vaskemetoder sikrer, at dine dyner og puder bliver
