@@ -33,14 +33,8 @@ export default function Gardinservice() {
             <h3>Priser</h3>
             <ul>
               <li>135 DKK pr. bane</li>
-            </ul>
-            <h4>Velourgardiner</h4>
-            <ul>
-              <li>155 DKK pr. bane</li>
-            </ul>
-            <h4>Rens af foldegardiner</h4>
-            <ul>
-              <li>Efter aftale</li>
+              <li>Velourgardiner - 155 DKK pr. bane</li>
+              <li>Rens af foldegardiner - Efter aftale</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

@@ -19,7 +19,7 @@ export default function Vaskerulleservice() {
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af tæpper</h1>
+          <h1>Specialiseret rensning af duge</h1>
           <p>
             Vores vaske- og rulleservice sikrer, at dine duge eller sengetøj er
             friskt, blødt og klart til at blive brugt.
@@ -34,8 +34,8 @@ export default function Vaskerulleservice() {
             <ul>
               <li>Duge Vask og rul - 65 kr. pr. meter</li>
               <li>Duge kun rul - 55 kr. pr. meter</li>
-              <li>Sengetøj vasket og rullet - 85 kr. pr. kg</li>
-              <li>Sengetøj kun rullet - 75 kr. pr. kg</li>
+              <li>Sengetøj vasket og rullet - 85 kr. pr. kg.</li>
+              <li>Sengetøj kun rullet - 75 kr. pr. kg.</li>
               <li>Servietter - 15 kr. pr. stk.</li>
             </ul>
             <Link

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className={styles.footerSection}>
           <h4>Kontakt Os</h4>
           <ul>
-            <li>Trio Renseri</li>
+            <li>Trio Renseriet</li>
             <li>
               <a
                 target="_blank"

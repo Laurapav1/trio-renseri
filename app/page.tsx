@@ -37,7 +37,7 @@ export default function Home() {
         <section className={styles.textWrapper}>
           <h2>Højt kvalitet af rens </h2>
           <p>
-            Hos Trio Renseri har vi leveret førsteklasses renseri- og
+            Hos Trio Renseriet har vi leveret førsteklasses renseri- og
             tøjplejeservices til både private kunder og virksomheder. Med mere
             end 30 års erfaring sørger vi for, at dit tøj altid modtager den
             opmærksomhed og pleje, det fortjener – uanset om det er hverdagstøj
@@ -51,9 +51,9 @@ export default function Home() {
             <img src="/images/profil.jpg" alt="Velkommen til Trio Renseri" />
           </div>
           <div className={styles.crossTextContainer}>
-            <h2>Velkommen til Trio Renseri</h2>
+            <h2>Velkommen til Trio Renseriet</h2>
             <p>
-              Hos Trio Renseri forstår vi, at dit tøj er mere end blot
+              Hos Trio Renseriet forstår vi, at dit tøj er mere end blot
               beklædning – det er en del af din identitet og huser både minder
               og stil. Derfor tilbyder vi skræddersyede løsninger, der sikrer,
               at dine favoritstykker behandles med den rette omhu og
@@ -65,7 +65,7 @@ export default function Home() {
               overlade din garderobe til os, velvidende at vi kombinerer
               tradition med innovation for at levere de bedste resultater.
             </p>
-            <h3>Hvorfor Vælge Trio Renseri?</h3>
+            <h3>Hvorfor Vælge Trio Renseriet?</h3>
             <ul>
               <li>Miljøvenlige metoder og materialer</li>
               <li>Over 30 års erfaring</li>

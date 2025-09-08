@@ -66,10 +66,10 @@ export default function Kontakt() {
                   <option value="tæpper">Tæpper</option>
                   <option value="møbelbetræk">Møbelbetræk</option>
                   <option value="udlejning af møbel og tæpperrensmaskine">
-                    Udlejning af møbel og tæpperrensmaskine
+                    Udlejning af møbel- og tæpperrensmaskine
                   </option>
                   <option value="båd kalache">Båd Kalache</option>
-                  <option value="odre">Odre</option>
+                  <option value="ordre">Ordre</option>
                   <option value="andet">Andet</option>
                 </select>
               </div>
@@ -85,7 +85,7 @@ export default function Kontakt() {
             </form>
           </div>
           <div className={styles.contactDetails}>
-            <h3>Trio Resneri</h3>
+            <h3>Trio Renseriet</h3>
             <p>
               L. A. Rings Vej 19
               <br />
