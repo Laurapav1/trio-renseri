@@ -32,11 +32,11 @@ export default function Vaskerulleservice() {
           <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og rullet):</h3>
             <ul>
-              <li>Duge Vask og rul - 65 kr. pr. meter</li>
-              <li>Duge kun rul - 55 kr. pr. meter</li>
-              <li>Sengetøj vasket og rullet - 85 kr. pr. kg.</li>
-              <li>Sengetøj kun rullet - 75 kr. pr. kg.</li>
-              <li>Servietter - 15 kr. pr. stk.</li>
+              <li>Duge Vask og rul - 65 DKK pr. meter</li>
+              <li>Duge kun rul - 55 DKK pr. meter</li>
+              <li>Sengetøj vasket og rullet - 85 DKK pr. kg.</li>
+              <li>Sengetøj kun rullet - 75 DKK pr. kg.</li>
+              <li>Servietter - 15 DKK pr. stk.</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

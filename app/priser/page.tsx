@@ -74,14 +74,25 @@ export default function Prices() {
         <PriceList
           heading="Diverse"
           items={[
-            { name: "Gardiner", prices: ["135 DKK/bane"] },
-            { name: "Pudestykker", prices: ["65 DKK"] },
+            { name: "Gardiner", prices: ["135 DKK pr. bane"] },
+            { name: "Velourgardiner", prices: ["155 DKK pr. bane"] },
+            { name: "Rens af foldegardiner", prices: ["Efter aftale"] },
+            { name: "Tæpper", prices: ["Efter aftale"] },
             { name: "Klokkestrenge fra", prices: ["65 DKK"] },
-            { name: "Soveposer", prices: ["fra 195 DKK"] },
             { name: "Sengetæpper", prices: ["135 DKK pr. kg. "] },
+            { name: "Madrasser", prices: ["Efter aftale"] },
+            { name: "Topmadras", prices: ["95 DKK pr. kg."] },
             { name: "Hyndebetræk", prices: ["135 DKK pr. kg."] },
             { name: "Dyne", prices: ["1 stk. 275 DKK", "2 stk. 350 DKK"] },
-            { name: "Pude", prices: ["150 DKK"] },
+            { name: "Dobbeltdyne", prices: ["300 DKK"] },
+            { name: "Silkedyne", prices: [" 275 DKK"] },
+            { name: "Børnedyne", prices: ["120 DKK"] },
+            { name: "Kugledyne", prices: ["fra 450 DKK"] },
+            { name: "Sovepose", prices: ["fra 195 DKK"] },
+            { name: "Pude", prices: ["1 stk. 150 DKK", "2 stk. 250 DKK"] },
+            { name: "Pudestykker", prices: ["65 DKK"] },
+            { name: "Servietter", prices: ["15 DKK pr. stk"] },
+            { name: "Bådkalecher", prices: ["395 DKK pr. kg."] },
           ]}
           highlightService={service}
         />
