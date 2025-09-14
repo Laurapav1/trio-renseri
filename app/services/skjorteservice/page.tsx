@@ -2,7 +2,6 @@
 import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
-import { url } from "inspector";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
 import Image from "next/image";
 import Navbar from "@/app/components/navbar/navbar";

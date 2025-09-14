@@ -15,7 +15,7 @@ function HomeHeroSection() {
         Your browser does not support the video tag.
       </video>
       <div className={styles.heroContent}>
-        <h1>Velkommen til Trio Renseri</h1>
+        <h1>Velkommen til Trio Renseriet</h1>
         <p>Professionel renseri service siden 1954</p>
       </div>
     </section>

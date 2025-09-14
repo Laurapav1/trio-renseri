@@ -32,13 +32,9 @@ export default function Madrasser() {
           </p>
           <section className={styles.priceSection}>
             <h3>Priser</h3>
-            <h4>Topmadras</h4>
             <ul>
-              <li>95 DKK pr. kg.</li>
-            </ul>
-            <h4>Madrasser</h4>
-            <ul>
-              <li>Efter aftale</li>
+              <li>Topmadras - 95 DKK pr. kg.</li>
+              <li>Madrasser - Efter aftale</li>
             </ul>
             <Link
               href={"/priser?service=brudekjolerens"}

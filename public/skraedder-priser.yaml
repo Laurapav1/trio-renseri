@@ -1,0 +1,75 @@
+sections:
+  - heading: "Bukser"
+    items:
+      - name: "Oplægning stikning"
+        prices:
+          - "150 DKK"
+      - name: "Oplægning m/lynlås"
+        prices:
+          - "210 DKK"
+      - name: "Oplægning blindstik"
+        prices:
+          - "175 DKK"
+      - name: "Oplægning m/slidbånd/opslag"
+        prices:
+          - "175 DKK"
+      - name: "Oplægning m/slidt kant jeans"
+        prices:
+          - "195 DKK"
+      - name: "Oplægning m/knaphul/snor"
+        prices:
+          - "195 DKK"
+      - name: "Livvidde+/-"
+        prices:
+          - "175 DKK"
+      - name: "Lårvidde"
+        prices:
+          - "195 DKK"
+      - name: "Ny lynlås"
+        prices:
+          - "175 DKK"
+
+  - heading: "Jakker"
+    items:
+      - name: "Ærmer +/-"
+        prices:
+          - "275 DKK"
+      - name: "Ærmer - (ved skulder)"
+        prices:
+          - "300 DKK"
+      - name: "Længde +/-"
+        prices:
+          - "300 DKK"
+      - name: "Ny lynlås"
+        prices:
+          - "fra 375 DKK"
+
+  - heading: "Kjoler"
+    items:
+      - name: "Stropper kortes fra"
+        prices:
+          - "80 DKK"
+      - name: "Ind i ærmegab"
+        prices:
+          - "110 DKK"
+      - name: "Ny lynlås"
+        prices:
+          - "fra 190 DKK"
+      - name: "Kjoler korte"
+        prices:
+          - "fra 175 DKK"
+
+  - heading: "Skindjakker"
+    items:
+      - name: "Ærmer +/-"
+        prices:
+          - "fra 300 DKK"
+      - name: "Ny lynlås excl lynlås"
+        prices:
+          - "320 DKK"
+      - name: "Knapper"
+        prices:
+          - "fra 50 DKK"
+      - name: "Nyt foer excl foer"
+        prices:
+          - "fra 650 DKK"

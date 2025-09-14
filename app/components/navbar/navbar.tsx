@@ -195,7 +195,7 @@ export default function Navbar() {
                 </li>
                 <li className={styles.dropdownItem}>
                   <Link href="/services/udlejning" onClick={closeAll}>
-                    Udlejning af møbel- og tæpperensmaskine
+                    Udlejning af møbel- & tæpperensmaskine
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>

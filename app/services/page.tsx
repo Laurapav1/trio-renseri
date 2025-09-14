@@ -15,7 +15,7 @@ export default function Tojrens() {
       />
       <div className={styles.container}>
         <p className={styles.intro}>
-          Velkommen til Trio Renseri – din pålidelige partner til hverdagens
+          Velkommen til Trio Renseriet – din pålidelige partner til hverdagens
           tekstilbehov. Vi sørger for, at du altid kan føle dig godt tilpas i
           dit tøj, uanset om det er den daglige skjorte eller den særlige
           brudekjole.

@@ -3,6 +3,7 @@
   width: 100%;
   height: 30vh; /* Ændret til samme højde som den gamle version */
   display: flex;
+  padding: 0 2rem;
   align-items: center;
   justify-content: center; /* Centrerer indholdet */
   overflow: hidden;

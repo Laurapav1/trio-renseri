@@ -53,10 +53,12 @@ export default function Kontakt() {
                 />
               </div>
               <div className={styles.inputContainer}>
-                <select name="interest" className={styles.input} required>
-                  <option value="" disabled selected hidden>
-                    Vælg en interesse
-                  </option>
+                <select
+                  name="interest"
+                  className={styles.input}
+                  required
+                  defaultValue={"Vælg en interesse"}
+                >
                   <option value="teksilrens">Tekstilrens</option>
                   <option value="skjorteservide">Skjorteservice </option>
                   <option value="brudetøj">Brudetøj</option>
@@ -66,10 +68,10 @@ export default function Kontakt() {
                   <option value="tæpper">Tæpper</option>
                   <option value="møbelbetræk">Møbelbetræk</option>
                   <option value="udlejning af møbel og tæpperrensmaskine">
-                    Udlejning af møbel og tæpperrensmaskine
+                    Udlejning af møbel- og tæpperrensmaskine
                   </option>
                   <option value="båd kalache">Båd Kalache</option>
-                  <option value="odre">Odre</option>
+                  <option value="ordre">Ordre</option>
                   <option value="andet">Andet</option>
                 </select>
               </div>
@@ -85,7 +87,7 @@ export default function Kontakt() {
             </form>
           </div>
           <div className={styles.contactDetails}>
-            <h3>Trio Resneri</h3>
+            <h3>Trio Renseriet</h3>
             <p>
               L. A. Rings Vej 19
               <br />

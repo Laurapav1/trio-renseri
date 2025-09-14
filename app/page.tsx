@@ -7,13 +7,7 @@ import HomeHeroSection from "./components/hero-section/home-hero-section";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  A11y,
-  Keyboard,
-} from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,10 +15,6 @@ import "swiper/css/pagination";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const prefersReducedMotion =
-    typeof window !== "undefined" &&
-    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-
   return (
     <>
       {/* Wrapper to make Navbar and HeroSection fill 100vh */}
@@ -37,7 +27,7 @@ export default function Home() {
         <section className={styles.textWrapper}>
           <h2>Højt kvalitet af rens </h2>
           <p>
-            Hos Trio Renseri har vi leveret førsteklasses renseri- og
+            Hos Trio Renseriet har vi leveret førsteklasses renseri- og
             tøjplejeservices til både private kunder og virksomheder. Med mere
             end 30 års erfaring sørger vi for, at dit tøj altid modtager den
             opmærksomhed og pleje, det fortjener – uanset om det er hverdagstøj
@@ -51,9 +41,9 @@ export default function Home() {
             <img src="/images/profil.jpg" alt="Velkommen til Trio Renseri" />
           </div>
           <div className={styles.crossTextContainer}>
-            <h2>Velkommen til Trio Renseri</h2>
+            <h2>Velkommen til Trio Renseriet</h2>
             <p>
-              Hos Trio Renseri forstår vi, at dit tøj er mere end blot
+              Hos Trio Renseriet forstår vi, at dit tøj er mere end blot
               beklædning – det er en del af din identitet og huser både minder
               og stil. Derfor tilbyder vi skræddersyede løsninger, der sikrer,
               at dine favoritstykker behandles med den rette omhu og
@@ -65,7 +55,7 @@ export default function Home() {
               overlade din garderobe til os, velvidende at vi kombinerer
               tradition med innovation for at levere de bedste resultater.
             </p>
-            <h3>Hvorfor Vælge Trio Renseri?</h3>
+            <h3>Hvorfor Vælge Trio Renseriet?</h3>
             <ul>
               <li>Miljøvenlige metoder og materialer</li>
               <li>Over 30 års erfaring</li>
@@ -92,6 +82,12 @@ export default function Home() {
               <li>Moderne og miljøvenlige metoder</li>
               <li>Erfaring med alle typer tekstiler</li>
             </ul>
+
+            <div className={styles.ctaButtonContainer}>
+              <Link href="/services/tekstilrens" className={styles.ctaButton}>
+                Se tekstilrens
+              </Link>
+            </div>
           </div>
           <div className={styles.crossImageContainer}>
             <img src="/images/tekstil.jpg" alt="Tekstilrens" />
@@ -113,7 +109,7 @@ export default function Home() {
             </p>
             <h3>Vores bådservice omfatter:</h3>
             <ul>
-              <li>vask og imrægnering af kalacher</li>
+              <li>Vask og imrægnering af kalacher</li>
               <li>Udskiftning af ruder og lynlåse</li>
             </ul>
             <div className={styles.ctaButtonContainer}>
