@@ -7,28 +7,31 @@ import PageHeroSection from "@/app/components/hero-section/page-hero-section";
 import PriceList from "@/app/components/prisliste/prisliste";
 import styles from "@/app/components/prices-page/prices-page.module.css";
 import Link from "next/link";
+import yaml from "js-yaml";
+import { z } from "zod";
 
-type PriceItem = { name: string; prices: string[] };
-type PriceSection = { heading: string; items: PriceItem[] };
-type PricesJson = { sections: PriceSection[] };
+/** ========= Zod schema & types ========= */
+const PriceItemSchema = z.object({
+  name: z.string(),
+  prices: z.array(z.string()),
+});
 
-function isValidJson(data: any): data is PricesJson {
-  return (
-    data &&
-    Array.isArray(data.sections) &&
-    data.sections.every(
-      (sec: any) =>
-        typeof sec.heading === "string" &&
-        Array.isArray(sec.items) &&
-        sec.items.every(
-          (item: any) =>
-            typeof item.name === "string" &&
-            Array.isArray(item.prices) &&
-            item.prices.every((p: any) => typeof p === "string")
-        )
-    )
-  );
-}
+const PriceSectionSchema = z.object({
+  heading: z.string(),
+  items: z.array(PriceItemSchema),
+});
+
+const PricesYamlSchema = z
+  .object({
+    sections: z.array(PriceSectionSchema),
+  })
+  .strict();
+
+type PriceItem = z.infer<typeof PriceItemSchema>;
+type PriceSection = z.infer<typeof PriceSectionSchema>;
+type PricesYaml = z.infer<typeof PricesYamlSchema>;
+
+/** ===================================== */
 
 export default function Prices() {
   const searchParams = useSearchParams();
@@ -42,23 +45,39 @@ export default function Prices() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/prices.json?ts=${Date.now()}`, {
+      // Ensure /public/prices.yaml exists (served as /prices.yaml)
+      const res = await fetch(`/prices.yaml?ts=${Date.now()}`, {
         cache: "no-store",
       });
-      if (!res.ok) throw new Error(res.statusText);
-      const data = await res.json();
-      if (!isValidJson(data))
-        throw new Error("Priser-filen har et forkert format.");
-      setSections(data.sections);
+      if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
+
+      const text = await res.text();
+
+      // Parse YAML -> unknown
+      const unknownData = yaml.load(text) as unknown;
+
+      // Validate + narrow
+      const parsed: PricesYaml = PricesYamlSchema.parse(unknownData);
+
+      setSections(parsed.sections);
     } catch (e: any) {
-      setError(e?.message || "Kunne ikke hente priser.");
+      if (e?.issues) {
+        console.error("Zod validation failed:", e.issues);
+        setError("Der er en fejl i prislisten. Vi arbejder på at rette det.");
+      } else {
+        console.error(e);
+        setError(
+          "Vi kunne desværre ikke hente priserne lige nu. Prøv igen om lidt."
+        );
+      }
+      setSections(null);
     } finally {
       setLoading(false);
     }
   }, []);
 
   useEffect(() => {
-    load();
+    void load();
   }, [load]);
 
   return (
@@ -68,8 +87,9 @@ export default function Prices() {
 
       <div className={styles.container}>
         {loading && <p>Indlæser…</p>}
+
         {!loading && error && (
-          <div style={{ color: "red", marginBottom: 16 }}>
+          <div className={styles.errorBox}>
             <p>{error}</p>
             <button onClick={load}>Prøv igen</button>
           </div>
@@ -79,8 +99,8 @@ export default function Prices() {
           <PriceList
             key={sec.heading}
             heading={sec.heading}
-            items={sec.items}
-            highlightService={service}
+            items={sec.items as PriceItem[]}
+            highlightService={service ?? undefined}
           />
         ))}
 

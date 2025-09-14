@@ -71,3 +71,27 @@
   margin-top: 1.5rem;
   font-weight: bold;
 }
+
+.errorBox {
+  background: #ffe6e6;
+  border: 1px solid #ff9999;
+  color: #660000;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.errorBox button {
+  margin-top: 8px;
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.errorBox button:hover {
+  background: #a30000;
+}
