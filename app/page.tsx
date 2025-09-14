@@ -109,7 +109,7 @@ export default function Home() {
             </p>
             <h3>Vores bådservice omfatter:</h3>
             <ul>
-              <li>vask og imrægnering af kalacher</li>
+              <li>Vask og imrægnering af kalacher</li>
               <li>Udskiftning af ruder og lynlåse</li>
             </ul>
             <div className={styles.ctaButtonContainer}>
