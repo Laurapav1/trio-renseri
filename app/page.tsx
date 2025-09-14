@@ -7,13 +7,7 @@ import HomeHeroSection from "./components/hero-section/home-hero-section";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Autoplay,
-  Navigation,
-  Pagination,
-  A11y,
-  Keyboard,
-} from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,10 +15,6 @@ import "swiper/css/pagination";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const prefersReducedMotion =
-    typeof window !== "undefined" &&
-    window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-
   return (
     <>
       {/* Wrapper to make Navbar and HeroSection fill 100vh */}
