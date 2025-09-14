@@ -15,19 +15,14 @@
     "js-yaml": "^4.1.0",
     "next": "14.2.14",
     "react": "^18",
-    "react-before-after-slider-component": "^1.1.8",
-    "react-compare-image": "^3.4.0",
     "react-dom": "^18",
     "react-social-icons": "^6.18.0",
     "swiper": "^11.2.10",
-    "trio-renseri": "file:",
     "zod": "^4.1.8"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
-    "@types/node": "^20",
     "@types/react": "^18.3.23",
-    "@types/react-dom": "^18.3.7",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "typescript": "^5"
