@@ -29,77 +29,77 @@ export default function Tojrens() {
             title="Tekstil Service"
             description="Effektiv rensning af alle typer tekstiler, der fjerner pletter og bevarer stoffets kvalitet."
             link="/services/tekstilrens"
-            imgURL="images/tekstil.jpg"
+            imgURL="/images/tekstil.jpg"
           />
 
           <ServiceCard
             title="Skjorteservice"
             description="Rensning og strygning af skjorter, så de altid ser skarpe og velplejede ud – klar til hverdag og fest."
             link="/services/skjorteservice"
-            imgURL="images/skjorte.jpg"
+            imgURL="/images/skjorte.jpg"
           />
 
           <ServiceCard
             title="Brudetøj"
             description="Skånsom rensning af brudekjoler, der bevarer deres glans og skønhed."
             link="/services/brudekjolerens"
-            imgURL="images/clean-wedding.jpeg"
+            imgURL="/images/clean-wedding.jpeg"
           />
 
           <ServiceCard
             title="Dyner/puder"
             description="Vi tilbyder grundig vask af dyner og puder, der fjerner støv og allergener, så du kan sove trygt og godt."
             link="/services/dynevask"
-            imgURL="images/dyne.jpg"
+            imgURL="/images/dyne.jpg"
           />
 
           <ServiceCard
             title="Vask af duge/sengetøj"
             description="Vask, tørring og rulning af duge og sengetøj, så det altid er klar til brug."
             link="/services/vaskerulleservice"
-            imgURL="images/table.jpg"
+            imgURL="/images/table.jpg"
           />
 
           <ServiceCard
             title="Gardiner"
             description="Rensning/vask af gardiner, så de fremstår friske og indbydende i dit hjem."
             link="/services/gardinservice"
-            imgURL="images/curtains2.jpg"
+            imgURL="/images/curtains2.jpg"
           />
 
           <ServiceCard
             title="Tæpper"
             description="Professionel rensning af tæpper, der bevarer farverne og fibrenes blødhed."
             link="/services/taepperens"
-            imgURL="images/floorcarpet.jpg"
+            imgURL="/images/floorcarpet.jpg"
           />
 
           <ServiceCard
             title="Madrasser"
             description="Skånsom rensning af madrasser, der holder dem friske og behagelige."
             link="/services/madrasser"
-            imgURL="images/madrass.jpg"
+            imgURL="/images/madrass.jpg"
           />
 
           <ServiceCard
             title="Møbelbetræk"
             description="Skånsom rensning af sofabetræk, der fjerner pletter og snavs, så din sofa fremstår frisk og indbydende."
             link="/services/mobelbetraak"
-            imgURL="images/sofa3.jpg"
+            imgURL="/images/sofa3.jpg"
           />
 
           <ServiceCard
             title="Udlejning af møbel og tæpperensmaskine"
             description="Lej professionelle maskiner til rensning af møbler og tæpper, og få det til at se nyt ud."
             link="/services/udlejning"
-            imgURL="images/maskine.jpeg"
+            imgURL="/images/maskine.jpeg"
           />
 
           <ServiceCard
             title="Bådkaleche"
             description="Rensning og vedligeholdelse af bådkaleche, så de forbliver i topform."
             link="/services/baadkalache"
-            imgURL="images/baad2.jpg"
+            imgURL="/images/baad2.jpg"
           />
         </div>
       </div>

@@ -1,19 +1,15 @@
 /* ==================================
-   Trio Renseriet - Navbar (unified color + fixed stacking)
+   Trio Renseriet - Navbar
    ================================== */
 
 .navbar {
-  --submenu-indent: 1.25rem; /* set to 0 for no indent */
-  --submenu-bg: color-mix(
-    in srgb,
-    var(--accent-color) 78%,
-    black 22%
-  ); /* darker sheet for subitems */
-
+  --submenu-indent: 1.25rem;
+  --submenu-bg: color-mix(in srgb, var(--accent-color) 78%, black 22%);
+  /* --nav-h is set from JS */
   padding: 0.5rem 1rem;
   background: var(--accent-color);
   position: relative;
-  z-index: 1100; /* ↑ nav above scrim */
+  z-index: 1100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,7 +59,7 @@
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Scrim lives OUTSIDE nav and sits under it */
+/* Scrim */
 .scrim {
   position: fixed;
   inset: 0;
@@ -71,14 +67,14 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.18s ease;
-  z-index: 1000; /* ↓ under navbar */
+  z-index: 1000;
 }
 .scrimVisible {
   opacity: 1;
   pointer-events: auto;
 }
 
-/* Container + list (drawer same color as bar) */
+/* Container + list */
 .navbarContainer {
   position: static;
   width: 100%;
@@ -87,7 +83,7 @@
 .navbarList {
   display: none;
   width: 100%;
-  background: var(--accent-color); /* exact same as bar */
+  background: var(--accent-color);
   flex-direction: column;
   align-items: stretch;
   position: relative;
@@ -164,6 +160,21 @@
     display: inline-block;
   }
 
+  /* Make the entire drawer the scroll container */
+  .navbarList {
+    position: fixed;
+    top: var(--nav-h, 64px);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto; /* <-- only scroll here */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain; /* prevent scroll chaining to body */
+    z-index: 1105; /* above scrim (1000) */
+    background: var(--accent-color);
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
   /* No separators/tints on parents */
   .navbarList > li > a {
     background: none !important;
@@ -176,28 +187,9 @@
     background: none !important;
   }
 
-  /* CLOSED submenu: invisible */
+  /* Submenu: just show/hide, no inner scroll/cap */
   .dropdownMenu {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease;
-    margin-left: 0;
-    padding: 0;
-    background: transparent;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .dropdownMenu {
-      transition: none;
-    }
-  }
-
-  /* OPEN submenu: only darker sheet */
-  .dropdownMenu.open {
-    max-height: 40rem;
+    display: none; /* hidden by default */
     margin-left: var(--submenu-indent);
     margin-right: var(--submenu-indent);
     padding: 0.25rem 0;
@@ -205,6 +197,9 @@
     border: 0;
     border-radius: 0;
     box-shadow: none;
+  }
+  .dropdownMenu.open {
+    display: block; /* expands inline */
   }
 
   .groupHeader a {
@@ -243,6 +238,8 @@
     display: flex;
     flex-direction: row;
     background: transparent;
+    position: static;
+    overflow: visible;
   }
 
   .navbarItem a {
@@ -268,7 +265,7 @@
     padding: 0.25rem 0;
     margin-left: 0;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-    z-index: 1200; /* above nav text */
+    z-index: 1200;
   }
   .hasDropdown:hover .dropdownMenu {
     display: block;
