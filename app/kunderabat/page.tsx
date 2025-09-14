@@ -14,7 +14,7 @@ export default function Kunderabat() {
       {/* Intro Section */}
       <section className={styles.container}>
         <p className={styles.intro}>
-          Hos Trio Renseri tilbyder vi særlige rabatter på rensning af
+          Hos Trio Renseriet tilbyder vi særlige rabatter på rensning af
           tekstiltøj. Er du studerende eller pensionist, kan du få 15% rabat på
           tekstiltøj med gyldigt studie- eller pensionistkort ved betaling.
         </p>

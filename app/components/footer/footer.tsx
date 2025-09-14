@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
       </div>
       <p className={styles.footerBottomText}>
-        © {new Date().getFullYear()} Trio Renseri. Alle rettigheder forbeholdes.
+        © {new Date().getFullYear()} Trio Renseriet. Alle rettigheder forbeholdes.
       </p>
     </footer>
   );
