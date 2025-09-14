@@ -45,8 +45,7 @@ export default function Prices() {
     setLoading(true);
     setError(null);
     try {
-      // Ensure /public/prices.yaml exists (served as /prices.yaml)
-      const res = await fetch(`/prices.yaml?ts=${Date.now()}`, {
+      const res = await fetch(`/priser.yaml?ts=${Date.now()}`, {
         cache: "no-store",
       });
       if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);

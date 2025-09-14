@@ -133,7 +133,7 @@ sections:
           - "1 stk. 275 DKK"
           - "2 stk. 350 DKK"
       - name: "Dobbeltdyne"
-        pricess:
+        prices:
           - "300 DKK"
       - name: "Silkedyne"
         prices:
