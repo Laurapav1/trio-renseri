@@ -2,8 +2,14 @@
 .heroWrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+
+  /* progressive enhancement for iOS/Safari */
+  height: 100vh; /* fallback */
+  height: 100dvh; /* modern iOS & Chrome */
+  min-height: -webkit-fill-available; /* old WebKit */
+  padding-bottom: env(safe-area-inset-bottom); /* prevents a sliver at bottom */
 }
+
 .heroWrapper > * {
   flex-shrink: 0;
 }

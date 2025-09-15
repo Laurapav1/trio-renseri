@@ -1,20 +1,22 @@
 .footer {
   background-color: hsl(0, 0%, 92%);
-  padding: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
 .footerContent {
   display: flex;
-  max-width: 80vw;
-  margin: 0 auto;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  gap: 2rem; /* spacing between sections */
+  max-width: 1080px; /* concrete max width */
+  margin: 0 auto 2rem auto;
+  justify-content: center; /* center sections when wrapping */
 }
 
 .footerSection {
-  flex: 1;
-  margin: 0 4rem;
+  flex: 1 1 280px; /* flexible, but don’t shrink too narrow */
+  margin: 0;
+  text-align: center;
 }
 
 .footerSection h4 {
@@ -23,50 +25,68 @@
   font-size: 1.2rem;
 }
 
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .footerSection li {
   margin-bottom: 0.6rem;
 }
 
-.footerSection a {
+/* Override global link styles inside footer */
+.footer a {
   color: #555;
   text-decoration: none;
+  padding: 0; /* remove global padding */
+  border-radius: 0; /* reset */
 }
 
-.footerSection a:hover {
+.footer a:hover {
   color: #000;
 }
 
 .socialIcon {
   margin: 0.5rem;
-  margin-top: 0;
   height: 35px !important;
   width: 35px !important;
-  padding: 0px;
 }
 
 .socialIcon:hover {
   filter: brightness(110%);
 }
 
-.footerSection ul {
-  list-style-type: none;
-  padding: 0;
+/* Opening hours formatting */
+.hoursContainer .openingHours {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.4rem 1rem;
+  justify-content: center;
+  align-items: baseline;
 }
 
-.footerSection .openingHours {
-  display: flex;
-  justify-content: space-between;
-}
-
-.footerSection .day {
-  text-align: left;
-}
-
-.footerSection .time {
+.hoursContainer .day {
   text-align: right;
+}
+
+.hoursContainer .time {
+  text-align: left;
 }
 
 .footerBottomText {
   color: #555;
   font-size: 0.9rem;
+  margin: 0;
+  padding-bottom: env(
+    safe-area-inset-bottom
+  ); /* avoid clash with iOS home bar */
+}
+
+/* Extra mobile refinement */
+@media (max-width: 380px) {
+  .hoursContainer .openingHours {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
