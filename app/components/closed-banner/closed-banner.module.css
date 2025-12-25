@@ -1,0 +1,17 @@
+.closedBanner {
+  background-color: hsl(0, 100%, 30%); /* Festive red */
+  color: #fff;
+  text-align: center;
+  padding: 16px 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5;
+  z-index: 9999;
+}
+
+@media (max-width: 768px) {
+  .closedBanner {
+    font-size: 0.9rem;
+    padding: 10px 6px;
+  }
+}

@@ -1,6 +1,7 @@
 import "./css/globals.css";
 import Footer from "./components/footer/footer";
 import { Suspense } from "react";
+import { ClosedBanner } from "./components/closed-banner/closed-banner";
 
 export const metadata = {
   title: "Trio Renseriet",
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
+        <ClosedBanner />
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         <Footer />
       </body>

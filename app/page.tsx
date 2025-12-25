@@ -17,18 +17,8 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <>
-      {/* Wrapper to make Navbar and HeroSection fill 100vh */}
-      <div className={styles.heroWrapper}>
-        <div className={styles.holidayBanner}>
-          <strong>Julelukket:</strong> Vi holder lukket fra
-          <strong> 21. december 2025</strong> til og med
-          <strong> 4. januar 2026</strong>. Vi ønsker alle en glædelig jul og et
-          godt nytår!
-        </div>
-        <Navbar />
-        {/* Holiday Announcement Banner */}
-        <HomeHeroSection />
-      </div>
+      <Navbar />
+      <HomeHeroSection />
       <main>
         {/* Intro Section */}
         <section className={styles.textWrapper}>

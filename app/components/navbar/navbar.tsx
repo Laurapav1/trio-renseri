@@ -54,8 +54,11 @@ export default function Navbar() {
   useLayoutEffect(() => {
     if (!navRef.current) return;
     const el = navRef.current;
-    const setVar = () =>
-      el.style.setProperty("--nav-h", `${el.offsetHeight}px`);
+    const setVar = () => {
+      const value = `${el.offsetHeight}px`;
+      el.style.setProperty("--nav-h", value);
+      document.documentElement.style.setProperty("--nav-h", value);
+    };
     setVar();
     const ro = new ResizeObserver(setVar);
     ro.observe(el);
