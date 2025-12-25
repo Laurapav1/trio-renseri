@@ -163,7 +163,7 @@
   /* Make the entire drawer the scroll container */
   .navbarList {
     position: fixed;
-    top: var(--nav-h, 64px);
+    top: calc(var(--nav-h, 64px) + var(--closed-banner-h, 0px));
     left: 0;
     right: 0;
     bottom: 0;
