@@ -12,23 +12,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { useClosedBanner } from "./hooks/useClosedBanner";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const { banner } = useClosedBanner("/lukketider.yaml");
   return (
     <>
-      {/* Wrapper to make Navbar and HeroSection fill 100vh */}
-      <div className={styles.heroWrapper}>
-        {banner && (
-          <div className={styles.closedBanner} role="status">
-            <strong>{banner.heading}:</strong> {banner.text}
-          </div>
-        )}
-        <Navbar />
-        <HomeHeroSection />
-      </div>
+      <Navbar />
+      <HomeHeroSection />
       <main>
         {/* Intro Section */}
         <section className={styles.textWrapper}>

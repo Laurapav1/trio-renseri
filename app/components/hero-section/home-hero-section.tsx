@@ -14,6 +14,7 @@ function HomeHeroSection() {
         <source src="/videos/forside.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <div className={styles.overlay} aria-hidden />
       <div className={styles.heroContent}>
         <h1>Velkommen til Trio Renseriet</h1>
         <p>Professionel renseri service siden 1954</p>

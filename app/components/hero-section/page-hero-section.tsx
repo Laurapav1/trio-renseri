@@ -12,7 +12,7 @@ const PageHeroSection = ({ heading, imagePath }: PageHeroSectionProps) => {
       className={styles.pageHeroSection}
       style={{ backgroundImage: `url(${imagePath})` }}
     >
-      <div className={styles.overlay}></div> {/* Tilføj overlayen */}
+      <div className={styles.overlay}></div>
       <h1 className={styles.heroHeading}>{heading}</h1>
     </div>
   );

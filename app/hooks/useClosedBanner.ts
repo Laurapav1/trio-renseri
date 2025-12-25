@@ -3,20 +3,82 @@
 import { useCallback, useEffect, useState } from "react";
 import yaml from "js-yaml";
 import {
+  ActiveClosedBanner,
   ClosedBannerFileSchema,
-  type ClosedBanner,
+  type ClosedBannerConfig,
   type ClosedBannerFile,
+  type ClosedBannerInterval,
 } from "@/app/types/closedBanner";
 
 type UseClosedBannerResult = {
-  banner: ClosedBanner | null;
+  banner: ActiveClosedBanner | null;
   loading: boolean;
   error: string | null;
   reload: () => void;
 };
 
+const toLocalDate = (value: string, endOfDay: boolean): Date => {
+  const [day, month, year] = value.split("-").map(Number);
+  const parsed = new Date(
+    year,
+    month - 1,
+    day,
+    endOfDay ? 23 : 0,
+    endOfDay ? 59 : 0,
+    endOfDay ? 59 : 0,
+    endOfDay ? 999 : 0,
+  );
+
+  const isValidDate =
+    !Number.isNaN(parsed.getTime()) &&
+    parsed.getFullYear() === year &&
+    parsed.getMonth() === month - 1 &&
+    parsed.getDate() === day;
+
+  if (!isValidDate) {
+    throw new Error(`Ugyldig dato: ${value}`);
+  }
+
+  return parsed;
+};
+
+const isIntervalActive = (interval: ClosedBannerInterval, now: Date): boolean => {
+  const start = toLocalDate(interval.start, false);
+  const end = toLocalDate(interval.end, true);
+  return now >= start && now <= end;
+};
+
+const resolveBanner = (
+  config: ClosedBannerConfig,
+  now: Date,
+): ActiveClosedBanner | null => {
+  if (!config.enabled) {
+    return null;
+  }
+
+  const activeInterval = config.intervals.find((interval) =>
+    isIntervalActive(interval, now),
+  );
+
+  if (activeInterval) {
+    return {
+      heading: activeInterval.heading,
+      text: activeInterval.text,
+    };
+  }
+
+  if (config.enabled && config.heading && config.text) {
+    return {
+      heading: config.heading,
+      text: config.text,
+    };
+  }
+
+  return null;
+};
+
 export function useClosedBanner(url: string): UseClosedBannerResult {
-  const [banner, setBanner] = useState<ClosedBanner | null>(null);
+  const [banner, setBanner] = useState<ActiveClosedBanner | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -33,8 +95,9 @@ export function useClosedBanner(url: string): UseClosedBannerResult {
       const parsed: ClosedBannerFile =
         ClosedBannerFileSchema.parse(unknownData);
 
-      // Hide the banner if it is explicitly disabled in the YAML file.
-      setBanner(parsed.banner.enabled ? parsed.banner : null);
+      // Hide the banner unless there is an active interval or an explicitly enabled default.
+      const nextBanner = resolveBanner(parsed.banner, new Date());
+      setBanner(nextBanner);
     } catch (e) {
       console.error(e);
       setError("Kunne ikke hente beskeden.");
