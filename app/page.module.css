@@ -247,7 +247,7 @@
   color: white;
 }
 
-.holidayBanner {
+.closedBanner {
   background-color: lab(37.08% 61.42 51.49); /* Festive red */
   color: #fff;
   text-align: center;
@@ -313,7 +313,7 @@
     max-height: none;
   }
 
-  .holidayBanner {
+  .closedBanner {
     font-size: 0.9rem;
     padding: 10px 6px;
   }
