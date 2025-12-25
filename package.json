@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "zip": "rm -f out.zip && test -d out && (cd out && zip -r ../out.zip . -x '*.DS_Store')",
+    "build:zip": "npm run build && npm run zip"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",

@@ -1,8 +1,8 @@
 .closedBanner {
-  background-color: hsl(0, 100%, 30%); /* Festive red */
+  background-color: hsl(0, 100%, 35%); /* Festive red */
   color: #fff;
   text-align: center;
-  padding: 16px 8px;
+  padding: 14px 8px;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
