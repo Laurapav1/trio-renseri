@@ -1,12 +1,11 @@
 .closedBanner {
-  background-color: lab(37.08% 61.42 51.49); /* Festive red */
+  background-color: hsl(0, 100%, 30%); /* Festive red */
   color: #fff;
   text-align: center;
-  padding: 12px 8px;
+  padding: 16px 8px;
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.5;
-  border-bottom: 3px solid lab(24.12% 46.42 36.22);
   z-index: 9999;
 }
 
