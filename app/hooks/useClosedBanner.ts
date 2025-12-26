@@ -3,15 +3,13 @@
 import { useCallback, useEffect, useState } from "react";
 import yaml from "js-yaml";
 import {
-  ActiveClosedBanner,
   ClosedBannerFileSchema,
-  type ClosedBannerConfig,
   type ClosedBannerFile,
   type ClosedBannerInterval,
 } from "@/app/types/closedBanner";
 
 type UseClosedBannerResult = {
-  banner: ActiveClosedBanner | null;
+  banner: ClosedBannerInterval | null;
   loading: boolean;
   error: string | null;
   reload: () => void;
@@ -49,36 +47,18 @@ const isIntervalActive = (interval: ClosedBannerInterval, now: Date): boolean =>
 };
 
 const resolveBanner = (
-  config: ClosedBannerConfig,
+  config: ClosedBannerFile,
   now: Date,
-): ActiveClosedBanner | null => {
-  if (!config.enabled) {
-    return null;
-  }
-
+): ClosedBannerInterval | null => {
   const activeInterval = config.intervals.find((interval) =>
     isIntervalActive(interval, now),
   );
 
-  if (activeInterval) {
-    return {
-      heading: activeInterval.heading,
-      text: activeInterval.text,
-    };
-  }
-
-  if (config.enabled && config.heading && config.text) {
-    return {
-      heading: config.heading,
-      text: config.text,
-    };
-  }
-
-  return null;
+  return activeInterval ?? null;
 };
 
 export function useClosedBanner(url: string): UseClosedBannerResult {
-  const [banner, setBanner] = useState<ActiveClosedBanner | null>(null);
+  const [banner, setBanner] = useState<ClosedBannerInterval | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -92,11 +72,10 @@ export function useClosedBanner(url: string): UseClosedBannerResult {
       const text = await res.text();
       const unknownData = yaml.load(text) as unknown;
 
-      const parsed: ClosedBannerFile =
-        ClosedBannerFileSchema.parse(unknownData);
+      const parsed: ClosedBannerFile = ClosedBannerFileSchema.parse(unknownData);
 
       // Hide the banner unless there is an active interval or an explicitly enabled default.
-      const nextBanner = resolveBanner(parsed.banner, new Date());
+      const nextBanner = resolveBanner(parsed, new Date());
       setBanner(nextBanner);
     } catch (e) {
       console.error(e);

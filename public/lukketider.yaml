@@ -1,6 +1,5 @@
-banner:
-  intervals:
-    - start: "21-12-2025"
-      end: "04-01-2026"
-      heading: "Julelukket"
-      text: "Vi holder lukket fra den 21. december 2025 til og med den 4. januar 2026. Vi ønsker alle en glædelig jul og et godt nytår!"
+intervals:
+  - start: "21-12-2025"
+    end: "04-01-2026"
+    heading: "Julelukket"
+    text: "Vi holder lukket fra den 21. december 2025 til og med den 4. januar 2026. Vi ønsker alle en glædelig jul og et godt nytår!"
