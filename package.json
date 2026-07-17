@@ -3,10 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "rm -rf .next",
     "dev": "next dev",
+    "prebuild": "rm -rf .next",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "verify:static": "node scripts/verify-static-export.mjs",
+    "verify": "npm run lint && npm run build && npm run verify:static",
+    "images:generate": "bash scripts/generate-responsive-images.sh",
     "zip": "rm -f out.zip && test -d out && (cd out && zip -r ../out.zip . -x '*.DS_Store')",
     "build:zip": "npm run build && npm run zip"
   },

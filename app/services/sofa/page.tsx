@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 import Navbar from "@/app/components/navbar/navbar";
 
 export default function Sofa() {
@@ -14,12 +14,13 @@ export default function Sofa() {
       <HeroSection
         heading="Friske sofabetræk - vores ekspertise"
         imagePath="/images/sofa2.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af skjorter</h1>
+          <h1>Specialiseret rensning af sofabetræk</h1>
           <p>
             Vi tilbyder professionel vask og rensning af sofabetræk, så din sofa
             altid ser flot og indbydende ud. Vores skånsomme metoder fjerner
@@ -39,7 +40,7 @@ export default function Sofa() {
               <li>Hjørnesofa - 800 DKK</li>
             </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=sofa"}
               className={styles.ctaButton}
             >
               Se andre priser
@@ -48,9 +49,12 @@ export default function Sofa() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/sofa2.jpg"
-            alt="sofa"
+            alt="Sofabetræk"
+            width={1600}
+            height={1277}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

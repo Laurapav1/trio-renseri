@@ -24,6 +24,27 @@
   line-height: 1.6;
 }
 
+.detailBlock {
+  margin: 1.5rem 0;
+}
+
+.detailBlock h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+  color: #222;
+}
+
+.detailList {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.detailList li + li {
+  margin-top: 0.35rem;
+}
+
 /* Billedsektionen til højre */
 .imageContainer {
   flex: 1;

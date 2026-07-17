@@ -10,17 +10,16 @@ export default function Tojrens() {
     <>
       <Navbar />
       <PageHeroSection
-        heading="Vores ydelser"
+        heading="Tøjrens og tekstilpleje"
         imagePath="/images/vores-ydelser.jpg"
       />
       <div className={styles.container}>
         <p className={styles.intro}>
-          Velkommen til Trio Renseriet – din pålidelige partner til hverdagens
-          tekstilbehov. Vi sørger for, at du altid kan føle dig godt tilpas i
-          dit tøj, uanset om det er den daglige skjorte eller den særlige
-          brudekjole.
+          Hos Trio Renseriet hjælper vi med tøjrens og tekstilpleje i
+          Højbjerg og Aarhus. Vi behandler blandt andet skjorter, brudekjoler,
+          dåbskjoler, dyner, gardiner, tæpper og sofabetræk.
         </p>
-        <Link href={"/tojrens/priser"} className={styles.ctaButton}>
+        <Link href={"/priser"} className={styles.ctaButton}>
           Se priser
         </Link>
         <div className={styles.servicesGrid}>
@@ -53,28 +52,28 @@ export default function Tojrens() {
           />
 
           <ServiceCard
-            title="Vaske/Rulle service"
+            title="Vaske- og rulleservice"
             description="Vask, tørring og rulning af tøj, så det altid er klar til brug."
             link="/services/vaskerulleservice"
             imgURL="/images/table.jpg"
           />
 
           <ServiceCard
-            title="Brudekjole rens"
+            title="Brudekjolerens"
             description="Skånsom rensning af brudekjoler, der bevarer deres glans og skønhed."
             link="/services/brudekjolerens"
             imgURL="/images/bridedress.jpg"
           />
 
           <ServiceCard
-            title="Dåbskjole vask/rens"
+            title="Dåbskjolevask"
             description="Omhyggelig rensning af dåbskjoler, så de forbliver smukke til den særlige dag."
             link="/services/daabskjolevask"
-            imgURL="/images/gowndress.png"
+            imgURL="/images/bridedress5.jpg"
           />
 
           <ServiceCard
-            title="Dyne/pude vask"
+            title="Dyne- og pudevask"
             description="Vi tilbyder grundig vask af dyner og puder, der fjerner støv og allergener, så du kan sove trygt og godt."
             link="/services/dynevask"
             imgURL="/images/dyne.jpg"
@@ -87,8 +86,8 @@ export default function Tojrens() {
             imgURL="/images/sofa.jpg"
           />
           <ServiceCard
-            title="Mange flere ydelser"
-            description="Har du særlige behov? Vi tilbyder mange flere renseri- og vaskeopgaver. Ring eller skriv til os for at høre nærmere"
+            title="Flere tekstilopgaver"
+            description="Har du en særlig tekstilopgave? Ring eller skriv, så vurderer vi, om vi kan hjælpe."
             link="/kontakt"
             imgURL="/images/kontakt.jpg"
           />

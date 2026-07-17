@@ -2,8 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "./components/navbar/navbar";
 import HomeHeroSection from "./components/hero-section/home-hero-section";
+import ResponsiveImage from "./components/responsive-image/responsive-image";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,7 +24,7 @@ export default function Home() {
       <main>
         {/* Intro Section */}
         <section className={styles.textWrapper}>
-          <h2>Højt kvalitet af rens </h2>
+          <h2>Høj kvalitet i rens</h2>
           <p>
             Hos Trio Renseriet har vi leveret førsteklasses renseri- og
             tøjplejeservices til både private kunder og virksomheder. Med mere
@@ -35,7 +37,13 @@ export default function Home() {
         {/* About Us Section */}
         <section className={styles.crossSection}>
           <div className={styles.crossImageContainer}>
-            <img src="/images/profil.jpg" alt="Velkommen til Trio Renseri" />
+            <ResponsiveImage
+              src="/images/profil.jpg"
+              alt="Velkommen til Trio Renseri"
+              width={1200}
+              height={900}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
           <div className={styles.crossTextContainer}>
             <h2>Velkommen til Trio Renseriet</h2>
@@ -87,30 +95,42 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.crossImageContainer}>
-            <img src="/images/tekstil.jpg" alt="Tekstilrens" />
+            <ResponsiveImage
+              src="/images/tekstil.jpg"
+              alt="Tekstilrens"
+              width={1200}
+              height={900}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
         </section>
 
         {/* Boat */}
         <section className={styles.crossSection}>
           <div className={styles.crossImageContainer}>
-            <img src="/images/baad2.jpg" alt="Bådservice" />
+            <ResponsiveImage
+              src="/images/baad2.jpg"
+              alt="Bådservice"
+              width={1200}
+              height={900}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
           <div className={styles.crossTextContainer}>
             <h2>Service til både</h2>
             <p>
               Udover vores klassiske renseri- og tøjplejeservices tilbyder vi
-              omfattende service til både. Vi hjælper dig med alt fra vask og
-              imprægnering af kalacher til alt slags af reperationer -
-              udskiftning af rude, lynlåse osv
+              omfattende service til både. Vi hjælper dig med vask,
+              imprægnering og forskellige reparationer af bådkalecher, blandt
+              andet udskiftning af ruder og lynlåse.
             </p>
             <h3>Vores bådservice omfatter:</h3>
             <ul>
-              <li>Vask og imrægnering af kalacher</li>
+              <li>Vask og imprægnering af bådkalecher</li>
               <li>Udskiftning af ruder og lynlåse</li>
             </ul>
             <div className={styles.ctaButtonContainer}>
-              <Link href="/services/batservice" className={styles.ctaButton}>
+              <Link href="/services/baadkalache" className={styles.ctaButton}>
                 Se bådservice
               </Link>
             </div>
@@ -120,7 +140,7 @@ export default function Home() {
         {/* Service Section with Swiper */}
         <section className={styles.serviceSection}>
           <div className={styles.serviceBanner}>
-            <h1>Vi udfører</h1>
+            <h2>Vi udfører</h2>
           </div>
 
           <Swiper
@@ -142,18 +162,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/tekstil.jpg"
                     alt="Tekstilrens"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/laundry.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Tekstilrens</h2>
                   </div>
@@ -169,24 +194,29 @@ export default function Home() {
               </div>
             </SwiperSlide>
 
-            {/* Skjorte service */}
+            {/* Skjorteservice */}
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/skjorte.jpg"
-                    alt="Skjorte service"
+                    alt="Skjorteservice"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/shirt-icon.webp"
                       alt=""
+                      width={42}
+                      height={42}
                     />
-                    <h2>Skjorte Service</h2>
+                    <h2>Skjorteservice</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>✓ Ekspertise og omhu for en skarp skjorte – hver gang.</p>
@@ -194,7 +224,7 @@ export default function Home() {
                     href="/services/skjorteservice"
                     className={styles.ctaButtonService}
                   >
-                    Se skjorte service
+                    Se skjorteservice
                   </Link>
                 </div>
               </div>
@@ -204,18 +234,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/clean-wedding.jpeg"
-                    alt="Brudekjole rens"
+                    alt="Brudekjolerens"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/bride-dress.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Brudekjole Rens</h2>
                   </div>
@@ -238,18 +273,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/dyne.jpg"
                     alt="Dyne og pude vask"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/pillow.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Dyne/Pude Vask</h2>
                   </div>
@@ -269,18 +309,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/table.jpg"
                     alt="Vask af duge"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/tablecloth.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Vask af duge</h2>
                   </div>
@@ -300,18 +345,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/curtains2.jpg"
                     alt="Gardinservice"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/curtain-icon.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Gardinservice</h2>
                   </div>
@@ -331,18 +381,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/floorcarpet.jpg"
                     alt="Tæpperens"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/carpet.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Tæpperens</h2>
                   </div>
@@ -361,18 +416,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/madrass.jpg"
                     alt="Vask af madrasser"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/mattress.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Vask af madrasser</h2>
                   </div>
@@ -391,20 +451,25 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/sofa3.jpg"
-                    alt="Vask af madrasser"
+                    alt="Rensning af møbelbetræk"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/sofa.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
-                    <h2>Resning af møbelbetræk</h2>
+                    <h2>Rensning af møbelbetræk</h2>
                   </div>
                   <hr className={styles.divider} />
                   <p>
@@ -426,18 +491,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/maskine.jpeg"
                     alt="Udlejning af maskiner"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/udlejning.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Udlejning af møbel- og tæpperensmaskine</h2>
                   </div>
@@ -457,18 +527,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/baad2.jpg"
                     alt="Rensning af bådkaleche"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/boat.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Rensning af bådkaleche</h2>
                   </div>
@@ -489,18 +564,23 @@ export default function Home() {
             <SwiperSlide>
               <div className={styles.gridService}>
                 <div className={styles.mediaBox}>
-                  <img
+                  <ResponsiveImage
                     src="/images/sew3.jpg"
                     alt="Omforandring af tøj"
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     loading="lazy"
                   />
                 </div>
                 <div className={styles.textcontent}>
                   <div className={styles.iconTitle}>
-                    <img
+                    <Image
                       className={styles.serviceIcon}
                       src="/images/icons/sewing-machine.png"
                       alt=""
+                      width={42}
+                      height={42}
                     />
                     <h2>Omforandring af tøj</h2>
                   </div>

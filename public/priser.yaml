@@ -2,6 +2,7 @@ sections:
   - heading: "Herretøj"
     items:
       - name: "Skjorter"
+        service: "skjorteservice"
         prices:
           - "1 stk. 25 DKK"
           - "5 stk. 110 DKK"
@@ -11,7 +12,7 @@ sections:
       - name: "Frakke ¾"
         prices:
           - "195 DKK"
-      - name: "Cotton coat"
+      - name: "Bomuldsfrakke"
         prices:
           - "225 DKK"
       - name: "Jakker"
@@ -21,6 +22,7 @@ sections:
         prices:
           - "119 DKK"
       - name: "Habit"
+        service: "tekstilrens"
         prices:
           - "269 DKK"
       - name: "Slips"
@@ -29,10 +31,10 @@ sections:
       - name: "Vindjakker"
         prices:
           - "fra 195 DKK"
-      - name: "Dunejakker"
+      - name: "Dunjakker"
         prices:
           - "fra 250 DKK"
-      - name: "Dunefrakker"
+      - name: "Dunfrakker"
         prices:
           - "fra 300 DKK"
       - name: "Veste"
@@ -56,7 +58,7 @@ sections:
       - name: "Frakker"
         prices:
           - "250 DKK"
-      - name: "Cotton coat"
+      - name: "Bomuldsfrakke"
         prices:
           - "225 DKK"
       - name: "Jakker"
@@ -75,6 +77,7 @@ sections:
         prices:
           - "Efter aftale"
       - name: "Brudekjoler"
+        service: "brudekjolerens"
         prices:
           - "fra 595 DKK"
       - name: "Nederdele, korte"
@@ -102,6 +105,7 @@ sections:
   - heading: "Diverse"
     items:
       - name: "Gardiner"
+        service: "gardinservice"
         prices:
           - "135 DKK pr. bane"
       - name: "Velourgardiner"
@@ -111,6 +115,7 @@ sections:
         prices:
           - "Efter aftale"
       - name: "Tæpper"
+        service: "taepperens"
         prices:
           - "Efter aftale"
       - name: "Klokkestrenge fra"
@@ -120,15 +125,20 @@ sections:
         prices:
           - "135 DKK pr. kg. "
       - name: "Madrasser"
+        service: "madrasser"
         prices:
           - "Efter aftale"
       - name: "Topmadras"
         prices:
           - "95 DKK pr. kg."
       - name: "Hyndebetræk"
+        service: "mobelbetraak"
+        serviceAliases:
+          - "sofa"
         prices:
           - "135 DKK pr. kg."
       - name: "Dyne"
+        service: "dynevask"
         prices:
           - "1 stk. 275 DKK"
           - "2 stk. 350 DKK"
@@ -155,8 +165,20 @@ sections:
         prices:
           - "65 DKK"
       - name: "Servietter"
+        service: "vaskerulleservice"
         prices:
           - "15 DKK pr. stk"
       - name: "Bådkalecher"
+        service: "baadkalache"
         prices:
           - "395 DKK pr. kg."
+      - name: "Dåbskjole"
+        service: "daabskjolevask"
+        prices:
+          - "500 DKK"
+      - name: "Tæpperensmaskine"
+        service: "udlejning"
+        prices:
+          - "275 DKK pr. dag"
+          - "Ekstra rengøringsmiddel - 100 DKK"
+          - "Udlejning i weekender - 375 DKK"

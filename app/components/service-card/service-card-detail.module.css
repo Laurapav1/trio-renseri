@@ -42,6 +42,28 @@
   align-self: center;
 }
 
+.detailBlock {
+  max-width: 900px;
+  margin: 3rem auto 0;
+  text-align: left;
+  line-height: 1.6;
+  color: #444;
+}
+
+.detailBlock h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.detailList {
+  padding-left: 1.2rem;
+}
+
+.detailList li + li {
+  margin-top: 0.4rem;
+}
+
 .serviceBox {
   flex: 1;
   max-width: 38%;

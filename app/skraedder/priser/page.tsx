@@ -1,17 +1,11 @@
-"use client";
-
-import { useSearchParams } from "next/navigation";
 import Navbar from "@/app/components/navbar/navbar";
 import PageHeroSection from "@/app/components/hero-section/page-hero-section";
-import PriceList from "@/app/components/prisliste/prisliste";
 import styles from "@/app/components/prices-page/prices-page.module.css";
-import { usePrices } from "@/app/hooks/usePrices";
+import PricesClient from "@/app/components/prices-page/prices-client";
+import { loadPriceSections } from "@/app/lib/prices";
 
 export default function PricesSkraedder() {
-  const service = useSearchParams().get("service") ?? undefined;
-  const { sections, loading, error, reload } = usePrices(
-    "/skraedder-priser.yaml"
-  );
+  const sections = loadPriceSections("skraedder-priser.yaml");
 
   return (
     <>
@@ -22,23 +16,10 @@ export default function PricesSkraedder() {
       />
 
       <div className={styles.container}>
-        {loading && <p>Indlæser…</p>}
-
-        {!loading && error && (
-          <div className={styles.errorBox}>
-            <p>{error}</p>
-            <button onClick={reload}>Prøv igen</button>
-          </div>
-        )}
-
-        {sections?.map((sec) => (
-          <PriceList
-            key={sec.heading}
-            heading={sec.heading}
-            items={sec.items}
-            highlightService={service}
-          />
-        ))}
+        <PricesClient
+          initialSections={sections}
+          yamlUrl="/skraedder-priser.yaml"
+        />
       </div>
     </>
   );

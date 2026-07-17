@@ -59,18 +59,18 @@ export default function Kontakt() {
                   required
                   defaultValue={"Vælg en interesse"}
                 >
-                  <option value="teksilrens">Tekstilrens</option>
-                  <option value="skjorteservide">Skjorteservice </option>
+                  <option value="tekstilrens">Tekstilrens</option>
+                  <option value="skjorteservice">Skjorteservice</option>
                   <option value="brudetøj">Brudetøj</option>
                   <option value="dyner og puder">Dyner/Puder</option>
                   <option value="vask af duge">Vask af duge</option>
-                  <option value="gardin">Gardinservice </option>
+                  <option value="gardinservice">Gardinservice</option>
                   <option value="tæpper">Tæpper</option>
                   <option value="møbelbetræk">Møbelbetræk</option>
-                  <option value="udlejning af møbel og tæpperrensmaskine">
-                    Udlejning af møbel- og tæpperrensmaskine
+                  <option value="udlejning af møbel- og tæpperensmaskine">
+                    Udlejning af møbel- og tæpperensmaskine
                   </option>
-                  <option value="båd kalache">Båd Kalache</option>
+                  <option value="baadkalache">Bådkaleche</option>
                   <option value="ordre">Ordre</option>
                   <option value="andet">Andet</option>
                 </select>
@@ -99,6 +99,41 @@ export default function Kontakt() {
             </p>
           </div>
         </div>
+        <section className={styles.visitInfo}>
+          <h2>Besøg renseriet i Højbjerg</h2>
+          <p>
+            Du finder Trio Renseriet på L. A. Rings Vej 19 i 8270 Højbjerg. Vi
+            hjælper kunder fra Højbjerg, Aarhus, Viby, Skåde og de nærliggende
+            områder med rens, vask, skrædderarbejde og tekstilpleje.
+          </p>
+          <p>
+            Kig gerne forbi med tøjet, gardinerne, tæppet eller bådkalechen, så
+            vurderer vi opgaven og taler om pris og leveringstid. Ved større
+            opgaver er du velkommen til at ringe først, så vi kan rådgive om
+            indlevering.
+          </p>
+          <div className={styles.infoGrid}>
+            <div>
+              <h3>Åbningstider</h3>
+              <p>Mandag-fredag: 08:30-17:30</p>
+              <p>Lørdag: 10:00-13:00</p>
+            </div>
+            <div>
+              <h3>Anmeldelser</h3>
+              <p>
+                Læs eller skriv en anmeldelse via vores Google Maps-profil, så
+                nye kunder kan se erfaringer fra andre i lokalområdet.
+              </p>
+              <a
+                href="https://maps.app.goo.gl/GSzww1hdHhaeqpZJ7"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Åbn Trio Renseriet på Google Maps
+              </a>
+            </div>
+          </div>
+        </section>
         <iframe
           className={styles.googleMaps}
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2224.26985372913!2d10.196112012843631!3d56.11784987310981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c4042a68764c7%3A0x13b872a78fe0820f!2sTrio%20Renseri!5e0!3m2!1sda!2sus!4v1723929675858!5m2!1sda!2sus"

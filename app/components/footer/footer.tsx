@@ -14,11 +14,11 @@ export default function Footer() {
                 target="_blank"
                 href="https://maps.app.goo.gl/GSzww1hdHhaeqpZJ7"
               >
-                L. A. Ringsvej 19, Højbjerg, Denmark
+                L. A. Rings Vej 19, 8270 Højbjerg
               </a>
             </li>
             <li>
-              <a href="mailto: andriustrio@hotmail.com">
+              <a href="mailto:andriustrio@hotmail.com">
                 andriustrio@hotmail.com
               </a>
             </li>

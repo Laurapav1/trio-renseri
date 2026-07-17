@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 import Navbar from "@/app/components/navbar/navbar";
 
 export default function Brudekjolerens() {
@@ -13,6 +13,7 @@ export default function Brudekjolerens() {
       <HeroSection
         heading="Din brudekjole - vores ekspertise"
         imagePath="/images/bridedress2.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -45,9 +46,12 @@ export default function Brudekjolerens() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/clean-wedding.jpeg"
             alt="Brudekjole"
+            width={1424}
+            height={2048}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

@@ -4,7 +4,7 @@ import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
 import Navbar from "@/app/components/navbar/navbar";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 
 export default function Madrasser() {
   return (
@@ -12,8 +12,9 @@ export default function Madrasser() {
       <Navbar />
       {/* Hero Section */}
       <HeroSection
-        heading=" Madrasser - vores ansvar"
+        heading="Madrasser - vores ansvar"
         imagePath="/images/madras.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -37,7 +38,7 @@ export default function Madrasser() {
               <li>Madrasser - Efter aftale</li>
             </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=madrasser"}
               className={styles.ctaButton}
             >
               Se andre priser
@@ -46,9 +47,12 @@ export default function Madrasser() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/madrass.jpg"
-            alt="madrasser"
+            alt="Madrasser"
+            width={1920}
+            height={1280}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

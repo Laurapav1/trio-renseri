@@ -3,6 +3,8 @@ import { z } from "zod";
 export const PriceItemSchema = z.object({
   name: z.string(),
   prices: z.array(z.string()),
+  service: z.string().optional(),
+  serviceAliases: z.array(z.string()).optional(),
 });
 
 export const PriceSectionSchema = z.object({

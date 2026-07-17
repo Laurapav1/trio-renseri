@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 import Navbar from "@/app/components/navbar/navbar";
 
 export default function DynePudeVask() {
@@ -14,6 +14,7 @@ export default function DynePudeVask() {
       <HeroSection
         heading="Friske dyner og puder - vores ekspertise"
         imagePath="/images/dynepude.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -42,7 +43,7 @@ export default function DynePudeVask() {
               <li>Sovepose - fra 195 DKK</li>
             </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=dynevask"}
               className={styles.ctaButton}
             >
               Se andre priser
@@ -51,9 +52,12 @@ export default function DynePudeVask() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/dyne.jpg"
-            alt="dyne/pude"
+            alt="Dyne og pude"
+            width={1920}
+            height={1280}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

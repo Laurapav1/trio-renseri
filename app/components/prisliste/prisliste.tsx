@@ -1,4 +1,7 @@
+"use client";
+
 // app/components/prisliste/prisliste.tsx
+import { useEffect, useRef } from "react";
 import styles from "./prisliste.module.css";
 
 interface PriceItem {
@@ -6,6 +9,7 @@ interface PriceItem {
   prices: string[];
   /** Optional stable id for deep-linking/highlighting (recommended). */
   service?: string;
+  serviceAliases?: string[];
 }
 
 interface PriceListProps {
@@ -23,12 +27,38 @@ export default function PriceList({
   highlightSection,
   highlightService,
 }: PriceListProps) {
+  const highlightedRef = useRef<HTMLLIElement | HTMLDivElement | null>(null);
   const sectionHighlighted =
     typeof highlightSection === "string" && highlightSection === heading;
+  const matchesHighlight = (item: PriceItem) =>
+    typeof highlightService === "string" &&
+    (item.service === highlightService ||
+      item.serviceAliases?.includes(highlightService) ||
+      (!item.service && item.name === highlightService));
+  const hasHighlightedRow = items.some(matchesHighlight);
+  const shouldScroll = hasHighlightedRow || sectionHighlighted;
+  const setHighlightedDivRef = (node: HTMLDivElement | null) => {
+    highlightedRef.current = node;
+  };
+  const setHighlightedListItemRef = (node: HTMLLIElement | null) => {
+    highlightedRef.current = node;
+  };
+
+  useEffect(() => {
+    if (!shouldScroll || !highlightedRef.current) return;
+
+    highlightedRef.current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+    highlightedRef.current.focus({ preventScroll: true });
+  }, [shouldScroll]);
 
   return (
     <div className={styles.prislisteContainer}>
       <div
+        ref={sectionHighlighted ? setHighlightedDivRef : undefined}
+        tabIndex={sectionHighlighted ? -1 : undefined}
         className={`${styles.prisliste} ${
           sectionHighlighted ? styles.highlighted : ""
         }`}
@@ -36,15 +66,16 @@ export default function PriceList({
         <h2>{heading}</h2>
         <ul>
           {items.map((item) => {
-            const isRowHighlighted =
-              typeof highlightService === "string" &&
-              (item.service
-                ? item.service === highlightService
-                : item.name === highlightService);
+            const isRowHighlighted = matchesHighlight(item);
 
             return (
               <li
                 key={item.service ?? item.name}
+                id={item.service ? `pris-${item.service}` : undefined}
+                ref={
+                  isRowHighlighted ? setHighlightedListItemRef : undefined
+                }
+                tabIndex={isRowHighlighted ? -1 : undefined}
                 className={isRowHighlighted ? styles.highlighted : ""}
               >
                 <span className={styles.itemName}>{item.name}</span>

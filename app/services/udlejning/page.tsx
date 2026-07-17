@@ -4,7 +4,7 @@ import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
 import Navbar from "@/app/components/navbar/navbar";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 
 export default function Udlejning() {
   return (
@@ -14,6 +14,7 @@ export default function Udlejning() {
       <HeroSection
         heading="Udlejning af møbel- og tæpperensmaskine"
         imagePath="/images/clean.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
@@ -21,23 +22,23 @@ export default function Udlejning() {
         <div className={styles.textContainer}>
           <h1>Udlejning af møbel- og tæpperensmaskine</h1>
           <p>
-            Lej en professionel rensningsmaskine til møbler og tæpper, og gør
+            Lej en professionel rensemaskine til møbler og tæpper, og gør
             dit hjem pænt og rent. Perfekt til selv at tage kontrol over
             rengøringen.
           </p>
           <p>
-            Vi tilbyder udlejning af effektive rensningsmaskine, der er let at
-            bruge og giver fantastiske resultater.
+            Vi tilbyder udlejning af en effektiv rensemaskine, der er let at
+            bruge og giver gode resultater.
           </p>
           <section className={styles.priceSection}>
             <h3>Pris i alt (inkl. leje og vejledning):</h3>
             <ul>
-              <li>Rensningsmaskine - 275 DKK pr. dag</li>
+              <li>Tæpperensmaskine - 275 DKK pr. dag</li>
               <li>Ekstra rengøringsmiddel - 100 DKK</li>
               <li>Udlejning i weekender - 375 DKK</li>
             </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=udlejning"}
               className={styles.ctaButton}
             >
               Se andre priser
@@ -46,9 +47,12 @@ export default function Udlejning() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/maskine.jpeg"
-            alt="tekstil"
+            alt="Udlejning af møbel- og tæpperensmaskine"
+            width={952}
+            height={1920}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}
