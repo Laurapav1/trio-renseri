@@ -9,12 +9,14 @@ This repository contains the public Danish website for Trio Renseriet, a dry-cle
 - `app/tojrens/` contains the focused textile-care hub.
 - `app/priser/`, `app/skraedder/priser/`, and `app/lib/` implement the build-time price pages.
 - `app/seo.ts` owns site identity, local-business data, route metadata, and canonical URLs.
+- `app/sitemap.ts` generates the sitemap from the route metadata in `app/seo.ts`.
 - `public/` owns static control files, YAML price sources, original media, and committed responsive image variants.
 
 ## Boundaries and sources of truth
 
 - The site must remain static-only. Preserve `output: "export"` in `next.config.mjs`; do not add SSR, API routes, server actions, or runtime data dependencies.
 - YAML price files are read at build time. Keep displayed prices and their source data synchronized.
+- The sitemap is generated from `app/seo.ts`; do not add a second hand-maintained sitemap under `public/`.
 - `out/` is generated output. Never edit it directly or commit it.
 - Original images in `public/images/` are the source assets. Their `-480.webp`, `-768.webp`, and `-1200.webp` companions are committed build inputs for responsive delivery and can be regenerated with `npm run images:generate`.
 - Keep business name, address, phone, opening hours, and service areas consistent between visible content and `app/seo.ts`.

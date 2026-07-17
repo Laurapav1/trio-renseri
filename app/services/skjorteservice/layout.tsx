@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import JsonLd from "@/app/components/seo-json-ld";
-import { breadcrumbJsonLd, metadataFor, routeByPath, serviceJsonLd } from "@/app/seo";
+import { metadataFor, routeByPath, serviceJsonLd } from "@/app/seo";
 
 const path = "/services/skjorteservice/";
 
@@ -14,7 +14,6 @@ export default function SkjorteserviceLayout({ children }: { children: ReactNode
       <JsonLd
         data={[
           serviceJsonLd(path, "Skjorteservice", route.description),
-          breadcrumbJsonLd(path, "Skjorteservice"),
         ]}
       />
       {children}

@@ -30,6 +30,8 @@ export type RouteEntry = {
   priority: number;
 };
 
+export const siteContentLastModified = "2026-07-18";
+
 export const routes: RouteEntry[] = [
   {
     path: "/",
@@ -225,7 +227,7 @@ export function metadataFor(path: string): Metadata {
 export function sitemapEntries(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
     url: absoluteUrl(route.path),
-    lastModified: new Date("2026-05-26"),
+    lastModified: new Date(siteContentLastModified),
     changeFrequency: route.path === "/" ? "weekly" : "monthly",
     priority: route.priority,
   }));
@@ -285,33 +287,6 @@ export const websiteJsonLd = {
     "@id": `${siteUrl}/#localbusiness`,
   },
 };
-
-export function breadcrumbJsonLd(path: string, name: string) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Forside",
-        item: absoluteUrl("/"),
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: absoluteUrl("/services/"),
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name,
-        item: absoluteUrl(path),
-      },
-    ],
-  };
-}
 
 export function serviceJsonLd(path: string, serviceType: string, description: string) {
   return {

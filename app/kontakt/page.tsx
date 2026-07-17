@@ -24,7 +24,11 @@ export default function Kontakt() {
             <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
               <div className={styles.inputContainer}>
                 <FontAwesomeIcon icon={faUser} className={styles.icon} />
+                <label className={styles.srOnly} htmlFor="contact-name">
+                  Navn
+                </label>
                 <input
+                  id="contact-name"
                   className={styles.input}
                   type="text"
                   name="name"
@@ -34,7 +38,11 @@ export default function Kontakt() {
               </div>
               <div className={styles.inputContainer}>
                 <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
+                <label className={styles.srOnly} htmlFor="contact-email">
+                  Email
+                </label>
                 <input
+                  id="contact-email"
                   className={styles.input}
                   type="email"
                   name="email"
@@ -44,7 +52,11 @@ export default function Kontakt() {
               </div>
               <div className={styles.inputContainer}>
                 <FontAwesomeIcon icon={faPhone} className={styles.icon} />
+                <label className={styles.srOnly} htmlFor="contact-phone">
+                  Telefon
+                </label>
                 <input
+                  id="contact-phone"
                   className={styles.input}
                   type="tel"
                   name="phone"
@@ -53,12 +65,19 @@ export default function Kontakt() {
                 />
               </div>
               <div className={styles.inputContainer}>
+                <label className={styles.srOnly} htmlFor="contact-interest">
+                  Hvad drejer din henvendelse sig om?
+                </label>
                 <select
+                  id="contact-interest"
                   name="interest"
                   className={styles.input}
                   required
-                  defaultValue={"Vælg en interesse"}
+                  defaultValue=""
                 >
+                  <option value="" disabled>
+                    Vælg en interesse
+                  </option>
                   <option value="tekstilrens">Tekstilrens</option>
                   <option value="skjorteservice">Skjorteservice</option>
                   <option value="brudetøj">Brudetøj</option>
@@ -75,7 +94,11 @@ export default function Kontakt() {
                   <option value="andet">Andet</option>
                 </select>
               </div>
+              <label className={styles.srOnly} htmlFor="contact-message">
+                Besked
+              </label>
               <textarea
+                id="contact-message"
                 name="message"
                 placeholder="Besked"
                 className={styles.textarea}
@@ -127,7 +150,7 @@ export default function Kontakt() {
               <a
                 href="https://maps.app.goo.gl/GSzww1hdHhaeqpZJ7"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Åbn Trio Renseriet på Google Maps
               </a>
