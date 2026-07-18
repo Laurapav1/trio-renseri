@@ -12,7 +12,7 @@ export default function Daabskjolevask() {
       {/* Hero Section */}
       <HeroSection
         heading="Din dåbskjole - vores ansvar"
-        imagePath="/images/dress.jpg"
+        imagePath="/images/bridedress5.jpg"
       />
 
       <div className={styles.container}>

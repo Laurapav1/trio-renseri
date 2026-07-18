@@ -12,13 +12,14 @@ export default function Footer() {
             <li>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://maps.app.goo.gl/GSzww1hdHhaeqpZJ7"
               >
-                L. A. Ringsvej 19, Højbjerg, Denmark
+                L. A. Rings Vej 19, 8270 Højbjerg
               </a>
             </li>
             <li>
-              <a href="mailto: andriustrio@hotmail.com">
+              <a href="mailto:andriustrio@hotmail.com">
                 andriustrio@hotmail.com
               </a>
             </li>
@@ -47,11 +48,13 @@ export default function Footer() {
               <SocialIcon
                 className={styles.socialIcon}
                 target="_blank"
+                rel="noopener noreferrer"
                 url="https://facebook.com/TrioRenseri"
               />
               <SocialIcon
                 className={styles.socialIcon}
                 target="_blank"
+                rel="noopener noreferrer"
                 url="https://instagram.com/triorenseri"
               />
             </li>

@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 import Navbar from "@/app/components/navbar/navbar";
 
 export default function Gardinservice() {
@@ -14,12 +14,13 @@ export default function Gardinservice() {
       <HeroSection
         heading="Dine gardiner - vores ansvar"
         imagePath="/images/curtain.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning/vask af gardiner</h1>
+          <h1>Specialiseret rensning og vask af gardiner</h1>
           <p>
             Vores gardinservice renser og plejer dine gardiner skånsomt for at
             fjerne støv, allergener og pletter. Vi sikrer, at dine gardiner
@@ -37,7 +38,7 @@ export default function Gardinservice() {
               <li>Rens af foldegardiner - Efter aftale</li>
             </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=gardinservice"}
               className={styles.ctaButton}
             >
               Se andre priser
@@ -46,9 +47,12 @@ export default function Gardinservice() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/curtains2.jpg"
-            alt="gardin"
+            alt="Gardiner"
+            width={1280}
+            height={1920}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

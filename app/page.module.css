@@ -97,7 +97,7 @@
   background: var(--accent-color);
   margin: 0;
 }
-.serviceBanner h1 {
+.serviceBanner h2 {
   margin: 0;
   font-weight: 300;
   text-align: center;

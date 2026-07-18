@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 import Navbar from "@/app/components/navbar/navbar";
 
 export default function Skjorteservice() {
@@ -14,17 +14,39 @@ export default function Skjorteservice() {
       <HeroSection
         heading="Din skjorte - vores ansvar"
         imagePath="/images/vores-ydelser.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Kvalitet rens/vask af skjorter</h1>
+          <h1>Skjorteservice i Højbjerg</h1>
           <p>
             Vi sørger for, at din skjorte får den behandling den fortjener og
             til Aarhus{"'"} billigste pris.
           </p>
           <p>Sidste år vaskede vi mere end 25.000 skjorter.</p>
+          <p>
+            Skjorteservice er oplagt til både arbejde, hverdag og fest, hvor
+            skjorten skal være ren, glat og klar til brug. Vi har fokus på
+            krave, manchetter og knapstolpe, fordi det ofte er her snavs og slid
+            ses først.
+          </p>
+
+          <div className={styles.detailBlock}>
+            <h2>Hvad indgår i skjorteservice?</h2>
+            <ul className={styles.detailList}>
+              <li>Vask og strygning af almindelige skjorter.</li>
+              <li>Ekstra opmærksomhed på kraver, manchetter og folder.</li>
+              <li>Mulighed for smokingskjorte og skjorter til særlige lejligheder.</li>
+            </ul>
+          </div>
+
+          <p>
+            Indlever skjorterne hos Trio Renseriet i Højbjerg, så aftaler vi
+            antal, pris og leveringstid. Mange kunder samler flere skjorter ad
+            gangen for at gøre hverdagen lettere.
+          </p>
           <section className={styles.priceSection}>
             <h3>Pris i alt (vasket og strøget):</h3>
             <ul>
@@ -33,7 +55,7 @@ export default function Skjorteservice() {
               <li>+ smokingskjorte 50 DKK</li>
             </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=skjorteservice"}
               className={styles.ctaButton}
             >
               Se andre priser
@@ -42,9 +64,12 @@ export default function Skjorteservice() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/skjorte.jpg"
-            alt="skjorte"
+            alt="Skjorte"
+            width={1280}
+            height={853}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

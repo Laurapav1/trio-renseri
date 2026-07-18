@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../serviceDetail.module.css";
 import Link from "next/link";
 import HeroSection from "@/app/components/hero-section/page-hero-section";
-import Image from "next/image";
+import ResponsiveImage from "@/app/components/responsive-image/responsive-image";
 import Navbar from "@/app/components/navbar/navbar";
 
 export default function Vaskerulleservice() {
@@ -14,19 +14,20 @@ export default function Vaskerulleservice() {
       <HeroSection
         heading="Din dug - vores ekspertise"
         imagePath="/images/tablecloth.jpg"
+        as="p"
       />
 
       {/* Sektion med tekst (venstre) og billede (højre) */}
       <section className={styles.wrapper}>
         <div className={styles.textContainer}>
-          <h1>Specialiseret rensning af duge</h1>
+          <h1>Vask og rulning af duge og sengetøj</h1>
           <p>
             Vores vaske- og rulleservice sikrer, at dine duge eller sengetøj er
             friskt, blødt og klart til at blive brugt.
           </p>
           <p>
-            Vi vasker og ruller tøj og sengetøj med omhu for at sikre, at de
-            altid føles friske og er klare til brug.
+            Vi vasker og ruller duge, tøj og sengetøj med omhu, så det altid
+            føles friskt og er klart til brug.
           </p>
 
           <section className={styles.priceSection}>
@@ -39,7 +40,7 @@ export default function Vaskerulleservice() {
               <li>Servietter - 15 DKK pr. stk.</li>
             </ul>
             <Link
-              href={"/priser?service=brudekjolerens"}
+              href={"/priser?service=vaskerulleservice"}
               className={styles.ctaButton}
             >
               Se andre priser
@@ -48,9 +49,12 @@ export default function Vaskerulleservice() {
         </div>
 
         <div className={styles.imageContainer}>
-          <Image
+          <ResponsiveImage
             src="/images/table.jpg"
-            alt="tekstil"
+            alt="Vask og rul af duge"
+            width={1280}
+            height={857}
+            sizes="(max-width: 768px) 100vw, 50vw"
             fill
             style={{ objectFit: "cover" }}
             className={styles.image}

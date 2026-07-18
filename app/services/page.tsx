@@ -23,10 +23,14 @@ export default function Tojrens() {
         <Link href={"/priser"} className={styles.ctaButton}>
           Se priser
         </Link>
+        <p className={styles.categoryLink}>
+          Leder du især efter tøjrens og tekstilpleje?{" "}
+          <Link href="/tojrens">Se tøjrens og tekstilpleje</Link>.
+        </p>
         <div className={styles.servicesGrid}>
           {/* Ændret rækkefølge af servicekort */}
           <ServiceCard
-            title="Tekstil Service"
+            title="Tekstilrens"
             description="Effektiv rensning af alle typer tekstiler, der fjerner pletter og bevarer stoffets kvalitet."
             link="/services/tekstilrens"
             imgURL="/images/tekstil.jpg"
@@ -54,7 +58,7 @@ export default function Tojrens() {
           />
 
           <ServiceCard
-            title="Vask af duge/sengetøj"
+            title="Vask af duge og sengetøj"
             description="Vask, tørring og rulning af duge og sengetøj, så det altid er klar til brug."
             link="/services/vaskerulleservice"
             imgURL="/images/table.jpg"
@@ -62,7 +66,7 @@ export default function Tojrens() {
 
           <ServiceCard
             title="Gardiner"
-            description="Rensning/vask af gardiner, så de fremstår friske og indbydende i dit hjem."
+            description="Rensning og vask af gardiner, så de fremstår friske og indbydende i dit hjem."
             link="/services/gardinservice"
             imgURL="/images/curtains2.jpg"
           />
@@ -89,7 +93,21 @@ export default function Tojrens() {
           />
 
           <ServiceCard
-            title="Udlejning af møbel og tæpperensmaskine"
+            title="Dåbskjolevask"
+            description="Skånsom vask og pleje af dåbskjoler, så familiens minder bevares."
+            link="/services/daabskjolevask"
+            imgURL="/images/bridedress5.jpg"
+          />
+
+          <ServiceCard
+            title="Rensning af sofabetræk"
+            description="Få sofabetræk vurderet og renset, så stoffet bevarer farve og kvalitet."
+            link="/services/sofa"
+            imgURL="/images/sofa.jpg"
+          />
+
+          <ServiceCard
+            title="Udlejning af møbel- og tæpperensmaskine"
             description="Lej professionelle maskiner til rensning af møbler og tæpper, og få det til at se nyt ud."
             link="/services/udlejning"
             imgURL="/images/maskine.jpeg"
@@ -97,7 +115,7 @@ export default function Tojrens() {
 
           <ServiceCard
             title="Bådkaleche"
-            description="Rensning og vedligeholdelse af bådkaleche, så de forbliver i topform."
+            description="Rensning og vedligeholdelse af bådkalecher, så de forbliver i god stand."
             link="/services/baadkalache"
             imgURL="/images/baad2.jpg"
           />

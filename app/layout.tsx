@@ -2,10 +2,12 @@ import "./css/globals.css";
 import Footer from "./components/footer/footer";
 import { Suspense } from "react";
 import { ClosedBanner } from "./components/closed-banner/closed-banner";
+import JsonLd from "./components/seo-json-ld";
+import { localBusinessJsonLd, metadataFor, siteUrl, websiteJsonLd } from "./seo";
 
 export const metadata = {
-  title: "Trio Renseriet",
-  description: "Trio Renseriet",
+  ...metadataFor("/"),
+  metadataBase: new URL(siteUrl),
   icons: {
     icon: "/favicon.svg",
   },
@@ -17,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head />
+    <html lang="da-DK">
+      <head>
+        <JsonLd data={[localBusinessJsonLd, websiteJsonLd]} />
+      </head>
       <body>
         <ClosedBanner />
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>

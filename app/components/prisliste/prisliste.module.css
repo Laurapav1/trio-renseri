@@ -65,12 +65,15 @@
 */
 .prisliste.highlighted {
   background-color: hsl(0, 0%, 98%);
+  scroll-margin-top: calc(var(--nav-h, 80px) + 2rem);
 }
 
 .prisliste ul li.highlighted {
-  background-color: hsl(0, 0%, 97%);
+  background-color: color-mix(in srgb, var(--accent-color) 8%, white);
   font-weight: 600;
   color: var(--accent-color);
+  box-shadow: inset 3px 0 0 var(--accent-color);
+  scroll-margin-top: calc(var(--nav-h, 80px) + 2rem);
 }
 
 /* Optional small-screen tuning */

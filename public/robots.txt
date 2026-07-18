@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://www.trio-renseri.dk
+Sitemap: https://www.trio-renseri.dk/sitemap.xml

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./navbar.module.css";
 
 type Panel = "services" | "skraedder" | null;
@@ -84,10 +85,13 @@ export default function Navbar() {
           aria-label="Trio Renseri - Forside"
           onClick={closeAll}
         >
-          <img
+          <Image
             className={styles.logo}
             src="/images/logo.svg"
             alt="Trio Renseri"
+            width={95}
+            height={48}
+            priority
           />
         </a>
 
@@ -152,8 +156,13 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>
+                  <Link href="/tojrens" onClick={closeAll}>
+                    Tøjrens og tekstilpleje
+                  </Link>
+                </li>
+                <li className={styles.dropdownItem}>
                   <Link href="/services/tekstilrens" onClick={closeAll}>
-                    Tekstil service
+                    Tekstilrens
                   </Link>
                 </li>
                 <li className={styles.dropdownItem}>

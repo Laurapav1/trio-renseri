@@ -21,9 +21,13 @@
   padding: 0;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-self: flex-start;
 }
 .logo {
   height: 3rem;
+  width: auto;
+  display: block;
   filter: brightness(0.92);
 }
 .logo:hover {
