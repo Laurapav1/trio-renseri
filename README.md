@@ -40,6 +40,18 @@ The canonical pre-PR check is `npm run verify`.
 
 ## Static deployment
 
-Run `npm run build` and upload the contents of `out/` to the static host. The export uses directory-style routes with trailing slashes, so the host must serve paths such as `/services/` from their generated `index.html` files and return a real 404 for unknown paths.
+Before building for deployment, create a Static Forms account and put its API key in `.env.local`:
+
+```bash
+cp .env.example .env.local
+# edit .env.local and replace the placeholder with your Static Forms API key
+npm run build
+```
+
+The contact form posts directly to Static Forms, so no SMTP server, API route, or server-side runtime is needed. Upload the contents of `out/` to the static host. The export uses directory-style routes with trailing slashes, so the host must serve paths such as `/services/` from their generated `index.html` files and return a real 404 for unknown paths.
+
+## SEO backlog
+
+The current SEO status, remaining launch checks, and intentionally deferred work are tracked in [BACKLOG.md](BACKLOG.md).
 
 Read [AGENTS.md](AGENTS.md) for repository-specific operating rules and source-of-truth boundaries.

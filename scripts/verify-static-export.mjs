@@ -59,6 +59,19 @@ for (const requiredFile of ["robots.txt", "sitemap.xml", "llms.txt"]) {
   }
 }
 
+const contactPage = path.join(outputDirectory, "kontakt", "index.html");
+if (fs.existsSync(contactPage)) {
+  const contactHtml = fs.readFileSync(contactPage, "utf8");
+
+  if (!contactHtml.includes('action="https://api.staticforms.dev/submit"')) {
+    fail("contact form is not configured for Static Forms");
+  }
+
+  if (!contactHtml.includes('name="apiKey"')) {
+    fail("contact form is missing the Static Forms API key field");
+  }
+}
+
 const sitemap = fs.existsSync(path.join(outputDirectory, "sitemap.xml"))
   ? fs.readFileSync(path.join(outputDirectory, "sitemap.xml"), "utf8")
   : "";

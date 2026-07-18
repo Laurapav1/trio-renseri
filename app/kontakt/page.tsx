@@ -1,17 +1,12 @@
 "use client";
 
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./kontakt.module.css";
 import { faEnvelope, faPhone, faUser } from "@fortawesome/free-solid-svg-icons";
 import PageHeroSection from "../components/hero-section/page-hero-section";
 import Navbar from "../components/navbar/navbar";
 
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  // Form submission logic here
-  alert("Form submitted!");
-};
+const staticFormsApiKey = process.env.NEXT_PUBLIC_STATIC_FORMS_API_KEY ?? "";
 
 export default function Kontakt() {
   return (
@@ -21,7 +16,20 @@ export default function Kontakt() {
       <div className={styles.container}>
         <div className={styles.formContainer}>
           <div className={styles.formSection}>
-            <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
+            <form
+              className={styles.form}
+              action="https://api.staticforms.dev/submit"
+              method="POST"
+            >
+              <input type="hidden" name="apiKey" value={staticFormsApiKey} />
+              <input
+                className={styles.honeypot}
+                type="text"
+                name="honeypot"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+              />
               <div className={styles.inputContainer}>
                 <FontAwesomeIcon icon={faUser} className={styles.icon} />
                 <label className={styles.srOnly} htmlFor="contact-name">

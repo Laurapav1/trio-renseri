@@ -46,3 +46,5 @@ Use `npm run verify` before opening a PR. It runs linting, the static build, and
 ## Maintenance
 
 Update commands here and in `package.json` together when the workflow changes. Keep human setup guidance in `README.md`; keep implementation detail in code; record a durable architectural decision only when a choice has meaningful alternatives and is likely to be revisited.
+
+Keep planned and intentionally deferred SEO outcomes in `BACKLOG.md`. Do not commit generated build output, browser captures, audit reports, or local logs.

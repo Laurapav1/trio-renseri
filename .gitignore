@@ -27,6 +27,7 @@ yarn-error.log*
 .seo-cache/
 /logs
 /output/
+/.playwright-cli/
 
 # local env files
 .env*.local
